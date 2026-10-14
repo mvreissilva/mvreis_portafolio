@@ -7,8 +7,8 @@ export function generateStaticParams() {
 
 export default async function HomePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: _lang } = await params;
-  const lang = (_lang as Lang) || "es";
-  const tr = t[lang] || t.es;
+  const lang = (LANGS.includes(_lang as Lang) ? _lang : "es") as Lang;
+  const tr = t[lang];
 
   const sec: React.CSSProperties  = { paddingTop: "4.5rem" };
   const lbl: React.CSSProperties  = { fontSize: "0.6875rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "2.5rem", display: "block", fontFamily: "var(--font-sans)" };
@@ -25,7 +25,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           {tr.hero.available}
         </div>
 
-        <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem,5vw,2.75rem)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--ink)", marginBottom: "1.25rem" }}>
+        <h1 style={{ fontFamily: "var(--font-serif, Georgia, serif)", fontSize: "clamp(2rem,5vw,2.75rem)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--ink)", marginBottom: "1.25rem" }}>
           {tr.hero.title1}<br />
           <span style={{ color: "var(--accent)" }}>{tr.hero.title2}</span>
         </h1>
@@ -62,7 +62,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* ── ABOUT ── */}
+      {/* ── ABOUT — CAMBIO 4: texto nuevo desde i18n ── */}
       <section id="about" style={sec}>
         <hr style={hr} />
         <div style={{ paddingTop: "3rem" }}>
@@ -79,7 +79,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <details key={q} style={{ borderTop: "1px solid var(--border)" }}>
                 <summary style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem", padding: "1.125rem 0", cursor: "pointer", userSelect: "none" }}>
                   <span style={{ fontSize: "0.9375rem", fontWeight: 500, color: "var(--ink)", fontFamily: "var(--font-sans)" }}>{q}</span>
-                  <span style={{ color: "var(--muted)", fontSize: "1.25rem", fontWeight: 300, flexShrink: 0, lineHeight: 1, transition: "transform 0.2s" }} className="faq-plus">+</span>
+                  <span style={{ color: "var(--muted)", fontSize: "1.25rem", fontWeight: 300, flexShrink: 0, lineHeight: 1 }}>+</span>
                 </summary>
                 <p style={{ ...body, paddingBottom: "1.25rem" }}>{a}</p>
               </details>
@@ -89,23 +89,20 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* ── SKILLS ── */}
+      {/* ── ÁREAS DE TRABAJO — CAMBIO 5: reemplaza skills ── */}
       <section id="skills" style={sec}>
         <hr style={hr} />
         <div style={{ paddingTop: "3rem" }}>
-          <span style={lbl}>{tr.skills.label}</span>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "2.5rem" }}>
-            {tr.skills.groups.map(g => (
-              <div key={g.title}>
-                <p style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--ink)", letterSpacing: "0.05em", marginBottom: "1rem", textTransform: "uppercase", fontFamily: "var(--font-sans)" }}>{g.title}</p>
-                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                  {g.items.map(item => (
-                    <li key={item} style={{ fontSize: "0.875rem", color: "var(--muted)", fontFamily: "var(--font-sans)" }}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <span style={lbl}>{tr.areas.label}</span>
+          <p style={{
+            fontSize: "0.9375rem",
+            color: "var(--muted)",
+            fontFamily: "var(--font-sans)",
+            lineHeight: 1.65,
+            letterSpacing: "0.01em",
+          }}>
+            {tr.areas.items.join(" · ")}
+          </p>
         </div>
       </section>
 
@@ -114,7 +111,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <hr style={hr} />
         <div style={{ paddingTop: "3rem" }}>
           <span style={lbl}>{tr.contact.label}</span>
-          <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem,4vw,2.5rem)", lineHeight: 1.12, letterSpacing: "-0.015em", color: "var(--ink)", marginBottom: "1rem" }}>
+          <h2 style={{ fontFamily: "var(--font-serif, Georgia, serif)", fontSize: "clamp(1.75rem,4vw,2.5rem)", lineHeight: 1.12, letterSpacing: "-0.015em", color: "var(--ink)", marginBottom: "1rem" }}>
             {tr.contact.title}
           </h2>
           <p style={{ ...body, maxWidth: "480px", marginBottom: "2rem" }}>{tr.contact.body}</p>

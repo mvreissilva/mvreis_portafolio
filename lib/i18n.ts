@@ -3,7 +3,7 @@ export type Lang = typeof LANGS[number];
 
 export const t = {
   es: {
-    nav: { work: "Trabajo", about: "Sobre mí", skills: "Skills", contact: "Contacto" },
+    nav: { work: "Proyectos", about: "Sobre mí", skills: "Áreas", contact: "Contacto" },
     hero: {
       available: "Disponible · Sevilla",
       title1: "Soy Marcus Reis.",
@@ -18,9 +18,9 @@ export const t = {
     },
     about: {
       label: "Sobre mí",
-      p1: "Llegué al UX/UI Design desde más de diez años en entornos corporativos — primero en IBM Brasil analizando contratos y procesos complejos, después en Foundever España trabajando directamente con usuarios reales en la campaña de Iberia.",
-      p2: "Esa trayectoria me enseñó algo que los bootcamps no enseñan: los problemas más importantes no están en la interfaz. Están en la brecha entre cómo funciona un sistema y cómo lo viven las personas que lo usan.",
-      p3: "Hoy diseño desde esa convicción. Priorizo investigación, arquitectura de información y validación real antes de tomar ninguna decisión visual.",
+      p1: "Mi camino hacia el UX/UI Design comenzó mucho antes de diseñar interfaces.",
+      p2: "Durante más de diez años trabajé en entornos corporativos, analizando contratos, procesos y sistemas, y acompañando a personas en la resolución de problemas reales. Esa experiencia me enseñó a mirar más allá de las tareas: a entender el contexto, identificar necesidades y buscar soluciones que tengan sentido para quienes las utilizan.",
+      p3: "Hoy aplico esa perspectiva al diseño de productos digitales. Me interesa comprender el problema antes de diseñar la solución, conectar las necesidades de las personas con los objetivos del producto y convertir la complejidad en experiencias claras, útiles e intuitivas.",
       faq: [
         { q: "¿Qué tipo de diseñador es Marcus?", a: "Uno que investiga antes de diseñar. Mi foco está en entender el problema real — no en saltar a wireframes. Combino UX Research, arquitectura de información y diseño de interfaz dentro del mismo proceso." },
         { q: "¿Qué lo diferencia de otros perfiles junior?", a: "Más de diez años en entornos corporativos reales. En IBM aprendí a analizar procesos complejos. En Foundever trabajé directamente con usuarios finales. Esa base no se improvisa." },
@@ -28,14 +28,9 @@ export const t = {
         { q: "¿Está disponible?", a: "Sí. Busco un rol como UX Designer, UX Researcher o Product Designer en España, Europa o en remoto. Disponibilidad inmediata." },
       ],
     },
-    skills: {
-      label: "Capacidades",
-      groups: [
-        { title: "Investigación", items: ["UX Research", "Entrevistas", "Encuestas", "Benchmark", "User Personas", "Customer Journey", "Usability Testing"] },
-        { title: "Diseño de producto", items: ["Arquitectura de información", "User Flows", "Wireframing", "Prototipado", "MVP Definition", "Design Systems"] },
-        { title: "UI e interfaz", items: ["UI Design", "Interaction Design", "Responsive Design", "Mobile First", "Accesibilidad"] },
-        { title: "Herramientas", items: ["Figma · FigJam", "Framer", "Miro", "Notion", "Claude AI", "ChatGPT"] },
-      ],
+    areas: {
+      label: "Áreas de trabajo",
+      items: ["Research", "Information Architecture", "Interaction Design", "UI Design", "Prototyping", "AI-assisted Design"],
     },
     contact: {
       label: "Contacto",
@@ -44,7 +39,7 @@ export const t = {
       linkedin: "LinkedIn",
       cv: "Descargar CV",
     },
-    footer: "Sevilla, España · 2025",
+    footer: "Sevilla, España · 2026",
     projects: {
       camperoteca: {
         tag: "UX/UI · End to End · Proyecto personal",
@@ -62,7 +57,7 @@ export const t = {
   },
 
   en: {
-    nav: { work: "Work", about: "About", skills: "Skills", contact: "Contact" },
+    nav: { work: "Work", about: "About", skills: "Areas", contact: "Contact" },
     hero: {
       available: "Available · Seville",
       title1: "I'm Marcus Reis.",
@@ -77,9 +72,9 @@ export const t = {
     },
     about: {
       label: "About",
-      p1: "I came to UX/UI Design from over ten years in corporate environments — first at IBM Brasil analysing complex contracts and processes, then at Foundever España working directly with real users on the Iberia campaign.",
-      p2: "That background taught me something bootcamps don't: the most important problems aren't in the interface. They're in the gap between how a system works and how the people using it experience it.",
-      p3: "Today I design from that conviction. I prioritise research, information architecture, and real validation before making any visual decisions.",
+      p1: "My path to UX/UI Design began long before I designed interfaces.",
+      p2: "For over ten years I worked in corporate environments, analysing contracts, processes and systems, and supporting people in solving real problems. That experience taught me to look beyond tasks: to understand context, identify needs and find solutions that make sense for the people who use them.",
+      p3: "Today I apply that perspective to digital product design. I'm interested in understanding the problem before designing the solution, connecting people's needs with product goals and turning complexity into clear, useful and intuitive experiences.",
       faq: [
         { q: "What kind of designer is Marcus?", a: "One who researches before designing. My focus is on understanding the real problem — not jumping straight to wireframes. I combine UX Research, information architecture and interface design in one process." },
         { q: "What sets him apart from other junior profiles?", a: "Over ten years in real corporate environments. At IBM I learned to analyse complex processes. At Foundever I worked directly with end users. That foundation can't be improvised." },
@@ -87,14 +82,9 @@ export const t = {
         { q: "Is he available?", a: "Yes. I'm looking for a role as UX Designer, UX Researcher or Product Designer in Spain, Europe or remote. Immediately available." },
       ],
     },
-    skills: {
-      label: "Capabilities",
-      groups: [
-        { title: "Research", items: ["UX Research", "User Interviews", "Surveys", "Benchmark", "User Personas", "Customer Journey", "Usability Testing"] },
-        { title: "Product design", items: ["Information Architecture", "User Flows", "Wireframing", "Prototyping", "MVP Definition", "Design Systems"] },
-        { title: "UI & interface", items: ["UI Design", "Interaction Design", "Responsive Design", "Mobile First", "Accessibility"] },
-        { title: "Tools", items: ["Figma · FigJam", "Framer", "Miro", "Notion", "Claude AI", "ChatGPT"] },
-      ],
+    areas: {
+      label: "Work areas",
+      items: ["Research", "Information Architecture", "Interaction Design", "UI Design", "Prototyping", "AI-assisted Design"],
     },
     contact: {
       label: "Contact",
@@ -103,7 +93,7 @@ export const t = {
       linkedin: "LinkedIn",
       cv: "Download CV",
     },
-    footer: "Seville, Spain · 2025",
+    footer: "Seville, Spain · 2026",
     projects: {
       camperoteca: {
         tag: "UX/UI · End to End · Personal project",
@@ -121,7 +111,7 @@ export const t = {
   },
 
   pt: {
-    nav: { work: "Projetos", about: "Sobre mim", skills: "Skills", contact: "Contato" },
+    nav: { work: "Projetos", about: "Sobre mim", skills: "Áreas", contact: "Contato" },
     hero: {
       available: "Disponível · Sevilha",
       title1: "Sou Marcus Reis.",
@@ -136,9 +126,9 @@ export const t = {
     },
     about: {
       label: "Sobre mim",
-      p1: "Cheguei ao UX/UI Design após mais de dez anos em ambientes corporativos — primeiro na IBM Brasil analisando contratos e processos complexos, depois na Foundever Espanha trabalhando diretamente com utilizadores reais na campanha da Iberia.",
-      p2: "Essa trajetória ensinou-me algo que os bootcamps não ensinam: os problemas mais importantes não estão na interface. Estão na lacuna entre como um sistema funciona e como as pessoas que o utilizam o vivenciam.",
-      p3: "Hoje desenho com essa convicção. Priorizo pesquisa, arquitetura de informação e validação real antes de tomar qualquer decisão visual.",
+      p1: "O meu caminho para o UX/UI Design começou muito antes de desenhar interfaces.",
+      p2: "Durante mais de dez anos trabalhei em ambientes corporativos, analisando contratos, processos e sistemas, e acompanhando pessoas na resolução de problemas reais. Essa experiência ensinou-me a olhar para além das tarefas: a entender o contexto, identificar necessidades e procurar soluções que façam sentido para quem as utiliza.",
+      p3: "Hoje aplico essa perspetiva ao design de produtos digitais. Interessa-me compreender o problema antes de desenhar a solução, ligar as necessidades das pessoas aos objetivos do produto e transformar a complexidade em experiências claras, úteis e intuitivas.",
       faq: [
         { q: "Que tipo de designer é o Marcus?", a: "Um que pesquisa antes de desenhar. O meu foco é entender o problema real — não saltar para wireframes. Combino UX Research, arquitetura de informação e design de interface no mesmo processo." },
         { q: "O que o diferencia de outros perfis junior?", a: "Mais de dez anos em ambientes corporativos reais. Na IBM aprendi a analisar processos complexos. Na Foundever trabalhei diretamente com utilizadores finais. Essa base não se improvisa." },
@@ -146,14 +136,9 @@ export const t = {
         { q: "Está disponível?", a: "Sim. Procuro uma função como UX Designer, UX Researcher ou Product Designer em Espanha, Europa ou remoto. Disponibilidade imediata." },
       ],
     },
-    skills: {
-      label: "Capacidades",
-      groups: [
-        { title: "Investigação", items: ["UX Research", "Entrevistas", "Inquéritos", "Benchmark", "User Personas", "Customer Journey", "Usability Testing"] },
-        { title: "Design de produto", items: ["Arquitetura de informação", "User Flows", "Wireframing", "Prototipagem", "Definição de MVP", "Design Systems"] },
-        { title: "UI e interface", items: ["UI Design", "Interaction Design", "Responsive Design", "Mobile First", "Acessibilidade"] },
-        { title: "Ferramentas", items: ["Figma · FigJam", "Framer", "Miro", "Notion", "Claude AI", "ChatGPT"] },
-      ],
+    areas: {
+      label: "Áreas de trabalho",
+      items: ["Research", "Information Architecture", "Interaction Design", "UI Design", "Prototyping", "AI-assisted Design"],
     },
     contact: {
       label: "Contato",
@@ -162,7 +147,7 @@ export const t = {
       linkedin: "LinkedIn",
       cv: "Baixar CV",
     },
-    footer: "Sevilha, Espanha · 2025",
+    footer: "Sevilha, Espanha · 2026",
     projects: {
       camperoteca: {
         tag: "UX/UI · End to End · Projeto pessoal",

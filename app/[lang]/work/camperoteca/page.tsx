@@ -1,272 +1,913 @@
-import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { t, LANGS, type Lang } from "@/lib/i18n";
+import { Reveal } from "@/components/ui/Reveal";
 
-export function generateStaticParams() {
-  return LANGS.map(lang => ({ lang }));
-}
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang: _lang } = await params;
-  const lang = _lang as Lang;
-  const titles = { es: "Camperoteca — UX/UI Case Study", en: "Camperoteca — UX/UI Case Study", pt: "Camperoteca — Case Study UX/UI" };
-  return { title: titles[lang] };
+interface Props {
+  params: Promise<{ lang: string }>;
 }
 
-const INSIGHTS = {
-  es: [
-    { t: "La información dispersa genera parálisis", e: "La mayoría consultaban múltiples fuentes sin llegar a una conclusión sobre qué priorizar.", i: "La solución debía reducir carga cognitiva, no añadir más información." },
-    { t: "El proceso sin orden genera ansiedad", e: "Los usuarios no sabían si estaban haciendo las cosas en el orden correcto.", i: "Necesitaban una referencia de progreso visible." },
-    { t: "La comunidad es valiosa pero está desordenada", e: "Los foros eran consultados pero la dificultad de encontrar información específica los hacía frustrantes.", i: "El valor estaba en organizar el contenido existente, no en crear nuevo." },
-  ],
-  en: [
-    { t: "Fragmented information creates paralysis", e: "Most users consulted multiple sources without reaching a conclusion about what to prioritise.", i: "The solution had to reduce cognitive load, not add more information." },
-    { t: "An unordered process creates anxiety", e: "Users didn't know whether they were doing things in the right order.", i: "They needed a visible progress reference." },
-    { t: "The community is valuable but disorganised", e: "Forums were frequently used, but finding specific information was too difficult.", i: "The value was in organising existing content, not creating new content." },
-  ],
-  pt: [
-    { t: "Informação dispersa cria paralisia", e: "A maioria consultava múltiplas fontes sem chegar a uma conclusão sobre o que priorizar.", i: "A solução tinha que reduzir a carga cognitiva, não adicionar mais informação." },
-    { t: "Processo sem ordem gera ansiedade", e: "Os utilizadores não sabiam se estavam a fazer as coisas na ordem correta.", i: "Precisavam de uma referência de progresso visível." },
-    { t: "A comunidade é valiosa mas desorganizada", e: "Os fóruns eram consultados mas a dificuldade de encontrar informação específica tornava-os frustrantes.", i: "O valor estava em organizar o conteúdo existente, não em criar novo." },
-  ],
+export async function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }, { lang: "pt" }];
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { lang } = await params;
+  const titles: Record<string, string> = {
+    es: "Camperoteca — Case Study · Marcus Reis",
+    en: "Camperoteca — Case Study · Marcus Reis",
+    pt: "Camperoteca — Case Study · Marcus Reis",
+  };
+  const descs: Record<string, string> = {
+    es: "Diseño UX/UI end-to-end de una plataforma para acompañar a personas durante la planificación de su proyecto de camperización.",
+    en: "End-to-end UX/UI design of a platform to guide people through the planning of their camper van conversion project.",
+    pt: "Design UX/UI end-to-end de uma plataforma para acompanhar pessoas durante o planejamento de seu projeto de camperização.",
+  };
+  return {
+    title: titles[lang] ?? titles.es,
+    description: descs[lang] ?? descs.es,
+  };
+}
+
+/* ─── copy strings ─────────────────────────────────────────────── */
+const copy = {
+  es: {
+    back: "← Proyectos",
+    tag1: "UX/UI Designer · End-to-End",
+    tag2: "Proyecto académico · Bootcamp NEOLAND",
+    tag3: "Oct 2025 – Abr 2026",
+    tag4: "Responsive · Mobile First",
+    tag5: "Figma · FigJam · Figma Make · Stitch",
+    heroTitle: "Camperoteca:",
+    heroSub: "convertir un proceso complejo en un recorrido claro",
+    heroDesc:
+      "Diseño de una plataforma digital para acompañar a las personas durante la planificación de su proyecto de camperización.",
+
+    /* 02 */
+    prob_label: "Problema y oportunidad",
+    prob_title: "Un proceso sin guía",
+    prob_body:
+      "Camperizar una furgoneta es un proyecto técnico, económico y legal complejo. Sin embargo, quienes se inician en este mundo se enfrentan a información fragmentada distribuida entre foros, canales de YouTube y grupos de redes sociales: sin orden, sin criterio de calidad y sin contexto sobre en qué fase del proyecto aplicar cada recurso.",
+    prob_opp:
+      "La oportunidad estaba clara: diseñar una experiencia que centralizara el conocimiento, estructurara el recorrido del usuario y le acompañara en cada etapa del proceso, desde la primera decisión hasta el montaje final.",
+
+    /* 03 */
+    research_label: "UX Research",
+    research_title: "Investigar antes de diseñar",
+    research_body:
+      "Antes de proponer ninguna solución, llevé a cabo una investigación mixta para entender quiénes eran los usuarios, qué hacían y dónde encontraban dificultades.",
+
+    /* 04 */
+    insight_label: "Insight y persona",
+    insight_title: "Lo que realmente necesitaban",
+    insight_quote:
+      "Los usuarios no necesitan más información, sino una estructura clara, acompañamiento y confianza para poder avanzar en su proyecto.",
+    persona_name: "Blanca Jiménez, 38 años",
+    persona_tag: "«La Exploradora»",
+    persona_desc:
+      "Psicóloga en Pamplona. Le interesa la sostenibilidad y la economía colaborativa. Quiere iniciarse en el mundo camper de forma responsable: aprender antes de camperizar y conectar con personas con intereses similares.",
+    goals_title: "Objetivos",
+    goals: [
+      "Empezar de forma sostenible y responsable.",
+      "Aprender antes de tomar decisiones económicas.",
+      "Conectar con otras personas en el mismo proceso.",
+    ],
+    frusts_title: "Frustraciones",
+    frusts: [
+      "No saber por dónde empezar.",
+      "Información dispersa y sin contexto.",
+      "Miedo a gastar dinero en soluciones que no funcionen.",
+    ],
+
+    /* 05 */
+    hmw_label: "How Might We",
+    hmw_title: "Del problema a la oportunidad",
+    hmw_rows: [
+      {
+        prob: "Información fragmentada en múltiples fuentes",
+        opp: "Centralizar y estructurar en un solo lugar",
+        dec: "Dashboard con fases ordenadas",
+      },
+      {
+        prob: "Sin referencia de progreso en el proyecto",
+        opp: "Hacer visible el avance paso a paso",
+        dec: "Planificador con etapas y checklist",
+      },
+      {
+        prob: "Comunidad valiosa pero caótica",
+        opp: "Organizar por contexto y fase",
+        dec: "Biblioteca filtrable por categoría",
+      },
+      {
+        prob: "Decisiones sin contexto ni ayuda",
+        opp: "Acompañar con información relevante en cada paso",
+        dec: "Recursos asociados a cada etapa",
+      },
+    ],
+    hmw_col1: "Problema",
+    hmw_col2: "Oportunidad",
+    hmw_col3: "Decisión de diseño",
+
+    /* 06 */
+    arch_label: "Arquitectura de información",
+    arch_title: "Estructura de navegación y recorrido principal",
+    arch_body:
+      "El Happy Path define la secuencia óptima que recorre un usuario nuevo: desde la Home y el Onboarding hasta el acceso a las cuatro áreas principales de la plataforma. Mi Proyecto es el hub central; Aprende, Encuentra y Comunidad lo complementan con contenido, recursos y conexión.",
+    mvp_title: "Alcance del MVP",
+    mvp_inc: [
+      "Mi Proyecto: planificador por etapas con progreso y siguiente paso.",
+      "Aprende: guías técnicas, legales y casos reales.",
+      "Encuentra: directorio de herramientas y materiales.",
+      "Onboarding personalizado para nuevos usuarios.",
+    ],
+    mvp_post: [
+      "Comunidad: foro y grupos de usuarios.",
+      "Marketplace de materiales sobrantes.",
+      "Notificaciones y recordatorios por etapa.",
+    ],
+    mvp_inc_label: "Incluido en MVP",
+    mvp_post_label: "Pospuesto",
+
+    /* 07 */
+    wf_label: "Wireframes",
+    wf_title: "De la estructura al diseño final",
+    wf_body:
+      "El proceso de wireframing avanzó desde una estructura funcional en baja fidelidad hasta la definición visual en alta fidelidad. Cada iteración permitió validar la jerarquía de la información, la navegación y la coherencia entre secciones antes de avanzar al diseño de interfaz.",
+
+    /* 08 */
+    ui_label: "UI Design",
+    ui_title: "La solución final",
+    ui_body:
+      "La interfaz de Camperoteca toma como referencia visual el mundo camper: colores cálidos y terrosos, tipografía legible y un lenguaje visual que transmite calma y orientación. El diseño prioriza la claridad sobre la decoración.",
+    ui_miproyecto_title: "Mi Proyecto",
+    ui_miproyecto_body:
+      "El hub central de la plataforma muestra la etapa actual, el progreso general y el siguiente paso recomendado. Reduce la incertidumbre y mantiene al usuario orientado en todo momento.",
+    ui_aprende_title: "Aprende",
+    ui_aprende_body:
+      "Organiza el conocimiento en tres categorías: guías técnicas (sistemas eléctricos, aislamiento, carpintería), guías legales (homologaciones, ITV, normativa) y casos reales de otros usuarios.",
+    ui_encuentra_title: "Encuentra Recursos",
+    ui_encuentra_body:
+      "Directorio de herramientas y materiales para la camperización, organizado por categoría para facilitar la localización de lo que se necesita en cada fase del proyecto.",
+
+    /* 09 */
+    learn_label: "Aprendizajes",
+    learn_title: "Qué me llevo de este proyecto",
+    learns: [
+      "Diseñar para la incertidumbre: los usuarios no saben lo que no saben. La clave fue diseñar para reducir esa incertidumbre antes de que el usuario la sienta.",
+      "La información de progreso es motivadora: mostrar en qué etapa está el usuario y cuánto ha avanzado tiene un impacto directo en su disposición a continuar.",
+      "Centralizar no basta: la estructura y el contexto son tan importantes como tener el recurso disponible. Un recurso sin contexto no ayuda.",
+      "La comunidad como recurso de diseño: las personas valoran compartir experiencias con otros en el mismo proceso, no solo consumir contenido experto.",
+    ],
+    next_title: "Próximas iteraciones",
+    nexts: [
+      "Evaluar la comprensión del flujo principal con usuarios reales mediante pruebas de usabilidad.",
+      "Validar la utilidad del 'siguiente paso recomendado' como mecanismo de orientación.",
+      "Explorar la incorporación de la sección Comunidad en el MVP.",
+      "Iterar el onboarding en base a patrones de uso reales.",
+    ],
+    proto_cta: "Ver prototipo en Figma",
+    back_projects: "← Volver a proyectos",
+  },
 };
 
-const ITERATIONS = {
-  es: [
-    { p: "Onboarding de 5 pasos", f: "Los usuarios llegaban al planificador con sensación de haber tardado demasiado.", c: "Reducido a 3 pasos. Configuración detallada aplazada al perfil post-registro." },
-    { p: "Iconos sin labels", f: "La navegación inferior no era autoexplicativa.", c: "Labels permanentes debajo de cada icono." },
-    { p: "Estado vacío sin guía", f: "El dashboard vacío generaba incertidumbre sobre qué hacer primero.", c: "CTA claro en el empty state: Empieza aquí, tu primera etapa te espera." },
-  ],
-  en: [
-    { p: "5-step onboarding", f: "Users reached the planner feeling it had taken too long.", c: "Reduced to 3 steps. Detailed setup moved to the post-registration profile." },
-    { p: "Icons without labels", f: "The bottom navigation wasn't self-explanatory.", c: "Permanent labels under each icon." },
-    { p: "Empty state without guidance", f: "The empty dashboard created uncertainty about what to do first.", c: "Clear CTA in the empty state: Start here, your first stage is waiting." },
-  ],
-  pt: [
-    { p: "Onboarding de 5 passos", f: "Os utilizadores chegavam ao planificador com sensação de ter demorado demasiado.", c: "Reduzido a 3 passos. Configuração detalhada adiada para o perfil pós-registo." },
-    { p: "Ícones sem labels", f: "A navegação inferior não era autoexplicativa.", c: "Labels permanentes abaixo de cada ícone." },
-    { p: "Estado vazio sem orientação", f: "O dashboard vazio gerava incerteza sobre o que fazer primeiro.", c: "CTA claro no empty state: Começa aqui, a tua primeira etapa está à espera." },
-  ],
-};
+const C = copy.es; // single-lang for now; extend if needed
 
-const LEARNINGS = {
-  es: ["El problema real no estaba donde parecía — el research cambió la hipótesis inicial antes de diseñar una sola pantalla.", "Diseñar el estado vacío es diseñar la primera impresión.", "La arquitectura de información es la decisión más importante. Ninguna pantalla bonita compensa una IA confusa.", "Mi experiencia previa fue un activo: años gestionando procesos complejos me dieron intuición sobre dónde aparece la fricción."],
-  en: ["The real problem wasn't where it seemed — research changed the initial hypothesis before designing a single screen.", "Designing the empty state is designing the first impression.", "Information architecture is the most important decision. No beautiful screen compensates for a confusing IA.", "My prior experience was an asset: years managing complex processes gave me intuition about where friction appears."],
-  pt: ["O problema real não estava onde parecia — a pesquisa mudou a hipótese inicial antes de desenhar um único ecrã.", "Desenhar o estado vazio é desenhar a primeira impressão.", "A arquitetura de informação é a decisão mais importante. Nenhum ecrã bonito compensa uma IA confusa.", "A minha experiência anterior foi um ativo: anos a gerir processos complexos deram-me intuição sobre onde aparece o atrito."],
-};
+/* ─── helpers ──────────────────────────────────────────────────── */
+function Label({ text }: { text: string }) {
+  return (
+    <span
+      style={{
+        fontSize: "0.7rem",
+        fontWeight: 600,
+        letterSpacing: "0.12em",
+        textTransform: "uppercase",
+        color: "var(--accent)",
+      }}
+    >
+      {text}
+    </span>
+  );
+}
 
-const LABELS = {
-  es: { back: "← Volver", role: "Rol", type: "Tipo", platform: "Plataforma", tools: "Herramientas", process: "Proceso", award: "Distinción", problem: "El problema", insights: "Hallazgos", evidence: "Evidencia", implication: "Implicación", opportunity: "Oportunidad de diseño", problem_col: "Problema", opp_col: "Oportunidad", decision: "Decisión", mvp: "MVP", included: "Incluido", deferred: "Aplazado", wireframes: "Wireframes", testing: "Testing e iteración", detected: "Problema detectado", change: "Cambio", results: "Resultados", future: "Métricas a medir en siguiente fase", learnings: "Aprendizajes", prototype: "Prototipo", contact: "Contactar →" },
-  en: { back: "← Back", role: "Role", type: "Type", platform: "Platform", tools: "Tools", process: "Process", award: "Award", problem: "The problem", insights: "Findings", evidence: "Evidence", implication: "Implication", opportunity: "Design opportunity", problem_col: "Problem", opp_col: "Opportunity", decision: "Decision", mvp: "MVP", included: "Included", deferred: "Deferred", wireframes: "Wireframes", testing: "Testing & iteration", detected: "Issue detected", change: "Change", results: "Outcomes", future: "Metrics to measure next", learnings: "Learnings", prototype: "Prototype", contact: "Get in touch →" },
-  pt: { back: "← Voltar", role: "Função", type: "Tipo", platform: "Plataforma", tools: "Ferramentas", process: "Processo", award: "Distinção", problem: "O problema", insights: "Descobertas", evidence: "Evidência", implication: "Implicação", opportunity: "Oportunidade de design", problem_col: "Problema", opp_col: "Oportunidade", decision: "Decisão", mvp: "MVP", included: "Incluído", deferred: "Adiado", wireframes: "Wireframes", testing: "Testing e iteração", detected: "Problema detetado", change: "Mudança", results: "Resultados", future: "Métricas a medir na próxima fase", learnings: "Aprendizagens", prototype: "Protótipo", contact: "Entrar em contacto →" },
-};
+function SectionHeading({ label, title }: { label: string; title: string }) {
+  return (
+    <div style={{ marginBottom: "2rem" }}>
+      <Label text={label} />
+      <h2
+        style={{
+          fontFamily: "'DM Serif Display', Georgia, serif",
+          fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+          fontWeight: 400,
+          lineHeight: 1.2,
+          marginTop: "0.4rem",
+          color: "var(--ink)",
+        }}
+      >
+        {title}
+      </h2>
+    </div>
+  );
+}
 
-const S = {
-  page:   { maxWidth: "680px", margin: "0 auto", padding: "0 1.5rem", paddingTop: "6.5rem", paddingBottom: "6rem" } as React.CSSProperties,
-  label:  { fontSize: "0.6875rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "var(--muted)", marginBottom: "2rem", display: "block" },
-  h1:     { fontFamily: "var(--font-serif,Georgia,serif)", fontSize: "clamp(2rem,5vw,2.75rem)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--ink)", marginBottom: "1.125rem" } as React.CSSProperties,
-  h2:     { fontFamily: "var(--font-serif,Georgia,serif)", fontSize: "clamp(1.375rem,3vw,1.625rem)", lineHeight: 1.2, letterSpacing: "-0.015em", color: "var(--ink)", marginBottom: "0.875rem" } as React.CSSProperties,
-  body:   { fontSize: "0.9375rem", color: "var(--muted)", lineHeight: 1.78 } as React.CSSProperties,
-  sec:    { marginTop: "4rem" } as React.CSSProperties,
-  div:    { border: "none", borderTop: "1px solid var(--border)", margin: "0 0 2.5rem" } as React.CSSProperties,
-};
+/* ─── page ──────────────────────────────────────────────────────── */
+export default async function CamperotecaPage({ params }: Props) {
+  const { lang } = await params;
 
-export default async function CamperotecaPage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang: _lang } = await params;
-  const lang = _lang as Lang;
-  const L = LABELS[lang];
-  const ins = INSIGHTS[lang];
-  const iters = ITERATIONS[lang];
-  const learns = LEARNINGS[lang];
+  const maxW = "860px";
+  const section: React.CSSProperties = {
+    maxWidth: maxW,
+    margin: "0 auto",
+    padding: "5rem 1.5rem",
+    borderBottom: "1px solid var(--border)",
+  };
+  const sectionLast: React.CSSProperties = {
+    ...section,
+    borderBottom: "none",
+  };
 
   return (
-    <div style={S.page}>
-      <Link href={`/${lang}`} style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none", display: "inline-block", marginBottom: "3rem", transition: "color 0.2s" }}>
-        {L.back}
-      </Link>
-
-      {/* Hero */}
-      <p style={{ fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>
-        UX/UI Design · End to End · Personal Project
-      </p>
-      <h1 style={S.h1}>Camperoteca</h1>
-      <p style={{ ...S.body, maxWidth: "520px", marginBottom: "3rem" }}>
-        {lang === "es" && "Una experiencia digital para simplificar la planificación y gestión del proceso de camperización. Del caos de información dispersa a una guía progresiva centrada en el usuario."}
-        {lang === "en" && "A digital experience to simplify the planning and management of the van conversion process. From fragmented information to a progressive user-centred guide."}
-        {lang === "pt" && "Uma experiência digital para simplificar o planeamento e gestão do processo de camperização. Do caos de informação dispersa a um guia progressivo centrado no utilizador."}
-      </p>
-
-      {/* Meta grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px,1fr))", gap: "0",
-                    border: "1px solid var(--border)", borderRadius: "0.5rem", overflow: "hidden", marginBottom: "4rem" }}>
-        {[[L.role,"UX/UI Designer · End to End"],[L.type,lang==="es"?"Proyecto personal":lang==="en"?"Personal Project":"Projeto pessoal"],[L.platform,"Responsive / Mobile First"],[L.tools,"Figma · FigJam · Miro · Framer"],[L.process,"Research → Design → Test → Iterate"],[L.award,"Neoland — Distinción"]].map(([lbl,val],i) => (
-          <div key={i} style={{ padding: "1rem 1.125rem", background: i%2===0?"var(--surface)":"var(--bg)", borderRight: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
-            <p style={{ fontSize: "0.6875rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--muted)", marginBottom: "0.25rem" }}>{lbl}</p>
-            <p style={{ fontSize: "0.8125rem", color: "var(--ink)" }}>{val}</p>
-          </div>
-        ))}
+    <main style={{ background: "var(--bg)", color: "var(--ink)" }}>
+      {/* ── BACK LINK ── */}
+      <div style={{ maxWidth: maxW, margin: "0 auto", padding: "2rem 1.5rem 0" }}>
+        <Link
+          href={`/${lang}`}
+          style={{
+            fontSize: "0.85rem",
+            color: "var(--muted)",
+            textDecoration: "none",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.3rem",
+          }}
+        >
+          {C.back}
+        </Link>
       </div>
 
-      {/* Problem */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.problem}</span>
-        <h2 style={S.h2}>{lang==="es"?"El problema no era falta de información. Era falta de estructura.":lang==="en"?"The problem wasn't a lack of information. It was a lack of structure.":"O problema não era falta de informação. Era falta de estrutura."}</h2>
-        <div style={{ ...S.body, display:"flex", flexDirection:"column", gap:"0.875rem", maxWidth:"540px" }}>
-          <p>{lang==="es"?"Camperizar un vehículo implica decisiones técnicas, logísticas, económicas y personales que se superponen sin orden claro. Las personas llegan con motivación y energía, pero la información existe en todas partes y en ninguna a la vez.":lang==="en"?"Converting a vehicle involves technical, logistical, financial and personal decisions that overlap without clear order. People arrive motivated and energetic, but information exists everywhere and nowhere at the same time.":"Camperizar um veículo implica decisões técnicas, logísticas, económicas e pessoais que se sobrepõem sem ordem clara. As pessoas chegam motivadas, mas a informação existe em todo o lado e em lado nenhum ao mesmo tempo."}</p>
-          <blockquote style={{ borderLeft: "2px solid var(--accent)", paddingLeft: "1rem", fontStyle: "italic", color: "var(--ink)" }}>
-            {lang==="es"&&'"Sé que hay mucha información ahí fuera, pero no sé por dónde empezar ni si lo estoy haciendo en el orden correcto."'}
-            {lang==="en"&&'"I know there\'s a lot of information out there, but I don\'t know where to start or whether I\'m doing things in the right order."'}
-            {lang==="pt"&&'"Sei que há muita informação disponível, mas não sei por onde começar nem se estou a fazer as coisas na ordem certa."'}
-          </blockquote>
-        </div>
-        <div style={{ marginTop:"2rem", width:"100%", aspectRatio:"21/9", borderRadius:"0.5rem", background:"var(--surface)", border:"1px solid var(--border)", display:"flex", alignItems:"center", justifyContent:"center" }}>
-          <p style={{ fontSize:"0.75rem", color:"var(--muted)", textAlign:"center" }}>Imagen del proyecto — añade captura de Figma</p>
-        </div>
-      </section>
+      {/* ── 01 HERO ── */}
+      <section style={section}>
+        <Reveal>
+          <Label text="Case Study" />
+          <h1
+            style={{
+              fontFamily: "'DM Serif Display', Georgia, serif",
+              fontSize: "clamp(2rem, 5vw, 3.2rem)",
+              fontWeight: 400,
+              lineHeight: 1.1,
+              marginTop: "0.5rem",
+              marginBottom: "0.25rem",
+              color: "var(--ink)",
+            }}
+          >
+            {C.heroTitle}
+          </h1>
+          <h1
+            style={{
+              fontFamily: "'DM Serif Display', Georgia, serif",
+              fontSize: "clamp(2rem, 5vw, 3.2rem)",
+              fontWeight: 400,
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+              color: "var(--muted)",
+            }}
+          >
+            {C.heroSub}
+          </h1>
+          <p
+            style={{
+              fontSize: "1.05rem",
+              lineHeight: 1.7,
+              color: "var(--muted)",
+              maxWidth: "600px",
+              marginBottom: "2.5rem",
+            }}
+          >
+            {C.heroDesc}
+          </p>
 
-      {/* Insights */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.insights}</span>
-        <div style={{ display:"flex", flexDirection:"column" }}>
-          {ins.map((item, i) => (
-            <div key={i} style={{ padding:"1.375rem 0", borderBottom:"1px solid var(--border)" }}>
-              <p style={{ fontSize:"0.9375rem", fontWeight:500, color:"var(--ink)", marginBottom:"0.5rem" }}>{item.t}</p>
-              <p style={{ fontSize:"0.8125rem", color:"var(--muted)", marginBottom:"0.375rem" }}><strong style={{color:"var(--accent)",fontWeight:500}}>{L.evidence} — </strong>{item.e}</p>
-              <p style={{ fontSize:"0.8125rem", color:"var(--muted)" }}><strong style={{color:"var(--ink)",fontWeight:500}}>→ {L.implication} — </strong>{item.i}</p>
-            </div>
-          ))}
-        </div>
-        <blockquote style={{ marginTop:"1.5rem", padding:"1.25rem 1.5rem", background:"var(--surface)", borderRadius:"0.5rem", borderLeft:"2px solid var(--accent)", fontSize:"0.9375rem", fontStyle:"italic", color:"var(--ink)" }}>
-          {lang==="es"&&'"Los usuarios no necesitan más información. Necesitan una guía clara que les ayude a avanzar con seguridad."'}
-          {lang==="en"&&'"Users don\'t need more information. They need a clear guide that helps them move forward with confidence."'}
-          {lang==="pt"&&'"Os utilizadores não precisam de mais informação. Precisam de um guia claro que os ajude a avançar com segurança."'}
-        </blockquote>
-      </section>
-
-      {/* Opportunity table */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.opportunity}</span>
-        <div style={{ overflowX:"auto" }}>
-          <table style={{ width:"100%", fontSize:"0.875rem", borderCollapse:"collapse" }}>
-            <thead>
-              <tr style={{ borderBottom:"1px solid var(--border)" }}>
-                {[L.problem_col, L.opp_col, L.decision].map(h => (
-                  <th key={h} style={{ textAlign:"left", padding:"0.625rem 1rem 0.625rem 0", fontSize:"0.6875rem", textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--muted)", fontWeight:600 }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {(lang==="es"?[["Información fragmentada","Centralizar y estructurar","Dashboard con fases ordenadas"],["Sin referencia de progreso","Hacer visible el avance","Planificador con checklist"],["Comunidad caótica","Organizar por fase","Biblioteca filtrable"],["Decisiones sin contexto","Acompañar con info relevante","Recursos por etapa"]]:
-                lang==="en"?[["Fragmented information","Centralise and structure","Dashboard with ordered phases"],["No progress reference","Make progress visible","Planner with checklist"],["Chaotic community","Organise by phase","Filterable library"],["Decisions without context","Provide relevant info","Resources per stage"]]:
-                [["Informação fragmentada","Centralizar e estruturar","Dashboard com fases ordenadas"],["Sem referência de progresso","Tornar o progresso visível","Planificador com checklist"],["Comunidade caótica","Organizar por fase","Biblioteca filtrável"],["Decisões sem contexto","Acompanhar com info relevante","Recursos por etapa"]]
-              ).map(([p,o,d], i) => (
-                <tr key={i} style={{ borderBottom:"1px solid var(--border)" }}>
-                  <td style={{ padding:"0.75rem 1rem 0.75rem 0", color:"var(--muted)" }}>{p}</td>
-                  <td style={{ padding:"0.75rem 1rem 0.75rem 0", color:"var(--muted)" }}>{o}</td>
-                  <td style={{ padding:"0.75rem 0", color:"var(--ink)" }}>{d}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* MVP */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.mvp}</span>
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"2rem" }}>
-          <div>
-            <p style={{ fontSize:"0.75rem", fontWeight:600, color:"#16a34a", textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:"0.875rem" }}>✓ {L.included}</p>
-            <ul style={{ listStyle:"none", display:"flex", flexDirection:"column", gap:"0.5rem" }}>
-              {(lang==="es"?["Onboarding personalizado","Dashboard con fases del proceso","Planificador con checklist","Biblioteca de recursos filtrable","Seguimiento de progreso"]:lang==="en"?["Personalised onboarding","Dashboard with process phases","Planner with checklist","Filterable resource library","Progress tracking"]:["Onboarding personalizado","Dashboard com fases do processo","Planificador com checklist","Biblioteca de recursos filtrável","Acompanhamento de progresso"]).map(i=>(
-                <li key={i} style={{ fontSize:"0.875rem", color:"var(--muted)" }}>· {i}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p style={{ fontSize:"0.75rem", fontWeight:600, color:"var(--muted)", textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:"0.875rem", opacity:0.6 }}>✗ {L.deferred}</p>
-            <ul style={{ listStyle:"none", display:"flex", flexDirection:"column", gap:"0.5rem", opacity:0.5 }}>
-              {(lang==="es"?["Módulo de comunidad","Comparador de presupuestos","Integración con proveedores","Modo colaborativo"]:lang==="en"?["Community module","Budget comparator","Provider integration","Collaborative mode"]:["Módulo de comunidade","Comparador de orçamentos","Integração com fornecedores","Modo colaborativo"]).map(i=>(
-                <li key={i} style={{ fontSize:"0.875rem", color:"var(--muted)" }}>· {i}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Wireframes placeholder */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.wireframes}</span>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(3,1fr)", gap:"0.75rem" }}>
-          {(lang==="es"?["Baja fidelidad","Media fidelidad","Alta fidelidad"]:lang==="en"?["Low fidelity","Mid fidelity","High fidelity"]:["Baixa fidelidade","Média fidelidade","Alta fidelidade"]).map((l,i)=>(
-            <div key={i} style={{ aspectRatio:"9/16", borderRadius:"0.375rem", background:"var(--surface)", border:"1px solid var(--border)", display:"flex", alignItems:"flex-end", padding:"0.75rem" }}>
-              <p style={{ fontSize:"0.6875rem", color:"var(--muted)" }}>{l}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Iterations */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.testing}</span>
-        <div style={{ display:"flex", flexDirection:"column" }}>
-          {iters.map((it, i) => (
-            <div key={i} style={{ padding:"1.375rem 0", borderBottom:"1px solid var(--border)" }}>
-              <p style={{ fontSize:"0.6875rem", textTransform:"uppercase", letterSpacing:"0.08em", color:"#ef4444", marginBottom:"0.5rem", fontWeight:600 }}>{L.detected}</p>
-              <p style={{ fontSize:"0.9375rem", fontWeight:500, color:"var(--ink)", marginBottom:"0.5rem" }}>{it.p}</p>
-              <p style={{ fontSize:"0.8125rem", color:"var(--muted)", marginBottom:"0.375rem" }}>{it.f}</p>
-              <p style={{ fontSize:"0.8125rem", color:"var(--ink)" }}><strong style={{color:"#16a34a",fontWeight:500}}>→ {L.change}: </strong>{it.c}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Results */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.results}</span>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))", gap:"0.5rem", marginBottom:"1.5rem" }}>
-          {(lang==="es"?["MVP definido con criterios claros","Flujo principal iterado tras testing","Validación positiva del 100% de usuarios en testing final","Design System 'Cosecha Solar' documentado","Prototipo navegable de alta fidelidad","Aprobado con distinción — TFM Neoland"]:lang==="en"?["MVP defined with clear criteria","Main flow iterated after testing","Positive validation from 100% of users in final testing","'Cosecha Solar' Design System documented","High-fidelity navigable prototype","Distinction grade — TFM Neoland"]:["MVP definido com critérios claros","Fluxo principal iterado após testes","Validação positiva de 100% dos utilizadores nos testes finais","Design System 'Cosecha Solar' documentado","Protótipo navegável de alta fidelidade","Aprovado com distinção — TFM Neoland"]).map(r=>(
-            <div key={r} style={{ display:"flex", gap:"0.5rem", fontSize:"0.875rem", color:"var(--muted)", padding:"0.625rem", borderRadius:"0.375rem", background:"var(--surface)", border:"1px solid var(--border)" }}>
-              <span style={{ color:"var(--accent)", flexShrink:0 }}>✓</span>{r}
-            </div>
-          ))}
-        </div>
-        <div style={{ padding:"1rem 1.25rem", borderRadius:"0.375rem", background:"var(--surface)", border:"1px solid var(--border)" }}>
-          <p style={{ fontSize:"0.6875rem", textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--muted)", marginBottom:"0.75rem", fontWeight:600 }}>{L.future}</p>
-          <div style={{ display:"flex", flexWrap:"wrap", gap:"0.5rem" }}>
-            {["Task Success Rate","Time on Task","SUS Score","Drop-off Rate","Feature Adoption"].map(m=>(
-              <span key={m} style={{ fontSize:"0.75rem", padding:"0.2rem 0.6rem", borderRadius:"0.25rem", border:"1px solid var(--border)", color:"var(--muted)" }}>{m}</span>
+          {/* Meta tags */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "0.5rem",
+              marginBottom: "3rem",
+            }}
+          >
+            {[C.tag1, C.tag2, C.tag3, C.tag4, C.tag5].map((t) => (
+              <span
+                key={t}
+                style={{
+                  fontSize: "0.75rem",
+                  padding: "0.3rem 0.75rem",
+                  border: "1px solid var(--border)",
+                  borderRadius: "999px",
+                  color: "var(--muted)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {t}
+              </span>
             ))}
           </div>
-        </div>
+        </Reveal>
+
+        {/* Hero image — mockup gris */}
+        <Reveal delay={0.1}>
+          <div
+            style={{
+              borderRadius: "12px",
+              overflow: "hidden",
+              background: "var(--surface)",
+            }}
+          >
+            <Image
+              src="/assets/camperoteca/mockup-gris-camperoteca.png"
+              alt="Composición de pantallas de la app Camperoteca"
+              width={1200}
+              height={750}
+              style={{ width: "100%", height: "auto", display: "block" }}
+              priority
+            />
+          </div>
+        </Reveal>
       </section>
 
-      {/* Learnings */}
-      <section style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{L.learnings}</span>
-        <div style={{ display:"flex", flexDirection:"column" }}>
-          {learns.map((l, i) => (
-            <div key={i} style={{ display:"flex", gap:"1.25rem", padding:"1.25rem 0", borderBottom:"1px solid var(--border)" }}>
-              <span style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"1.5rem", color:"var(--accent)", flexShrink:0, lineHeight:1 }}>{i+1}</span>
-              <p style={{ fontSize:"0.9375rem", color:"var(--muted)", lineHeight:1.75 }}>{l}</p>
+      {/* ── 02 PROBLEMA ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.prob_label} title={C.prob_title} />
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "1.25rem" }}>
+            {C.prob_body}
+          </p>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--ink)" }}>
+            {C.prob_opp}
+          </p>
+        </Reveal>
+      </section>
+
+      {/* ── 03 RESEARCH ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.research_label} title={C.research_title} />
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
+            {C.research_body}
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div style={{ marginBottom: "1.5rem", borderRadius: "10px", overflow: "hidden" }}>
+            <Image
+              src="/assets/camperoteca/research-metodos.jpg"
+              alt="Métodos de investigación: 34 encuestas, 8 entrevistas, 3 plataformas, 30 preguntas"
+              width={1200}
+              height={675}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <div style={{ borderRadius: "10px", overflow: "hidden" }}>
+            <Image
+              src="/assets/camperoteca/hallazgos-cuantitativos.jpg"
+              alt="Hallazgos cuantitativos: 72% no saben por dónde empezar, 68% consultan múltiples fuentes, 54% han cometido errores, 61% preferirían ayuda de otros usuarios"
+              width={1200}
+              height={675}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 04 INSIGHT + PERSONA ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.insight_label} title={C.insight_title} />
+
+          {/* Insight quote */}
+          <blockquote
+            style={{
+              borderLeft: "3px solid var(--accent)",
+              paddingLeft: "1.25rem",
+              marginBottom: "3rem",
+              fontFamily: "'DM Serif Display', Georgia, serif",
+              fontSize: "clamp(1.1rem, 2.2vw, 1.35rem)",
+              lineHeight: 1.5,
+              color: "var(--ink)",
+              fontStyle: "italic",
+            }}
+          >
+            {C.insight_quote}
+          </blockquote>
+
+          {/* Persona card */}
+          <div
+            style={{
+              background: "var(--surface)",
+              border: "1px solid var(--border)",
+              borderRadius: "12px",
+              padding: "2rem",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "2rem",
+            }}
+            className="persona-grid"
+          >
+            <div>
+              <p style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: "0.25rem", color: "var(--ink)" }}>
+                {C.persona_name}
+              </p>
+              <p style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 600, marginBottom: "1rem" }}>
+                {C.persona_tag}
+              </p>
+              <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "var(--muted)" }}>{C.persona_desc}</p>
             </div>
-          ))}
-        </div>
+            <div>
+              <div style={{ marginBottom: "1.5rem" }}>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>
+                  {C.goals_title}
+                </p>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {C.goals.map((g) => (
+                    <li key={g} style={{ fontSize: "0.9rem", lineHeight: 1.6, color: "var(--ink)", padding: "0.3rem 0", borderBottom: "1px solid var(--border)", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
+                      <span style={{ color: "var(--accent)", flexShrink: 0 }}>✓</span> {g}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>
+                  {C.frusts_title}
+                </p>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {C.frusts.map((f) => (
+                    <li key={f} style={{ fontSize: "0.9rem", lineHeight: 1.6, color: "var(--ink)", padding: "0.3rem 0", borderBottom: "1px solid var(--border)", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
+                      <span style={{ color: "var(--muted)", flexShrink: 0 }}>—</span> {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
-      {/* Prototype + CTA */}
-      <section style={{ marginTop:"4rem", paddingTop:"2rem", borderTop:"1px solid var(--border)", display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:"1rem" }}>
-        <Link href={`/${lang}`} style={{ fontSize:"0.875rem", color:"var(--muted)", textDecoration:"none", transition:"color 0.2s" }}>
-          {L.back}
-        </Link>
-        <div style={{ display:"flex", gap:"1rem", alignItems:"center" }}>
-          <span style={{ fontSize:"0.875rem", color:"var(--muted)", borderBottom:"1px dashed var(--border)", paddingBottom:"1px", cursor:"not-allowed" }}>
-            {L.prototype} — {lang==="es"?"próximamente":lang==="en"?"coming soon":"em breve"}
-          </span>
-          <a href="mailto:mvreissilva@gmail.com" style={{ fontSize:"0.875rem", fontWeight:500, color:"var(--accent)", textDecoration:"none", transition:"opacity 0.2s" }}>
-            {L.contact}
-          </a>
-        </div>
+      {/* ── 05 HMW ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.hmw_label} title={C.hmw_title} />
+          <div style={{ overflowX: "auto" }}>
+            <table
+              style={{
+                width: "100%",
+                borderCollapse: "collapse",
+                fontSize: "0.875rem",
+                lineHeight: 1.6,
+              }}
+            >
+              <thead>
+                <tr>
+                  {[C.hmw_col1, C.hmw_col2, C.hmw_col3].map((col) => (
+                    <th
+                      key={col}
+                      style={{
+                        textAlign: "left",
+                        padding: "0.75rem 1rem",
+                        fontSize: "0.7rem",
+                        fontWeight: 700,
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        color: "var(--muted)",
+                        borderBottom: "2px solid var(--border)",
+                      }}
+                    >
+                      {col}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {C.hmw_rows.map((row, i) => (
+                  <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
+                    <td style={{ padding: "1rem", color: "var(--muted)", verticalAlign: "top" }}>{row.prob}</td>
+                    <td style={{ padding: "1rem", color: "var(--ink)", verticalAlign: "top" }}>{row.opp}</td>
+                    <td style={{ padding: "1rem", verticalAlign: "top" }}>
+                      <span
+                        style={{
+                          display: "inline-block",
+                          background: "var(--surface)",
+                          border: "1px solid var(--border)",
+                          borderRadius: "6px",
+                          padding: "0.25rem 0.6rem",
+                          fontSize: "0.8rem",
+                          color: "var(--accent)",
+                          fontWeight: 600,
+                        }}
+                      >
+                        {row.dec}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Reveal>
       </section>
-    </div>
+
+      {/* ── 06 ARQUITECTURA ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.arch_label} title={C.arch_title} />
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
+            {C.arch_body}
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div style={{ borderRadius: "10px", overflow: "hidden", marginBottom: "3rem" }}>
+            <Image
+              src="/assets/camperoteca/happy-path.jpg"
+              alt="Happy Path: Home → Onboarding → Login o Registro → Mi Proyecto → Aprende → Encuentra → Comunidad"
+              width={1400}
+              height={700}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+        </Reveal>
+
+        {/* MVP table */}
+        <Reveal delay={0.15}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "1.5rem",
+            }}
+            className="mvp-grid"
+          >
+            <div
+              style={{
+                background: "var(--surface)",
+                border: "1px solid var(--border)",
+                borderRadius: "10px",
+                padding: "1.5rem",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "0.7rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--accent)",
+                  marginBottom: "1rem",
+                }}
+              >
+                {C.mvp_inc_label}
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {C.mvp_inc.map((item) => (
+                  <li
+                    key={item}
+                    style={{
+                      fontSize: "0.875rem",
+                      lineHeight: 1.6,
+                      color: "var(--ink)",
+                      padding: "0.4rem 0",
+                      borderBottom: "1px solid var(--border)",
+                      display: "flex",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    <span style={{ color: "var(--accent)", flexShrink: 0 }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div
+              style={{
+                background: "var(--surface)",
+                border: "1px solid var(--border)",
+                borderRadius: "10px",
+                padding: "1.5rem",
+                opacity: 0.7,
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "0.7rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--muted)",
+                  marginBottom: "1rem",
+                }}
+              >
+                {C.mvp_post_label}
+              </p>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {C.mvp_post.map((item) => (
+                  <li
+                    key={item}
+                    style={{
+                      fontSize: "0.875rem",
+                      lineHeight: 1.6,
+                      color: "var(--muted)",
+                      padding: "0.4rem 0",
+                      borderBottom: "1px solid var(--border)",
+                      display: "flex",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    <span style={{ flexShrink: 0 }}>○</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 07 WIREFRAMES ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.wf_label} title={C.wf_title} />
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
+            {C.wf_body}
+          </p>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <div style={{ borderRadius: "10px", overflow: "hidden" }}>
+            <Image
+              src="/assets/camperoteca/mockup-wireframes.png"
+              alt="Evolución de wireframes: baja, media y alta fidelidad de las pantallas de Camperoteca"
+              width={1400}
+              height={800}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 08 UI DESIGN ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.ui_label} title={C.ui_title} />
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "3rem" }}>
+            {C.ui_body}
+          </p>
+        </Reveal>
+
+        {/* Onboarding full-width */}
+        <Reveal delay={0.05}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "3rem",
+            }}
+          >
+            <div style={{ width: "min(260px, 60vw)" }}>
+              <Image
+                src="/assets/camperoteca/screen-onboarding.webp"
+                alt="Pantalla de onboarding: Planifica tu proyecto, empieza desde cero y avanza paso a paso"
+                width={390}
+                height={844}
+                style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
+              />
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Mi Proyecto — editorial alternating */}
+        <Reveal delay={0.1}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "3rem",
+              alignItems: "center",
+              marginBottom: "4rem",
+            }}
+            className="screen-grid"
+          >
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div style={{ width: "min(240px, 55vw)" }}>
+                <Image
+                  src="/assets/camperoteca/screen-miproyecto.webp"
+                  alt="Pantalla Mi Proyecto: etapa actual Aislamiento al 35%, siguiente paso recomendado"
+                  width={390}
+                  height={844}
+                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
+                />
+              </div>
+            </div>
+            <div>
+              <Label text={C.ui_label} />
+              <h3
+                style={{
+                  fontFamily: "'DM Serif Display', Georgia, serif",
+                  fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)",
+                  fontWeight: 400,
+                  marginTop: "0.4rem",
+                  marginBottom: "1rem",
+                  color: "var(--ink)",
+                }}
+              >
+                {C.ui_miproyecto_title}
+              </h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
+                {C.ui_miproyecto_body}
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Aprende */}
+        <Reveal delay={0.1}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "3rem",
+              alignItems: "center",
+              marginBottom: "4rem",
+            }}
+            className="screen-grid screen-grid--reverse"
+          >
+            <div>
+              <Label text={C.ui_label} />
+              <h3
+                style={{
+                  fontFamily: "'DM Serif Display', Georgia, serif",
+                  fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)",
+                  fontWeight: 400,
+                  marginTop: "0.4rem",
+                  marginBottom: "1rem",
+                  color: "var(--ink)",
+                }}
+              >
+                {C.ui_aprende_title}
+              </h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
+                {C.ui_aprende_body}
+              </p>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div style={{ width: "min(240px, 55vw)" }}>
+                <Image
+                  src="/assets/camperoteca/screen-aprende.webp"
+                  alt="Pantalla Aprende: guías técnicas, legales y casos reales"
+                  width={390}
+                  height={844}
+                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Encuentra */}
+        <Reveal delay={0.1}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "3rem",
+              alignItems: "center",
+            }}
+            className="screen-grid"
+          >
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div style={{ width: "min(240px, 55vw)" }}>
+                <Image
+                  src="/assets/camperoteca/screen-encuentra.webp"
+                  alt="Pantalla Encuentra Recursos: herramientas y materiales para la camperización"
+                  width={390}
+                  height={844}
+                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
+                />
+              </div>
+            </div>
+            <div>
+              <Label text={C.ui_label} />
+              <h3
+                style={{
+                  fontFamily: "'DM Serif Display', Georgia, serif",
+                  fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)",
+                  fontWeight: 400,
+                  marginTop: "0.4rem",
+                  marginBottom: "1rem",
+                  color: "var(--ink)",
+                }}
+              >
+                {C.ui_encuentra_title}
+              </h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
+                {C.ui_encuentra_body}
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 09 APRENDIZAJES ── */}
+      <section style={sectionLast}>
+        <Reveal>
+          <SectionHeading label={C.learn_label} title={C.learn_title} />
+          <ul style={{ listStyle: "none", padding: 0, margin: "0 0 3rem" }}>
+            {C.learns.map((l, i) => (
+              <li
+                key={i}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "2rem 1fr",
+                  gap: "0.75rem",
+                  padding: "1.25rem 0",
+                  borderBottom: "1px solid var(--border)",
+                  fontSize: "0.95rem",
+                  lineHeight: 1.7,
+                  color: "var(--ink)",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'DM Serif Display', Georgia, serif",
+                    fontSize: "1.1rem",
+                    color: "var(--accent)",
+                    paddingTop: "0.1rem",
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span>{l}</span>
+              </li>
+            ))}
+          </ul>
+
+          <h3
+            style={{
+              fontFamily: "'DM Serif Display', Georgia, serif",
+              fontSize: "1.3rem",
+              fontWeight: 400,
+              marginBottom: "1rem",
+              color: "var(--ink)",
+            }}
+          >
+            {C.next_title}
+          </h3>
+          <ul style={{ listStyle: "none", padding: 0, margin: "0 0 3rem" }}>
+            {C.nexts.map((n) => (
+              <li
+                key={n}
+                style={{
+                  fontSize: "0.9rem",
+                  lineHeight: 1.7,
+                  color: "var(--muted)",
+                  padding: "0.5rem 0",
+                  borderBottom: "1px solid var(--border)",
+                  display: "flex",
+                  gap: "0.5rem",
+                }}
+              >
+                <span style={{ color: "var(--border)", flexShrink: 0 }}>→</span>
+                {n}
+              </li>
+            ))}
+          </ul>
+
+          {/* CTA */}
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
+            <Link
+              href={`/${lang}`}
+              className="link-muted"
+              style={{ fontSize: "0.9rem" }}
+            >
+              {C.back_projects}
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── responsive styles ── */}
+      <style>{`
+        @media (max-width: 640px) {
+          .persona-grid,
+          .mvp-grid,
+          .screen-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .screen-grid--reverse > *:first-child {
+            order: 2;
+          }
+          .screen-grid--reverse > *:last-child {
+            order: 1;
+          }
+        }
+      `}</style>
+    </main>
   );
 }

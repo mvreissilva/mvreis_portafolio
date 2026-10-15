@@ -4,29 +4,58 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { t, LANGS, type Lang } from "@/lib/i18n";
 
+/* ── SVG Icons ── */
+const SunIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+       aria-hidden="true">
+    <circle cx="12" cy="12" r="4"/>
+    <line x1="12" y1="2"  x2="12" y2="4"/>
+    <line x1="12" y1="20" x2="12" y2="22"/>
+    <line x1="4.22"  y1="4.22"  x2="5.64"  y2="5.64"/>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+    <line x1="2"  y1="12" x2="4"  y2="12"/>
+    <line x1="20" y1="12" x2="22" y2="12"/>
+    <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
+    <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+  </svg>
+);
+
+const MoonIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+       aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+);
+
 function ThemeBtn() {
   const [dark, setDark] = useState(false);
+
   useEffect(() => {
     setDark(document.documentElement.classList.contains("dark"));
   }, []);
+
   const toggle = () => {
     const next = !dark;
     setDark(next);
     document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
+    try { localStorage.setItem("theme", next ? "dark" : "light"); } catch {}
   };
+
   return (
     <button
       onClick={toggle}
-      aria-label="Toggle theme"
+      aria-label={dark ? "Activar modo claro" : "Activar modo oscuro"}
+      title={dark ? "Modo claro" : "Modo oscuro"}
       style={{
         width: "2rem", height: "2rem", display: "flex", alignItems: "center",
         justifyContent: "center", borderRadius: "50%", border: "none",
         background: "transparent", cursor: "pointer", color: "var(--muted)",
-        fontSize: "1rem", transition: "color 0.2s",
+        transition: "color 0.2s",
       }}
     >
-      {dark ? "○" : "●"}
+      {dark ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }
@@ -64,7 +93,6 @@ export default function Nav({ lang }: { lang: Lang }) {
     transition: "color 0.2s", padding: "0.25rem 0", fontFamily: "var(--font-sans)",
   };
 
-  /* CAMBIO 2: tamaño logo aumentado ~17% (1rem → 1.175rem) */
   const logoStyle: React.CSSProperties = {
     fontFamily: "var(--font-serif, Georgia, serif)",
     fontSize: "1.175rem",
@@ -82,7 +110,6 @@ export default function Nav({ lang }: { lang: Lang }) {
     textTransform: "uppercase", fontFamily: "var(--font-sans)",
   });
 
-  /* Nav keys — "skills" key maps to "areas" section id */
   const navKeys = [
     { key: "work",    id: "work"    },
     { key: "about",   id: "about"   },
@@ -96,31 +123,19 @@ export default function Nav({ lang }: { lang: Lang }) {
         maxWidth: "680px", margin: "0 auto", padding: "0 1.5rem",
         height: "3.5rem", display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
-        {/* Logo — CAMBIO 2: font-size aumentado */}
-        <Link href={`/${lang}`} style={logoStyle}>
-          Marcus Reis
-        </Link>
+        <Link href={`/${lang}`} style={logoStyle}>Marcus Reis</Link>
 
-        {/* Desktop nav */}
+        {/* Desktop */}
         <nav style={{ display: "flex", alignItems: "center", gap: "1.75rem" }}
              className="hidden-mobile">
           {navKeys.map(({ key, id }) => (
-            <a
-              key={key}
-              href={`#${id}`}
-              onClick={e => go(e, id)}
-              style={linkStyle}
-            >
+            <a key={key} href={`#${id}`} onClick={e => go(e, id)} style={linkStyle}>
               {(tr as Record<string, string>)[key]}
             </a>
           ))}
-
-          {/* Lang switcher */}
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginLeft: "0.5rem" }}>
             {LANGS.map(l => (
-              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}>
-                {l}
-              </Link>
+              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}>{l}</Link>
             ))}
           </div>
           <ThemeBtn />
@@ -135,34 +150,28 @@ export default function Nav({ lang }: { lang: Lang }) {
             ))}
           </div>
           <ThemeBtn />
-          <button
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            style={{
-              background: "transparent", border: "none", cursor: "pointer",
-              display: "flex", flexDirection: "column", gap: "5px", padding: "4px",
-            }}
-          >
-            <span style={{ display: "block", width: "20px", height: "1.5px", background: "var(--ink)", transition: "all 0.2s", transform: open ? "rotate(45deg) translate(4.5px, 4.5px)" : "" }} />
-            <span style={{ display: "block", width: "20px", height: "1.5px", background: "var(--ink)", transition: "all 0.2s", opacity: open ? 0 : 1 }} />
-            <span style={{ display: "block", width: "20px", height: "1.5px", background: "var(--ink)", transition: "all 0.2s", transform: open ? "rotate(-45deg) translate(4.5px, -4.5px)" : "" }} />
+          <button onClick={() => setOpen(!open)} aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            style={{ background: "transparent", border: "none", cursor: "pointer",
+                     display: "flex", flexDirection: "column", gap: "5px", padding: "4px" }}>
+            <span style={{ display: "block", width: "20px", height: "1.5px", background: "var(--ink)",
+                           transition: "all 0.2s",
+                           transform: open ? "rotate(45deg) translate(4.5px,4.5px)" : "" }} />
+            <span style={{ display: "block", width: "20px", height: "1.5px", background: "var(--ink)",
+                           transition: "all 0.2s", opacity: open ? 0 : 1 }} />
+            <span style={{ display: "block", width: "20px", height: "1.5px", background: "var(--ink)",
+                           transition: "all 0.2s",
+                           transform: open ? "rotate(-45deg) translate(4.5px,-4.5px)" : "" }} />
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div style={{
-          background: "var(--bg)", borderTop: "1px solid var(--border)",
-          padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "1rem",
-        }}>
+        <div style={{ background: "var(--bg)", borderTop: "1px solid var(--border)",
+                      padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
           {navKeys.map(({ key, id }) => (
-            <a
-              key={key}
-              href={`#${id}`}
-              onClick={e => go(e, id)}
-              style={{ fontSize: "0.9375rem", color: "var(--muted)", textDecoration: "none", fontFamily: "var(--font-sans)" }}
-            >
+            <a key={key} href={`#${id}`} onClick={e => go(e, id)}
+               style={{ fontSize: "0.9375rem", color: "var(--muted)", textDecoration: "none",
+                        fontFamily: "var(--font-sans)" }}>
               {(tr as Record<string, string>)[key]}
             </a>
           ))}
@@ -170,14 +179,8 @@ export default function Nav({ lang }: { lang: Lang }) {
       )}
 
       <style>{`
-        @media (min-width: 640px) {
-          .hidden-mobile { display: flex !important; }
-          .show-mobile   { display: none  !important; }
-        }
-        @media (max-width: 639px) {
-          .hidden-mobile { display: none  !important; }
-          .show-mobile   { display: flex  !important; }
-        }
+        @media (min-width: 640px) { .hidden-mobile{display:flex!important} .show-mobile{display:none!important} }
+        @media (max-width: 639px) { .hidden-mobile{display:none!important} .show-mobile{display:flex!important} }
       `}</style>
     </header>
   );

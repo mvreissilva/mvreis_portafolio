@@ -62,13 +62,13 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                 {/* Cover image */}
                 <div style={{ gridColumn: "1 / -1", marginBottom: "0.75rem",
                               borderRadius: "0.5rem", overflow: "hidden",
-                              aspectRatio: "16/7", position: "relative" }}>
+                              aspectRatio: "12/7", position: "relative", background: "var(--surface)" }}>
                   <Image
                     src={p.cover}
                     alt={p.coverAlt}
                     fill
                     sizes="(max-width: 680px) 100vw, 680px"
-                    style={{ objectFit: "cover", objectPosition: "center" }}
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
                 <span style={{ fontSize: "0.8125rem", color: "var(--muted)",

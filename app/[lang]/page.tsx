@@ -62,7 +62,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                 {/* Cover image */}
                 <div style={{ gridColumn: "1 / -1", marginBottom: "0.75rem",
                               borderRadius: "0.5rem", overflow: "hidden",
-                              aspectRatio: "16/7", position: "relative" }}>
+                              aspectRatio: "16/9", position: "relative" }}>
                   <Image
                     src={p.cover}
                     alt={p.coverAlt}

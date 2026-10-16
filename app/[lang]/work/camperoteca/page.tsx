@@ -738,25 +738,17 @@ export default async function CamperotecaPage({ params }: Props) {
             style={{
               borderRadius: "16px",
               overflow: "hidden",
-              background: "linear-gradient(135deg, var(--surface) 0%, color-mix(in srgb, var(--accent) 6%, var(--surface)) 100%)",
-              border: "1px solid var(--border)",
-              padding: "3rem 2rem",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
             }}
           >
             <Image
-              src="/assets/camperoteca/mockup-gris-camperoteca.png"
+              src="/assets/camperoteca/mockup-camperoteca-hero.png"
               alt={C.ui_mockup_alt}
-              width={1200}
-              height={750}
+              width={1920}
+              height={1080}
               style={{
                 width: "100%",
-                maxWidth: "820px",
                 height: "auto",
                 display: "block",
-                borderRadius: "8px",
               }}
             />
           </div>

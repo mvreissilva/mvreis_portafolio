@@ -31,16 +31,20 @@ export async function generateMetadata({ params }: Props) {
 /* ─── copy strings ─────────────────────────────────────────────── */
 const copy = {
   es: {
-    back: "← Proyectos",
+    back: "Volver",
     tag1: "UX/UI Designer · End-to-End",
     tag2: "Proyecto académico · Bootcamp NEOLAND",
     tag3: "Oct 2025 – Abr 2026",
     tag4: "Responsive · Mobile First",
     tag5: "Figma · FigJam · Figma Make · Stitch",
-    heroTitle: "Camperoteca:",
+    heroTitle: "Camperoteca",
     heroSub: "convertir un proceso complejo en un recorrido claro",
     heroDesc:
       "Diseño de una plataforma digital para acompañar a las personas durante la planificación de su proyecto de camperización.",
+    meta_rol: "Rol",
+    meta_tipo: "Tipo de proyecto",
+    meta_tools: "Herramientas",
+    meta_dur: "Duración",
 
     /* 02 */
     prob_label: "Problema y oportunidad",
@@ -93,14 +97,19 @@ const copy = {
         dec: "Planificador con etapas y checklist",
       },
       {
-        prob: "Comunidad valiosa pero caótica",
-        opp: "Organizar por contexto y fase",
-        dec: "Biblioteca filtrable por categoría",
+        prob: "Guías dispersas en YouTube, foros y redes; el usuario no sabe por dónde empezar",
+        opp: "Estructurar el conocimiento por tipo y fase del proyecto",
+        dec: "Guías técnicas, legales y casos reales",
       },
       {
-        prob: "Decisiones sin contexto ni ayuda",
-        opp: "Acompañar con información relevante en cada paso",
-        dec: "Recursos asociados a cada etapa",
+        prob: "Herramientas y materiales requieren compra definitiva o búsqueda externa",
+        opp: "Facilitar el acceso y localización de recursos cercanos",
+        dec: "Directorio filtrable por categoría",
+      },
+      {
+        prob: "Comunidad valiosa pero caótica e infiable",
+        opp: "Organizar por contexto, fase y reputación",
+        dec: "Foro estructurado con validación",
       },
     ],
     hmw_col1: "Problema",
@@ -111,7 +120,7 @@ const copy = {
     arch_label: "Arquitectura de información",
     arch_title: "Estructura de navegación y recorrido principal",
     arch_body:
-      "El Happy Path define la secuencia óptima que recorre un usuario nuevo: desde la Home y el Onboarding hasta el acceso a las cuatro áreas principales de la plataforma. Mi Proyecto es el hub central; Aprende, Encuentra y Comunidad lo complementan con contenido, recursos y conexión.",
+      "La secuencia óptima que recorre un usuario nuevo: desde la Home y el Onboarding hasta el acceso a las cuatro áreas principales de la plataforma. Mi Proyecto es el hub central; Aprende, Encuentra y Comunidad lo complementan con contenido, recursos y conexión.",
     mvp_title: "Alcance del MVP",
     mvp_inc: [
       "Mi Proyecto: planificador por etapas con progreso y siguiente paso.",
@@ -134,6 +143,23 @@ const copy = {
       "El proceso de wireframing avanzó desde una estructura funcional en baja fidelidad hasta la definición visual en alta fidelidad. Cada iteración permitió validar la jerarquía de la información, la navegación y la coherencia entre secciones antes de avanzar al diseño de interfaz.",
 
     /* 08 */
+    ds_label: "UI Design & Design System",
+    ds_title: "«Cosecha Solar»",
+    ds_body:
+      "El nombre no es accidental. El universo camper evoca naturaleza, movimiento y luz. El sistema visual de Camperoteca parte de esa referencia para construir una identidad reconocible, cálida y funcional.",
+    ds_colors: [
+      { hex: "#E07B00", name: "Primario", role: "Energía, acción, orientación" },
+      { hex: "#6B7A1A", name: "Secundario", role: "Naturaleza, confianza" },
+      { hex: "#F5E642", name: "Acento", role: "Destacados, progreso" },
+      { hex: "#FDFBF5", name: "Background", role: "Calidez, legibilidad" },
+    ],
+    ds_type_label: "Tipografía",
+    ds_fonts: [
+      { name: "Roboto", role: "Titulares — estructura y jerarquía" },
+      { name: "DM Sans", role: "Body/UI — claridad y modernidad" },
+    ],
+
+    /* 09 */
     ui_label: "UI Design",
     ui_title: "La solución final",
     ui_body:
@@ -147,6 +173,13 @@ const copy = {
     ui_encuentra_title: "Encuentra Recursos",
     ui_encuentra_body:
       "Directorio de herramientas y materiales para la camperización, organizado por categoría para facilitar la localización de lo que se necesita en cada fase del proyecto.",
+    ui_login_title: "Login",
+    ui_login_body:
+      "Acceso directo y sin fricción. El usuario entra con email y contraseña para continuar donde lo dejó.",
+    ui_comunidad_title: "Comunidad",
+    ui_comunidad_body:
+      "Conecta con otros camperos. Pregunta, responde y encuentra usuarios cercanos con herramientas o conocimiento.",
+    ui_mockup_alt: "Vista general de la aplicación Camperoteca mostrando la pantalla principal Mi Proyecto con el planificador por etapas",
 
     /* 09 */
     learn_label: "Aprendizajes",
@@ -231,15 +264,21 @@ export default async function CamperotecaPage({ params }: Props) {
         <Link
           href={`/${lang}`}
           style={{
-            fontSize: "0.85rem",
+            fontSize: "0.8rem",
+            fontWeight: 500,
             color: "var(--muted)",
             textDecoration: "none",
             display: "inline-flex",
             alignItems: "center",
-            gap: "0.3rem",
+            gap: "0.4rem",
+            border: "1px solid var(--border)",
+            borderRadius: "6px",
+            padding: "0.35rem 0.75rem",
+            transition: "color 0.15s, border-color 0.15s",
           }}
+          aria-label="Volver a proyectos"
         >
-          {C.back}
+          <span aria-hidden="true">←</span> {C.back}
         </Link>
       </div>
 
@@ -250,84 +289,68 @@ export default async function CamperotecaPage({ params }: Props) {
           <h1
             style={{
               fontFamily: "'DM Serif Display', Georgia, serif",
-              fontSize: "clamp(2rem, 5vw, 3.2rem)",
+              fontSize: "clamp(2.2rem, 5vw, 3.4rem)",
               fontWeight: 400,
               lineHeight: 1.1,
               marginTop: "0.5rem",
-              marginBottom: "0.25rem",
+              marginBottom: "1rem",
               color: "var(--ink)",
             }}
           >
             {C.heroTitle}
-          </h1>
-          <h1
-            style={{
-              fontFamily: "'DM Serif Display', Georgia, serif",
-              fontSize: "clamp(2rem, 5vw, 3.2rem)",
-              fontWeight: 400,
-              lineHeight: 1.1,
-              marginBottom: "1.25rem",
-              color: "var(--muted)",
-            }}
-          >
-            {C.heroSub}
           </h1>
           <p
             style={{
               fontSize: "1.05rem",
               lineHeight: 1.7,
               color: "var(--muted)",
-              maxWidth: "600px",
-              marginBottom: "2.5rem",
+              maxWidth: "580px",
+              marginBottom: "3rem",
             }}
           >
             {C.heroDesc}
           </p>
 
-          {/* Meta tags */}
+          {/* Project meta cards */}
           <div
             style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "0.5rem",
-              marginBottom: "3rem",
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "1rem",
+              marginBottom: "0",
             }}
+            className="meta-grid"
           >
-            {[C.tag1, C.tag2, C.tag3, C.tag4, C.tag5].map((t) => (
-              <span
-                key={t}
+            {[
+              { label: C.meta_rol, value: "UX/UI Designer · End-to-End" },
+              { label: C.meta_tipo, value: "Proyecto académico · Bootcamp NEOLAND" },
+              { label: C.meta_tools, value: "Figma · FigJam · Figma Make · Stitch" },
+              { label: C.meta_dur, value: "Oct 2025 – Abr 2026" },
+            ].map(({ label, value }) => (
+              <div
+                key={label}
                 style={{
-                  fontSize: "0.75rem",
-                  padding: "0.3rem 0.75rem",
+                  background: "var(--surface)",
                   border: "1px solid var(--border)",
-                  borderRadius: "999px",
-                  color: "var(--muted)",
-                  whiteSpace: "nowrap",
+                  borderRadius: "10px",
+                  padding: "1rem 1.1rem",
                 }}
               >
-                {t}
-              </span>
+                <p
+                  style={{
+                    fontSize: "0.65rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: "var(--accent)",
+                    marginBottom: "0.4rem",
+                  }}
+                >
+                  {label}
+                </p>
+                <p style={{ fontSize: "0.8rem", lineHeight: 1.5, color: "var(--ink)" }}>{value}</p>
+              </div>
             ))}
-          </div>
-        </Reveal>
-
-        {/* Hero image — mockup gris */}
-        <Reveal delay={0.1}>
-          <div
-            style={{
-              borderRadius: "12px",
-              overflow: "hidden",
-              background: "var(--surface)",
-            }}
-          >
-            <Image
-              src="/assets/camperoteca/mockup-gris-camperoteca.png"
-              alt="Composición de pantallas de la app Camperoteca"
-              width={1200}
-              height={750}
-              style={{ width: "100%", height: "auto", display: "block" }}
-              priority
-            />
           </div>
         </Reveal>
       </section>
@@ -604,9 +627,9 @@ export default async function CamperotecaPage({ params }: Props) {
           <div style={{ borderRadius: "10px", overflow: "hidden", marginBottom: "3rem" }}>
             <Image
               src="/assets/camperoteca/happy-path.jpg"
-              alt="Happy Path: Home → Onboarding → Login o Registro → Mi Proyecto → Aprende → Encuentra → Comunidad"
-              width={1400}
-              height={700}
+              alt="Secuencia de navegación: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"
+              width={2000}
+              height={606}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
@@ -718,17 +741,122 @@ export default async function CamperotecaPage({ params }: Props) {
         <Reveal delay={0.1}>
           <div style={{ borderRadius: "10px", overflow: "hidden" }}>
             <Image
-              src="/assets/camperoteca/mockup-wireframes.png"
+              src="/assets/camperoteca/wireframes-hero.png"
               alt="Evolución de wireframes: baja, media y alta fidelidad de las pantallas de Camperoteca"
-              width={1400}
-              height={800}
+              width={1920}
+              height={1080}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>
         </Reveal>
       </section>
 
-      {/* ── 08 UI DESIGN ── */}
+      {/* ── 08 UI DESIGN & DESIGN SYSTEM ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.ds_label} title={C.ds_title} />
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
+            {C.ds_body}
+          </p>
+        </Reveal>
+
+        {/* Paleta de color */}
+        <Reveal delay={0.1}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "1rem",
+              marginBottom: "1.5rem",
+            }}
+            className="ds-color-grid"
+          >
+            {C.ds_colors.map(({ hex, name, role }) => (
+              <div
+                key={hex}
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "14px",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    height: "90px",
+                    background: hex,
+                    border: hex === "#FDFBF5" ? "1px solid var(--border)" : "none",
+                    borderRadius: "12px 12px 0 0",
+                  }}
+                />
+                <div style={{ padding: "1rem" }}>
+                  <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ink)", marginBottom: "0.2rem" }}>
+                    {name}
+                  </p>
+                  <p style={{ fontSize: "0.7rem", fontFamily: "monospace", color: "var(--accent)", marginBottom: "0.4rem", letterSpacing: "0.04em" }}>
+                    {hex}
+                  </p>
+                  <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.4 }}>{role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* Tipografía */}
+        <Reveal delay={0.15}>
+          <p
+            style={{
+              fontSize: "0.7rem",
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+              marginBottom: "1rem",
+            }}
+          >
+            {C.ds_type_label}
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "1rem",
+            }}
+            className="ds-type-grid"
+          >
+            {C.ds_fonts.map(({ name, role }) => (
+              <div
+                key={name}
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "14px",
+                  padding: "1.75rem 2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: name === "Roboto" ? "'Roboto', sans-serif" : "'DM Sans', sans-serif",
+                    fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+                    fontWeight: name === "Roboto" ? 700 : 400,
+                    color: "var(--ink)",
+                    lineHeight: 1,
+                  }}
+                >
+                  {name}
+                </p>
+                <p style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{role}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 09 SOLUCIÓN FINAL ── */}
       <section style={section}>
         <Reveal>
           <SectionHeading label={C.ui_label} title={C.ui_title} />
@@ -737,155 +865,107 @@ export default async function CamperotecaPage({ params }: Props) {
           </p>
         </Reveal>
 
-        {/* Onboarding full-width */}
-        <Reveal delay={0.05}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "3rem",
-            }}
-          >
-            <div style={{ width: "min(260px, 60vw)" }}>
-              <Image
-                src="/assets/camperoteca/screen-onboarding.webp"
-                alt="Pantalla de onboarding: Planifica tu proyecto, empieza desde cero y avanza paso a paso"
-                width={390}
-                height={844}
-                style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
-              />
-            </div>
-          </div>
-        </Reveal>
-
-        {/* Mi Proyecto — editorial alternating */}
+        {/* Mockup principal — imagen protagonista */}
         <Reveal delay={0.1}>
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "3rem",
-              alignItems: "center",
-              marginBottom: "4rem",
+              borderRadius: "16px",
+              overflow: "hidden",
             }}
-            className="screen-grid"
           >
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <div style={{ width: "min(240px, 55vw)" }}>
-                <Image
-                  src="/assets/camperoteca/screen-miproyecto.webp"
-                  alt="Pantalla Mi Proyecto: etapa actual Aislamiento al 35%, siguiente paso recomendado"
-                  width={390}
-                  height={844}
-                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
-                />
-              </div>
-            </div>
-            <div>
-              <Label text={C.ui_label} />
-              <h3
-                style={{
-                  fontFamily: "'DM Serif Display', Georgia, serif",
-                  fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)",
-                  fontWeight: 400,
-                  marginTop: "0.4rem",
-                  marginBottom: "1rem",
-                  color: "var(--ink)",
-                }}
-              >
-                {C.ui_miproyecto_title}
-              </h3>
-              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
-                {C.ui_miproyecto_body}
-              </p>
-            </div>
+            <Image
+              src="/assets/camperoteca/mockup-camperoteca-hero.png"
+              alt={C.ui_mockup_alt}
+              width={1920}
+              height={1080}
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
           </div>
         </Reveal>
 
-        {/* Aprende */}
-        <Reveal delay={0.1}>
+        {/* Screens grid — 3 pantallas clave */}
+        <Reveal delay={0.15}>
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "3rem",
-              alignItems: "center",
-              marginBottom: "4rem",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "1.5rem",
+              marginTop: "3rem",
             }}
-            className="screen-grid screen-grid--reverse"
+            className="screens-grid"
           >
-            <div>
-              <Label text={C.ui_label} />
-              <h3
-                style={{
-                  fontFamily: "'DM Serif Display', Georgia, serif",
-                  fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)",
-                  fontWeight: 400,
-                  marginTop: "0.4rem",
-                  marginBottom: "1rem",
-                  color: "var(--ink)",
-                }}
-              >
-                {C.ui_aprende_title}
-              </h3>
-              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
-                {C.ui_aprende_body}
-              </p>
-            </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <div style={{ width: "min(240px, 55vw)" }}>
-                <Image
-                  src="/assets/camperoteca/screen-aprende.webp"
-                  alt="Pantalla Aprende: guías técnicas, legales y casos reales"
-                  width={390}
-                  height={844}
-                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
-                />
+            {[
+              {
+                src: "/assets/camperoteca/screen-miproyecto.webp",
+                alt: "Mi Proyecto: planificador por etapas con progreso y siguiente paso recomendado",
+                title: C.ui_miproyecto_title,
+                body: C.ui_miproyecto_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-aprende-v2.webp",
+                alt: "Aprende: guías técnicas, legales y casos reales",
+                title: C.ui_aprende_title,
+                body: C.ui_aprende_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-encuentra-v2.webp",
+                alt: "Encuentra Recursos: herramientas y materiales para la camperización",
+                title: C.ui_encuentra_title,
+                body: C.ui_encuentra_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-login.png",
+                alt: "Login: acceso con email y contraseña para continuar el proyecto",
+                title: C.ui_login_title,
+                body: C.ui_login_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-comunidad.png",
+                alt: "Comunidad: foro y usuarios cercanos para compartir herramientas y consejos",
+                title: C.ui_comunidad_title,
+                body: C.ui_comunidad_body,
+              },
+            ].map(({ src, alt, title, body }) => (
+              <div key={title}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: "1.25rem",
+                  }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={src}
+                    alt={alt}
+                    style={{
+                      display: "block",
+                      width: "min(180px, 48vw)",
+                      height: "calc(min(180px, 48vw) * 620 / 284)",
+                      objectFit: "cover",
+                      borderRadius: "22px",
+                      boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
+                    }}
+                  />
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "'DM Serif Display', Georgia, serif",
+                    fontSize: "1.05rem",
+                    fontWeight: 400,
+                    marginBottom: "0.5rem",
+                    color: "var(--ink)",
+                  }}
+                >
+                  {title}
+                </h3>
+                <p style={{ fontSize: "0.825rem", lineHeight: 1.6, color: "var(--muted)" }}>{body}</p>
               </div>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* Encuentra */}
-        <Reveal delay={0.1}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "3rem",
-              alignItems: "center",
-            }}
-            className="screen-grid"
-          >
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <div style={{ width: "min(240px, 55vw)" }}>
-                <Image
-                  src="/assets/camperoteca/screen-encuentra.webp"
-                  alt="Pantalla Encuentra Recursos: herramientas y materiales para la camperización"
-                  width={390}
-                  height={844}
-                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "28px", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
-                />
-              </div>
-            </div>
-            <div>
-              <Label text={C.ui_label} />
-              <h3
-                style={{
-                  fontFamily: "'DM Serif Display', Georgia, serif",
-                  fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)",
-                  fontWeight: 400,
-                  marginTop: "0.4rem",
-                  marginBottom: "1rem",
-                  color: "var(--ink)",
-                }}
-              >
-                {C.ui_encuentra_title}
-              </h3>
-              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
-                {C.ui_encuentra_body}
-              </p>
-            </div>
+            ))}
           </div>
         </Reveal>
       </section>
@@ -981,6 +1061,23 @@ export default async function CamperotecaPage({ params }: Props) {
           }
           .screen-grid--reverse > *:last-child {
             order: 1;
+          }
+          .meta-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .screens-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .ds-color-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .ds-type-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .meta-grid {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>

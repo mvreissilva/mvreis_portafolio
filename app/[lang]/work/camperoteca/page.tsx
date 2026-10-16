@@ -156,6 +156,12 @@ const copy = {
     ui_encuentra_title: "Encuentra Recursos",
     ui_encuentra_body:
       "Directorio de herramientas y materiales para la camperización, organizado por categoría para facilitar la localización de lo que se necesita en cada fase del proyecto.",
+    ui_login_title: "Login",
+    ui_login_body:
+      "Acceso directo y sin fricción. El usuario entra con email y contraseña para continuar donde lo dejó.",
+    ui_comunidad_title: "Comunidad",
+    ui_comunidad_body:
+      "Conecta con otros camperos. Pregunta, responde y encuentra usuarios cercanos con herramientas o conocimiento.",
     ui_mockup_alt: "Vista general de la aplicación Camperoteca mostrando la pantalla principal Mi Proyecto con el planificador por etapas",
 
     /* 09 */
@@ -788,6 +794,18 @@ export default async function CamperotecaPage({ params }: Props) {
                 alt: "Encuentra Recursos: herramientas y materiales para la camperización",
                 title: C.ui_encuentra_title,
                 body: C.ui_encuentra_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-login.png",
+                alt: "Login: acceso con email y contraseña para continuar el proyecto",
+                title: C.ui_login_title,
+                body: C.ui_login_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-comunidad.png",
+                alt: "Comunidad: foro y usuarios cercanos para compartir herramientas y consejos",
+                title: C.ui_comunidad_title,
+                body: C.ui_comunidad_body,
               },
             ].map(({ src, alt, title, body }) => (
               <div key={title}>

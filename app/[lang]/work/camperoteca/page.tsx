@@ -906,13 +906,13 @@ export default async function CamperotecaPage({ params }: Props) {
                 body: C.ui_miproyecto_body,
               },
               {
-                src: "/assets/camperoteca/screen-aprende.webp",
+                src: "/assets/camperoteca/screen-aprende-v2.webp",
                 alt: "Aprende: guías técnicas, legales y casos reales",
                 title: C.ui_aprende_title,
                 body: C.ui_aprende_body,
               },
               {
-                src: "/assets/camperoteca/screen-encuentra.webp",
+                src: "/assets/camperoteca/screen-encuentra-v2.webp",
                 alt: "Encuentra Recursos: herramientas y materiales para la camperización",
                 title: C.ui_encuentra_title,
                 body: C.ui_encuentra_body,

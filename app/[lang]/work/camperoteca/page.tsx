@@ -713,10 +713,10 @@ export default async function CamperotecaPage({ params }: Props) {
         <Reveal delay={0.1}>
           <div style={{ borderRadius: "10px", overflow: "hidden" }}>
             <Image
-              src="/assets/camperoteca/mockup-wireframes.png"
+              src="/assets/camperoteca/wireframes-hero.png"
               alt="Evolución de wireframes: baja, media y alta fidelidad de las pantallas de Camperoteca"
-              width={1400}
-              height={800}
+              width={1920}
+              height={980}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>

@@ -354,27 +354,103 @@ export default async function CamperotecaPage({ params }: Props) {
           </p>
         </Reveal>
 
+        {/* Métodos row */}
         <Reveal delay={0.1}>
-          <div style={{ marginBottom: "1.5rem", borderRadius: "10px", overflow: "hidden" }}>
-            <Image
-              src="/assets/camperoteca/research-metodos.jpg"
-              alt="Métodos de investigación: 34 encuestas, 8 entrevistas, 3 plataformas, 30 preguntas"
-              width={1200}
-              height={675}
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "0",
+              border: "1px solid var(--border)",
+              borderRadius: "12px",
+              overflow: "hidden",
+              marginBottom: "2rem",
+            }}
+          >
+            {[
+              { num: "34", label: "encuestas realizadas" },
+              { num: "8", label: "entrevistas en profundidad" },
+              { num: "3", label: "plataformas analizadas" },
+            ].map(({ num, label }, i) => (
+              <div
+                key={num}
+                style={{
+                  padding: "2rem 1.5rem",
+                  background: "var(--surface)",
+                  borderLeft: i > 0 ? "1px solid var(--border)" : "none",
+                  textAlign: "center",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "'DM Serif Display', Georgia, serif",
+                    fontSize: "clamp(2.2rem, 5vw, 3rem)",
+                    fontWeight: 400,
+                    color: "var(--accent)",
+                    lineHeight: 1,
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  {num}
+                </p>
+                <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.4 }}>{label}</p>
+              </div>
+            ))}
           </div>
         </Reveal>
 
+        {/* Hallazgos cuantitativos grid */}
         <Reveal delay={0.15}>
-          <div style={{ borderRadius: "10px", overflow: "hidden" }}>
-            <Image
-              src="/assets/camperoteca/hallazgos-cuantitativos.jpg"
-              alt="Hallazgos cuantitativos: 72% no saben por dónde empezar, 68% consultan múltiples fuentes, 54% han cometido errores, 61% preferirían ayuda de otros usuarios"
-              width={1200}
-              height={675}
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
+          <p
+            style={{
+              fontSize: "0.7rem",
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+              marginBottom: "1rem",
+            }}
+          >
+            Hallazgos cuantitativos
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "1rem",
+              marginBottom: "1.5rem",
+            }}
+          >
+            {[
+              { pct: "72%", label: "no saben por dónde empezar su proyecto" },
+              { pct: "68%", label: "consultan múltiples fuentes para resolver una sola duda" },
+              { pct: "54%", label: "han cometido o temen errores con impacto económico real" },
+              { pct: "61%", label: "preferirían ayuda de otros usuarios durante el proceso" },
+            ].map(({ pct, label }) => (
+              <div
+                key={pct + label}
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "12px",
+                  padding: "1.5rem",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: "'DM Serif Display', Georgia, serif",
+                    fontSize: "clamp(2rem, 4vw, 2.6rem)",
+                    fontWeight: 400,
+                    color: "var(--ink)",
+                    lineHeight: 1,
+                    marginBottom: "0.6rem",
+                  }}
+                >
+                  {pct}
+                </p>
+                <p style={{ fontSize: "0.875rem", color: "var(--muted)", lineHeight: 1.5 }}>{label}</p>
+              </div>
+            ))}
           </div>
         </Reveal>
       </section>

@@ -716,7 +716,7 @@ export default async function CamperotecaPage({ params }: Props) {
               src="/assets/camperoteca/wireframes-hero.png"
               alt="Evolución de wireframes: baja, media y alta fidelidad de las pantallas de Camperoteca"
               width={1920}
-              height={980}
+              height={1080}
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>

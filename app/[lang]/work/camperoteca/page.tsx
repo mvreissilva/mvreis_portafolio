@@ -143,6 +143,23 @@ const copy = {
       "El proceso de wireframing avanzó desde una estructura funcional en baja fidelidad hasta la definición visual en alta fidelidad. Cada iteración permitió validar la jerarquía de la información, la navegación y la coherencia entre secciones antes de avanzar al diseño de interfaz.",
 
     /* 08 */
+    ds_label: "UI Design & Design System",
+    ds_title: "«Cosecha Solar»",
+    ds_body:
+      "El nombre no es accidental. El universo camper evoca naturaleza, movimiento y luz. El sistema visual de Camperoteca parte de esa referencia para construir una identidad reconocible, cálida y funcional.",
+    ds_colors: [
+      { hex: "#E07B00", name: "Primario", role: "Energía, acción, orientación" },
+      { hex: "#6B7A1A", name: "Secundario", role: "Naturaleza, confianza" },
+      { hex: "#F5E642", name: "Acento", role: "Destacados, progreso" },
+      { hex: "#FDFBF5", name: "Background", role: "Calidez, legibilidad" },
+    ],
+    ds_type_label: "Tipografía",
+    ds_fonts: [
+      { name: "Roboto", role: "Titulares — estructura y jerarquía" },
+      { name: "DM Sans", role: "Body/UI — claridad y modernidad" },
+    ],
+
+    /* 09 */
     ui_label: "UI Design",
     ui_title: "La solución final",
     ui_body:
@@ -734,7 +751,112 @@ export default async function CamperotecaPage({ params }: Props) {
         </Reveal>
       </section>
 
-      {/* ── 08 UI DESIGN ── */}
+      {/* ── 08 UI DESIGN & DESIGN SYSTEM ── */}
+      <section style={section}>
+        <Reveal>
+          <SectionHeading label={C.ds_label} title={C.ds_title} />
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
+            {C.ds_body}
+          </p>
+        </Reveal>
+
+        {/* Paleta de color */}
+        <Reveal delay={0.1}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(4, 1fr)",
+              gap: "1rem",
+              marginBottom: "1.5rem",
+            }}
+            className="ds-color-grid"
+          >
+            {C.ds_colors.map(({ hex, name, role }) => (
+              <div
+                key={hex}
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "14px",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    height: "90px",
+                    background: hex,
+                    border: hex === "#FDFBF5" ? "1px solid var(--border)" : "none",
+                    borderRadius: "12px 12px 0 0",
+                  }}
+                />
+                <div style={{ padding: "1rem" }}>
+                  <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--ink)", marginBottom: "0.2rem" }}>
+                    {name}
+                  </p>
+                  <p style={{ fontSize: "0.7rem", fontFamily: "monospace", color: "var(--accent)", marginBottom: "0.4rem", letterSpacing: "0.04em" }}>
+                    {hex}
+                  </p>
+                  <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.4 }}>{role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* Tipografía */}
+        <Reveal delay={0.15}>
+          <p
+            style={{
+              fontSize: "0.7rem",
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+              marginBottom: "1rem",
+            }}
+          >
+            {C.ds_type_label}
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "1rem",
+            }}
+            className="ds-type-grid"
+          >
+            {C.ds_fonts.map(({ name, role }) => (
+              <div
+                key={name}
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "14px",
+                  padding: "1.75rem 2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: name === "Roboto" ? "'Roboto', sans-serif" : "'DM Sans', sans-serif",
+                    fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
+                    fontWeight: name === "Roboto" ? 700 : 400,
+                    color: "var(--ink)",
+                    lineHeight: 1,
+                  }}
+                >
+                  {name}
+                </p>
+                <p style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{role}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 09 SOLUCIÓN FINAL ── */}
       <section style={section}>
         <Reveal>
           <SectionHeading label={C.ui_label} title={C.ui_title} />
@@ -946,6 +1068,12 @@ export default async function CamperotecaPage({ params }: Props) {
             grid-template-columns: 1fr 1fr !important;
           }
           .screens-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .ds-color-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          .ds-type-grid {
             grid-template-columns: 1fr !important;
           }
         }

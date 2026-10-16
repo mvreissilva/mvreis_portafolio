@@ -1268,6 +1268,8 @@ export default async function CamperotecaPage({ params }: Props) {
                   <img
                     src={src}
                     alt={alt}
+                    width={284}
+                    height={620}
                     style={{
                       display: "block",
                       width: "min(180px, 48vw)",

@@ -16,7 +16,12 @@ export default async function LangLayout({
   const lang = (LANGS.includes(_lang as Lang) ? _lang : "es") as Lang;
 
   return (
-    <div lang={lang}>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang="${lang}";`,
+        }}
+      />
       <Nav lang={lang} />
       <main>{children}</main>
       {/* CAMBIO 3: footer year → 2026 (via i18n footer string) */}
@@ -30,6 +35,6 @@ export default async function LangLayout({
           </span>
         </div>
       </footer>
-    </div>
+    </>
   );
 }

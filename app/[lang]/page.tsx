@@ -54,7 +54,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <div style={{ paddingTop: "3rem" }}>
           <span style={lbl}>{tr.work.label}</span>
 
-          {(["camperoteca", "riptide"] as const).map(slug => {
+          {(["camperoteca", "riptide"] as const).map((slug, idx) => {
             const p = tr.projects[slug];
             return (
               <Link key={slug} href={`/${lang}/work/${slug}`}
@@ -69,6 +69,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                     fill
                     sizes="(max-width: 680px) 100vw, 680px"
                     style={{ objectFit: "cover", objectPosition: "center" }}
+                    priority={idx === 0}
                   />
                 </div>
                 <span style={{ fontSize: "0.8125rem", color: "var(--muted)",
@@ -145,17 +146,20 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           <p style={{ ...body, maxWidth: "480px", marginBottom: "2rem" }}>{tr.contact.body}</p>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1.25rem" }}>
             <a href="mailto:mvreissilva@gmail.com" className="link-accent"
+               aria-label="Send email to Marcus Reis"
                style={{ fontSize: "0.9375rem", fontWeight: 500, fontFamily: "var(--font-sans)" }}>
               mvreissilva@gmail.com
             </a>
             <span style={{ color: "var(--border)" }}>·</span>
             <a href="https://linkedin.com/in/reis-marcus" target="_blank" rel="noopener noreferrer"
                className="link-muted"
+               aria-label="Marcus Reis on LinkedIn (opens in new tab)"
                style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
               {tr.contact.linkedin} ↗
             </a>
             <span style={{ color: "var(--border)" }}>·</span>
             <a href="/assets/marcus-reis-cv.pdf" download className="link-muted"
+               aria-label="Download Marcus Reis CV (PDF)"
                style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
               {tr.contact.cv} ↓
             </a>

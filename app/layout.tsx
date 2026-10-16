@@ -1,10 +1,39 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mvreis-uxportafolio.vercel.app"),
   title: { default: "Marcus Reis — UX/UI Designer", template: "%s — Marcus Reis" },
   description: "UX/UI Designer. Research, information architecture and user-centred design. Seville, Spain.",
-  openGraph: { title: "Marcus Reis — UX/UI Designer", description: "I design experiences that make sense.", siteName: "Marcus Reis", type: "website" },
+  openGraph: {
+    title: "Marcus Reis — UX/UI Designer",
+    description: "I design experiences that make sense.",
+    siteName: "Marcus Reis",
+    type: "website",
+    images: [{ url: "/assets/og-image.jpg", width: 1200, height: 630, alt: "Marcus Reis — UX/UI Designer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marcus Reis — UX/UI Designer",
+    description: "I design experiences that make sense.",
+    images: ["/assets/og-image.jpg"],
+  },
   robots: { index: true, follow: true },
 };
 
@@ -17,12 +46,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-      </head>
+    <html suppressHydrationWarning className={`${inter.variable} ${dmSerifDisplay.variable}`}>
       <body>
         <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t!=='light'&&d))document.documentElement.classList.add('dark');})();` }} />
         {children}

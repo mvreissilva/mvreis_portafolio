@@ -200,9 +200,334 @@ const copy = {
     proto_cta: "Ver prototipo en Figma",
     back_projects: "← Volver a proyectos",
   },
+
+  en: {
+    back: "Back",
+    tag1: "UX/UI Designer · End-to-End",
+    tag2: "Academic project · Bootcamp NEOLAND",
+    tag3: "Oct 2025 – Apr 2026",
+    tag4: "Responsive · Mobile First",
+    tag5: "Figma · FigJam · Figma Make · Stitch",
+    heroTitle: "Camperoteca",
+    heroSub: "turning a complex process into a clear journey",
+    heroDesc:
+      "Design of a digital platform to guide people through the planning of their camper van conversion project.",
+    meta_rol: "Role",
+    meta_tipo: "Project type",
+    meta_tools: "Tools",
+    meta_dur: "Duration",
+
+    prob_label: "Problem & Opportunity",
+    prob_title: "A process without guidance",
+    prob_body:
+      "Converting a van is a complex technical, financial and legal project. Yet people entering this world face fragmented information scattered across forums, YouTube channels and social media groups — unstructured, with no quality filter and no context about which phase of the project each resource applies to.",
+    prob_opp:
+      "The opportunity was clear: design an experience that centralises knowledge, structures the user journey and accompanies them at every stage of the process, from the first decision to the final build.",
+
+    research_label: "UX Research",
+    research_title: "Research before design",
+    research_body:
+      "Before proposing any solution, I conducted mixed research to understand who the users were, what they did and where they encountered difficulties.",
+
+    insight_label: "Insight & Persona",
+    insight_title: "What they really needed",
+    insight_quote:
+      "Users don't need more information — they need a clear structure, guidance and confidence to move forward with their project.",
+    persona_name: "Blanca Jiménez, 38",
+    persona_tag: "«The Explorer»",
+    persona_desc:
+      "Psychologist in Pamplona. Interested in sustainability and the sharing economy. Wants to enter the camper world responsibly: learn before building and connect with like-minded people.",
+    goals_title: "Goals",
+    goals: [
+      "Start in a sustainable and responsible way.",
+      "Learn before making financial decisions.",
+      "Connect with others going through the same process.",
+    ],
+    frusts_title: "Frustrations",
+    frusts: [
+      "Not knowing where to start.",
+      "Scattered information with no context.",
+      "Fear of spending money on solutions that won't work.",
+    ],
+
+    hmw_label: "How Might We",
+    hmw_title: "From problem to opportunity",
+    hmw_rows: [
+      {
+        prob: "Information fragmented across multiple sources",
+        opp: "Centralise and structure in one place",
+        dec: "Dashboard with ordered phases",
+      },
+      {
+        prob: "No reference for project progress",
+        opp: "Make progress visible step by step",
+        dec: "Planner with stages and checklist",
+      },
+      {
+        prob: "Guides scattered across YouTube, forums and social media; users don't know where to start",
+        opp: "Structure knowledge by type and project phase",
+        dec: "Technical, legal guides and real cases",
+      },
+      {
+        prob: "Tools and materials require outright purchase or external search",
+        opp: "Facilitate access and location of nearby resources",
+        dec: "Directory filterable by category",
+      },
+      {
+        prob: "Valuable but chaotic and unreliable community",
+        opp: "Organise by context, phase and reputation",
+        dec: "Structured forum with validation",
+      },
+    ],
+    hmw_col1: "Problem",
+    hmw_col2: "Opportunity",
+    hmw_col3: "Design decision",
+
+    arch_label: "Information Architecture",
+    arch_title: "Navigation structure and main user flow",
+    arch_body:
+      "The optimal sequence a new user follows: from Home and Onboarding to access to the four main areas of the platform. My Project is the central hub; Learn, Find and Community complement it with content, resources and connection.",
+    mvp_title: "MVP Scope",
+    mvp_inc: [
+      "My Project: stage planner with progress and next step.",
+      "Learn: technical guides, legal guides and real cases.",
+      "Find: directory of tools and materials.",
+      "Personalised onboarding for new users.",
+    ],
+    mvp_post: [
+      "Community: forum and user groups.",
+      "Leftover materials marketplace.",
+      "Stage-based notifications and reminders.",
+    ],
+    mvp_inc_label: "Included in MVP",
+    mvp_post_label: "Postponed",
+
+    wf_label: "Wireframes",
+    wf_title: "From structure to final design",
+    wf_body:
+      "The wireframing process moved from a functional low-fidelity structure to high-fidelity visual definition. Each iteration validated information hierarchy, navigation and consistency across sections before moving to interface design.",
+
+    ds_label: "UI Design & Design System",
+    ds_title: "«Cosecha Solar»",
+    ds_body:
+      "The name is no accident. The camper universe evokes nature, movement and light. Camperoteca's visual system draws from that reference to build a recognisable, warm and functional identity.",
+    ds_colors: [
+      { hex: "#E07B00", name: "Primary", role: "Energy, action, orientation" },
+      { hex: "#6B7A1A", name: "Secondary", role: "Nature, trust" },
+      { hex: "#F5E642", name: "Accent", role: "Highlights, progress" },
+      { hex: "#FDFBF5", name: "Background", role: "Warmth, readability" },
+    ],
+    ds_type_label: "Typography",
+    ds_fonts: [
+      { name: "Roboto", role: "Headlines — structure and hierarchy" },
+      { name: "DM Sans", role: "Body/UI — clarity and modernity" },
+    ],
+
+    ui_label: "UI Design",
+    ui_title: "The final solution",
+    ui_body:
+      "Camperoteca's interface draws visual reference from the camper world: warm earthy colours, readable typography and a visual language that conveys calm and orientation. The design prioritises clarity over decoration.",
+    ui_miproyecto_title: "My Project",
+    ui_miproyecto_body:
+      "The platform's central hub shows the current stage, overall progress and the recommended next step. It reduces uncertainty and keeps the user oriented at all times.",
+    ui_aprende_title: "Learn",
+    ui_aprende_body:
+      "Organises knowledge into three categories: technical guides (electrical systems, insulation, carpentry), legal guides (homologation, MOT, regulations) and real cases from other users.",
+    ui_encuentra_title: "Find Resources",
+    ui_encuentra_body:
+      "Directory of tools and materials for van conversion, organised by category to make it easy to find what you need at each project phase.",
+    ui_login_title: "Login",
+    ui_login_body:
+      "Direct, frictionless access. The user signs in with email and password to continue where they left off.",
+    ui_comunidad_title: "Community",
+    ui_comunidad_body:
+      "Connect with other campers. Ask, answer and find nearby users with tools or knowledge to share.",
+    ui_mockup_alt: "General view of the Camperoteca app showing the main My Project screen with the stage planner",
+
+    learn_label: "Learnings",
+    learn_title: "What I take away from this project",
+    learns: [
+      "Designing for uncertainty: users don't know what they don't know. The key was designing to reduce that uncertainty before the user even feels it.",
+      "Progress information is motivating: showing users what stage they're at and how far they've come has a direct impact on their willingness to continue.",
+      "Centralising isn't enough: structure and context are just as important as having the resource available. A resource without context doesn't help.",
+      "Community as a design resource: people value sharing experiences with others going through the same process, not just consuming expert content.",
+    ],
+    next_title: "Next iterations",
+    nexts: [
+      "Evaluate understanding of the main flow with real users through usability testing.",
+      "Validate the usefulness of the 'recommended next step' as a guidance mechanism.",
+      "Explore incorporating the Community section into the MVP.",
+      "Iterate onboarding based on real usage patterns.",
+    ],
+    proto_cta: "View prototype on Figma",
+    back_projects: "← Back to projects",
+  },
+
+  pt: {
+    back: "Voltar",
+    tag1: "UX/UI Designer · End-to-End",
+    tag2: "Projeto académico · Bootcamp NEOLAND",
+    tag3: "Out 2025 – Abr 2026",
+    tag4: "Responsivo · Mobile First",
+    tag5: "Figma · FigJam · Figma Make · Stitch",
+    heroTitle: "Camperoteca",
+    heroSub: "transformar um processo complexo numa jornada clara",
+    heroDesc:
+      "Design de uma plataforma digital para acompanhar pessoas durante o planejamento do seu projeto de camperização.",
+    meta_rol: "Função",
+    meta_tipo: "Tipo de projeto",
+    meta_tools: "Ferramentas",
+    meta_dur: "Duração",
+
+    prob_label: "Problema e oportunidade",
+    prob_title: "Um processo sem orientação",
+    prob_body:
+      "Camperizar uma van é um projeto técnico, económico e legal complexo. Porém, quem começa neste mundo depara-se com informação fragmentada distribuída por fóruns, canais do YouTube e grupos de redes sociais — sem ordem, sem critério de qualidade e sem contexto sobre em que fase do projeto aplicar cada recurso.",
+    prob_opp:
+      "A oportunidade era clara: desenhar uma experiência que centralizasse o conhecimento, estruturasse o percurso do utilizador e o acompanhasse em cada etapa do processo, desde a primeira decisão até à montagem final.",
+
+    research_label: "UX Research",
+    research_title: "Investigar antes de desenhar",
+    research_body:
+      "Antes de propor qualquer solução, realizei uma investigação mista para entender quem eram os utilizadores, o que faziam e onde encontravam dificuldades.",
+
+    insight_label: "Insight e Persona",
+    insight_title: "O que realmente precisavam",
+    insight_quote:
+      "Os utilizadores não precisam de mais informação, mas de uma estrutura clara, acompanhamento e confiança para avançar no seu projeto.",
+    persona_name: "Blanca Jiménez, 38 anos",
+    persona_tag: "«A Exploradora»",
+    persona_desc:
+      "Psicóloga em Pamplona. Interessada em sustentabilidade e economia colaborativa. Quer entrar no mundo camper de forma responsável: aprender antes de camperizar e conectar com pessoas com interesses semelhantes.",
+    goals_title: "Objetivos",
+    goals: [
+      "Começar de forma sustentável e responsável.",
+      "Aprender antes de tomar decisões económicas.",
+      "Conectar com outras pessoas no mesmo processo.",
+    ],
+    frusts_title: "Frustrações",
+    frusts: [
+      "Não saber por onde começar.",
+      "Informação dispersa e sem contexto.",
+      "Medo de gastar dinheiro em soluções que não funcionem.",
+    ],
+
+    hmw_label: "How Might We",
+    hmw_title: "Do problema à oportunidade",
+    hmw_rows: [
+      {
+        prob: "Informação fragmentada em múltiplas fontes",
+        opp: "Centralizar e estruturar num único lugar",
+        dec: "Dashboard com fases ordenadas",
+      },
+      {
+        prob: "Sem referência de progresso no projeto",
+        opp: "Tornar o avanço visível passo a passo",
+        dec: "Planeador com etapas e checklist",
+      },
+      {
+        prob: "Guias dispersos no YouTube, fóruns e redes; o utilizador não sabe por onde começar",
+        opp: "Estruturar o conhecimento por tipo e fase do projeto",
+        dec: "Guias técnicos, legais e casos reais",
+      },
+      {
+        prob: "Ferramentas e materiais requerem compra definitiva ou pesquisa externa",
+        opp: "Facilitar o acesso e localização de recursos próximos",
+        dec: "Diretório filtrável por categoria",
+      },
+      {
+        prob: "Comunidade valiosa mas caótica e pouco fiável",
+        opp: "Organizar por contexto, fase e reputação",
+        dec: "Fórum estruturado com validação",
+      },
+    ],
+    hmw_col1: "Problema",
+    hmw_col2: "Oportunidade",
+    hmw_col3: "Decisão de design",
+
+    arch_label: "Arquitetura de informação",
+    arch_title: "Estrutura de navegação e percurso principal",
+    arch_body:
+      "A sequência ideal que um novo utilizador percorre: desde a Home e o Onboarding até ao acesso às quatro áreas principais da plataforma. O Meu Projeto é o hub central; Aprende, Encontra e Comunidade complementam-no com conteúdo, recursos e ligação.",
+    mvp_title: "Âmbito do MVP",
+    mvp_inc: [
+      "Meu Projeto: planeador por etapas com progresso e próximo passo.",
+      "Aprende: guias técnicos, legais e casos reais.",
+      "Encontra: diretório de ferramentas e materiais.",
+      "Onboarding personalizado para novos utilizadores.",
+    ],
+    mvp_post: [
+      "Comunidade: fórum e grupos de utilizadores.",
+      "Marketplace de materiais excedentes.",
+      "Notificações e lembretes por etapa.",
+    ],
+    mvp_inc_label: "Incluído no MVP",
+    mvp_post_label: "Adiado",
+
+    wf_label: "Wireframes",
+    wf_title: "Da estrutura ao design final",
+    wf_body:
+      "O processo de wireframing avançou de uma estrutura funcional em baixa fidelidade até à definição visual em alta fidelidade. Cada iteração permitiu validar a hierarquia da informação, a navegação e a coerência entre secções antes de avançar para o design de interface.",
+
+    ds_label: "UI Design & Design System",
+    ds_title: "«Cosecha Solar»",
+    ds_body:
+      "O nome não é acidental. O universo camper evoca natureza, movimento e luz. O sistema visual da Camperoteca parte dessa referência para construir uma identidade reconhecível, calorosa e funcional.",
+    ds_colors: [
+      { hex: "#E07B00", name: "Primário", role: "Energia, ação, orientação" },
+      { hex: "#6B7A1A", name: "Secundário", role: "Natureza, confiança" },
+      { hex: "#F5E642", name: "Destaque", role: "Destaques, progresso" },
+      { hex: "#FDFBF5", name: "Background", role: "Calor, legibilidade" },
+    ],
+    ds_type_label: "Tipografia",
+    ds_fonts: [
+      { name: "Roboto", role: "Títulos — estrutura e hierarquia" },
+      { name: "DM Sans", role: "Body/UI — clareza e modernidade" },
+    ],
+
+    ui_label: "UI Design",
+    ui_title: "A solução final",
+    ui_body:
+      "A interface da Camperoteca toma como referência visual o mundo camper: cores quentes e terrosas, tipografia legível e uma linguagem visual que transmite calma e orientação. O design prioriza a clareza em detrimento da decoração.",
+    ui_miproyecto_title: "Meu Projeto",
+    ui_miproyecto_body:
+      "O hub central da plataforma mostra a etapa atual, o progresso geral e o próximo passo recomendado. Reduz a incerteza e mantém o utilizador orientado a todo o momento.",
+    ui_aprende_title: "Aprende",
+    ui_aprende_body:
+      "Organiza o conhecimento em três categorias: guias técnicos (sistemas elétricos, isolamento, carpintaria), guias legais (homologação, inspeção, regulamentação) e casos reais de outros utilizadores.",
+    ui_encuentra_title: "Encontra Recursos",
+    ui_encuentra_body:
+      "Diretório de ferramentas e materiais para a camperização, organizado por categoria para facilitar a localização do que é necessário em cada fase do projeto.",
+    ui_login_title: "Login",
+    ui_login_body:
+      "Acesso direto e sem fricção. O utilizador entra com email e palavra-passe para continuar onde ficou.",
+    ui_comunidad_title: "Comunidade",
+    ui_comunidad_body:
+      "Conecta com outros campistas. Pergunta, responde e encontra utilizadores próximos com ferramentas ou conhecimento.",
+    ui_mockup_alt: "Vista geral da aplicação Camperoteca mostrando o ecrã principal Meu Projeto com o planeador por etapas",
+
+    learn_label: "Aprendizagens",
+    learn_title: "O que levo deste projeto",
+    learns: [
+      "Desenhar para a incerteza: os utilizadores não sabem o que não sabem. A chave foi desenhar para reduzir essa incerteza antes que o utilizador a sinta.",
+      "A informação de progresso é motivadora: mostrar em que etapa está o utilizador e quanto avançou tem um impacto direto na sua disposição para continuar.",
+      "Centralizar não chega: a estrutura e o contexto são tão importantes quanto ter o recurso disponível. Um recurso sem contexto não ajuda.",
+      "A comunidade como recurso de design: as pessoas valorizam partilhar experiências com outros no mesmo processo, não apenas consumir conteúdo especializado.",
+    ],
+    next_title: "Próximas iterações",
+    nexts: [
+      "Avaliar a compreensão do fluxo principal com utilizadores reais através de testes de usabilidade.",
+      "Validar a utilidade do 'próximo passo recomendado' como mecanismo de orientação.",
+      "Explorar a incorporação da secção Comunidade no MVP.",
+      "Iterar o onboarding com base em padrões de uso reais.",
+    ],
+    proto_cta: "Ver protótipo no Figma",
+    back_projects: "← Voltar aos projetos",
+  },
 };
 
-const C = copy.es; // single-lang for now; extend if needed
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getCopy = (lang: string): typeof copy.es => (copy as any)[lang] ?? copy.es;
 
 /* ─── helpers ──────────────────────────────────────────────────── */
 function Label({ text }: { text: string }) {
@@ -244,6 +569,7 @@ function SectionHeading({ label, title }: { label: string; title: string }) {
 /* ─── page ──────────────────────────────────────────────────────── */
 export default async function CamperotecaPage({ params }: Props) {
   const { lang } = await params;
+  const C = getCopy(lang);
 
   const maxW = "860px";
   const section: React.CSSProperties = {
@@ -276,7 +602,7 @@ export default async function CamperotecaPage({ params }: Props) {
             padding: "0.35rem 0.75rem",
             transition: "color 0.15s, border-color 0.15s",
           }}
-          aria-label="Volver a proyectos"
+          aria-label={C.back_projects}
         >
           <span aria-hidden="true">←</span> {C.back}
         </Link>

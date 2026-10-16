@@ -743,107 +743,164 @@ export default async function CamperotecaPage({ params }: Props) {
           </p>
         </Reveal>
 
-        {/* Mockup principal — imagen protagonista */}
+        {/* ── Pantalla destacada 1: Mi Proyecto ── */}
         <Reveal delay={0.1}>
           <div
             style={{
-              borderRadius: "16px",
-              overflow: "hidden",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "3rem",
+              alignItems: "center",
+              marginBottom: "4rem",
             }}
+            className="ui-row"
           >
-            <Image
-              src="/assets/camperoteca/mockup-camperoteca-hero.png"
-              alt={C.ui_mockup_alt}
-              width={1920}
-              height={1080}
+            <div
               style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
+                background: "var(--surface)",
+                border: "1px solid var(--border)",
+                borderRadius: "20px",
+                padding: "2.5rem 2rem",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
-            />
+            >
+              <div style={{ width: "min(200px, 52vw)" }}>
+                <Image
+                  src="/assets/camperoteca/screen-miproyecto.webp"
+                  alt="Mi Proyecto: planificador por etapas con progreso y siguiente paso recomendado"
+                  width={390}
+                  height={844}
+                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "22px", boxShadow: "0 12px 40px rgba(0,0,0,0.12)" }}
+                />
+              </div>
+            </div>
+            <div>
+              <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", display: "block", marginBottom: "0.75rem" }}>01</span>
+              <h3 style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", fontWeight: 400, lineHeight: 1.25, marginBottom: "1rem", color: "var(--ink)" }}>
+                {C.ui_miproyecto_title}
+              </h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
+                {C.ui_miproyecto_body}
+              </p>
+            </div>
           </div>
         </Reveal>
 
-        {/* Screens grid — 3 pantallas clave */}
-        <Reveal delay={0.15}>
+        {/* ── Pantalla destacada 2: Aprende (imagen derecha) ── */}
+        <Reveal delay={0.1}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "3rem",
+              alignItems: "center",
+              marginBottom: "4rem",
+            }}
+            className="ui-row ui-row--reverse"
+          >
+            <div>
+              <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", display: "block", marginBottom: "0.75rem" }}>02</span>
+              <h3 style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "clamp(1.3rem, 2.5vw, 1.7rem)", fontWeight: 400, lineHeight: 1.25, marginBottom: "1rem", color: "var(--ink)" }}>
+                {C.ui_aprende_title}
+              </h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "var(--muted)" }}>
+                {C.ui_aprende_body}
+              </p>
+            </div>
+            <div
+              style={{
+                background: "var(--surface)",
+                border: "1px solid var(--border)",
+                borderRadius: "20px",
+                padding: "2.5rem 2rem",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div style={{ width: "min(200px, 52vw)" }}>
+                <Image
+                  src="/assets/camperoteca/screen-aprende.webp"
+                  alt="Aprende: guías técnicas, legales y casos reales"
+                  width={390}
+                  height={844}
+                  style={{ width: "100%", height: "auto", display: "block", borderRadius: "22px", boxShadow: "0 12px 40px rgba(0,0,0,0.12)" }}
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* ── Tres pantallas secundarias: Encuentra, Login, Comunidad ── */}
+        <Reveal delay={0.1}>
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
               gap: "1.5rem",
-              marginTop: "3rem",
             }}
             className="screens-grid"
           >
             {[
               {
-                src: "/assets/camperoteca/screen-miproyecto.webp",
-                alt: "Mi Proyecto: planificador por etapas con progreso y siguiente paso recomendado",
-                title: C.ui_miproyecto_title,
-                body: C.ui_miproyecto_body,
-              },
-              {
-                src: "/assets/camperoteca/screen-aprende.webp",
-                alt: "Aprende: guías técnicas, legales y casos reales",
-                title: C.ui_aprende_title,
-                body: C.ui_aprende_body,
-              },
-              {
                 src: "/assets/camperoteca/screen-encuentra.webp",
                 alt: "Encuentra Recursos: herramientas y materiales para la camperización",
+                num: "03",
                 title: C.ui_encuentra_title,
                 body: C.ui_encuentra_body,
               },
               {
                 src: "/assets/camperoteca/screen-login.png",
                 alt: "Login: acceso con email y contraseña para continuar el proyecto",
+                num: "04",
                 title: C.ui_login_title,
                 body: C.ui_login_body,
               },
               {
                 src: "/assets/camperoteca/screen-comunidad.png",
                 alt: "Comunidad: foro y usuarios cercanos para compartir herramientas y consejos",
+                num: "05",
                 title: C.ui_comunidad_title,
                 body: C.ui_comunidad_body,
               },
-            ].map(({ src, alt, title, body }) => (
-              <div key={title}>
+            ].map(({ src, alt, num, title, body }) => (
+              <div
+                key={title}
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "16px",
+                  overflow: "hidden",
+                }}
+              >
                 <div
                   style={{
+                    padding: "2rem 1.5rem 1.5rem",
                     display: "flex",
                     justifyContent: "center",
-                    marginBottom: "1.25rem",
+                    background: "var(--bg)",
+                    borderBottom: "1px solid var(--border)",
                   }}
                 >
-                  <div style={{ width: "min(180px, 48vw)" }}>
+                  <div style={{ width: "min(140px, 42vw)" }}>
                     <Image
                       src={src}
                       alt={alt}
                       width={390}
                       height={844}
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        display: "block",
-                        borderRadius: "22px",
-                        boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
-                      }}
+                      style={{ width: "100%", height: "auto", display: "block", borderRadius: "18px", boxShadow: "0 8px 28px rgba(0,0,0,0.1)" }}
                     />
                   </div>
                 </div>
-                <h3
-                  style={{
-                    fontFamily: "'DM Serif Display', Georgia, serif",
-                    fontSize: "1.05rem",
-                    fontWeight: 400,
-                    marginBottom: "0.5rem",
-                    color: "var(--ink)",
-                  }}
-                >
-                  {title}
-                </h3>
-                <p style={{ fontSize: "0.825rem", lineHeight: 1.6, color: "var(--muted)" }}>{body}</p>
+                <div style={{ padding: "1.25rem 1.25rem 1.5rem" }}>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)", display: "block", marginBottom: "0.4rem" }}>{num}</span>
+                  <h3 style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "1rem", fontWeight: 400, marginBottom: "0.5rem", color: "var(--ink)" }}>
+                    {title}
+                  </h3>
+                  <p style={{ fontSize: "0.8rem", lineHeight: 1.6, color: "var(--muted)" }}>{body}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -947,6 +1004,16 @@ export default async function CamperotecaPage({ params }: Props) {
           }
           .screens-grid {
             grid-template-columns: 1fr !important;
+          }
+          .ui-row {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+          .ui-row--reverse > *:first-child {
+            order: 2;
+          }
+          .ui-row--reverse > *:last-child {
+            order: 1;
           }
         }
         @media (max-width: 480px) {

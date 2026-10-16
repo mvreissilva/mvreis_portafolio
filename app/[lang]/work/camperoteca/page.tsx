@@ -938,18 +938,14 @@ export default async function CamperotecaPage({ params }: Props) {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  <div style={{ width: "min(180px, 48vw)" }}>
+                  <div style={{ width: "min(180px, 48vw)", aspectRatio: "284/620", position: "relative", overflow: "hidden", borderRadius: "22px", boxShadow: "0 6px 24px rgba(0,0,0,0.1)" }}>
                     <Image
                       src={src}
                       alt={alt}
-                      width={390}
-                      height={844}
+                      fill
                       style={{
-                        width: "100%",
-                        height: "auto",
+                        objectFit: "contain",
                         display: "block",
-                        borderRadius: "22px",
-                        boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
                       }}
                     />
                   </div>

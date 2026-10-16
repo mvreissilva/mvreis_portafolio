@@ -384,17 +384,17 @@ const copy = {
     prob_body:
       "Camperizar uma van é um projeto técnico, económico e legal complexo. Porém, quem começa neste mundo depara-se com informação fragmentada distribuída por fóruns, canais do YouTube e grupos de redes sociais — sem ordem, sem critério de qualidade e sem contexto sobre em que fase do projeto aplicar cada recurso.",
     prob_opp:
-      "A oportunidade era clara: desenhar uma experiência que centralizasse o conhecimento, estruturasse o percurso do utilizador e o acompanhasse em cada etapa do processo, desde a primeira decisão até à montagem final.",
+      "A oportunidade era clara: desenhar uma experiência que centralizasse o conhecimento, estruturasse o percurso do usuario e o acompanhasse em cada etapa do processo, desde a primeira decisão até à montagem final.",
 
     research_label: "UX Research",
     research_title: "Investigar antes de desenhar",
     research_body:
-      "Antes de propor qualquer solução, realizei uma investigação mista para entender quem eram os utilizadores, o que faziam e onde encontravam dificuldades.",
+      "Antes de propor qualquer solução, realizei uma investigação mista para entender quem eram os usuarios, o que faziam e onde encontravam dificuldades.",
 
     insight_label: "Insight e Persona",
     insight_title: "O que realmente precisavam",
     insight_quote:
-      "Os utilizadores não precisam de mais informação, mas de uma estrutura clara, acompanhamento e confiança para avançar no seu projeto.",
+      "Os usuarios não precisam de mais informação, mas de uma estrutura clara, acompanhamento e confiança para avançar no seu projeto.",
     persona_name: "Blanca Jiménez, 38 anos",
     persona_tag: "«A Exploradora»",
     persona_desc:
@@ -426,7 +426,7 @@ const copy = {
         dec: "Planeador com etapas e checklist",
       },
       {
-        prob: "Guias dispersos no YouTube, fóruns e redes; o utilizador não sabe por onde começar",
+        prob: "Guias dispersos no YouTube, fóruns e redes; o usuario não sabe por onde começar",
         opp: "Estruturar o conhecimento por tipo e fase do projeto",
         dec: "Guias técnicos, legais e casos reais",
       },
@@ -448,16 +448,16 @@ const copy = {
     arch_label: "Arquitetura de informação",
     arch_title: "Estrutura de navegação e percurso principal",
     arch_body:
-      "A sequência ideal que um novo utilizador percorre: desde a Home e o Onboarding até ao acesso às quatro áreas principais da plataforma. O Meu Projeto é o hub central; Aprende, Encontra e Comunidade complementam-no com conteúdo, recursos e ligação.",
+      "A sequência ideal que um novo usuario percorre: desde a Home e o Onboarding até ao acesso às quatro áreas principais da plataforma. O Meu Projeto é o hub central; Aprende, Encontra e Comunidade complementam-no com conteúdo, recursos e ligação.",
     mvp_title: "Âmbito do MVP",
     mvp_inc: [
       "Meu Projeto: planeador por etapas com progresso e próximo passo.",
       "Aprende: guias técnicos, legais e casos reais.",
       "Encontra: diretório de ferramentas e materiais.",
-      "Onboarding personalizado para novos utilizadores.",
+      "Onboarding personalizado para novos usuarios.",
     ],
     mvp_post: [
-      "Comunidade: fórum e grupos de utilizadores.",
+      "Comunidade: fórum e grupos de usuarios.",
       "Marketplace de materiais excedentes.",
       "Notificações e lembretes por etapa.",
     ],
@@ -491,32 +491,32 @@ const copy = {
       "A interface da Camperoteca toma como referência visual o mundo camper: cores quentes e terrosas, tipografia legível e uma linguagem visual que transmite calma e orientação. O design prioriza a clareza em detrimento da decoração.",
     ui_miproyecto_title: "Meu Projeto",
     ui_miproyecto_body:
-      "O hub central da plataforma mostra a etapa atual, o progresso geral e o próximo passo recomendado. Reduz a incerteza e mantém o utilizador orientado a todo o momento.",
+      "O hub central da plataforma mostra a etapa atual, o progresso geral e o próximo passo recomendado. Reduz a incerteza e mantém o usuario orientado a todo o momento.",
     ui_aprende_title: "Aprende",
     ui_aprende_body:
-      "Organiza o conhecimento em três categorias: guias técnicos (sistemas elétricos, isolamento, carpintaria), guias legais (homologação, inspeção, regulamentação) e casos reais de outros utilizadores.",
+      "Organiza o conhecimento em três categorias: guias técnicos (sistemas elétricos, isolamento, carpintaria), guias legais (homologação, inspeção, regulamentação) e casos reais de outros usuarios.",
     ui_encuentra_title: "Encontra Recursos",
     ui_encuentra_body:
       "Diretório de ferramentas e materiais para a camperização, organizado por categoria para facilitar a localização do que é necessário em cada fase do projeto.",
     ui_login_title: "Login",
     ui_login_body:
-      "Acesso direto e sem fricção. O utilizador entra com email e palavra-passe para continuar onde ficou.",
+      "Acesso direto e sem fricção. O usuario entra com email e palavra-passe para continuar onde ficou.",
     ui_comunidad_title: "Comunidade",
     ui_comunidad_body:
-      "Conecta com outros campistas. Pergunta, responde e encontra utilizadores próximos com ferramentas ou conhecimento.",
+      "Conecta com outros campistas. Pergunta, responde e encontra usuarios próximos com ferramentas ou conhecimento.",
     ui_mockup_alt: "Vista geral da aplicação Camperoteca mostrando o ecrã principal Meu Projeto com o planeador por etapas",
 
     learn_label: "Aprendizagens",
     learn_title: "O que levo deste projeto",
     learns: [
-      "Desenhar para a incerteza: os utilizadores não sabem o que não sabem. A chave foi desenhar para reduzir essa incerteza antes que o utilizador a sinta.",
-      "A informação de progresso é motivadora: mostrar em que etapa está o utilizador e quanto avançou tem um impacto direto na sua disposição para continuar.",
+      "Desenhar para a incerteza: os usuarios não sabem o que não sabem. A chave foi desenhar para reduzir essa incerteza antes que o usuario a sinta.",
+      "A informação de progresso é motivadora: mostrar em que etapa está o usuario e quanto avançou tem um impacto direto na sua disposição para continuar.",
       "Centralizar não chega: a estrutura e o contexto são tão importantes quanto ter o recurso disponível. Um recurso sem contexto não ajuda.",
       "A comunidade como recurso de design: as pessoas valorizam partilhar experiências com outros no mesmo processo, não apenas consumir conteúdo especializado.",
     ],
     next_title: "Próximas iterações",
     nexts: [
-      "Avaliar a compreensão do fluxo principal com utilizadores reais através de testes de usabilidade.",
+      "Avaliar a compreensão do fluxo principal com usuarios reais através de testes de usabilidade.",
       "Validar a utilidade do 'próximo passo recomendado' como mecanismo de orientação.",
       "Explorar a incorporação da secção Comunidade no MVP.",
       "Iterar o onboarding com base em padrões de uso reais.",

@@ -601,94 +601,14 @@ export default async function CamperotecaPage({ params }: Props) {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div
-            style={{
-              overflowX: "auto",
-              marginBottom: "3rem",
-              paddingBottom: "0.5rem",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                minWidth: "640px",
-              }}
-            >
-              {[
-                { label: "Home", accent: false },
-                { label: "Onboarding", accent: false },
-                { label: "Login o Registro", accent: false },
-                { label: "Mi Proyecto", accent: true },
-                { label: "Aprende", accent: false },
-                { label: "Encuentra", accent: false },
-                { label: "Comunidad", accent: false },
-              ].map(({ label, accent }, i, arr) => (
-                <div key={label} style={{ display: "flex", alignItems: "center", gap: "0.5rem", flex: 1 }}>
-                  {/* Frame */}
-                  <div
-                    style={{
-                      flex: 1,
-                      border: "1px solid var(--border)",
-                      borderRadius: "8px",
-                      overflow: "hidden",
-                      background: "var(--surface)",
-                    }}
-                  >
-                    {/* Header */}
-                    <div
-                      style={{
-                        background: accent ? "var(--accent)" : "var(--border)",
-                        padding: "0.45rem 0.5rem",
-                        textAlign: "center",
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontSize: "0.6rem",
-                          fontWeight: 700,
-                          letterSpacing: "0.08em",
-                          textTransform: "uppercase",
-                          color: accent ? "#fff" : "var(--muted)",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        {label}
-                      </span>
-                    </div>
-                    {/* Content bars */}
-                    <div style={{ padding: "0.5rem 0.4rem", display: "flex", flexDirection: "column", gap: "0.3rem" }}>
-                      {[1, 2, 3, 4].map((n) => (
-                        <div
-                          key={n}
-                          style={{
-                            height: "0.55rem",
-                            borderRadius: "3px",
-                            background: accent
-                              ? "color-mix(in srgb, var(--accent) 18%, var(--surface))"
-                              : "var(--border)",
-                            opacity: n === 4 ? 0.5 : 1,
-                          }}
-                        />
-                      ))}
-                    </div>
-                    {/* Footer */}
-                    <div
-                      style={{
-                        height: "0.35rem",
-                        background: accent ? "var(--accent)" : "var(--border)",
-                        opacity: accent ? 0.6 : 1,
-                      }}
-                    />
-                  </div>
-                  {/* Arrow connector */}
-                  {i < arr.length - 1 && (
-                    <span style={{ color: "var(--border)", fontSize: "0.75rem", flexShrink: 0 }}>→</span>
-                  )}
-                </div>
-              ))}
-            </div>
+          <div style={{ borderRadius: "10px", overflow: "hidden", marginBottom: "3rem" }}>
+            <Image
+              src="/assets/camperoteca/happy-path.jpg"
+              alt="Secuencia de navegación: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"
+              width={2000}
+              height={606}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
           </div>
         </Reveal>
 

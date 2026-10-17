@@ -141,7 +141,7 @@ const copy = {
     ],
     mvp_post: [
       "Comunidad: foro y grupos de usuarios.",
-      "Marketplace de materiales sobrantes.",
+      "Marketplace completo con valoraciones y sistema de reputación.",
       "Notificaciones y recordatorios por etapa.",
     ],
     mvp_inc_label: "Incluido en MVP",
@@ -199,7 +199,7 @@ const copy = {
       "Diseñar para la incertidumbre: los usuarios no saben lo que no saben. La clave fue diseñar para reducir esa incertidumbre antes de que el usuario la sienta.",
       "La información de progreso es motivadora: mostrar en qué etapa está el usuario y cuánto ha avanzado tiene un impacto directo en su disposición a continuar.",
       "Centralizar no basta: la estructura y el contexto son tan importantes como tener el recurso disponible. Un recurso sin contexto no ayuda.",
-      "La comunidad como recurso de diseño: las personas valoran compartir experiencias con otros en el mismo proceso, no solo consumir contenido experto.",
+      "La comunidad como recurso de diseño: las personas valoran compartir experiencias y recursos con otros en el mismo proceso — y están dispuestas a ceder lo que ya no necesitan.",
     ],
     next_title: "Próximas iteraciones",
     nexts: [
@@ -309,7 +309,7 @@ const copy = {
     ],
     mvp_post: [
       "Community: forum and user groups.",
-      "Leftover materials marketplace.",
+      "Full marketplace with ratings and reputation system.",
       "Stage-based notifications and reminders.",
     ],
     mvp_inc_label: "Included in MVP",
@@ -363,7 +363,7 @@ const copy = {
       "Designing for uncertainty: users don't know what they don't know. The key was designing to reduce that uncertainty before the user even feels it.",
       "Progress information is motivating: showing users what stage they're at and how far they've come has a direct impact on their willingness to continue.",
       "Centralising isn't enough: structure and context are just as important as having the resource available. A resource without context doesn't help.",
-      "Community as a design resource: people value sharing experiences with others going through the same process, not just consuming expert content.",
+      "Community as a design resource: people value sharing experiences and resources with others going through the same process — and are willing to pass on what they no longer need.",
     ],
     next_title: "Next iterations",
     nexts: [
@@ -473,7 +473,7 @@ const copy = {
     ],
     mvp_post: [
       "Comunidade: fórum e grupos de usuarios.",
-      "Marketplace de materiais excedentes.",
+      "Marketplace completo com avaliações e sistema de reputação.",
       "Notificações e lembretes por etapa.",
     ],
     mvp_inc_label: "Incluído no MVP",
@@ -527,7 +527,7 @@ const copy = {
       "Desenhar para a incerteza: os usuarios não sabem o que não sabem. A chave foi desenhar para reduzir essa incerteza antes que o usuario a sinta.",
       "A informação de progresso é motivadora: mostrar em que etapa está o usuario e quanto avançou tem um impacto direto na sua disposição para continuar.",
       "Centralizar não chega: a estrutura e o contexto são tão importantes quanto ter o recurso disponível. Um recurso sem contexto não ajuda.",
-      "A comunidade como recurso de design: as pessoas valorizam partilhar experiências com outros no mesmo processo, não apenas consumir conteúdo especializado.",
+      "A comunidade como recurso de design: as pessoas valorizam partilhar experiências e recursos com outros no mesmo processo — e estão dispostas a ceder o que já não precisam.",
     ],
     next_title: "Próximas iterações",
     nexts: [

@@ -1387,6 +1387,7 @@ export default async function CamperotecaPage({ params }: Props) {
                         alt={alt}
                         width={284}
                         height={620}
+                        className="screen-img"
                         style={{
                           display: "block",
                           width: "100%",
@@ -1494,6 +1495,10 @@ export default async function CamperotecaPage({ params }: Props) {
 
       {/* ── responsive styles ── */}
       <style>{`
+        @media (prefers-color-scheme: dark) {
+          .screen-img { mix-blend-mode: multiply; }
+        }
+        [data-theme="dark"] .screen-img { mix-blend-mode: multiply; }
         @media (max-width: 640px) {
           .persona-grid,
           .mvp-grid,

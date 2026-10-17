@@ -57,11 +57,11 @@ const copy = {
 
     /* 02 */
     prob_label: "Problema y oportunidad",
-    prob_title: "Un proceso sin guía",
+    prob_title: "Un proceso complejo, sin guía ni recursos compartidos",
     prob_body:
-      "Camperizar una furgoneta es un proyecto técnico, económico y legal complejo. Sin embargo, quienes se inician en este mundo se enfrentan a información fragmentada distribuida entre foros, canales de YouTube y grupos de redes sociales: sin orden, sin criterio de calidad y sin contexto sobre en qué fase del proyecto aplicar cada recurso.",
+      "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, y los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin una plataforma que la articule.",
     prob_opp:
-      "La oportunidad estaba clara: diseñar una experiencia que centralizara el conocimiento, estructurara el recorrido del usuario y le acompañara en cada etapa del proceso, desde la primera decisión hasta el montaje final.",
+      "La oportunidad: una plataforma que guiara el proceso y activara la comunidad — donde materiales, herramientas y conocimiento circularan entre privados por donación, intercambio o venta. Orientación y economía circular en un mismo lugar.",
 
     /* 03 */
     research_label: "UX Research",
@@ -227,11 +227,11 @@ const copy = {
     meta_dur: "Duration",
 
     prob_label: "Problem & Opportunity",
-    prob_title: "A process without guidance",
+    prob_title: "A complex process, with no guidance or shared resources",
     prob_body:
-      "Converting a van is a complex technical, financial and legal project. Yet people entering this world face fragmented information scattered across forums, YouTube channels and social media groups — unstructured, with no quality filter and no context about which phase of the project each resource applies to.",
+      "Converting a van on your own is technically complex and financially demanding. The process has no clear order, and the materials and tools used briefly — at real cost — end up unused once that phase is done. A community that shares resources exists, but without a platform to bring it together.",
     prob_opp:
-      "The opportunity was clear: design an experience that centralises knowledge, structures the user journey and accompanies them at every stage of the process, from the first decision to the final build.",
+      "The opportunity: a platform that guides the process and activates the community — where materials, tools and knowledge flow between individuals through donation, exchange or sale. Guidance and circular economy in one place.",
 
     research_label: "UX Research",
     research_title: "Research before design",
@@ -389,11 +389,11 @@ const copy = {
     meta_dur: "Duração",
 
     prob_label: "Problema e oportunidade",
-    prob_title: "Um processo sem orientação",
+    prob_title: "Um processo complexo, sem orientação nem recursos partilhados",
     prob_body:
-      "Camperizar uma van é um projeto técnico, económico e legal complexo. Porém, quem começa neste mundo depara-se com informação fragmentada distribuída por fóruns, canais do YouTube e grupos de redes sociais — sem ordem, sem critério de qualidade e sem contexto sobre em que fase do projeto aplicar cada recurso.",
+      "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, e os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que partilha recursos, mas sem uma plataforma que a articule.",
     prob_opp:
-      "A oportunidade era clara: desenhar uma experiência que centralizasse o conhecimento, estruturasse o percurso do usuario e o acompanhasse em cada etapa do processo, desde a primeira decisão até à montagem final.",
+      "A oportunidade: uma plataforma que orientasse o processo e ativasse a comunidade — onde materiais, ferramentas e conhecimento circulassem entre privados por doação, troca ou venda. Orientação e economia circular num mesmo lugar.",
 
     research_label: "UX Research",
     research_title: "Investigar antes de desenhar",

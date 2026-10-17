@@ -41,7 +41,7 @@ export const t = {
       camperoteca: {
         tag: "UX/UI · End to End · Proyecto personal",
         title: "Camperoteca",
-        desc: "Plataforma mobile para simplificar la planificación del proceso de camperización. Del caos de información a una guía progresiva centrada en el usuario.",
+        desc: "Plataforma mobile para acompañar el proceso de camperización paso a paso y conectar a la comunidad para intercambiar materiales, herramientas y conocimiento.",
         year: "2025–26",
         cover: "/assets/camperoteca-cover.jpg",
         coverAlt: "Pantalla de la app Camperoteca en un teléfono móvil",
@@ -96,7 +96,7 @@ export const t = {
       camperoteca: {
         tag: "UX/UI · End to End · Personal project",
         title: "Camperoteca",
-        desc: "Mobile platform to simplify the planning of the van conversion process. From fragmented information to a progressive user-centred guide.",
+        desc: "Mobile platform to guide the van conversion process step by step and connect the community to exchange materials, tools and knowledge.",
         year: "2025–26",
         cover: "/assets/camperoteca-cover.jpg",
         coverAlt: "Camperoteca app screen on a mobile phone",
@@ -151,7 +151,7 @@ export const t = {
       camperoteca: {
         tag: "UX/UI · End to End · Projeto pessoal",
         title: "Camperoteca",
-        desc: "Plataforma mobile para simplificar o planeamento do processo de camperização. Do caos de informação a um guia progressivo centrado no utilizador.",
+        desc: "Plataforma mobile para acompanhar o processo de camperização passo a passo e conectar a comunidade para trocar materiais, ferramentas e conhecimento.",
         year: "2025–26",
         cover: "/assets/camperoteca-cover.jpg",
         coverAlt: "Ecrã da app Camperoteca num telemóvel",

@@ -135,7 +135,10 @@ export default function Nav({ lang }: { lang: Lang }) {
           ))}
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginLeft: "0.5rem" }}>
             {LANGS.map(l => (
-              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}>{l}</Link>
+              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}
+                aria-label={l === "es" ? "Español" : l === "en" ? "English" : "Português"}
+                aria-current={l === lang ? "page" : undefined}
+              >{l.toUpperCase()}</Link>
             ))}
           </div>
           <ThemeBtn />
@@ -146,7 +149,10 @@ export default function Nav({ lang }: { lang: Lang }) {
              className="show-mobile">
           <div style={{ display: "flex", gap: "0.5rem" }}>
             {LANGS.map(l => (
-              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}>{l}</Link>
+              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}
+                aria-label={l === "es" ? "Español" : l === "en" ? "English" : "Português"}
+                aria-current={l === lang ? "page" : undefined}
+              >{l.toUpperCase()}</Link>
             ))}
           </div>
           <ThemeBtn />

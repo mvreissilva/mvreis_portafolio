@@ -1,8 +1,29 @@
+import type { Metadata } from "next";
 import { LANGS, t, type Lang } from "@/lib/i18n";
 import Nav from "@/components/layout/Nav";
 
 export function generateStaticParams() {
   return LANGS.map(lang => ({ lang }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang: _lang } = await params;
+  const lang = (LANGS.includes(_lang as Lang) ? _lang : "es") as Lang;
+  const base = "https://mvreis-uxportafolio.vercel.app";
+  return {
+    alternates: {
+      canonical: `${base}/${lang}`,
+      languages: {
+        "es": `${base}/es`,
+        "en": `${base}/en`,
+        "pt": `${base}/pt`,
+      },
+    },
+  };
 }
 
 export default async function LangLayout({

@@ -1025,62 +1025,56 @@ export default async function CamperotecaPage({ params }: Props) {
       <section id="cs-hmw" style={section}>
         <Reveal>
           <SectionHeading label={C.hmw_label} title={C.hmw_title} />
-          <div style={{ overflowX: "auto" }}>
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                fontSize: "0.875rem",
-                lineHeight: 1.6,
-              }}
-            >
-              <thead>
-                <tr>
-                  {[C.hmw_col1, C.hmw_col2, C.hmw_col3].map((col) => (
-                    <th
-                      key={col}
-                      style={{
-                        textAlign: "left",
-                        padding: "0.75rem 1rem",
-                        fontSize: "0.7rem",
-                        fontWeight: 700,
-                        letterSpacing: "0.1em",
-                        textTransform: "uppercase",
-                        color: "var(--muted)",
-                        borderBottom: "2px solid var(--border)",
-                      }}
-                    >
-                      {col}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {C.hmw_rows.map((row, i) => (
-                  <tr key={i} style={{ borderBottom: "1px solid var(--border)" }}>
-                    <td style={{ padding: "1rem", color: "var(--muted)", verticalAlign: "top" }}>{row.prob}</td>
-                    <td style={{ padding: "1rem", color: "var(--ink)", verticalAlign: "top" }}>{row.opp}</td>
-                    <td style={{ padding: "1rem", verticalAlign: "top" }}>
-                      <span
-                        style={{
-                          display: "inline-block",
-                          background: "var(--surface)",
-                          border: "1px solid var(--border)",
-                          borderRadius: "6px",
-                          padding: "0.25rem 0.6rem",
-                          fontSize: "0.8rem",
-                          color: "var(--accent)",
-                          fontWeight: 600,
-                        }}
-                      >
-                        {row.dec}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            {C.hmw_rows.map((row, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr",
+                  gap: "0.5rem",
+                  padding: "1rem",
+                  borderRadius: "10px",
+                  border: "1px solid var(--border)",
+                  background: "var(--surface)",
+                  fontSize: "0.875rem",
+                  lineHeight: 1.6,
+                }}
+                className="hmw-row"
+              >
+                <div>
+                  <span style={{ display: "block", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.25rem" }}>{C.hmw_col1}</span>
+                  <span style={{ color: "var(--muted)" }}>{row.prob}</span>
+                </div>
+                <div>
+                  <span style={{ display: "block", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.25rem" }}>{C.hmw_col2}</span>
+                  <span style={{ color: "var(--ink)" }}>{row.opp}</span>
+                </div>
+                <div>
+                  <span style={{ display: "block", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.25rem" }}>{C.hmw_col3}</span>
+                  <span
+                    style={{
+                      display: "inline-block",
+                      background: "var(--bg)",
+                      border: "1px solid var(--border)",
+                      borderRadius: "6px",
+                      padding: "0.25rem 0.6rem",
+                      fontSize: "0.8rem",
+                      color: "var(--accent)",
+                      fontWeight: 600,
+                    }}
+                  >
+                    {row.dec}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
+          <style>{`
+            @media (min-width: 640px) {
+              .hmw-row { grid-template-columns: 1fr 1fr 1fr !important; }
+            }
+          `}</style>
         </Reveal>
       </section>
 

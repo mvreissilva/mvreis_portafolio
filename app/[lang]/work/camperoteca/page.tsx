@@ -93,7 +93,21 @@ const copy = {
       "Miedo a gastar dinero en soluciones que no funcionen.",
     ],
     persona_context:
-      "Se definieron tres personas de usuario. Blanca representa el eje de aprendizaje y proceso; Fernando Molina (31, nómada digital) el eje de intercambio de recursos y comunidad.",
+      "Se definieron tres personas de usuario. Blanca representa el eje de aprendizaje y proceso; Fernando, el eje de intercambio de recursos y comunidad.",
+    persona2_name: "Fernando Molina, 31 años",
+    persona2_tag: "«El Nómada»",
+    persona2_desc:
+      "Desarrollador freelance en Valencia. Ya tiene su furgoneta camperizada y la usa como segunda residencia. Acumula materiales sobrantes y herramientas que ya no necesita, y busca una forma de que circulen entre otros usuarios.",
+    persona2_goals: [
+      "Dar salida a herramientas y materiales que ya no usa.",
+      "Conectar con personas en fases más tempranas que él.",
+      "Participar en una comunidad donde el conocimiento se comparte.",
+    ],
+    persona2_frusts: [
+      "No hay un canal confiable para intercambiar entre privados.",
+      "Los grupos de Facebook son caóticos y sin sistema de confianza.",
+      "Siente que su experiencia podría ayudar a otros pero no tiene cómo.",
+    ],
 
     /* 05 */
     hmw_label: "How Might We",
@@ -275,7 +289,21 @@ const copy = {
       "Fear of spending money on solutions that won't work.",
     ],
     persona_context:
-      "Three user personas were defined. Blanca represents the learning and process axis; Fernando Molina (31, digital nomad) the resource exchange and community axis.",
+      "Three user personas were defined. Blanca represents the learning and process axis; Fernando, the resource exchange and community axis.",
+    persona2_name: "Fernando Molina, 31",
+    persona2_tag: "«The Nomad»",
+    persona2_desc:
+      "Freelance developer in Valencia. His van is already converted and serves as a second home. He has leftover materials and tools he no longer needs and is looking for a way to pass them on to other users.",
+    persona2_goals: [
+      "Find a use for tools and materials he no longer needs.",
+      "Connect with people in earlier stages of the process.",
+      "Participate in a community where knowledge is shared.",
+    ],
+    persona2_frusts: [
+      "No reliable channel exists for peer-to-peer exchange.",
+      "Facebook groups are chaotic and lack a trust system.",
+      "His experience could help others, but he has no way to share it.",
+    ],
 
     hmw_label: "How Might We",
     hmw_title: "From problem to opportunity",
@@ -451,7 +479,21 @@ const copy = {
       "Medo de gastar dinheiro em soluções que não funcionem.",
     ],
     persona_context:
-      "Foram definidas três personas de utilizador. Blanca representa o eixo de aprendizagem e processo; Fernando Molina (31, nómada digital) o eixo de troca de recursos e comunidade.",
+      "Foram definidas três personas de utilizador. Blanca representa o eixo de aprendizagem e processo; Fernando, o eixo de troca de recursos e comunidade.",
+    persona2_name: "Fernando Molina, 31 anos",
+    persona2_tag: "«O Nómada»",
+    persona2_desc:
+      "Programador freelance em Valência. A sua furgoneta já está camperizada e serve como segunda residência. Acumula materiais e ferramentas que já não precisa e procura uma forma de os fazer circular entre outros utilizadores.",
+    persona2_goals: [
+      "Dar saída a ferramentas e materiais que já não usa.",
+      "Conectar com pessoas em fases mais iniciais do processo.",
+      "Participar numa comunidade onde o conhecimento se partilha.",
+    ],
+    persona2_frusts: [
+      "Não existe um canal confiável para troca entre privados.",
+      "Os grupos do Facebook são caóticos e sem sistema de confiança.",
+      "Sente que a sua experiência poderia ajudar outros, mas não tem como.",
+    ],
 
     hmw_label: "How Might We",
     hmw_title: "Do problema à oportunidade",
@@ -888,54 +930,57 @@ export default async function CamperotecaPage({ params }: Props) {
             {C.persona_context}
           </p>
 
-          {/* Persona card */}
-          <div
-            style={{
-              background: "var(--surface)",
-              border: "1px solid var(--border)",
-              borderRadius: "12px",
-              padding: "2rem",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "2rem",
-            }}
-            className="persona-grid"
-          >
-            <div>
-              <p style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: "0.25rem", color: "var(--ink)" }}>
-                {C.persona_name}
-              </p>
-              <p style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 600, marginBottom: "1rem" }}>
-                {C.persona_tag}
-              </p>
-              <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "var(--muted)" }}>{C.persona_desc}</p>
-            </div>
-            <div>
-              <div style={{ marginBottom: "1.5rem" }}>
-                <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>
-                  {C.goals_title}
-                </p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {C.goals.map((g) => (
-                    <li key={g} style={{ fontSize: "0.9rem", lineHeight: 1.6, color: "var(--ink)", padding: "0.3rem 0", borderBottom: "1px solid var(--border)", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
-                      <span style={{ color: "var(--accent)", flexShrink: 0 }}>✓</span> {g}
-                    </li>
-                  ))}
-                </ul>
+          {/* Persona cards — Blanca + Fernando */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }} className="personas-two-col">
+            {[
+              { name: C.persona_name, tag: C.persona_tag, desc: C.persona_desc, goals: C.goals, frusts: C.frusts },
+              { name: C.persona2_name, tag: C.persona2_tag, desc: C.persona2_desc, goals: C.persona2_goals, frusts: C.persona2_frusts },
+            ].map(({ name, tag, desc, goals, frusts }) => (
+              <div
+                key={name}
+                style={{
+                  background: "var(--surface)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "12px",
+                  padding: "1.75rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1.25rem",
+                }}
+              >
+                <div>
+                  <p style={{ fontSize: "1.05rem", fontWeight: 600, marginBottom: "0.2rem", color: "var(--ink)" }}>
+                    {name}
+                  </p>
+                  <p style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 600, marginBottom: "0.75rem" }}>
+                    {tag}
+                  </p>
+                  <p style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--muted)" }}>{desc}</p>
+                </div>
+                <div>
+                  <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.6rem" }}>
+                    {C.goals_title}
+                  </p>
+                  <ul style={{ listStyle: "none", padding: 0, margin: "0 0 1.25rem" }}>
+                    {goals.map((g) => (
+                      <li key={g} style={{ fontSize: "0.875rem", lineHeight: 1.6, color: "var(--ink)", padding: "0.3rem 0", borderBottom: "1px solid var(--border)", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
+                        <span style={{ color: "var(--accent)", flexShrink: 0 }}>✓</span> {g}
+                      </li>
+                    ))}
+                  </ul>
+                  <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.6rem" }}>
+                    {C.frusts_title}
+                  </p>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    {frusts.map((f) => (
+                      <li key={f} style={{ fontSize: "0.875rem", lineHeight: 1.6, color: "var(--ink)", padding: "0.3rem 0", borderBottom: "1px solid var(--border)", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
+                        <span style={{ color: "var(--muted)", flexShrink: 0 }}>—</span> {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div>
-                <p style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>
-                  {C.frusts_title}
-                </p>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {C.frusts.map((f) => (
-                    <li key={f} style={{ fontSize: "0.9rem", lineHeight: 1.6, color: "var(--ink)", padding: "0.3rem 0", borderBottom: "1px solid var(--border)", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
-                      <span style={{ color: "var(--muted)", flexShrink: 0 }}>—</span> {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
         </Reveal>
       </section>
@@ -1419,6 +1464,9 @@ export default async function CamperotecaPage({ params }: Props) {
           }
           .meta-grid {
             grid-template-columns: 1fr 1fr !important;
+          }
+          .personas-two-col {
+            grid-template-columns: 1fr !important;
           }
           .screens-grid {
             grid-template-columns: 1fr !important;

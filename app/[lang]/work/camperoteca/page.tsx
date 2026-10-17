@@ -1376,6 +1376,7 @@ export default async function CamperotecaPage({ params }: Props) {
                         height: "calc(min(180px, 48vw) * 620 / 284)",
                         borderRadius: "22px",
                         overflow: "hidden",
+                        background: "transparent",
                         boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
                         flexShrink: 0,
                       }}
@@ -1390,7 +1391,7 @@ export default async function CamperotecaPage({ params }: Props) {
                           display: "block",
                           width: "100%",
                           height: "100%",
-                          objectFit: "cover",
+                          objectFit: "fill",
                         }}
                       />
                     </div>

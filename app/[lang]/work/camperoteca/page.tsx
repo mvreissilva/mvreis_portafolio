@@ -1361,16 +1361,50 @@ export default async function CamperotecaPage({ params }: Props) {
                   }}
                 >
                   {placeholder ? (
-                    <div
-                      style={{
-                        display: "block",
-                        width: "min(180px, 48vw)",
-                        height: "calc(min(180px, 48vw) * 620 / 284)",
-                        borderRadius: "22px",
+                    <div style={{
+                      position: "relative",
+                      width: "min(180px, 48vw)",
+                      height: "calc(min(180px, 48vw) * 1320 / 648)",
+                      borderRadius: "calc(min(180px, 48vw) * 46 / 284)",
+                      background: "linear-gradient(180deg, #2c2c2c 0%, #1a1a1a 100%)",
+                      boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+                      overflow: "hidden",
+                      flexShrink: 0,
+                    }}>
+                      {/* Screen area */}
+                      <div style={{
+                        position: "absolute",
+                        top: "calc(min(180px, 48vw) * 9 / 284)",
+                        left: "calc(min(180px, 48vw) * 9 / 284)",
+                        right: "calc(min(180px, 48vw) * 9 / 284)",
+                        bottom: "calc(min(180px, 48vw) * 9 / 284)",
+                        borderRadius: "calc(min(180px, 48vw) * 38 / 284)",
                         background: "var(--surface)",
-                        border: "1.5px dashed var(--border)",
-                      }}
-                    />
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}>
+                        <span style={{
+                          fontSize: "calc(min(180px, 48vw) * 11 / 284)",
+                          color: "var(--muted)",
+                          fontFamily: "system-ui",
+                          textAlign: "center",
+                          padding: "0 8px",
+                        }}>{title}</span>
+                      </div>
+                      {/* Dynamic Island */}
+                      <div style={{
+                        position: "absolute",
+                        top: "calc(min(180px, 48vw) * 17 / 284)",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        width: "calc(min(180px, 48vw) * 76 / 284)",
+                        height: "calc(min(180px, 48vw) * 20 / 284)",
+                        borderRadius: "999px",
+                        background: "#000",
+                        zIndex: 10,
+                      }} />
+                    </div>
                   ) : (
                     <Image
                       src={src}

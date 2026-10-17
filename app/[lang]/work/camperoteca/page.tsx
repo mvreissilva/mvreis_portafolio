@@ -92,6 +92,8 @@ const copy = {
       "Información dispersa y sin contexto.",
       "Miedo a gastar dinero en soluciones que no funcionen.",
     ],
+    persona_context:
+      "Se definieron tres personas de usuario. Blanca representa el eje de aprendizaje y proceso; Fernando Molina (31, nómada digital) el eje de intercambio de recursos y comunidad.",
 
     /* 05 */
     hmw_label: "How Might We",
@@ -261,6 +263,8 @@ const copy = {
       "Scattered information with no context.",
       "Fear of spending money on solutions that won't work.",
     ],
+    persona_context:
+      "Three user personas were defined. Blanca represents the learning and process axis; Fernando Molina (31, digital nomad) the resource exchange and community axis.",
 
     hmw_label: "How Might We",
     hmw_title: "From problem to opportunity",
@@ -424,6 +428,8 @@ const copy = {
       "Informação dispersa e sem contexto.",
       "Medo de gastar dinheiro em soluções que não funcionem.",
     ],
+    persona_context:
+      "Foram definidas três personas de utilizador. Blanca representa o eixo de aprendizagem e processo; Fernando Molina (31, nómada digital) o eixo de troca de recursos e comunidade.",
 
     hmw_label: "How Might We",
     hmw_title: "Do problema à oportunidade",
@@ -840,6 +846,11 @@ export default async function CamperotecaPage({ params }: Props) {
           >
             {C.insight_quote}
           </blockquote>
+
+          {/* Persona context */}
+          <p style={{ fontSize: "0.9rem", color: "var(--muted)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+            {C.persona_context}
+          </p>
 
           {/* Persona card */}
           <div

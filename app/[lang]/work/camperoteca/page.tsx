@@ -12,6 +12,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { lang } = await params;
+  const base = "https://mvreis-uxportafolio.vercel.app";
   const titles: Record<string, string> = {
     es: "Camperoteca — Case Study · Marcus Reis",
     en: "Camperoteca — Case Study · Marcus Reis",
@@ -25,6 +26,14 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: titles[lang] ?? titles.es,
     description: descs[lang] ?? descs.es,
+    alternates: {
+      canonical: `${base}/${lang}/work/camperoteca`,
+      languages: {
+        "es": `${base}/es/work/camperoteca`,
+        "en": `${base}/en/work/camperoteca`,
+        "pt": `${base}/pt/work/camperoteca`,
+      },
+    },
   };
 }
 

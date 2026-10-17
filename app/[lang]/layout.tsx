@@ -16,6 +16,8 @@ export async function generateMetadata({
   const base = "https://mvreis-uxportafolio.vercel.app";
   return {
     alternates: {
+      // canonical per-page is set in each page's own generateMetadata;
+      // this layout-level entry covers the root /{lang} only
       canonical: `${base}/${lang}`,
       languages: {
         "es": `${base}/es`,

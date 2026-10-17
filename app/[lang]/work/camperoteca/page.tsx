@@ -53,7 +53,7 @@ const copy = {
     meta_val_tipo: "Proyecto personal · Bootcamp NEOLAND",
     meta_val_tools: "Figma · FigJam · Figma Make",
     meta_val_dur: "Oct 2025 – Abr 2026",
-    meta_alcance: "Alcance",
+    meta_alcance: "Proceso",
     meta_val_alcance: "Research · Definición · Arquitectura · UI Design · Prototipado",
 
     cta_label: "¿Hablamos?",
@@ -268,7 +268,7 @@ const copy = {
     meta_val_tipo: "Personal project · Bootcamp NEOLAND",
     meta_val_tools: "Figma · FigJam · Figma Make",
     meta_val_dur: "Oct 2025 – Apr 2026",
-    meta_alcance: "Scope",
+    meta_alcance: "Process",
     meta_val_alcance: "Research · Definition · Architecture · UI Design · Prototyping",
 
     cta_label: "Let's talk",
@@ -474,7 +474,7 @@ const copy = {
     meta_val_tipo: "Projeto pessoal · Bootcamp NEOLAND",
     meta_val_tools: "Figma · FigJam · Figma Make",
     meta_val_dur: "Out 2025 – Abr 2026",
-    meta_alcance: "Escopo",
+    meta_alcance: "Processo",
     meta_val_alcance: "Research · Definição · Arquitetura · UI Design · Prototipagem",
 
     cta_label: "Vamos conversar?",
@@ -781,9 +781,9 @@ export default async function CamperotecaPage({ params }: Props) {
             {[
               { label: C.meta_rol, value: C.meta_val_rol },
               { label: C.meta_tipo, value: C.meta_val_tipo },
+              { label: C.meta_alcance, value: C.meta_val_alcance },
               { label: C.meta_tools, value: C.meta_val_tools },
               { label: C.meta_dur, value: C.meta_val_dur },
-              { label: C.meta_alcance, value: C.meta_val_alcance },
             ].map(({ label, value }) => (
               <div
                 key={label}

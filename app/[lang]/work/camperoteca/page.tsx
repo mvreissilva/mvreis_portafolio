@@ -1209,6 +1209,18 @@ export default async function CamperotecaPage({ params }: Props) {
           >
             {[
               {
+                src: "/assets/camperoteca/screen-onboarding-v2.webp",
+                alt: "Onboarding: primer paso de la app, planifica tu proyecto desde cero",
+                title: C.ui_onboarding_title,
+                body: C.ui_onboarding_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-login.png",
+                alt: "Login: acceso con email y contraseña para continuar el proyecto",
+                title: C.ui_login_title,
+                body: C.ui_login_body,
+              },
+              {
                 src: "/assets/camperoteca/screen-miproyecto.webp",
                 alt: "Mi Proyecto: planificador por etapas con progreso y siguiente paso recomendado",
                 title: C.ui_miproyecto_title,
@@ -1227,22 +1239,10 @@ export default async function CamperotecaPage({ params }: Props) {
                 body: C.ui_encuentra_body,
               },
               {
-                src: "/assets/camperoteca/screen-login.png",
-                alt: "Login: acceso con email y contraseña para continuar el proyecto",
-                title: C.ui_login_title,
-                body: C.ui_login_body,
-              },
-              {
                 src: "/assets/camperoteca/screen-comunidad.png",
                 alt: "Comunidad: foro y usuarios cercanos para compartir herramientas y consejos",
                 title: C.ui_comunidad_title,
                 body: C.ui_comunidad_body,
-              },
-              {
-                src: "/assets/camperoteca/screen-onboarding-v2.webp",
-                alt: "Onboarding: primer paso de la app, planifica tu proyecto desde cero",
-                title: C.ui_onboarding_title,
-                body: C.ui_onboarding_body,
               },
             ].map(({ src, alt, title, body }) => (
               <div key={title}>

@@ -1307,11 +1307,11 @@ export default async function CamperotecaPage({ params }: Props) {
           >
             {[
               {
-                src: "/assets/camperoteca/screen-onboarding.png",
-                alt: "Onboarding: primer paso de la app, planifica tu proyecto desde cero",
+                src: "",
+                alt: "",
                 title: C.ui_onboarding_title,
                 body: C.ui_onboarding_body,
-                placeholder: false,
+                placeholder: true,
               },
               {
                 src: "",
@@ -1321,32 +1321,32 @@ export default async function CamperotecaPage({ params }: Props) {
                 placeholder: true,
               },
               {
-                src: "/assets/camperoteca/screen-miproyecto.png",
-                alt: "Mi Proyecto: planificador por etapas con progreso y siguiente paso recomendado",
+                src: "",
+                alt: "",
                 title: C.ui_miproyecto_title,
                 body: C.ui_miproyecto_body,
-                placeholder: false,
+                placeholder: true,
               },
               {
-                src: "/assets/camperoteca/screen-aprende.png",
-                alt: "Aprende: guías técnicas, legales y casos reales",
+                src: "",
+                alt: "",
                 title: C.ui_aprende_title,
                 body: C.ui_aprende_body,
-                placeholder: false,
+                placeholder: true,
               },
               {
-                src: "/assets/camperoteca/screen-encuentra.png",
-                alt: "Encuentra Recursos: herramientas y materiales para la camperización",
+                src: "",
+                alt: "",
                 title: C.ui_encuentra_title,
                 body: C.ui_encuentra_body,
-                placeholder: false,
+                placeholder: true,
               },
               {
-                src: "/assets/camperoteca/screen-comunidad.png",
-                alt: "Pantalla de Comunidad de Camperoteca",
+                src: "",
+                alt: "",
                 title: C.ui_comunidad_title,
                 body: C.ui_comunidad_body,
-                placeholder: false,
+                placeholder: true,
               },
             ].map(({ src, alt, title, body, placeholder }) => (
               <div key={title}>

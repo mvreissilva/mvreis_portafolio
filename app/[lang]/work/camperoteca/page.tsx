@@ -133,7 +133,7 @@ const copy = {
     arch_label: "Arquitectura de información",
     arch_title: "Estructura de navegación y recorrido principal",
     arch_body:
-      "La secuencia óptima que recorre un usuario nuevo: desde la Home y el Onboarding hasta el acceso a las cuatro áreas principales de la plataforma. Mi Proyecto es el hub central; Aprende, Encuentra y Comunidad lo complementan con contenido, recursos y conexión.",
+      "Mi Proyecto actúa como hub central: el usuario avanza por etapas y, al detectar una necesidad, accede a Aprende, Encuentra o Comunidad mediante CTAs contextuales. El intercambio de recursos no es un flujo paralelo — emerge del propio proceso, en el momento en que tiene sentido.",
     mvp_title: "Alcance del MVP",
     mvp_inc: [
       "Mi Proyecto: planificador por etapas con progreso y siguiente paso.",
@@ -302,7 +302,7 @@ const copy = {
     arch_label: "Information Architecture",
     arch_title: "Navigation structure and main user flow",
     arch_body:
-      "The optimal sequence a new user follows: from Home and Onboarding to access to the four main areas of the platform. My Project is the central hub; Learn, Find and Community complement it with content, resources and connection.",
+      "My Project acts as the central hub: the user progresses through stages and, when a need arises, accesses Learn, Find or Community through contextual CTAs. The exchange of resources is not a parallel flow — it emerges from the process itself, at the moment it makes sense.",
     mvp_title: "MVP Scope",
     mvp_inc: [
       "My Project: stage planner with progress and next step.",
@@ -467,7 +467,7 @@ const copy = {
     arch_label: "Arquitetura de informação",
     arch_title: "Estrutura de navegação e percurso principal",
     arch_body:
-      "A sequência ideal que um novo usuario percorre: desde a Home e o Onboarding até ao acesso às quatro áreas principais da plataforma. O Meu Projeto é o hub central; Aprende, Encontra e Comunidade complementam-no com conteúdo, recursos e ligação.",
+      "O Meu Projeto funciona como hub central: o utilizador avança por etapas e, ao detetar uma necessidade, acede a Aprende, Encontra ou Comunidade através de CTAs contextuais. A troca de recursos não é um fluxo paralelo — emerge do próprio processo, no momento em que faz sentido.",
     mvp_title: "Âmbito do MVP",
     mvp_inc: [
       "Meu Projeto: planeador por etapas com progresso e próximo passo.",

@@ -69,7 +69,7 @@ const copy = {
     research_body:
       "Antes de proponer ninguna solución, llevé a cabo una investigación mixta para entender quiénes eran los usuarios, qué hacían y dónde encontraban dificultades.",
     research_benchmark:
-      "El análisis competitivo confirmó el hueco: ninguna plataforma española cubre los tres ejes — guías, comunidad y recursos — en un solo lugar. El 71,6% de los encuestados usaría una app para este proceso, y el 40,6% mostró interés activo en compartir recursos con la comunidad.",
+      "El análisis competitivo confirmó el hueco: ninguna plataforma española cubre los tres ejes — guías, comunidad y recursos — en un solo lugar. El 71,6% de los encuestados usaría una app para este proceso, y el 40,6% mostró interés activo en compartir recursos con la comunidad. Las entrevistas reforzaron este dato: los usuarios no encuentran una forma sencilla de localizar herramientas o materiales cercanos — recurren a búsquedas dispersas o soluciones costosas por falta de un canal directo.",
 
     /* 04 */
     insight_label: "Insight y persona",
@@ -239,7 +239,7 @@ const copy = {
     research_body:
       "Before proposing any solution, I conducted mixed research to understand who the users were, what they did and where they encountered difficulties.",
     research_benchmark:
-      "The competitive analysis confirmed the gap: no Spanish platform covers all three axes — guides, community and resources — in one place. 71.6% of respondents would use an app for this process, and 40.6% showed active interest in sharing resources within the community.",
+      "The competitive analysis confirmed the gap: no Spanish platform covers all three axes — guides, community and resources — in one place. 71.6% of respondents would use an app for this process, and 40.6% showed active interest in sharing resources within the community. Interviews reinforced this: users have no simple way to find nearby tools or materials — they resort to scattered searches or costly solutions for lack of a direct channel.",
 
     insight_label: "Insight & Persona",
     insight_title: "What they really needed",
@@ -402,7 +402,7 @@ const copy = {
     research_body:
       "Antes de propor qualquer solução, realizei uma investigação mista para entender quem eram os usuarios, o que faziam e onde encontravam dificuldades.",
     research_benchmark:
-      "A análise competitiva confirmou a lacuna: nenhuma plataforma espanhola cobre os três eixos — guias, comunidade e recursos — num único lugar. 71,6% dos inquiridos usaria uma app para este processo, e 40,6% mostrou interesse ativo em partilhar recursos com a comunidade.",
+      "A análise competitiva confirmou a lacuna: nenhuma plataforma espanhola cobre os três eixos — guias, comunidade e recursos — num único lugar. 71,6% dos inquiridos usaria uma app para este processo, e 40,6% mostrou interesse ativo em partilhar recursos com a comunidade. As entrevistas reforçaram este dado: os utilizadores não encontram uma forma simples de localizar ferramentas ou materiais próximos — recorrem a pesquisas dispersas ou soluções dispendiosas por falta de um canal direto.",
 
     insight_label: "Insight e Persona",
     insight_title: "O que realmente precisavam",

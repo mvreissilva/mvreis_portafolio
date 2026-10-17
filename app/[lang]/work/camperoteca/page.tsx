@@ -1294,28 +1294,6 @@ export default async function CamperotecaPage({ params }: Props) {
           </p>
         </Reveal>
 
-        {/* Mockup principal — imagen protagonista */}
-        <Reveal delay={0.1}>
-          <div
-            style={{
-              borderRadius: "16px",
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              src="/assets/camperoteca/mockup-camperoteca-hero.png"
-              alt={C.ui_mockup_alt}
-              width={1920}
-              height={1080}
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-              }}
-            />
-          </div>
-        </Reveal>
-
         {/* Screens grid — 3 pantallas clave */}
         <Reveal delay={0.15}>
           <div

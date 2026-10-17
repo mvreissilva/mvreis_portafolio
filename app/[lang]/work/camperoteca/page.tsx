@@ -1092,7 +1092,12 @@ export default async function CamperotecaPage({ params }: Props) {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div style={{ borderRadius: "10px", overflow: "hidden", marginBottom: "3rem" }}>
+          <div style={{
+            borderRadius: "10px", overflow: "hidden", marginBottom: "3rem",
+            width: "min(1100px, 100vw - 3rem)",
+            marginLeft: "50%",
+            transform: "translateX(-50%)",
+          }}>
             <Image
               src="/assets/camperoteca/happy-path.jpg"
               alt="Secuencia de navegación: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"

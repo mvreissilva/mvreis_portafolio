@@ -1487,7 +1487,7 @@ export default async function CamperotecaPage({ params }: Props) {
             <p style={{
               fontFamily: "var(--font-serif)",
               fontSize: "1.5rem",
-              color: "var(--ink)",
+              color: "var(--accent)",
               marginBottom: "0.75rem",
               letterSpacing: "-0.01em",
             }}>

@@ -586,25 +586,12 @@ export default async function CamperotecaPage({ params }: Props) {
   return (
     <div style={{ background: "var(--bg)", color: "var(--ink)" }}>
       {/* ── BACK LINK ── */}
-      <div className="back-wrapper" style={{ maxWidth: maxW, margin: "0 auto", padding: "6rem 1.5rem 0" }}>
+      <div style={{ maxWidth: maxW, margin: "0 auto", padding: "6.5rem 1.5rem 0" }}>
         <Link
           href={`/${lang}`}
-          style={{
-            fontSize: "0.8rem",
-            fontWeight: 500,
-            color: "var(--muted)",
-            textDecoration: "none",
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "0.4rem",
-            border: "1px solid var(--border)",
-            borderRadius: "6px",
-            padding: "0.35rem 0.75rem",
-            transition: "color 0.15s, border-color 0.15s",
-          }}
-          aria-label={C.back_projects}
+          style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none", display: "inline-block", marginBottom: "3rem", transition: "color 0.2s" }}
         >
-          <span aria-hidden="true">←</span> {C.back}
+          {C.back_projects}
         </Link>
       </div>
 
@@ -1367,21 +1354,9 @@ export default async function CamperotecaPage({ params }: Props) {
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
             <Link
               href={`/${lang}`}
-              style={{
-                fontSize: "0.8rem",
-                fontWeight: 500,
-                color: "var(--muted)",
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.4rem",
-                border: "1px solid var(--border)",
-                borderRadius: "6px",
-                padding: "0.35rem 0.75rem",
-                transition: "color 0.15s, border-color 0.15s",
-              }}
+              style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none", display: "inline-block", transition: "color 0.2s" }}
             >
-              <span aria-hidden="true">←</span> {C.back}
+              {C.back_projects}
             </Link>
           </div>
         </Reveal>
@@ -1390,7 +1365,6 @@ export default async function CamperotecaPage({ params }: Props) {
       {/* ── responsive styles ── */}
       <style>{`
         @media (max-width: 640px) {
-          .back-wrapper { padding-top: 5rem !important; }
           .persona-grid,
           .mvp-grid,
           .screen-grid {

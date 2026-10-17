@@ -1369,21 +1369,31 @@ export default async function CamperotecaPage({ params }: Props) {
                       }}
                     />
                   ) : (
-                    /* eslint-disable-next-line @next/next/no-img-element */
-                    <img
-                      src={src}
-                      alt={alt}
-                      width={284}
-                      height={620}
+                    <div
                       style={{
                         display: "block",
                         width: "min(180px, 48vw)",
                         height: "calc(min(180px, 48vw) * 620 / 284)",
-                        objectFit: "cover",
                         borderRadius: "22px",
+                        overflow: "hidden",
                         boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
+                        flexShrink: 0,
                       }}
-                    />
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={src}
+                        alt={alt}
+                        width={284}
+                        height={620}
+                        style={{
+                          display: "block",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>
                   )}
                 </div>
                 <h3

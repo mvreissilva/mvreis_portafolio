@@ -187,6 +187,9 @@ const copy = {
     ui_comunidad_title: "Comunidad",
     ui_comunidad_body:
       "Conecta con otros camperos. Pregunta, responde y encuentra usuarios cercanos con herramientas o conocimiento.",
+    ui_onboarding_title: "Onboarding",
+    ui_onboarding_body:
+      "El punto de entrada al proyecto. Guía al usuario desde cero con contexto claro y un primer paso accionable — antes de que la complejidad del proceso lo frene.",
     ui_mockup_alt: "Vista general de la aplicación Camperoteca mostrando la pantalla principal Mi Proyecto con el planificador por etapas",
 
     /* 09 */
@@ -349,6 +352,9 @@ const copy = {
     ui_comunidad_title: "Community",
     ui_comunidad_body:
       "Connect with other campers. Ask, answer and find nearby users with tools or knowledge to share.",
+    ui_onboarding_title: "Onboarding",
+    ui_onboarding_body:
+      "The entry point to the project. Guides the user from scratch with clear context and a first actionable step — before the complexity of the process holds them back.",
     ui_mockup_alt: "General view of the Camperoteca app showing the main My Project screen with the stage planner",
 
     learn_label: "Learnings",
@@ -510,6 +516,9 @@ const copy = {
     ui_comunidad_title: "Comunidade",
     ui_comunidad_body:
       "Conecta com outros campistas. Pergunta, responde e encontra usuarios próximos com ferramentas ou conhecimento.",
+    ui_onboarding_title: "Onboarding",
+    ui_onboarding_body:
+      "O ponto de entrada no projeto. Guia o utilizador desde o início com contexto claro e um primeiro passo acionável — antes que a complexidade do processo o bloqueie.",
     ui_mockup_alt: "Vista geral da aplicação Camperoteca mostrando o ecrã principal Meu Projeto com o planeador por etapas",
 
     learn_label: "Aprendizagens",
@@ -1228,6 +1237,12 @@ export default async function CamperotecaPage({ params }: Props) {
                 alt: "Comunidad: foro y usuarios cercanos para compartir herramientas y consejos",
                 title: C.ui_comunidad_title,
                 body: C.ui_comunidad_body,
+              },
+              {
+                src: "/assets/camperoteca/screen-onboarding-v2.webp",
+                alt: "Onboarding: primer paso de la app, planifica tu proyecto desde cero",
+                title: C.ui_onboarding_title,
+                body: C.ui_onboarding_body,
               },
             ].map(({ src, alt, title, body }) => (
               <div key={title}>

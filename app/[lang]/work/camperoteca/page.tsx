@@ -68,6 +68,8 @@ const copy = {
     research_title: "Investigar antes de diseñar",
     research_body:
       "Antes de proponer ninguna solución, llevé a cabo una investigación mixta para entender quiénes eran los usuarios, qué hacían y dónde encontraban dificultades.",
+    research_benchmark:
+      "El análisis competitivo confirmó el hueco: ninguna plataforma española cubre los tres ejes — guías, comunidad y recursos — en un solo lugar.",
 
     /* 04 */
     insight_label: "Insight y persona",
@@ -237,6 +239,8 @@ const copy = {
     research_title: "Research before design",
     research_body:
       "Before proposing any solution, I conducted mixed research to understand who the users were, what they did and where they encountered difficulties.",
+    research_benchmark:
+      "The competitive analysis confirmed the gap: no Spanish platform covers all three axes — guides, community and resources — in one place.",
 
     insight_label: "Insight & Persona",
     insight_title: "What they really needed",
@@ -399,6 +403,8 @@ const copy = {
     research_title: "Investigar antes de desenhar",
     research_body:
       "Antes de propor qualquer solução, realizei uma investigação mista para entender quem eram os usuarios, o que faziam e onde encontravam dificuldades.",
+    research_benchmark:
+      "A análise competitiva confirmou a lacuna: nenhuma plataforma espanhola cobre os três eixos — guias, comunidade e recursos — num único lugar.",
 
     insight_label: "Insight e Persona",
     insight_title: "O que realmente precisavam",
@@ -796,6 +802,23 @@ export default async function CamperotecaPage({ params }: Props) {
                 <p style={{ fontSize: "0.875rem", color: "var(--muted)", lineHeight: 1.5 }}>{label}</p>
               </div>
             ))}
+          </div>
+        </Reveal>
+
+        {/* Benchmark */}
+        <Reveal delay={0.2}>
+          <div
+            style={{
+              marginTop: "1.5rem",
+              padding: "1.25rem 1.5rem",
+              borderLeft: "3px solid var(--accent)",
+              background: "var(--surface)",
+              borderRadius: "0 10px 10px 0",
+            }}
+          >
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "var(--muted)", fontStyle: "italic" }}>
+              {C.research_benchmark}
+            </p>
           </div>
         </Reveal>
       </section>

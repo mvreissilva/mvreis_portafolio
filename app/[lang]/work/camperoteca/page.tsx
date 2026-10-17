@@ -1297,38 +1297,44 @@ export default async function CamperotecaPage({ params }: Props) {
                 alt: "Onboarding: primer paso de la app, planifica tu proyecto desde cero",
                 title: C.ui_onboarding_title,
                 body: C.ui_onboarding_body,
+                placeholder: false,
               },
               {
-                src: "/assets/camperoteca/screen-login.png",
-                alt: "Login: acceso con email y contraseña para continuar el proyecto",
+                src: "",
+                alt: "",
                 title: C.ui_login_title,
                 body: C.ui_login_body,
+                placeholder: true,
               },
               {
                 src: "/assets/camperoteca/screen-miproyecto.webp",
                 alt: "Mi Proyecto: planificador por etapas con progreso y siguiente paso recomendado",
                 title: C.ui_miproyecto_title,
                 body: C.ui_miproyecto_body,
+                placeholder: false,
               },
               {
                 src: "/assets/camperoteca/screen-aprende-v2.webp",
                 alt: "Aprende: guías técnicas, legales y casos reales",
                 title: C.ui_aprende_title,
                 body: C.ui_aprende_body,
+                placeholder: false,
               },
               {
                 src: "/assets/camperoteca/screen-encuentra-v2.webp",
                 alt: "Encuentra Recursos: herramientas y materiales para la camperización",
                 title: C.ui_encuentra_title,
                 body: C.ui_encuentra_body,
+                placeholder: false,
               },
               {
-                src: "/assets/camperoteca/screen-comunidad.png",
-                alt: "Comunidad: foro y usuarios cercanos para compartir herramientas y consejos",
+                src: "",
+                alt: "",
                 title: C.ui_comunidad_title,
                 body: C.ui_comunidad_body,
+                placeholder: true,
               },
-            ].map(({ src, alt, title, body }) => (
+            ].map(({ src, alt, title, body, placeholder }) => (
               <div key={title}>
                 <div
                   style={{
@@ -1337,21 +1343,34 @@ export default async function CamperotecaPage({ params }: Props) {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={src}
-                    alt={alt}
-                    width={284}
-                    height={620}
-                    style={{
-                      display: "block",
-                      width: "min(180px, 48vw)",
-                      height: "calc(min(180px, 48vw) * 620 / 284)",
-                      objectFit: "cover",
-                      borderRadius: "22px",
-                      boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
-                    }}
-                  />
+                  {placeholder ? (
+                    <div
+                      style={{
+                        display: "block",
+                        width: "min(180px, 48vw)",
+                        height: "calc(min(180px, 48vw) * 620 / 284)",
+                        borderRadius: "22px",
+                        background: "var(--surface)",
+                        border: "1.5px dashed var(--border)",
+                      }}
+                    />
+                  ) : (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={src}
+                      alt={alt}
+                      width={284}
+                      height={620}
+                      style={{
+                        display: "block",
+                        width: "min(180px, 48vw)",
+                        height: "calc(min(180px, 48vw) * 620 / 284)",
+                        objectFit: "cover",
+                        borderRadius: "22px",
+                        boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
+                      }}
+                    />
+                  )}
                 </div>
                 <h3
                   style={{

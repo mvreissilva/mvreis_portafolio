@@ -136,17 +136,13 @@ const copy = {
       "Mi Proyecto actúa como hub central: el usuario avanza por etapas y, al detectar una necesidad, accede a Aprende, Encuentra o Comunidad mediante CTAs contextuales. El intercambio de recursos no es un flujo paralelo — emerge del propio proceso, en el momento en que tiene sentido.",
     mvp_title: "Alcance del MVP",
     mvp_inc: [
-      "Mi Proyecto: planificador por etapas con progreso y siguiente paso.",
-      "Aprende: guías técnicas, legales y casos reales.",
-      "Encuentra: directorio de herramientas y materiales.",
-      "Onboarding personalizado para nuevos usuarios.",
-    ],
-    mvp_post: [
-      "Marketplace completo con valoraciones y sistema de reputación.",
-      "Notificaciones y recordatorios por etapa.",
+      "Mi Proyecto: hub central del proceso. El usuario gestiona su avance por etapas, visualiza su progreso y accede a recursos contextuales según su necesidad actual.",
+      "Aprende: guías técnicas, legales y casos reales organizados por etapa del proyecto.",
+      "Encuentra: directorio de materiales y herramientas disponibles entre usuarios — versión inicial del eje de intercambio P2P.",
+      "Comunidad: espacio de conexión entre personas en proceso de camperización para compartir experiencias y conocimiento.",
+      "Onboarding y registro: flujo de incorporación personalizado que recoge el tipo de furgoneta, fase del proyecto y objetivos del usuario.",
     ],
     mvp_inc_label: "Incluido en MVP",
-    mvp_post_label: "Pospuesto",
 
     /* 07 */
     wf_label: "Wireframes",
@@ -305,17 +301,13 @@ const copy = {
       "My Project acts as the central hub: the user progresses through stages and, when a need arises, accesses Learn, Find or Community through contextual CTAs. The exchange of resources is not a parallel flow — it emerges from the process itself, at the moment it makes sense.",
     mvp_title: "MVP Scope",
     mvp_inc: [
-      "My Project: stage planner with progress and next step.",
-      "Learn: technical guides, legal guides and real cases.",
-      "Find: directory of tools and materials.",
-      "Personalised onboarding for new users.",
-    ],
-    mvp_post: [
-      "Full marketplace with ratings and reputation system.",
-      "Stage-based notifications and reminders.",
+      "My Project: central hub of the process. The user manages their progress through stages, tracks advancement and accesses contextual resources based on their current need.",
+      "Learn: technical guides, legal guides and real cases organised by project stage.",
+      "Find: directory of materials and tools available between users — initial version of the P2P exchange axis.",
+      "Community: connection space for people going through the van conversion process to share experiences and knowledge.",
+      "Onboarding and registration: personalised onboarding flow that captures the van type, project phase and user goals.",
     ],
     mvp_inc_label: "Included in MVP",
-    mvp_post_label: "Postponed",
 
     wf_label: "Wireframes",
     wf_title: "From structure to final design",
@@ -470,17 +462,13 @@ const copy = {
       "O Meu Projeto funciona como hub central: o utilizador avança por etapas e, ao detetar uma necessidade, acede a Aprende, Encontra ou Comunidade através de CTAs contextuais. A troca de recursos não é um fluxo paralelo — emerge do próprio processo, no momento em que faz sentido.",
     mvp_title: "Âmbito do MVP",
     mvp_inc: [
-      "Meu Projeto: planeador por etapas com progresso e próximo passo.",
-      "Aprende: guias técnicos, legais e casos reais.",
-      "Encontra: diretório de ferramentas e materiais.",
-      "Onboarding personalizado para novos usuarios.",
-    ],
-    mvp_post: [
-      "Marketplace completo com avaliações e sistema de reputação.",
-      "Notificações e lembretes por etapa.",
+      "O Meu Projeto: hub central do processo. O utilizador gere o seu avanço por etapas, visualiza o progresso e acede a recursos contextuais conforme a necessidade atual.",
+      "Aprende: guias técnicos, legais e casos reais organizados por etapa do projeto.",
+      "Encontra: diretório de materiais e ferramentas disponíveis entre utilizadores — versão inicial do eixo de troca P2P.",
+      "Comunidade: espaço de ligação entre pessoas em processo de camperização para partilhar experiências e conhecimento.",
+      "Onboarding e registo: fluxo de incorporação personalizado que recolhe o tipo de furgoneta, fase do projeto e objetivos do utilizador.",
     ],
     mvp_inc_label: "Incluído no MVP",
-    mvp_post_label: "Adiado",
 
     wf_label: "Wireframes",
     wf_title: "Da estrutura ao design final",
@@ -1033,47 +1021,6 @@ export default async function CamperotecaPage({ params }: Props) {
                     }}
                   >
                     <span style={{ color: "var(--accent)", flexShrink: 0 }}>✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div
-              style={{
-                background: "var(--surface)",
-                border: "1px solid var(--border)",
-                borderRadius: "10px",
-                padding: "1.5rem",
-                opacity: 0.7,
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "0.7rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "var(--muted)",
-                  marginBottom: "1rem",
-                }}
-              >
-                {C.mvp_post_label}
-              </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                {C.mvp_post.map((item) => (
-                  <li
-                    key={item}
-                    style={{
-                      fontSize: "0.875rem",
-                      lineHeight: 1.6,
-                      color: "var(--muted)",
-                      padding: "0.4rem 0",
-                      borderBottom: "1px solid var(--border)",
-                      display: "flex",
-                      gap: "0.5rem",
-                    }}
-                  >
-                    <span style={{ flexShrink: 0 }}>○</span>
                     {item}
                   </li>
                 ))}

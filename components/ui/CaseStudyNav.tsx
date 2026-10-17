@@ -87,11 +87,11 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                padding: "0 0.875rem",
+                padding: "0 0.55rem",
                 height: "100%",
-                fontSize: "0.68rem",
+                fontSize: "0.6rem",
                 fontWeight: 600,
-                letterSpacing: "0.1em",
+                letterSpacing: "0.07em",
                 textTransform: "uppercase",
                 fontFamily: "var(--font-sans)",
                 color: active === id ? "var(--ink)" : "var(--muted)",
@@ -102,7 +102,7 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
                 whiteSpace: "nowrap",
                 flexShrink: 0,
                 /* first item flush left */
-                paddingLeft: i === 0 ? "0" : "0.875rem",
+                paddingLeft: i === 0 ? "0" : "0.55rem",
               }}
             >
               {label}

@@ -1336,11 +1336,11 @@ export default async function CamperotecaPage({ params }: Props) {
                 placeholder: false,
               },
               {
-                src: "",
-                alt: "",
+                src: "/assets/camperoteca/screen-login.png",
+                alt: "Pantalla de login de Camperoteca",
                 title: C.ui_login_title,
                 body: C.ui_login_body,
-                placeholder: true,
+                placeholder: false,
               },
               {
                 src: "/assets/camperoteca/screen-miproyecto.webp",

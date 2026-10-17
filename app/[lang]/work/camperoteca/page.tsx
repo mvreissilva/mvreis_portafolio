@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import CaseStudyNav from "@/components/ui/CaseStudyNav";
 
 interface Props {
   params: Promise<{ lang: string }>;
@@ -236,6 +237,17 @@ const copy = {
     ],
     proto_cta: "Ver prototipo en Figma",
     back_projects: "← Volver a proyectos",
+    nav_sections: [
+      { id: "cs-problema",    label: "Problema" },
+      { id: "cs-research",    label: "Research" },
+      { id: "cs-insight",     label: "Insight" },
+      { id: "cs-hmw",         label: "HMW" },
+      { id: "cs-arch",        label: "Arquitectura" },
+      { id: "cs-wireframes",  label: "Wireframes" },
+      { id: "cs-ds",          label: "Design System" },
+      { id: "cs-ui",          label: "UI" },
+      { id: "cs-learn",       label: "Aprendizajes" },
+    ],
   },
 
   en: {
@@ -426,6 +438,17 @@ const copy = {
     ],
     proto_cta: "View prototype on Figma",
     back_projects: "← Back to projects",
+    nav_sections: [
+      { id: "cs-problema",    label: "Problem" },
+      { id: "cs-research",    label: "Research" },
+      { id: "cs-insight",     label: "Insight" },
+      { id: "cs-hmw",         label: "HMW" },
+      { id: "cs-arch",        label: "Architecture" },
+      { id: "cs-wireframes",  label: "Wireframes" },
+      { id: "cs-ds",          label: "Design System" },
+      { id: "cs-ui",          label: "UI" },
+      { id: "cs-learn",       label: "Learnings" },
+    ],
   },
 
   pt: {
@@ -616,6 +639,17 @@ const copy = {
     ],
     proto_cta: "Ver protótipo no Figma",
     back_projects: "← Voltar aos projetos",
+    nav_sections: [
+      { id: "cs-problema",    label: "Problema" },
+      { id: "cs-research",    label: "Research" },
+      { id: "cs-insight",     label: "Insight" },
+      { id: "cs-hmw",         label: "HMW" },
+      { id: "cs-arch",        label: "Arquitetura" },
+      { id: "cs-wireframes",  label: "Wireframes" },
+      { id: "cs-ds",          label: "Design System" },
+      { id: "cs-ui",          label: "UI" },
+      { id: "cs-learn",       label: "Aprendizagens" },
+    ],
   },
 };
 
@@ -678,6 +712,8 @@ export default async function CamperotecaPage({ params }: Props) {
 
   return (
     <div style={{ background: "var(--bg)", color: "var(--ink)" }}>
+      <CaseStudyNav sections={C.nav_sections} />
+
       {/* ── BACK LINK ── */}
       <div style={{ maxWidth: maxW, margin: "0 auto", padding: "6.5rem 1.5rem 0" }}>
         <Link
@@ -689,7 +725,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </div>
 
       {/* ── 01 HERO ── */}
-      <section style={section}>
+      <section id="cs-hero" style={section}>
         <Reveal>
           <Label text="Case Study" />
           <h1
@@ -774,7 +810,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 02 PROBLEMA ── */}
-      <section style={section}>
+      <section id="cs-problema" style={section}>
         <Reveal>
           <SectionHeading label={C.prob_label} title={C.prob_title} />
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "1.25rem" }}>
@@ -787,7 +823,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 03 RESEARCH ── */}
-      <section style={section}>
+      <section id="cs-research" style={section}>
         <Reveal>
           <SectionHeading label={C.research_label} title={C.research_title} />
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
@@ -905,7 +941,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 04 INSIGHT + PERSONA ── */}
-      <section style={section}>
+      <section id="cs-insight" style={section}>
         <Reveal>
           <SectionHeading label={C.insight_label} title={C.insight_title} />
 
@@ -986,7 +1022,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 05 HMW ── */}
-      <section style={section}>
+      <section id="cs-hmw" style={section}>
         <Reveal>
           <SectionHeading label={C.hmw_label} title={C.hmw_title} />
           <div style={{ overflowX: "auto" }}>
@@ -1049,7 +1085,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 06 ARQUITECTURA ── */}
-      <section style={section}>
+      <section id="cs-arch" style={section}>
         <Reveal>
           <SectionHeading label={C.arch_label} title={C.arch_title} />
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
@@ -1124,7 +1160,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 07 WIREFRAMES ── */}
-      <section style={section}>
+      <section id="cs-wireframes" style={section}>
         <Reveal>
           <SectionHeading label={C.wf_label} title={C.wf_title} />
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
@@ -1145,7 +1181,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 08 UI DESIGN & DESIGN SYSTEM ── */}
-      <section style={section}>
+      <section id="cs-ds" style={section}>
         <Reveal>
           <SectionHeading label={C.ds_label} title={C.ds_title} />
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
@@ -1250,7 +1286,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 09 SOLUCIÓN FINAL ── */}
-      <section style={section}>
+      <section id="cs-ui" style={section}>
         <Reveal>
           <SectionHeading label={C.ui_label} title={C.ui_title} />
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "3rem" }}>
@@ -1391,7 +1427,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 09 APRENDIZAJES ── */}
-      <section style={sectionLast}>
+      <section id="cs-learn" style={sectionLast}>
         <Reveal>
           <SectionHeading label={C.learn_label} title={C.learn_title} />
           <ul style={{ listStyle: "none", padding: 0, margin: "0 0 3rem" }}>

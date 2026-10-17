@@ -51,8 +51,10 @@ const copy = {
     meta_dur: "Duración",
     meta_val_rol: "UX/UI Designer · End-to-End",
     meta_val_tipo: "Proyecto académico · Bootcamp NEOLAND",
-    meta_val_tools: "Figma · FigJam · Figma Make · Stitch",
+    meta_val_tools: "Figma · FigJam · Figma Make",
     meta_val_dur: "Oct 2025 – Abr 2026",
+    meta_alcance: "Alcance",
+    meta_val_alcance: "Research · Definición · Arquitectura · UI Design · Prototipado",
 
     /* 02 */
     prob_label: "Problema y oportunidad",
@@ -259,8 +261,10 @@ const copy = {
     meta_dur: "Duration",
     meta_val_rol: "UX/UI Designer · End-to-End",
     meta_val_tipo: "Academic project · Bootcamp NEOLAND",
-    meta_val_tools: "Figma · FigJam · Figma Make · Stitch",
+    meta_val_tools: "Figma · FigJam · Figma Make",
     meta_val_dur: "Oct 2025 – Apr 2026",
+    meta_alcance: "Scope",
+    meta_val_alcance: "Research · Definition · Architecture · UI Design · Prototyping",
 
     prob_label: "Problem & Opportunity",
     prob_title: "A complex process, with no guidance or shared resources",
@@ -458,8 +462,10 @@ const copy = {
     meta_dur: "Duração",
     meta_val_rol: "UX/UI Designer · End-to-End",
     meta_val_tipo: "Projeto académico · Bootcamp NEOLAND",
-    meta_val_tools: "Figma · FigJam · Figma Make · Stitch",
+    meta_val_tools: "Figma · FigJam · Figma Make",
     meta_val_dur: "Out 2025 – Abr 2026",
+    meta_alcance: "Escopo",
+    meta_val_alcance: "Research · Definição · Arquitetura · UI Design · Prototipagem",
 
     prob_label: "Problema e oportunidade",
     prob_title: "Um processo complexo, sem orientação nem recursos partilhados",
@@ -762,6 +768,7 @@ export default async function CamperotecaPage({ params }: Props) {
               { label: C.meta_tipo, value: C.meta_val_tipo },
               { label: C.meta_tools, value: C.meta_val_tools },
               { label: C.meta_dur, value: C.meta_val_dur },
+              { label: C.meta_alcance, value: C.meta_val_alcance },
             ].map(({ label, value }) => (
               <div
                 key={label}

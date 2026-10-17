@@ -1372,28 +1372,19 @@ export default async function CamperotecaPage({ params }: Props) {
                       }}
                     />
                   ) : (
-                    <div
+                    <Image
+                      src={src}
+                      alt={alt}
+                      width={648}
+                      height={1320}
+                      sizes="min(180px, 48vw)"
+                      className="screen-img"
                       style={{
-                        display: "block",
                         width: "min(180px, 48vw)",
-                        height: "calc(min(180px, 48vw) * 620 / 284)",
-                        borderRadius: "22px",
-                        overflow: "hidden",
-                        background: "transparent",
-                        boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
-                        flexShrink: 0,
-                        position: "relative",
+                        height: "auto",
+                        display: "block",
                       }}
-                    >
-                      <Image
-                        src={src}
-                        alt={alt}
-                        fill
-                        sizes="min(180px, 48vw)"
-                        className="screen-img"
-                        style={{ objectFit: "fill" }}
-                      />
-                    </div>
+                    />
                   )}
                 </div>
                 <h3

@@ -114,8 +114,8 @@ const copy = {
       },
       {
         prob: "Herramientas y materiales requieren compra definitiva o búsqueda externa",
-        opp: "Facilitar el acceso y localización de recursos cercanos",
-        dec: "Directorio filtrable por categoría",
+        opp: "Facilitar el acceso a recursos cercanos mediante intercambio, donación o venta entre usuarios",
+        dec: "Directorio con filtros + perfiles de usuario",
       },
       {
         prob: "Comunidad valiosa pero caótica e infiable",
@@ -283,8 +283,8 @@ const copy = {
       },
       {
         prob: "Tools and materials require outright purchase or external search",
-        opp: "Facilitate access and location of nearby resources",
-        dec: "Directory filterable by category",
+        opp: "Facilitate access to nearby resources through exchange, donation or sale between users",
+        dec: "Directory with filters + user profiles",
       },
       {
         prob: "Valuable but chaotic and unreliable community",
@@ -447,8 +447,8 @@ const copy = {
       },
       {
         prob: "Ferramentas e materiais requerem compra definitiva ou pesquisa externa",
-        opp: "Facilitar o acesso e localização de recursos próximos",
-        dec: "Diretório filtrável por categoria",
+        opp: "Facilitar o acesso a recursos próximos através de troca, doação ou venda entre utilizadores",
+        dec: "Diretório com filtros + perfis de utilizador",
       },
       {
         prob: "Comunidade valiosa mas caótica e pouco fiável",

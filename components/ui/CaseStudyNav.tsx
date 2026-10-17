@@ -113,7 +113,6 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
 
       <style>{`
         .cs-nav::-webkit-scrollbar { display: none; }
-        @media (max-width: 480px) { .cs-nav { display: none !important; } }
       `}</style>
     </>
   );

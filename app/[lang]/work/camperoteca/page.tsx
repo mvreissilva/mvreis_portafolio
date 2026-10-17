@@ -743,18 +743,6 @@ export default async function CamperotecaPage({ params }: Props) {
           </h1>
           <p
             style={{
-              fontSize: "1.15rem",
-              lineHeight: 1.5,
-              color: "var(--muted)",
-              maxWidth: "560px",
-              marginBottom: "1rem",
-              fontStyle: "italic",
-            }}
-          >
-            {C.heroSub}
-          </p>
-          <p
-            style={{
               fontSize: "1.05rem",
               lineHeight: 1.7,
               color: "var(--muted)",

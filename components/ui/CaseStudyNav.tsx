@@ -56,11 +56,12 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
           left: 0,
           right: 0,
           zIndex: 49,
-          background: "color-mix(in srgb, var(--bg) 94%, transparent)",
+          background: "color-mix(in srgb, var(--bg) 96%, transparent)",
           backdropFilter: "blur(12px)",
           borderBottom: "1px solid var(--border)",
-          transform: visible ? "translateY(0)" : "translateY(-110%)",
-          transition: "transform 0.3s cubic-bezier(0.4,0,0.2,1)",
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0)" : "translateY(-8px)",
+          transition: "opacity 0.25s ease, transform 0.25s ease",
           pointerEvents: visible ? "auto" : "none",
         }}
         className="cs-nav"

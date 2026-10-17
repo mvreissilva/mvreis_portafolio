@@ -183,7 +183,7 @@ const copy = {
       "Organiza el conocimiento en tres categorías: guías técnicas (sistemas eléctricos, aislamiento, carpintería), guías legales (homologaciones, ITV, normativa) y casos reales de otros usuarios.",
     ui_encuentra_title: "Encuentra Recursos",
     ui_encuentra_body:
-      "Directorio de herramientas y materiales para la camperización, organizado por categoría para facilitar la localización de lo que se necesita en cada fase del proyecto.",
+      "Conecta con usuarios cercanos que tienen herramientas o materiales disponibles — para intercambiar, donar, comprar o vender. También deriva a tiendas especializadas cuando no hay recurso disponible en la comunidad.",
     ui_login_title: "Login",
     ui_login_body:
       "Acceso directo y sin fricción. El usuario entra con email y contraseña para continuar donde lo dejó.",
@@ -348,7 +348,7 @@ const copy = {
       "Organises knowledge into three categories: technical guides (electrical systems, insulation, carpentry), legal guides (homologation, MOT, regulations) and real cases from other users.",
     ui_encuentra_title: "Find Resources",
     ui_encuentra_body:
-      "Directory of tools and materials for van conversion, organised by category to make it easy to find what you need at each project phase.",
+      "Connect with nearby users who have tools or materials available — to exchange, donate, buy or sell. Also redirects to specialist shops when no resource is available within the community.",
     ui_login_title: "Login",
     ui_login_body:
       "Direct, frictionless access. The user signs in with email and password to continue where they left off.",
@@ -512,7 +512,7 @@ const copy = {
       "Organiza o conhecimento em três categorias: guias técnicos (sistemas elétricos, isolamento, carpintaria), guias legais (homologação, inspeção, regulamentação) e casos reais de outros usuarios.",
     ui_encuentra_title: "Encontra Recursos",
     ui_encuentra_body:
-      "Diretório de ferramentas e materiais para a camperização, organizado por categoria para facilitar a localização do que é necessário em cada fase do projeto.",
+      "Liga com utilizadores próximos que têm ferramentas ou materiais disponíveis — para trocar, doar, comprar ou vender. Também redireciona para lojas especializadas quando não há recurso disponível na comunidade.",
     ui_login_title: "Login",
     ui_login_body:
       "Acesso direto e sem fricção. O usuario entra com email e palavra-passe para continuar onde ficou.",

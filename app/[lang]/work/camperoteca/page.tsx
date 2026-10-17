@@ -591,7 +591,7 @@ export default async function CamperotecaPage({ params }: Props) {
           href={`/${lang}`}
           style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none", display: "inline-block", marginBottom: "3rem", transition: "color 0.2s" }}
         >
-          {C.back_projects}
+          ← {C.back}
         </Link>
       </div>
 
@@ -1356,7 +1356,7 @@ export default async function CamperotecaPage({ params }: Props) {
               href={`/${lang}`}
               style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none", display: "inline-block", transition: "color 0.2s" }}
             >
-              {C.back_projects}
+              ← {C.back}
             </Link>
           </div>
         </Reveal>

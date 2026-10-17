@@ -152,7 +152,7 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "De la estructura al diseño final",
     wf_body:
-      "El proceso de wireframing avanzó desde una estructura funcional en baja fidelidad hasta la definición visual en alta fidelidad. Cada iteración permitió validar la jerarquía de la información, la navegación y la coherencia entre secciones antes de avanzar al diseño de interfaz.",
+      "El wireframing avanzó en dos fases. En baja fidelidad el foco estuvo en la estructura de navegación y el flujo principal: cómo un usuario nuevo pasa del onboarding a su primer paso real en el proyecto. En alta fidelidad, las decisiones se centraron en la jerarquía visual de 'Mi Proyecto' como hub central, y en cómo presentar el contenido de 'Aprende', 'Encuentra' y 'Comunidad' sin saturar al usuario. Cada iteración validó que la plataforma guiara sin sobrecargar.",
 
     /* 08 */
     ds_label: "UI Design & Design System",
@@ -320,7 +320,7 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "From structure to final design",
     wf_body:
-      "The wireframing process moved from a functional low-fidelity structure to high-fidelity visual definition. Each iteration validated information hierarchy, navigation and consistency across sections before moving to interface design.",
+      "Wireframing progressed in two phases. In low fidelity the focus was on navigation structure and the main flow: how a new user moves from onboarding to their first real step in the project. In high fidelity, decisions centred on the visual hierarchy of 'My Project' as the central hub, and on how to present 'Learn', 'Find' and 'Community' content without overwhelming the user. Each iteration validated that the platform guided without overloading.",
 
     ds_label: "UI Design & Design System",
     ds_title: "«Cosecha Solar»",
@@ -485,7 +485,7 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "Da estrutura ao design final",
     wf_body:
-      "O processo de wireframing avançou de uma estrutura funcional em baixa fidelidade até à definição visual em alta fidelidade. Cada iteração permitiu validar a hierarquia da informação, a navegação e a coerência entre secções antes de avançar para o design de interface.",
+      "O wireframing avançou em duas fases. Em baixa fidelidade o foco esteve na estrutura de navegação e no fluxo principal: como um utilizador novo passa do onboarding ao seu primeiro passo real no projeto. Em alta fidelidade, as decisões centraram-se na hierarquia visual de 'O Meu Projeto' como hub central, e em como apresentar o conteúdo de 'Aprende', 'Encontra' e 'Comunidade' sem saturar o utilizador. Cada iteração validou que a plataforma orientava sem sobrecarregar.",
 
     ds_label: "UI Design & Design System",
     ds_title: "«Cosecha Solar»",

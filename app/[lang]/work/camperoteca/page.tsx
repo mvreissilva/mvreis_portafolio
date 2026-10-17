@@ -140,7 +140,6 @@ const copy = {
       "Onboarding personalizado para nuevos usuarios.",
     ],
     mvp_post: [
-      "Comunidad: foro y grupos de usuarios.",
       "Marketplace completo con valoraciones y sistema de reputación.",
       "Notificaciones y recordatorios por etapa.",
     ],
@@ -308,7 +307,6 @@ const copy = {
       "Personalised onboarding for new users.",
     ],
     mvp_post: [
-      "Community: forum and user groups.",
       "Full marketplace with ratings and reputation system.",
       "Stage-based notifications and reminders.",
     ],
@@ -472,7 +470,6 @@ const copy = {
       "Onboarding personalizado para novos usuarios.",
     ],
     mvp_post: [
-      "Comunidade: fórum e grupos de usuarios.",
       "Marketplace completo com avaliações e sistema de reputação.",
       "Notificações e lembretes por etapa.",
     ],

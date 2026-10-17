@@ -1307,7 +1307,7 @@ export default async function CamperotecaPage({ params }: Props) {
           >
             {[
               {
-                src: "/assets/camperoteca/screen-onboarding-v2.webp",
+                src: "/assets/camperoteca/screen-onboarding.png",
                 alt: "Onboarding: primer paso de la app, planifica tu proyecto desde cero",
                 title: C.ui_onboarding_title,
                 body: C.ui_onboarding_body,
@@ -1321,21 +1321,21 @@ export default async function CamperotecaPage({ params }: Props) {
                 placeholder: false,
               },
               {
-                src: "/assets/camperoteca/screen-miproyecto.webp",
+                src: "/assets/camperoteca/screen-miproyecto.png",
                 alt: "Mi Proyecto: planificador por etapas con progreso y siguiente paso recomendado",
                 title: C.ui_miproyecto_title,
                 body: C.ui_miproyecto_body,
                 placeholder: false,
               },
               {
-                src: "/assets/camperoteca/screen-aprende-v2.webp",
+                src: "/assets/camperoteca/screen-aprende.png",
                 alt: "Aprende: guías técnicas, legales y casos reales",
                 title: C.ui_aprende_title,
                 body: C.ui_aprende_body,
                 placeholder: false,
               },
               {
-                src: "/assets/camperoteca/screen-encuentra-v2.webp",
+                src: "/assets/camperoteca/screen-encuentra.png",
                 alt: "Encuentra Recursos: herramientas y materiales para la camperización",
                 title: C.ui_encuentra_title,
                 body: C.ui_encuentra_body,

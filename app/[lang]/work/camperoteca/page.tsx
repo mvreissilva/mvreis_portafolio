@@ -93,7 +93,7 @@ const copy = {
       "Miedo a gastar dinero en soluciones que no funcionen.",
     ],
     persona_context:
-      "Se definieron tres personas de usuario. Blanca representa el eje de aprendizaje y proceso; Fernando, el eje de intercambio de recursos y comunidad.",
+      "Dos perfiles distintos, dos necesidades que el producto debe resolver a la vez.",
     persona2_name: "Fernando Molina, 31 años",
     persona2_tag: "«El Nómada»",
     persona2_desc:
@@ -289,7 +289,7 @@ const copy = {
       "Fear of spending money on solutions that won't work.",
     ],
     persona_context:
-      "Three user personas were defined. Blanca represents the learning and process axis; Fernando, the resource exchange and community axis.",
+      "Two distinct profiles, two needs the product must solve at once.",
     persona2_name: "Fernando Molina, 31",
     persona2_tag: "«The Nomad»",
     persona2_desc:
@@ -479,7 +479,7 @@ const copy = {
       "Medo de gastar dinheiro em soluções que não funcionem.",
     ],
     persona_context:
-      "Foram definidas três personas de utilizador. Blanca representa o eixo de aprendizagem e processo; Fernando, o eixo de troca de recursos e comunidade.",
+      "Dois perfis distintos, duas necessidades que o produto tem de resolver em simultâneo.",
     persona2_name: "Fernando Molina, 31 anos",
     persona2_tag: "«O Nómada»",
     persona2_desc:

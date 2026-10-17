@@ -49,7 +49,7 @@ const copy = {
     heroTitle: "Camperoteca",
     heroSub: "convertir un proceso complejo en un recorrido claro",
     heroDesc:
-      "Diseño de una plataforma digital para acompañar a las personas durante la planificación de su proyecto de camperización.",
+      "Diseño de una plataforma digital para acompañar a las personas durante su proyecto de camperización y facilitar el intercambio de recursos y conocimiento dentro de la comunidad.",
     meta_rol: "Rol",
     meta_tipo: "Tipo de proyecto",
     meta_tools: "Herramientas",
@@ -222,7 +222,7 @@ const copy = {
     heroTitle: "Camperoteca",
     heroSub: "turning a complex process into a clear journey",
     heroDesc:
-      "Design of a digital platform to guide people through the planning of their camper van conversion project.",
+      "Design of a digital platform to guide people through their camper van conversion project and facilitate the exchange of resources and knowledge within the community.",
     meta_rol: "Role",
     meta_tipo: "Project type",
     meta_tools: "Tools",
@@ -386,7 +386,7 @@ const copy = {
     heroTitle: "Camperoteca",
     heroSub: "transformar um processo complexo numa jornada clara",
     heroDesc:
-      "Design de uma plataforma digital para acompanhar pessoas durante o planejamento do seu projeto de camperização.",
+      "Design de uma plataforma digital para acompanhar pessoas durante o seu projeto de camperização e facilitar a troca de recursos e conhecimento dentro da comunidade.",
     meta_rol: "Função",
     meta_tipo: "Tipo de projeto",
     meta_tools: "Ferramentas",

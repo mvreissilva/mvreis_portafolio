@@ -59,7 +59,7 @@ const copy = {
     prob_label: "Problema y oportunidad",
     prob_title: "Un proceso complejo, sin guía ni recursos compartidos",
     prob_body:
-      "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, y los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin una plataforma que la articule.",
+      "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, la información está dispersa y las decisiones mal tomadas tienen coste real. Al mismo tiempo, los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin un canal que la articule.",
     prob_opp:
       "La oportunidad: una plataforma que guiara el proceso y activara la comunidad — donde materiales, herramientas y conocimiento circularan entre privados por donación, intercambio o venta. Orientación y economía circular en un mismo lugar.",
 
@@ -69,7 +69,7 @@ const copy = {
     research_body:
       "Antes de proponer ninguna solución, llevé a cabo una investigación mixta para entender quiénes eran los usuarios, qué hacían y dónde encontraban dificultades.",
     research_benchmark:
-      "El análisis competitivo confirmó el hueco: ninguna plataforma española cubre los tres ejes — guías, comunidad y recursos — en un solo lugar. El 71,6% de los encuestados usaría una app para este proceso, y el 40,6% mostró interés activo en compartir recursos con la comunidad. Las entrevistas reforzaron este dato: los usuarios no encuentran una forma sencilla de localizar herramientas o materiales cercanos — recurren a búsquedas dispersas o soluciones costosas por falta de un canal directo.",
+      "El análisis competitivo confirmó el hueco: ninguna plataforma española cubre los tres ejes — guías, comunidad y recursos — en un solo lugar. Eso definió el doble alcance del proyecto. El 71,6% de los encuestados usaría una app para este proceso — lo que validó la necesidad de guía estructurada. El 40,6% mostró interés activo en compartir recursos, lo que justificó incluir el eje de intercambio P2P desde el MVP. Las entrevistas reforzaron ambos hallazgos: sin una plataforma que ordene el proceso y conecte a usuarios, cada persona lo resuelve sola y a mayor coste.",
 
     /* 04 */
     insight_label: "Insight y persona",
@@ -198,7 +198,7 @@ const copy = {
     learns: [
       "Escuchar a los usuarios me hizo cambiar el foco: no diseñé una guía de contenidos, diseñé un punto de entrada. La desorientación inicial era el problema real.",
       "El research reveló que la motivación caía cuando el proceso parecía infinito. Mostrar etapas y avance no fue una decisión estética — fue una respuesta directa a lo que decían los usuarios.",
-      "La estructura por etapas validó la hipótesis: cuando el contenido aparece en el momento correcto del proceso, deja de ser información y se convierte en orientación.",
+      "Los datos de la encuesta — el 68% consultando múltiples fuentes, el 72% sin punto de partida claro — hicieron de la arquitectura por etapas la única respuesta coherente. Estructurar el contenido por fase no fue una convención de UX, fue una decisión de diseño anclada en esos números.",
       "Las encuestas revelaron una disposición real a compartir materiales y herramientas. La comunidad no fue una apuesta de diseño — fue una respuesta a lo que los propios usuarios pedían.",
     ],
     next_title: "Próximas iteraciones",
@@ -207,6 +207,18 @@ const copy = {
       "Diseñar y validar la sección de perfil de usuario como base del sistema de confianza para las operaciones de intercambio, donación y venta entre privados.",
       "Desarrollar el marketplace completo con sistema de valoraciones y reputación entre usuarios.",
       "Explorar personalización del proyecto: recomendaciones adaptadas al tipo de furgoneta, presupuesto y fase de construcción del usuario.",
+    ],
+    research_methods: [
+      { num: "34", label: "encuestas realizadas" },
+      { num: "8", label: "entrevistas en profundidad" },
+      { num: "3", label: "plataformas analizadas" },
+    ],
+    research_findings_label: "Hallazgos cuantitativos",
+    research_findings: [
+      { pct: "72%", label: "no saben por dónde empezar su proyecto" },
+      { pct: "68%", label: "consultan múltiples fuentes para resolver una sola duda" },
+      { pct: "54%", label: "han cometido o temen errores con impacto económico real" },
+      { pct: "61%", label: "preferirían ayuda de otros usuarios durante el proceso" },
     ],
     proto_cta: "Ver prototipo en Figma",
     back_projects: "← Volver a proyectos",
@@ -231,7 +243,7 @@ const copy = {
     prob_label: "Problem & Opportunity",
     prob_title: "A complex process, with no guidance or shared resources",
     prob_body:
-      "Converting a van on your own is technically complex and financially demanding. The process has no clear order, and the materials and tools used briefly — at real cost — end up unused once that phase is done. A community that shares resources exists, but without a platform to bring it together.",
+      "Converting a van on your own is technically complex and financially demanding. The process has no clear order, information is scattered and poorly timed decisions carry real cost. At the same time, materials and tools used briefly — at real cost — end up idle once that phase is over. A community that shares resources exists, but without a channel to bring it together.",
     prob_opp:
       "The opportunity: a platform that guides the process and activates the community — where materials, tools and knowledge flow between individuals through donation, exchange or sale. Guidance and circular economy in one place.",
 
@@ -240,7 +252,7 @@ const copy = {
     research_body:
       "Before proposing any solution, I conducted mixed research to understand who the users were, what they did and where they encountered difficulties.",
     research_benchmark:
-      "The competitive analysis confirmed the gap: no Spanish platform covers all three axes — guides, community and resources — in one place. 71.6% of respondents would use an app for this process, and 40.6% showed active interest in sharing resources within the community. Interviews reinforced this: users have no simple way to find nearby tools or materials — they resort to scattered searches or costly solutions for lack of a direct channel.",
+      "The competitive analysis confirmed the gap: no Spanish platform covers all three axes — guides, community and resources — in one place. That defined the project's dual scope. 71.6% of respondents would use an app for this process — validating the need for structured guidance. 40.6% showed active interest in sharing resources within the community, which justified including the P2P exchange axis from the MVP. Interviews reinforced both findings: without a platform that organises the process and connects users, everyone solves it alone and at greater cost.",
 
     insight_label: "Insight & Persona",
     insight_title: "What they really needed",
@@ -362,7 +374,7 @@ const copy = {
     learns: [
       "Listening to users made me shift my focus: I didn't design a content guide, I designed a starting point. The initial disorientation was the real problem.",
       "Research revealed that motivation dropped when the process seemed endless. Showing stages and progress was not an aesthetic decision — it was a direct response to what users were saying.",
-      "The stage-based structure validated the hypothesis: when content appears at the right moment in the process, it stops being information and becomes guidance.",
+      "The survey data — 68% consulting multiple sources, 72% without a clear starting point — made the staged architecture the only coherent answer. Structuring content by phase was not a UX convention, it was a design decision grounded in those numbers.",
       "Surveys revealed a genuine willingness to share materials and tools. The community axis was not a design bet — it was a response to what users themselves were asking for.",
     ],
     next_title: "Next iterations",
@@ -371,6 +383,18 @@ const copy = {
       "Design and validate the user profile section as the foundation of the trust system for exchange, donation and sale operations between private users.",
       "Develop the full marketplace with a ratings and reputation system between users.",
       "Explore project personalisation: recommendations tailored to the user's van type, budget and construction phase.",
+    ],
+    research_methods: [
+      { num: "34", label: "surveys completed" },
+      { num: "8", label: "in-depth interviews" },
+      { num: "3", label: "platforms analysed" },
+    ],
+    research_findings_label: "Quantitative findings",
+    research_findings: [
+      { pct: "72%", label: "don't know where to start their project" },
+      { pct: "68%", label: "consult multiple sources to answer a single question" },
+      { pct: "54%", label: "have made or fear mistakes with real financial impact" },
+      { pct: "61%", label: "would prefer help from other users during the process" },
     ],
     proto_cta: "View prototype on Figma",
     back_projects: "← Back to projects",
@@ -395,7 +419,7 @@ const copy = {
     prob_label: "Problema e oportunidade",
     prob_title: "Um processo complexo, sem orientação nem recursos partilhados",
     prob_body:
-      "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, e os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que partilha recursos, mas sem uma plataforma que a articule.",
+      "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e as decisões mal tomadas têm custo real. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que partilha recursos, mas sem um canal que a articule.",
     prob_opp:
       "A oportunidade: uma plataforma que orientasse o processo e ativasse a comunidade — onde materiais, ferramentas e conhecimento circulassem entre privados por doação, troca ou venda. Orientação e economia circular num mesmo lugar.",
 
@@ -404,7 +428,7 @@ const copy = {
     research_body:
       "Antes de propor qualquer solução, realizei uma investigação mista para entender quem eram os usuarios, o que faziam e onde encontravam dificuldades.",
     research_benchmark:
-      "A análise competitiva confirmou a lacuna: nenhuma plataforma espanhola cobre os três eixos — guias, comunidade e recursos — num único lugar. 71,6% dos inquiridos usaria uma app para este processo, e 40,6% mostrou interesse ativo em partilhar recursos com a comunidade. As entrevistas reforçaram este dado: os utilizadores não encontram uma forma simples de localizar ferramentas ou materiais próximos — recorrem a pesquisas dispersas ou soluções dispendiosas por falta de um canal direto.",
+      "A análise competitiva confirmou a lacuna: nenhuma plataforma espanhola cobre os três eixos — guias, comunidade e recursos — num único lugar. Isso definiu o duplo âmbito do projeto. 71,6% dos inquiridos usaria uma app para este processo — o que validou a necessidade de orientação estruturada. 40,6% mostrou interesse ativo em partilhar recursos, o que justificou incluir o eixo de troca P2P desde o MVP. As entrevistas reforçaram ambos os dados: sem uma plataforma que organize o processo e conecte utilizadores, cada pessoa resolve sozinha e a maior custo.",
 
     insight_label: "Insight e Persona",
     insight_title: "O que realmente precisavam",
@@ -526,7 +550,7 @@ const copy = {
     learns: [
       "Ouvir os utilizadores fez-me mudar o foco: não desenhei um guia de conteúdos, desenhei um ponto de entrada. A desorientação inicial era o problema real.",
       "A investigação revelou que a motivação caía quando o processo parecia infinito. Mostrar etapas e progresso não foi uma decisão estética — foi uma resposta direta ao que os utilizadores diziam.",
-      "A estrutura por etapas validou a hipótese: quando o conteúdo aparece no momento certo do processo, deixa de ser informação e torna-se orientação.",
+      "Os dados da pesquisa — 68% a consultar múltiplas fontes, 72% sem ponto de partida claro — tornaram a arquitetura por etapas a única resposta coerente. Estruturar o conteúdo por fase não foi uma convenção de UX, foi uma decisão de design ancorada nesses números.",
       "Os inquéritos revelaram uma disposição real para partilhar materiais e ferramentas. A comunidade não foi uma aposta de design — foi uma resposta ao que os próprios utilizadores pediam.",
     ],
     next_title: "Próximas iterações",
@@ -535,6 +559,18 @@ const copy = {
       "Desenhar e validar a secção de perfil de utilizador como base do sistema de confiança para as operações de troca, doação e venda entre privados.",
       "Desenvolver o marketplace completo com sistema de avaliações e reputação entre utilizadores.",
       "Explorar personalização do projeto: recomendações adaptadas ao tipo de furgoneta, orçamento e fase de construção do utilizador.",
+    ],
+    research_methods: [
+      { num: "34", label: "inquéritos realizados" },
+      { num: "8", label: "entrevistas em profundidade" },
+      { num: "3", label: "plataformas analisadas" },
+    ],
+    research_findings_label: "Resultados quantitativos",
+    research_findings: [
+      { pct: "72%", label: "não sabem por onde começar o seu projeto" },
+      { pct: "68%", label: "consultam múltiplas fontes para resolver uma única dúvida" },
+      { pct: "54%", label: "cometeram ou temem erros com impacto económico real" },
+      { pct: "61%", label: "prefeririam ajuda de outros utilizadores durante o processo" },
     ],
     proto_cta: "Ver protótipo no Figma",
     back_projects: "← Voltar aos projetos",
@@ -621,12 +657,24 @@ export default async function CamperotecaPage({ params }: Props) {
               fontWeight: 400,
               lineHeight: 1.1,
               marginTop: "0.5rem",
-              marginBottom: "1rem",
+              marginBottom: "0.5rem",
               color: "var(--ink)",
             }}
           >
             {C.heroTitle}
           </h1>
+          <p
+            style={{
+              fontSize: "1.15rem",
+              lineHeight: 1.5,
+              color: "var(--muted)",
+              maxWidth: "560px",
+              marginBottom: "1rem",
+              fontStyle: "italic",
+            }}
+          >
+            {C.heroSub}
+          </p>
           <p
             style={{
               fontSize: "1.05rem",
@@ -718,11 +766,7 @@ export default async function CamperotecaPage({ params }: Props) {
               marginBottom: "2rem",
             }}
           >
-            {[
-              { num: "34", label: "encuestas realizadas" },
-              { num: "8", label: "entrevistas en profundidad" },
-              { num: "3", label: "plataformas analizadas" },
-            ].map(({ num, label }, i) => (
+            {C.research_methods.map(({ num, label }, i) => (
               <div
                 key={num}
                 style={{
@@ -762,7 +806,7 @@ export default async function CamperotecaPage({ params }: Props) {
               marginBottom: "1rem",
             }}
           >
-            Hallazgos cuantitativos
+            {C.research_findings_label}
           </p>
           <div
             style={{
@@ -772,12 +816,7 @@ export default async function CamperotecaPage({ params }: Props) {
               marginBottom: "1.5rem",
             }}
           >
-            {[
-              { pct: "72%", label: "no saben por dónde empezar su proyecto" },
-              { pct: "68%", label: "consultan múltiples fuentes para resolver una sola duda" },
-              { pct: "54%", label: "han cometido o temen errores con impacto económico real" },
-              { pct: "61%", label: "preferirían ayuda de otros usuarios durante el proceso" },
-            ].map(({ pct, label }) => (
+            {C.research_findings.map(({ pct, label }) => (
               <div
                 key={pct + label}
                 style={{

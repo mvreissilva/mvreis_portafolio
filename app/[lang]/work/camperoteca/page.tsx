@@ -584,9 +584,9 @@ export default async function CamperotecaPage({ params }: Props) {
   };
 
   return (
-    <main style={{ background: "var(--bg)", color: "var(--ink)" }}>
+    <div style={{ background: "var(--bg)", color: "var(--ink)" }}>
       {/* ── BACK LINK ── */}
-      <div style={{ maxWidth: maxW, margin: "0 auto", padding: "2rem 1.5rem 0" }}>
+      <div className="back-wrapper" style={{ maxWidth: maxW, margin: "0 auto", padding: "6rem 1.5rem 0" }}>
         <Link
           href={`/${lang}`}
           style={{
@@ -1367,10 +1367,21 @@ export default async function CamperotecaPage({ params }: Props) {
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
             <Link
               href={`/${lang}`}
-              className="link-muted"
-              style={{ fontSize: "0.9rem" }}
+              style={{
+                fontSize: "0.8rem",
+                fontWeight: 500,
+                color: "var(--muted)",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.4rem",
+                border: "1px solid var(--border)",
+                borderRadius: "6px",
+                padding: "0.35rem 0.75rem",
+                transition: "color 0.15s, border-color 0.15s",
+              }}
             >
-              {C.back_projects}
+              <span aria-hidden="true">←</span> {C.back}
             </Link>
           </div>
         </Reveal>
@@ -1379,6 +1390,7 @@ export default async function CamperotecaPage({ params }: Props) {
       {/* ── responsive styles ── */}
       <style>{`
         @media (max-width: 640px) {
+          .back-wrapper { padding-top: 5rem !important; }
           .persona-grid,
           .mvp-grid,
           .screen-grid {
@@ -1409,6 +1421,6 @@ export default async function CamperotecaPage({ params }: Props) {
           }
         }
       `}</style>
-    </main>
+    </div>
   );
 }

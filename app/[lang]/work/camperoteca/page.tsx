@@ -42,19 +42,17 @@ export async function generateMetadata({ params }: Props) {
 const copy = {
   es: {
     back: "Volver",
-    tag1: "UX/UI Designer · End-to-End",
-    tag2: "Proyecto académico · Bootcamp NEOLAND",
-    tag3: "Oct 2025 – Abr 2026",
-    tag4: "Responsive · Mobile First",
-    tag5: "Figma · FigJam · Figma Make · Stitch",
     heroTitle: "Camperoteca",
-    heroSub: "convertir un proceso complejo en un recorrido claro",
     heroDesc:
       "Diseño de una plataforma digital para acompañar a las personas durante su proyecto de camperización y facilitar el intercambio de recursos y conocimiento dentro de la comunidad.",
     meta_rol: "Rol",
     meta_tipo: "Tipo de proyecto",
     meta_tools: "Herramientas",
     meta_dur: "Duración",
+    meta_val_rol: "UX/UI Designer · End-to-End",
+    meta_val_tipo: "Proyecto académico · Bootcamp NEOLAND",
+    meta_val_tools: "Figma · FigJam · Figma Make · Stitch",
+    meta_val_dur: "Oct 2025 – Abr 2026",
 
     /* 02 */
     prob_label: "Problema y oportunidad",
@@ -252,19 +250,17 @@ const copy = {
 
   en: {
     back: "Back",
-    tag1: "UX/UI Designer · End-to-End",
-    tag2: "Academic project · Bootcamp NEOLAND",
-    tag3: "Oct 2025 – Apr 2026",
-    tag4: "Responsive · Mobile First",
-    tag5: "Figma · FigJam · Figma Make · Stitch",
     heroTitle: "Camperoteca",
-    heroSub: "turning a complex process into a clear journey",
     heroDesc:
       "Design of a digital platform to guide people through their camper van conversion project and facilitate the exchange of resources and knowledge within the community.",
     meta_rol: "Role",
     meta_tipo: "Project type",
     meta_tools: "Tools",
     meta_dur: "Duration",
+    meta_val_rol: "UX/UI Designer · End-to-End",
+    meta_val_tipo: "Academic project · Bootcamp NEOLAND",
+    meta_val_tools: "Figma · FigJam · Figma Make · Stitch",
+    meta_val_dur: "Oct 2025 – Apr 2026",
 
     prob_label: "Problem & Opportunity",
     prob_title: "A complex process, with no guidance or shared resources",
@@ -453,19 +449,17 @@ const copy = {
 
   pt: {
     back: "Voltar",
-    tag1: "UX/UI Designer · End-to-End",
-    tag2: "Projeto académico · Bootcamp NEOLAND",
-    tag3: "Out 2025 – Abr 2026",
-    tag4: "Responsivo · Mobile First",
-    tag5: "Figma · FigJam · Figma Make · Stitch",
     heroTitle: "Camperoteca",
-    heroSub: "transformar um processo complexo numa jornada clara",
     heroDesc:
       "Design de uma plataforma digital para acompanhar pessoas durante o seu projeto de camperização e facilitar a troca de recursos e conhecimento dentro da comunidade.",
     meta_rol: "Função",
     meta_tipo: "Tipo de projeto",
     meta_tools: "Ferramentas",
     meta_dur: "Duração",
+    meta_val_rol: "UX/UI Designer · End-to-End",
+    meta_val_tipo: "Projeto académico · Bootcamp NEOLAND",
+    meta_val_tools: "Figma · FigJam · Figma Make · Stitch",
+    meta_val_dur: "Out 2025 – Abr 2026",
 
     prob_label: "Problema e oportunidade",
     prob_title: "Um processo complexo, sem orientação nem recursos partilhados",
@@ -764,10 +758,10 @@ export default async function CamperotecaPage({ params }: Props) {
             className="meta-grid"
           >
             {[
-              { label: C.meta_rol, value: "UX/UI Designer · End-to-End" },
-              { label: C.meta_tipo, value: "Proyecto académico · Bootcamp NEOLAND" },
-              { label: C.meta_tools, value: "Figma · FigJam · Figma Make · Stitch" },
-              { label: C.meta_dur, value: "Oct 2025 – Abr 2026" },
+              { label: C.meta_rol, value: C.meta_val_rol },
+              { label: C.meta_tipo, value: C.meta_val_tipo },
+              { label: C.meta_tools, value: C.meta_val_tools },
+              { label: C.meta_dur, value: C.meta_val_dur },
             ].map(({ label, value }) => (
               <div
                 key={label}
@@ -1092,7 +1086,7 @@ export default async function CamperotecaPage({ params }: Props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
+              gridTemplateColumns: "1fr",
               gap: "1.5rem",
             }}
             className="mvp-grid"
@@ -1267,7 +1261,7 @@ export default async function CamperotecaPage({ params }: Props) {
         </Reveal>
       </section>
 
-      {/* ── 09 SOLUCIÓN FINAL ── */}
+      {/* ── 08 SOLUCIÓN FINAL ── */}
       <section id="cs-ui" style={section}>
         <Reveal>
           <SectionHeading label={C.ui_label} title={C.ui_title} />
@@ -1361,21 +1355,16 @@ export default async function CamperotecaPage({ params }: Props) {
                         background: "transparent",
                         boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
                         flexShrink: 0,
+                        position: "relative",
                       }}
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={src}
                         alt={alt}
-                        width={284}
-                        height={620}
+                        fill
+                        sizes="min(180px, 48vw)"
                         className="screen-img"
-                        style={{
-                          display: "block",
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "fill",
-                        }}
+                        style={{ objectFit: "fill" }}
                       />
                     </div>
                   )}
@@ -1399,6 +1388,7 @@ export default async function CamperotecaPage({ params }: Props) {
       </section>
 
       {/* ── 09 APRENDIZAJES ── */}
+
       <section id="cs-learn" style={sectionLast}>
         <Reveal>
           <SectionHeading label={C.learn_label} title={C.learn_title} />

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LANGS, t, type Lang } from "@/lib/i18n";
+import { LANGS, type Lang } from "@/lib/i18n";
 import Nav from "@/components/layout/Nav";
 
 export function generateStaticParams() {

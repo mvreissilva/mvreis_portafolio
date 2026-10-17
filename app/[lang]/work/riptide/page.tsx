@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LANGS, type Lang } from "@/lib/i18n";
+import CaseStudyNav from "@/components/ui/CaseStudyNav";
 
 export function generateStaticParams() { return LANGS.map(lang => ({ lang })); }
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -62,8 +63,35 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
   const learns = LEARNS[lang];
   const resLabels = lang==="en"? DATA.researchEn : lang==="pt"? DATA.researchPt : DATA.research.map(r=>r[2]);
 
+  const navSections = lang === "en"
+    ? [
+        { id: "rt-problem",   label: "Problem"   },
+        { id: "rt-research",  label: "Research"  },
+        { id: "rt-persona",   label: "Persona"   },
+        { id: "rt-solution",  label: "Solution"  },
+        { id: "rt-learnings", label: "Learnings" },
+      ]
+    : lang === "pt"
+    ? [
+        { id: "rt-problem",   label: "Problema"      },
+        { id: "rt-research",  label: "Investigação"   },
+        { id: "rt-persona",   label: "Persona"        },
+        { id: "rt-solution",  label: "Solução"        },
+        { id: "rt-learnings", label: "Aprendizagens"  },
+      ]
+    : [
+        { id: "rt-problem",   label: "Problema"     },
+        { id: "rt-research",  label: "Investigación" },
+        { id: "rt-persona",   label: "Persona"       },
+        { id: "rt-solution",  label: "Solución"      },
+        { id: "rt-learnings", label: "Aprendizajes"  },
+      ];
+
   return (
-    <div style={S.page}>
+    <div style={{ background: "var(--bg)", color: "var(--ink)" }}>
+      <CaseStudyNav sections={navSections} />
+      <div style={S.page}>
+      <section id="rt-hero">
       <Link href={`/${lang}`} style={{ fontSize:"0.875rem", color:"var(--muted)", textDecoration:"none", display:"inline-block", marginBottom:"3rem", transition:"color 0.2s" }}>
         {back}
       </Link>
@@ -92,8 +120,10 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
         ))}
       </div>
 
+      </section>{/* end hero */}
+
       {/* Problem */}
-      <section style={S.sec}>
+      <section id="rt-problem" style={S.sec}>
         <hr style={S.div} /><span style={S.label}>{lang==="en"?"The problem":lang==="pt"?"O problema":"El problema"}</span>
         <h2 style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"clamp(1.375rem,3vw,1.625rem)", lineHeight:1.2, letterSpacing:"-0.015em", color:"var(--ink)", marginBottom:"0.875rem" }}>
           {lang==="en"?"The impact exists. But it's invisible.":lang==="pt"?"O impacto existe. Mas é invisível.":"El impacto existe. Pero es invisible."}
@@ -108,7 +138,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* Research */}
-      <section style={S.sec}>
+      <section id="rt-research" style={S.sec}>
         <hr style={S.div} /><span style={S.label}>{lang==="en"?"Research":lang==="pt"?"Investigação":"Investigación"}</span>
         <div style={{ display:"flex", flexDirection:"column" }}>
           {DATA.research.map(([pct,,], i) => (
@@ -121,7 +151,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* Persona */}
-      <section style={S.sec}>
+      <section id="rt-persona" style={S.sec}>
         <hr style={S.div} /><span style={S.label}>{lang==="en"?"User Persona":lang==="pt"?"User Persona":"User Persona"}</span>
         <h2 style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"clamp(1.375rem,3vw,1.625rem)", lineHeight:1.2, letterSpacing:"-0.015em", color:"var(--ink)", marginBottom:"0.875rem" }}>
           Ana — {lang==="en"?"The Water Guardian":lang==="pt"?"A Guardiã da Água":"La Guardiana del Agua"}
@@ -133,7 +163,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* Solution */}
-      <section style={S.sec}>
+      <section id="rt-solution" style={S.sec}>
         <hr style={S.div} /><span style={S.label}>{lang==="en"?"Solution":lang==="pt"?"Solução":"Solución"}</span>
         <h2 style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"clamp(1.375rem,3vw,1.625rem)", lineHeight:1.2, letterSpacing:"-0.015em", color:"var(--ink)", marginBottom:"0.875rem" }}>
           {lang==="en"?"Environmental presence, not surveillance":lang==="pt"?"Presença ambiental, não vigilância":"Presencia ambiental, no vigilancia"}
@@ -151,7 +181,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
       </section>
 
       {/* Learnings */}
-      <section style={S.sec}>
+      <section id="rt-learnings" style={S.sec}>
         <hr style={S.div} /><span style={S.label}>{lang==="en"?"Learnings":lang==="pt"?"Aprendizagens":"Aprendizajes"}</span>
         <div style={{ display:"flex", flexDirection:"column" }}>
           {learns.map(([title, body], i) => (
@@ -175,6 +205,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           {lang==="en"?"Get in touch →":lang==="pt"?"Entrar em contacto →":"Contactar →"}
         </a>
       </div>
+      </div>{/* end S.page */}
     </div>
   );
 }

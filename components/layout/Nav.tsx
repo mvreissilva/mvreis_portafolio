@@ -29,7 +29,19 @@ const MoonIcon = () => (
   </svg>
 );
 
-function ThemeBtn() {
+const themeLabels: Record<Lang, { light: string; dark: string }> = {
+  es: { light: "Activar modo claro", dark: "Activar modo oscuro" },
+  en: { light: "Switch to light mode", dark: "Switch to dark mode" },
+  pt: { light: "Ativar modo claro", dark: "Ativar modo escuro" },
+};
+
+const menuLabels: Record<Lang, { open: string; close: string }> = {
+  es: { open: "Abrir menú", close: "Cerrar menú" },
+  en: { open: "Open menu", close: "Close menu" },
+  pt: { open: "Abrir menu", close: "Fechar menu" },
+};
+
+function ThemeBtn({ lang }: { lang: Lang }) {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -43,11 +55,13 @@ function ThemeBtn() {
     try { localStorage.setItem("theme", next ? "dark" : "light"); } catch {}
   };
 
+  const labels = themeLabels[lang] ?? themeLabels.es;
+
   return (
     <button
       onClick={toggle}
-      aria-label={dark ? "Activar modo claro" : "Activar modo oscuro"}
-      title={dark ? "Modo claro" : "Modo oscuro"}
+      aria-label={dark ? labels.light : labels.dark}
+      title={dark ? labels.light : labels.dark}
       style={{
         width: "2rem", height: "2rem", display: "flex", alignItems: "center",
         justifyContent: "center", borderRadius: "50%", border: "none",
@@ -141,7 +155,7 @@ export default function Nav({ lang }: { lang: Lang }) {
               >{l.toUpperCase()}</Link>
             ))}
           </div>
-          <ThemeBtn />
+          <ThemeBtn lang={lang} />
         </nav>
 
         {/* Mobile */}
@@ -155,8 +169,8 @@ export default function Nav({ lang }: { lang: Lang }) {
               >{l.toUpperCase()}</Link>
             ))}
           </div>
-          <ThemeBtn />
-          <button onClick={() => setOpen(!open)} aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          <ThemeBtn lang={lang} />
+          <button onClick={() => setOpen(!open)} aria-label={open ? (menuLabels[lang]?.close ?? "Cerrar menú") : (menuLabels[lang]?.open ?? "Abrir menú")}
             style={{ background: "transparent", border: "none", cursor: "pointer",
                      display: "flex", flexDirection: "column", gap: "5px", padding: "4px" }}>
             <span style={{ display: "block", width: "20px", height: "1.5px", background: "var(--ink)",

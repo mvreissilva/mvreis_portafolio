@@ -193,10 +193,10 @@ const copy = {
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
     learns: [
-      "Diseñar para la incertidumbre: los usuarios no saben lo que no saben. La clave fue diseñar para reducir esa incertidumbre antes de que el usuario la sienta.",
-      "La información de progreso es motivadora: mostrar en qué etapa está el usuario y cuánto ha avanzado tiene un impacto directo en su disposición a continuar.",
-      "Centralizar no basta: la estructura y el contexto son tan importantes como tener el recurso disponible. Un recurso sin contexto no ayuda.",
-      "La comunidad como recurso de diseño: las personas valoran compartir experiencias y recursos con otros en el mismo proceso — y están dispuestas a ceder lo que ya no necesitan.",
+      "Escuchar a los usuarios me hizo cambiar el foco: no diseñé una guía de contenidos, diseñé un punto de entrada. La desorientación inicial era el problema real.",
+      "El research reveló que la motivación caía cuando el proceso parecía infinito. Mostrar etapas y avance no fue una decisión estética — fue una respuesta directa a lo que decían los usuarios.",
+      "La estructura por etapas validó la hipótesis: cuando el contenido aparece en el momento correcto del proceso, deja de ser información y se convierte en orientación.",
+      "Las encuestas revelaron una disposición real a compartir materiales y herramientas. La comunidad no fue una apuesta de diseño — fue una respuesta a lo que los propios usuarios pedían.",
     ],
     next_title: "Próximas iteraciones",
     nexts: [
@@ -354,10 +354,10 @@ const copy = {
     learn_label: "Learnings",
     learn_title: "What I take away from this project",
     learns: [
-      "Designing for uncertainty: users don't know what they don't know. The key was designing to reduce that uncertainty before the user even feels it.",
-      "Progress information is motivating: showing users what stage they're at and how far they've come has a direct impact on their willingness to continue.",
-      "Centralising isn't enough: structure and context are just as important as having the resource available. A resource without context doesn't help.",
-      "Community as a design resource: people value sharing experiences and resources with others going through the same process — and are willing to pass on what they no longer need.",
+      "Listening to users made me shift my focus: I didn't design a content guide, I designed a starting point. The initial disorientation was the real problem.",
+      "Research revealed that motivation dropped when the process seemed endless. Showing stages and progress was not an aesthetic decision — it was a direct response to what users were saying.",
+      "The stage-based structure validated the hypothesis: when content appears at the right moment in the process, it stops being information and becomes guidance.",
+      "Surveys revealed a genuine willingness to share materials and tools. The community axis was not a design bet — it was a response to what users themselves were asking for.",
     ],
     next_title: "Next iterations",
     nexts: [
@@ -515,10 +515,10 @@ const copy = {
     learn_label: "Aprendizagens",
     learn_title: "O que levo deste projeto",
     learns: [
-      "Desenhar para a incerteza: os usuarios não sabem o que não sabem. A chave foi desenhar para reduzir essa incerteza antes que o usuario a sinta.",
-      "A informação de progresso é motivadora: mostrar em que etapa está o usuario e quanto avançou tem um impacto direto na sua disposição para continuar.",
-      "Centralizar não chega: a estrutura e o contexto são tão importantes quanto ter o recurso disponível. Um recurso sem contexto não ajuda.",
-      "A comunidade como recurso de design: as pessoas valorizam partilhar experiências e recursos com outros no mesmo processo — e estão dispostas a ceder o que já não precisam.",
+      "Ouvir os utilizadores fez-me mudar o foco: não desenhei um guia de conteúdos, desenhei um ponto de entrada. A desorientação inicial era o problema real.",
+      "A investigação revelou que a motivação caía quando o processo parecia infinito. Mostrar etapas e progresso não foi uma decisão estética — foi uma resposta direta ao que os utilizadores diziam.",
+      "A estrutura por etapas validou a hipótese: quando o conteúdo aparece no momento certo do processo, deixa de ser informação e torna-se orientação.",
+      "Os inquéritos revelaram uma disposição real para partilhar materiais e ferramentas. A comunidade não foi uma aposta de design — foi uma resposta ao que os próprios utilizadores pediam.",
     ],
     next_title: "Próximas iterações",
     nexts: [

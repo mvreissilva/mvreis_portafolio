@@ -1364,11 +1364,11 @@ export default async function CamperotecaPage({ params }: Props) {
                 placeholder: false,
               },
               {
-                src: "",
-                alt: "",
+                src: "/assets/camperoteca/screen-comunidad.png",
+                alt: "Pantalla de Comunidad de Camperoteca",
                 title: C.ui_comunidad_title,
                 body: C.ui_comunidad_body,
-                placeholder: true,
+                placeholder: false,
               },
             ].map(({ src, alt, title, body, placeholder }) => (
               <div key={title}>

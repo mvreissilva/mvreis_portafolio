@@ -84,7 +84,7 @@ const copy = {
     goals: [
       "Empezar de forma sostenible y responsable.",
       "Aprender antes de tomar decisiones económicas.",
-      "Conectar con otras personas en el mismo proceso.",
+      "Conectar con una comunidad que comparte sus valores.",
     ],
     frusts_title: "Frustraciones",
     frusts: [
@@ -255,7 +255,7 @@ const copy = {
     goals: [
       "Start in a sustainable and responsible way.",
       "Learn before making financial decisions.",
-      "Connect with others going through the same process.",
+      "Connect with a community that shares her values.",
     ],
     frusts_title: "Frustrations",
     frusts: [
@@ -420,7 +420,7 @@ const copy = {
     goals: [
       "Começar de forma sustentável e responsável.",
       "Aprender antes de tomar decisões económicas.",
-      "Conectar com outras pessoas no mesmo processo.",
+      "Conectar com uma comunidade que partilha os seus valores.",
     ],
     frusts_title: "Frustrações",
     frusts: [

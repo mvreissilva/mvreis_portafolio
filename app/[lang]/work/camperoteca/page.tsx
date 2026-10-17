@@ -75,7 +75,7 @@ const copy = {
     insight_label: "Insight y persona",
     insight_title: "Lo que realmente necesitaban",
     insight_quote:
-      "Los usuarios no necesitan más información, sino una estructura clara, acompañamiento y confianza para poder avanzar en su proyecto.",
+      "Los usuarios saben lo que quieren: avanzar paso a paso y no gastar de más. Lo que les falta es una plataforma que ordene el proceso y conecte a quienes ya tienen lo que otros buscan.",
     persona_name: "Blanca Jiménez, 38 años",
     persona_tag: "«La Exploradora»",
     persona_desc:
@@ -244,7 +244,7 @@ const copy = {
     insight_label: "Insight & Persona",
     insight_title: "What they really needed",
     insight_quote:
-      "Users don't need more information — they need a clear structure, guidance and confidence to move forward with their project.",
+      "Users know what they want: to move forward step by step and not overspend. What they're missing is a platform that organises the process and connects those who already have what others are looking for.",
     persona_name: "Blanca Jiménez, 38",
     persona_tag: "«The Explorer»",
     persona_desc:
@@ -407,7 +407,7 @@ const copy = {
     insight_label: "Insight e Persona",
     insight_title: "O que realmente precisavam",
     insight_quote:
-      "Os usuarios não precisam de mais informação, mas de uma estrutura clara, acompanhamento e confiança para avançar no seu projeto.",
+      "Os utilizadores sabem o que querem: avançar passo a passo e não gastar desnecessariamente. O que lhes falta é uma plataforma que organize o processo e conecte quem já tem o que outros procuram.",
     persona_name: "Blanca Jiménez, 38 anos",
     persona_tag: "«A Exploradora»",
     persona_desc:

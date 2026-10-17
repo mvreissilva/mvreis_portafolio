@@ -56,6 +56,11 @@ const copy = {
     meta_alcance: "Alcance",
     meta_val_alcance: "Research · Definición · Arquitectura · UI Design · Prototipado",
 
+    cta_label: "¿Hablamos?",
+    cta_sub: "Si te interesa este proyecto o quieres conocer más sobre mi trabajo, escríbeme.",
+    cta_email: "Enviar email",
+    cta_linkedin: "Ver LinkedIn",
+
     /* 02 */
     prob_label: "Problema y oportunidad",
     prob_title: "Un proceso complejo, sin guía ni recursos compartidos",
@@ -266,6 +271,11 @@ const copy = {
     meta_alcance: "Scope",
     meta_val_alcance: "Research · Definition · Architecture · UI Design · Prototyping",
 
+    cta_label: "Let's talk",
+    cta_sub: "If this project caught your eye or you'd like to know more about my work, drop me a line.",
+    cta_email: "Send email",
+    cta_linkedin: "View LinkedIn",
+
     prob_label: "Problem & Opportunity",
     prob_title: "A complex process, with no guidance or shared resources",
     prob_body:
@@ -466,6 +476,11 @@ const copy = {
     meta_val_dur: "Out 2025 – Abr 2026",
     meta_alcance: "Escopo",
     meta_val_alcance: "Research · Definição · Arquitetura · UI Design · Prototipagem",
+
+    cta_label: "Vamos conversar?",
+    cta_sub: "Se este projeto te interessou ou queres saber mais sobre o meu trabalho, entra em contacto.",
+    cta_email: "Enviar email",
+    cta_linkedin: "Ver LinkedIn",
 
     prob_label: "Problema e oportunidade",
     prob_title: "Um processo complexo, sem orientação nem recursos partilhados",
@@ -1460,8 +1475,54 @@ export default async function CamperotecaPage({ params }: Props) {
             ))}
           </ul>
 
-          {/* CTA */}
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
+          {/* CTA contacto */}
+          <div style={{
+            marginTop: "3rem",
+            padding: "2rem",
+            borderRadius: "0.75rem",
+            border: "1px solid var(--border)",
+            background: "var(--surface)",
+            textAlign: "center",
+          }}>
+            <p style={{
+              fontFamily: "var(--font-serif)",
+              fontSize: "1.5rem",
+              color: "var(--ink)",
+              marginBottom: "0.75rem",
+              letterSpacing: "-0.01em",
+            }}>
+              {C.cta_label}
+            </p>
+            <p style={{ fontSize: "0.9375rem", color: "var(--muted)", marginBottom: "1.5rem", lineHeight: 1.6 }}>
+              {C.cta_sub}
+            </p>
+            <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+              <a
+                href="mailto:mvreissilva@gmail.com"
+                className="btn-primary"
+              >
+                {C.cta_email}
+              </a>
+              <a
+                href="https://linkedin.com/in/reis-marcus"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex", alignItems: "center",
+                  padding: "0.625rem 1.25rem", borderRadius: "0.5rem",
+                  border: "1px solid var(--border)", background: "transparent",
+                  fontSize: "0.875rem", fontWeight: 500, color: "var(--ink)",
+                  textDecoration: "none", transition: "opacity 0.2s",
+                  fontFamily: "var(--font-sans)",
+                }}
+              >
+                {C.cta_linkedin}
+              </a>
+            </div>
+          </div>
+
+          {/* Volver */}
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", marginTop: "1.5rem" }}>
             <Link
               href={`/${lang}`}
               style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none", display: "inline-block", transition: "color 0.2s" }}

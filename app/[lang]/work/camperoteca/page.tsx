@@ -19,9 +19,9 @@ export async function generateMetadata({ params }: Props) {
     pt: "Camperoteca — Case Study · Marcus Reis",
   };
   const descs: Record<string, string> = {
-    es: "Diseño UX/UI end-to-end de una plataforma para acompañar a personas durante la planificación de su proyecto de camperización.",
-    en: "End-to-end UX/UI design of a platform to guide people through the planning of their camper van conversion project.",
-    pt: "Design UX/UI end-to-end de uma plataforma para acompanhar pessoas durante o planejamento de seu projeto de camperização.",
+    es: "Diseño UX/UI end-to-end de una plataforma para acompañar a personas durante su proyecto de camperización y facilitar el intercambio de recursos y conocimiento dentro de la comunidad.",
+    en: "End-to-end UX/UI design of a platform to guide people through their camper van conversion project and facilitate the exchange of resources and knowledge within the community.",
+    pt: "Design UX/UI end-to-end de uma plataforma para acompanhar pessoas durante o seu projeto de camperização e facilitar a troca de recursos e conhecimento dentro da comunidade.",
   };
   return {
     title: titles[lang] ?? titles.es,

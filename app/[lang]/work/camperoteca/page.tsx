@@ -41,7 +41,7 @@ const SCREENS = {
   miproyecto: "/assets/camperoteca/ui/miproyecto.png",
   aprende: "/assets/camperoteca/ui/aprende.png",
   encuentra: "/assets/camperoteca/ui/encuentra.png",
-  comunidad: "",
+  comunidad: "/assets/camperoteca/ui/comunidad.png",
 };
 
 /* ─── copy strings ─────────────────────────────────────────────── */

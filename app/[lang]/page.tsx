@@ -54,7 +54,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <div style={{ paddingTop: "3rem" }}>
           <span style={lbl}>{tr.work.label}</span>
 
-          {(["camperoteca", "riptide"] as const).map((slug, idx) => {
+          {(["camperoteca", "riptide"] as const).map((slug) => {
             const p = tr.projects[slug];
             return (
               <Link key={slug} href={`/${lang}/work/${slug}`}
@@ -69,7 +69,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                     fill
                     sizes="(max-width: 680px) 100vw, 680px"
                     style={{ objectFit: "cover", objectPosition: "center" }}
-                    priority={idx === 0}
                   />
                 </div>
                 <span style={{ fontSize: "0.8125rem", color: "var(--muted)",

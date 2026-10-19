@@ -1310,25 +1310,25 @@ export default async function CamperotecaPage({ params }: Props) {
           >
             {[
               {
-                src: "/assets/camperoteca/screen-onboarding.png",
-                alt: C.ui_onboarding_title,
+                src: "",
+                alt: "",
                 title: C.ui_onboarding_title,
                 body: C.ui_onboarding_body,
-                placeholder: false,
+                placeholder: true,
               },
               {
-                src: "/assets/camperoteca/screen-login.png",
-                alt: C.ui_login_title,
+                src: "",
+                alt: "",
                 title: C.ui_login_title,
                 body: C.ui_login_body,
-                placeholder: false,
+                placeholder: true,
               },
               {
-                src: "/assets/camperoteca/screen-miproyecto.png",
-                alt: C.ui_miproyecto_title,
+                src: "",
+                alt: "",
                 title: C.ui_miproyecto_title,
                 body: C.ui_miproyecto_body,
-                placeholder: false,
+                placeholder: true,
               },
               {
                 src: "",

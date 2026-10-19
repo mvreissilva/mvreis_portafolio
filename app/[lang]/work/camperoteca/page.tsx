@@ -39,7 +39,7 @@ const SCREENS = {
   onboarding: "/assets/camperoteca/ui/onboarding.png",
   login: "/assets/camperoteca/ui/login.png",
   miproyecto: "/assets/camperoteca/ui/miproyecto.png",
-  aprende: "",
+  aprende: "/assets/camperoteca/ui/aprende.png",
   encuentra: "",
   comunidad: "",
 };

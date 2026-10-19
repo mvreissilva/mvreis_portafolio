@@ -44,6 +44,10 @@ const SCREENS = {
   comunidad: "/assets/camperoteca/ui/comunidad.png",
 };
 
+/* Prototipo interactivo en Figma: empieza en el Splash, escalado al tamaño de la ventana, sin la UI de Figma. */
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/KLMNqOh1B0oaEqsTskROc5/UX---Desafio-2-Marcus?node-id=2282-1002&starting-point-node-id=2282%3A1002&scaling=scale-down&content-scaling=fixed&hide-ui=1";
+
 /* ─── copy strings ─────────────────────────────────────────────── */
 const copy = {
   es: {
@@ -249,7 +253,8 @@ const copy = {
       { pct: "54%", label: "han cometido o temen errores con impacto económico real" },
       { pct: "61%", label: "preferirían ayuda de otros usuarios durante el proceso" },
     ],
-    proto_cta: "Ver prototipo en Figma",
+    proto_cta: "Ver prototipo interactivo",
+    proto_hint: "Recorre el flujo completo: onboarding, login y las cuatro secciones de la app.",
     back_projects: "← Volver a proyectos",
     nav_sections: [
       { id: "cs-problema",    label: "Problema" },
@@ -458,7 +463,8 @@ const copy = {
       { pct: "54%", label: "have made or fear mistakes with real financial impact" },
       { pct: "61%", label: "would prefer help from other users during the process" },
     ],
-    proto_cta: "View prototype on Figma",
+    proto_cta: "View interactive prototype",
+    proto_hint: "Walk through the full flow: onboarding, login and the app’s four sections.",
     back_projects: "← Back to projects",
     nav_sections: [
       { id: "cs-problema",    label: "Problem" },
@@ -667,7 +673,8 @@ const copy = {
       { pct: "54%", label: "cometeram ou temem erros com impacto económico real" },
       { pct: "61%", label: "prefeririam ajuda de outros utilizadores durante o processo" },
     ],
-    proto_cta: "Ver protótipo no Figma",
+    proto_cta: "Ver protótipo interativo",
+    proto_hint: "Percorra o fluxo completo: onboarding, login e as quatro seções do app.",
     back_projects: "← Voltar aos projetos",
     nav_sections: [
       { id: "cs-problema",    label: "Problema" },
@@ -777,11 +784,15 @@ export default async function CamperotecaPage({ params }: Props) {
               lineHeight: 1.7,
               color: "var(--muted)",
               maxWidth: "580px",
-              marginBottom: "3rem",
+              marginBottom: "1.5rem",
             }}
           >
             {C.heroDesc}
           </p>
+
+          <a href={PROTOTYPE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ marginBottom: "3rem", textDecoration: "none" }}>
+            {C.proto_cta} <span aria-hidden="true">↗</span>
+          </a>
 
           {/* Project meta cards */}
           <div
@@ -1383,6 +1394,15 @@ export default async function CamperotecaPage({ params }: Props) {
                 <p style={{ fontSize: "0.825rem", lineHeight: 1.6, color: "var(--muted)" }}>{body}</p>
               </div>
             ))}
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div style={{ marginTop: "3.5rem", textAlign: "center" }}>
+            <p style={{ fontSize: "0.9rem", lineHeight: 1.6, color: "var(--muted)", marginBottom: "1rem" }}>{C.proto_hint}</p>
+            <a href={PROTOTYPE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textDecoration: "none" }}>
+              {C.proto_cta} <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </Reveal>
       </section>

@@ -1,0 +1,19 @@
+# Marcus Reis — UX/UI Designer
+
+> Portfolio de Marcus Reis, UX/UI Designer en Sevilla (España). Diseño centrado en las personas con foco en UX Research y arquitectura de información, tras más de diez años en entornos corporativos. Disponible para roles de UX Designer, UX Researcher o Product Designer en España, Europa o en remoto. El sitio está en español, inglés y portugués.
+
+## Casos de estudio
+
+- [Camperoteca](https://mvreisuxportafolio.vercel.app/es/work/camperoteca): diseño end-to-end de una app que guía paso a paso a quienes camperizan su furgoneta y les conecta para compartir herramientas, materiales y conocimiento (Bootcamp NEOLAND, oct 2025 – abr 2026).
+- [Riptide](https://mvreisuxportafolio.vercel.app/es/work/riptide): extensión de navegador que hace visible el impacto hídrico de la actividad digital, sin culpa y sin intrusión.
+
+## Sobre Marcus
+
+- [Portfolio en español](https://mvreisuxportafolio.vercel.app/es): presentación, enfoque de trabajo, áreas (Research, Information Architecture, Interaction Design, UI Design, Prototyping, AI-assisted Design) y contacto.
+- [CV en PDF](https://mvreisuxportafolio.vercel.app/assets/marcus-reis-cv.pdf)
+- [LinkedIn](https://linkedin.com/in/reis-marcus)
+
+## Optional
+
+- [English version](https://mvreisuxportafolio.vercel.app/en)
+- [Versão em português](https://mvreisuxportafolio.vercel.app/pt)

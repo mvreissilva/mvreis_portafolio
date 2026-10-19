@@ -40,11 +40,20 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
           <Link href={`#work`} className="btn-primary">{tr.hero.cta} ↓</Link>
+          <span style={{ display: "inline-flex", gap: "1rem", alignItems: "center", whiteSpace: "nowrap" }}>
           <a href="/assets/marcus-reis-cv.pdf" download
              className="link-muted"
              style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
             {tr.hero.cv} ↓
           </a>
+          <span style={{ color: "var(--border)" }}>·</span>
+          <a href="https://linkedin.com/in/reis-marcus" target="_blank" rel="noopener noreferrer"
+             className="link-muted"
+             aria-label="Marcus Reis on LinkedIn (opens in new tab)"
+             style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
+            {tr.contact.linkedin} ↗
+          </a>
+          </span>
         </div>
       </section>
 

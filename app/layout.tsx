@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,8 +19,8 @@ const dmSerifDisplay = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mvreis-uxportafolio.vercel.app"),
-  title: { default: "Marcus Reis — UX/UI Designer", template: "%s — Marcus Reis" },
+  metadataBase: new URL(SITE_URL),
+  title: { default: "Marcus Reis — UX/UI Designer", template: "%s · Marcus Reis" },
   description: "UX/UI Designer. Research, information architecture and user-centred design. Seville, Spain.",
   openGraph: {
     title: "Marcus Reis — UX/UI Designer",

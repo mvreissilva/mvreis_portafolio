@@ -16,6 +16,9 @@ const dmSerifDisplay = DM_Serif_Display({
   style: ["normal", "italic"],
   variable: "--font-serif",
   display: "swap",
+  // Sin precarga: solo la usan títulos y citas; así no compite en móvil con Inter,
+  // que es la fuente del texto principal (LCP). Se pinta con el fallback ajustado y cambia sin saltos.
+  preload: false,
 });
 
 export const metadata: Metadata = {

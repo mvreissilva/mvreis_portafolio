@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/site";
 import ZoomableImage from "@/components/ui/ZoomableImage";
 import PhoneFrame from "@/components/ui/PhoneFrame";
 import Link from "next/link";
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
 
@@ -116,7 +117,7 @@ const copy = {
     persona2_name: "Fernando Molina, 31 años",
     persona2_tag: "«El Nómada»",
     persona2_desc:
-      "Desarrollador freelance en Valencia. Ya tiene su furgoneta camperizada y la usa como segunda residencia. Acumula materiales sobrantes y herramientas que ya no necesita, y busca una forma de que circulen entre otros usuarios.",
+      "Diseñador UX en Valencia. Ya tiene su furgoneta camperizada y la usa como segunda vivienda. Acumula materiales sobrantes y herramientas que ya no necesita, y busca una forma de que circulen entre otros usuarios.",
     persona2_goals: [
       "Dar salida a herramientas y materiales que ya no usa.",
       "Conectar con personas en fases más tempranas que él.",
@@ -332,7 +333,7 @@ const copy = {
     persona2_name: "Fernando Molina, 31",
     persona2_tag: "«The Nomad»",
     persona2_desc:
-      "Freelance developer in Valencia. His van is already converted and serves as a second home. He has leftover materials and tools he no longer needs and is looking for a way to pass them on to other users.",
+      "UX designer in Valencia. His van is already converted and serves as a second home. He has leftover materials and tools he no longer needs and is looking for a way to pass them on to other users.",
     persona2_goals: [
       "Find a use for tools and materials he no longer needs.",
       "Connect with people in earlier stages of the process.",
@@ -542,7 +543,7 @@ const copy = {
     persona2_name: "Fernando Molina, 31 anos",
     persona2_tag: "«O Nómada»",
     persona2_desc:
-      "Programador freelance em Valência. A sua furgoneta já está camperizada e serve como segunda residência. Acumula materiais e ferramentas que já não precisa e procura uma forma de os fazer circular entre outros utilizadores.",
+      "Designer UX em Valência. A sua furgoneta já está camperizada e serve como segunda habitação. Acumula materiais e ferramentas que já não precisa e procura uma forma de os fazer circular entre outros utilizadores.",
     persona2_goals: [
       "Dar saída a ferramentas e materiais que já não usa.",
       "Conectar com pessoas em fases mais iniciais do processo.",
@@ -999,9 +1000,9 @@ export default async function CamperotecaPage({ params }: Props) {
           {/* Persona cards — Blanca + Fernando */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }} className="personas-two-col">
             {[
-              { name: C.persona_name, tag: C.persona_tag, desc: C.persona_desc, goals: C.goals, frusts: C.frusts },
-              { name: C.persona2_name, tag: C.persona2_tag, desc: C.persona2_desc, goals: C.persona2_goals, frusts: C.persona2_frusts },
-            ].map(({ name, tag, desc, goals, frusts }) => (
+              { photo: "/assets/camperoteca/personas/blanca.webp", name: C.persona_name, tag: C.persona_tag, desc: C.persona_desc, goals: C.goals, frusts: C.frusts },
+              { photo: "/assets/camperoteca/personas/fernando.webp", name: C.persona2_name, tag: C.persona2_tag, desc: C.persona2_desc, goals: C.persona2_goals, frusts: C.persona2_frusts },
+            ].map(({ photo, name, tag, desc, goals, frusts }) => (
               <div
                 key={name}
                 style={{
@@ -1015,12 +1016,38 @@ export default async function CamperotecaPage({ params }: Props) {
                 }}
               >
                 <div>
-                  <p style={{ fontSize: "1.05rem", fontWeight: 600, marginBottom: "0.2rem", color: "var(--ink)" }}>
-                    {name}
-                  </p>
-                  <p style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 600, marginBottom: "0.75rem" }}>
-                    {tag}
-                  </p>
+                  {/* Foto (recorte sin fondo, desde Figma) + nombre y arquetipo */}
+                  <div style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "1rem" }}>
+                    <div
+                      style={{
+                        position: "relative",
+                        width: "88px",
+                        height: "88px",
+                        flexShrink: 0,
+                        borderRadius: "50%",
+                        overflow: "hidden",
+                        background: "var(--bg)",
+                        boxShadow: "0 0 0 1px var(--border), 0 0 0 4px var(--surface), 0 0 0 5px color-mix(in srgb, var(--accent) 45%, transparent)",
+                      }}
+                    >
+                      <Image
+                        src={photo}
+                        alt={name.split(",")[0]}
+                        fill
+                        sizes="88px"
+                        quality={90}
+                        style={{ objectFit: "cover", objectPosition: "50% 20%" }}
+                      />
+                    </div>
+                    <div>
+                      <p style={{ fontSize: "1.05rem", fontWeight: 600, marginBottom: "0.2rem", color: "var(--ink)" }}>
+                        {name}
+                      </p>
+                      <p style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 600 }}>
+                        {tag}
+                      </p>
+                    </div>
+                  </div>
                   <p style={{ fontSize: "0.875rem", lineHeight: 1.7, color: "var(--muted)" }}>{desc}</p>
                 </div>
                 <div>

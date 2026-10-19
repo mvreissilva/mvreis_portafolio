@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { LANGS, type Lang } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/site";
 import Nav from "@/components/layout/Nav";
+import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
   return LANGS.map(lang => ({ lang }));
@@ -31,7 +32,9 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang: _lang } = await params;
-  const lang = (LANGS.includes(_lang as Lang) ? _lang : "es") as Lang;
+  // Solo es/en/pt: cualquier otra ruta (p. ej. /robots.txt sin archivo) da 404 en vez de duplicar la home
+  if (!LANGS.includes(_lang as Lang)) notFound();
+  const lang = _lang as Lang;
 
   return (
     <>

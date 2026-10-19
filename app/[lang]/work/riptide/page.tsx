@@ -2,30 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LANGS, type Lang } from "@/lib/i18n";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
+import { pageMetadata } from "@/lib/site";
 
 export function generateStaticParams() { return LANGS.map(lang => ({ lang })); }
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang: _lang } = await params;
   const lang = _lang as Lang;
-  const base = "https://mvreis-uxportafolio.vercel.app";
   const title = lang === "pt" ? "Riptide — Case Study UX/UI" : "Riptide — UX/UI Case Study";
   const desc = lang === "en"
     ? "A browser extension that makes the hidden water footprint of digital activity visible. Awareness without guilt, presence without intrusion."
     : lang === "pt"
     ? "Extensão de browser que torna visível o impacto hídrico da atividade digital. Consciência sem culpa, presença sem intrusão."
     : "Extensión de navegador que hace visible el impacto hídrico de la actividad digital. Awareness sin culpa, presencia sin intrusión.";
-  return {
-    title,
-    description: desc,
-    alternates: {
-      canonical: `${base}/${lang}/work/riptide`,
-      languages: {
-        "es": `${base}/es/work/riptide`,
-        "en": `${base}/en/work/riptide`,
-        "pt": `${base}/pt/work/riptide`,
-      },
-    },
-  };
+  return pageMetadata({ lang, path: "/work/riptide", title, description: desc });
 }
 
 const DATA = {

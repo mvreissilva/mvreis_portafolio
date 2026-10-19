@@ -106,3 +106,41 @@ details > summary::-webkit-details-marker { display: none; }
   color: var(--muted); font-size: 1.125rem;
   transition: all 0.2s; display: block; padding-top: 0.25rem;
 }
+
+/* ── Lightbox (components/ui/ZoomableImage) ─────────────────── */
+.zi-trigger {
+  position: relative; display: block; width: 100%;
+  padding: 0; border: 0; background: none; cursor: zoom-in; font: inherit;
+}
+.zi-hint {
+  position: absolute; right: 0.75rem; bottom: 0.75rem;
+  padding: 0.3rem 0.65rem; border-radius: 999px;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  color: var(--ink); border: 1px solid var(--border);
+  backdrop-filter: blur(6px); pointer-events: none;
+}
+.zi-trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 10px; }
+.zi-dialog {
+  width: 100vw; height: 100dvh; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0; background: rgba(12, 12, 12, 0.94);
+}
+.zi-dialog::backdrop { background: rgba(12, 12, 12, 0.94); }
+.zi-scroll {
+  width: 100%; height: 100%; overflow: auto;
+  display: flex; align-items: center; justify-content: center;
+  padding: 3.75rem 1rem 1rem; cursor: zoom-out;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+.zi-full { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; cursor: default; border-radius: 6px; }
+.zi-close {
+  position: fixed; top: 0.75rem; right: 0.75rem; z-index: 1;
+  width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 0;
+  font-size: 1.05rem; background: #F7F7F4; color: #111110; cursor: pointer;
+}
+.zi-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* Móvil: ancho real para que las etiquetas se lean; se desplaza en horizontal */
+@media (max-width: 768px) {
+  .zi-scroll { justify-content: flex-start; }
+  .zi-full { max-width: none; max-height: none; width: 1400px; }
+}

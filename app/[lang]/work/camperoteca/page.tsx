@@ -1,4 +1,8 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import { LANGS, type Lang } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/site";
+import ZoomableImage from "@/components/ui/ZoomableImage";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
@@ -11,37 +15,42 @@ export async function generateStaticParams() {
   return [{ lang: "es" }, { lang: "en" }, { lang: "pt" }];
 }
 
-export async function generateMetadata({ params }: Props) {
-  const { lang } = await params;
-  const base = "https://mvreis-uxportafolio.vercel.app";
-  const titles: Record<string, string> = {
-    es: "Camperoteca — Case Study · Marcus Reis",
-    en: "Camperoteca — Case Study · Marcus Reis",
-    pt: "Camperoteca — Case Study · Marcus Reis",
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang: _lang } = await params;
+  const lang = (LANGS.includes(_lang as Lang) ? _lang : "es") as Lang;
+  const titles: Record<Lang, string> = {
+    es: "Camperoteca — Caso de estudio UX/UI",
+    en: "Camperoteca — UX/UI Case Study",
+    pt: "Camperoteca — Estudo de caso UX/UI",
   };
-  const descs: Record<string, string> = {
-    es: "Diseño UX/UI end-to-end de una plataforma para acompañar a personas durante su proyecto de camperización y facilitar el intercambio de recursos y conocimiento dentro de la comunidad.",
-    en: "End-to-end UX/UI design of a platform to guide people through their camper van conversion project and facilitate the exchange of resources and knowledge within the community.",
-    pt: "Design UX/UI end-to-end de uma plataforma para acompanhar pessoas durante o seu projeto de camperização e facilitar a troca de recursos e conhecimento dentro da comunidade.",
+  const descs: Record<Lang, string> = {
+    es: "Diseño end-to-end de una app que guía a quienes camperizan su furgoneta paso a paso y les conecta para compartir herramientas, materiales y conocimiento.",
+    en: "End-to-end design of an app that guides DIY camper van builders step by step and connects them to share tools, materials and know-how.",
+    pt: "Design end-to-end de um app que guia quem camperiza sua van passo a passo e conecta pessoas para compartilhar ferramentas, materiais e conhecimento.",
   };
-  return {
-    title: titles[lang] ?? titles.es,
-    description: descs[lang] ?? descs.es,
-    alternates: {
-      canonical: `${base}/${lang}/work/camperoteca`,
-      languages: {
-        "es": `${base}/es/work/camperoteca`,
-        "en": `${base}/en/work/camperoteca`,
-        "pt": `${base}/pt/work/camperoteca`,
-      },
-    },
-  };
+  return pageMetadata({ lang, path: "/work/camperoteca", title: titles[lang], description: descs[lang] });
 }
+
+/* ─── pantallas UI ────────────────────────────────────────────────
+   Vacío ("") = se muestra el marco con el nombre de la pantalla.
+   Al subir la exportación de Figma a /public/assets/camperoteca/ui/,
+   poner aquí la ruta, p. ej. "/assets/camperoteca/ui/onboarding.png". */
+const SCREENS = {
+  onboarding: "",
+  login: "",
+  miproyecto: "",
+  aprende: "",
+  encuentra: "",
+  comunidad: "",
+};
 
 /* ─── copy strings ─────────────────────────────────────────────── */
 const copy = {
   es: {
     back: "Volver",
+    zoom_hint: "Toca para ampliar",
+    zoom_close: "Cerrar",
+    ui_screen_alt: "Pantalla de Camperoteca",
     heroTitle: "Camperoteca",
     heroDesc:
       "Diseño de una plataforma digital para acompañar a las personas durante su proyecto de camperización y facilitar el intercambio de recursos y conocimiento dentro de la comunidad.",
@@ -257,6 +266,9 @@ const copy = {
 
   en: {
     back: "Back",
+    zoom_hint: "Tap to enlarge",
+    zoom_close: "Close",
+    ui_screen_alt: "Camperoteca screen",
     heroTitle: "Camperoteca",
     heroDesc:
       "Design of a digital platform to guide people through their camper van conversion project and facilitate the exchange of resources and knowledge within the community.",
@@ -463,6 +475,9 @@ const copy = {
 
   pt: {
     back: "Voltar",
+    zoom_hint: "Toque para ampliar",
+    zoom_close: "Fechar",
+    ui_screen_alt: "Tela do Camperoteca",
     heroTitle: "Camperoteca",
     heroDesc:
       "Design de uma plataforma digital para acompanhar pessoas durante o seu projeto de camperização e facilitar a troca de recursos e conhecimento dentro da comunidade.",
@@ -1098,12 +1113,14 @@ export default async function CamperotecaPage({ params }: Props) {
             marginLeft: "50%",
             transform: "translateX(-50%)",
           }}>
-            <Image
+            <ZoomableImage
               src="/assets/camperoteca/happy-path.jpg"
               alt="Secuencia de navegación: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"
               width={2000}
               height={606}
               style={{ width: "100%", height: "auto", display: "block" }}
+              hint={C.zoom_hint}
+              closeLabel={C.zoom_close}
             />
           </div>
         </Reveal>
@@ -1172,12 +1189,14 @@ export default async function CamperotecaPage({ params }: Props) {
         </Reveal>
         <Reveal delay={0.1}>
           <div style={{ borderRadius: "12px", overflow: "hidden", background: "#F7F7F4", padding: "1.5rem" }}>
-            <Image
+            <ZoomableImage
               src="/assets/camperoteca/wireframes-hero.png"
               alt="Evolución de wireframes: baja, media y alta fidelidad de las pantallas de Camperoteca"
-              width={1920}
-              height={1080}
+              width={1672}
+              height={941}
               style={{ width: "100%", height: "auto", display: "block", borderRadius: "8px" }}
+              hint={C.zoom_hint}
+              closeLabel={C.zoom_close}
             />
           </div>
         </Reveal>
@@ -1310,48 +1329,42 @@ export default async function CamperotecaPage({ params }: Props) {
           >
             {[
               {
-                src: "",
-                alt: "",
+                // Exportar desde Figma solo la pantalla (sin marco de móvil): 390×844 @2x → 780×1688
+                src: SCREENS.onboarding,
                 title: C.ui_onboarding_title,
                 body: C.ui_onboarding_body,
-                placeholder: true,
               },
               {
-                src: "",
-                alt: "",
+                // Exportar desde Figma solo la pantalla (sin marco de móvil): 390×844 @2x → 780×1688
+                src: SCREENS.login,
                 title: C.ui_login_title,
                 body: C.ui_login_body,
-                placeholder: true,
               },
               {
-                src: "",
-                alt: "",
+                // Exportar desde Figma solo la pantalla (sin marco de móvil): 390×844 @2x → 780×1688
+                src: SCREENS.miproyecto,
                 title: C.ui_miproyecto_title,
                 body: C.ui_miproyecto_body,
-                placeholder: true,
               },
               {
-                src: "",
-                alt: "",
+                // Exportar desde Figma solo la pantalla (sin marco de móvil): 390×844 @2x → 780×1688
+                src: SCREENS.aprende,
                 title: C.ui_aprende_title,
                 body: C.ui_aprende_body,
-                placeholder: true,
               },
               {
-                src: "",
-                alt: "",
+                // Exportar desde Figma solo la pantalla (sin marco de móvil): 390×844 @2x → 780×1688
+                src: SCREENS.encuentra,
                 title: C.ui_encuentra_title,
                 body: C.ui_encuentra_body,
-                placeholder: true,
               },
               {
-                src: "",
-                alt: "",
+                // Exportar desde Figma solo la pantalla (sin marco de móvil): 390×844 @2x → 780×1688
+                src: SCREENS.comunidad,
                 title: C.ui_comunidad_title,
                 body: C.ui_comunidad_body,
-                placeholder: true,
               },
-            ].map(({ src, alt, title, body, placeholder }) => (
+            ].map(({ src, title, body }) => (
               <div key={title}>
                 <div
                   style={{
@@ -1360,7 +1373,7 @@ export default async function CamperotecaPage({ params }: Props) {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  {placeholder ? (
+                  {(
                     <div style={{
                       position: "relative",
                       width: "min(180px, 48vw)",
@@ -1380,17 +1393,28 @@ export default async function CamperotecaPage({ params }: Props) {
                         bottom: "calc(min(180px, 48vw) * 9 / 284)",
                         borderRadius: "calc(min(180px, 48vw) * 38 / 284)",
                         background: "var(--surface)",
+                        overflow: "hidden",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                       }}>
-                        <span style={{
-                          fontSize: "calc(min(180px, 48vw) * 11 / 284)",
-                          color: "var(--muted)",
-                          fontFamily: "system-ui",
-                          textAlign: "center",
-                          padding: "0 8px",
-                        }}>{title}</span>
+                        {src ? (
+                          <Image
+                            src={src}
+                            alt={`${C.ui_screen_alt}: ${title}`}
+                            fill
+                            sizes="min(180px, 48vw)"
+                            style={{ objectFit: "cover", objectPosition: "top" }}
+                          />
+                        ) : (
+                          <span style={{
+                            fontSize: "calc(min(180px, 48vw) * 11 / 284)",
+                            color: "var(--muted)",
+                            fontFamily: "system-ui",
+                            textAlign: "center",
+                            padding: "0 8px",
+                          }}>{title}</span>
+                        )}
                       </div>
                       {/* Dynamic Island */}
                       <div style={{
@@ -1405,20 +1429,6 @@ export default async function CamperotecaPage({ params }: Props) {
                         zIndex: 10,
                       }} />
                     </div>
-                  ) : (
-                    <Image
-                      src={src}
-                      alt={alt}
-                      width={648}
-                      height={1320}
-                      sizes="min(180px, 48vw)"
-                      className="screen-img"
-                      style={{
-                        width: "min(180px, 48vw)",
-                        height: "auto",
-                        display: "block",
-                      }}
-                    />
                   )}
                 </div>
                 <h3

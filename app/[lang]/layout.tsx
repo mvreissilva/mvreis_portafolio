@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LANGS, type Lang } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/site";
 import Nav from "@/components/layout/Nav";
 
 export function generateStaticParams() {
@@ -13,19 +14,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang: _lang } = await params;
   const lang = (LANGS.includes(_lang as Lang) ? _lang : "es") as Lang;
-  const base = "https://mvreis-uxportafolio.vercel.app";
-  return {
-    alternates: {
-      // canonical per-page is set in each page's own generateMetadata;
-      // this layout-level entry covers the root /{lang} only
-      canonical: `${base}/${lang}`,
-      languages: {
-        "es": `${base}/es`,
-        "en": `${base}/en`,
-        "pt": `${base}/pt`,
-      },
-    },
+  const descs: Record<Lang, string> = {
+    es: "UX/UI Designer. Investigación, arquitectura de información y diseño centrado en las personas. Sevilla, España.",
+    en: "UX/UI Designer. Research, information architecture and user-centred design. Seville, Spain.",
+    pt: "UX/UI Designer. Pesquisa, arquitetura da informação e design centrado nas pessoas. Sevilha, Espanha.",
   };
+  // Valores por defecto para /{lang} (home). Cada case study define los suyos.
+  return pageMetadata({ lang, path: "", description: descs[lang] });
 }
 
 export default async function LangLayout({

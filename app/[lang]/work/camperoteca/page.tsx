@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { LANGS, type Lang } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/site";
 import ZoomableImage from "@/components/ui/ZoomableImage";
+import PhoneFrame from "@/components/ui/PhoneFrame";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
@@ -36,9 +36,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
    Al subir la exportación de Figma a /public/assets/camperoteca/ui/,
    poner aquí la ruta, p. ej. "/assets/camperoteca/ui/onboarding.png". */
 const SCREENS = {
-  onboarding: "",
-  login: "",
-  miproyecto: "",
+  onboarding: "/assets/camperoteca/ui/onboarding.png",
+  login: "/assets/camperoteca/ui/login.png",
+  miproyecto: "/assets/camperoteca/ui/miproyecto.png",
   aprende: "",
   encuentra: "",
   comunidad: "",
@@ -1366,70 +1366,8 @@ export default async function CamperotecaPage({ params }: Props) {
               },
             ].map(({ src, title, body }) => (
               <div key={title}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  {(
-                    <div style={{
-                      position: "relative",
-                      width: "min(180px, 48vw)",
-                      height: "calc(min(180px, 48vw) * 1320 / 648)",
-                      borderRadius: "calc(min(180px, 48vw) * 46 / 284)",
-                      background: "linear-gradient(180deg, #2c2c2c 0%, #1a1a1a 100%)",
-                      boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
-                      overflow: "hidden",
-                      flexShrink: 0,
-                    }}>
-                      {/* Screen area */}
-                      <div style={{
-                        position: "absolute",
-                        top: "calc(min(180px, 48vw) * 9 / 284)",
-                        left: "calc(min(180px, 48vw) * 9 / 284)",
-                        right: "calc(min(180px, 48vw) * 9 / 284)",
-                        bottom: "calc(min(180px, 48vw) * 9 / 284)",
-                        borderRadius: "calc(min(180px, 48vw) * 38 / 284)",
-                        background: "var(--surface)",
-                        overflow: "hidden",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}>
-                        {src ? (
-                          <Image
-                            src={src}
-                            alt={`${C.ui_screen_alt}: ${title}`}
-                            fill
-                            sizes="min(180px, 48vw)"
-                            style={{ objectFit: "cover", objectPosition: "top" }}
-                          />
-                        ) : (
-                          <span style={{
-                            fontSize: "calc(min(180px, 48vw) * 11 / 284)",
-                            color: "var(--muted)",
-                            fontFamily: "system-ui",
-                            textAlign: "center",
-                            padding: "0 8px",
-                          }}>{title}</span>
-                        )}
-                      </div>
-                      {/* Dynamic Island */}
-                      <div style={{
-                        position: "absolute",
-                        top: "calc(min(180px, 48vw) * 17 / 284)",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                        width: "calc(min(180px, 48vw) * 76 / 284)",
-                        height: "calc(min(180px, 48vw) * 20 / 284)",
-                        borderRadius: "999px",
-                        background: "#000",
-                        zIndex: 10,
-                      }} />
-                    </div>
-                  )}
+                <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.5rem" }}>
+                  <PhoneFrame src={src || undefined} alt={`${C.ui_screen_alt}: ${title}`} label={title} />
                 </div>
                 <h3
                   style={{

@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     images: ["/assets/og-image.jpg"],
   },
   robots: { index: true, follow: true },
+  verification: { google: "DCFGfIg4vNNWZskmV13JVGmaoA3wDU9RauvlJZgB1y4" },
 };
 
 export const viewport: Viewport = {

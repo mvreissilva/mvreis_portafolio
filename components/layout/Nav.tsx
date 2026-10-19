@@ -86,13 +86,18 @@ export default function Nav({ lang }: { lang: Lang }) {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
+  // En la home: scroll suave a la sección. En un caso de estudio: navega a la home y baja a la sección.
   const go = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    setOpen(false);
     const isLangRoot = path === `/${lang}` || path === `/${lang}/`;
     if (!isLangRoot) return;
     e.preventDefault();
-    setOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    history.replaceState(null, "", `#${id}`);
   };
+
+  // Cambiar de idioma conserva la página actual (p. ej. /es/work/camperoteca → /en/work/camperoteca)
+  const langHref = (l: Lang) => path.replace(/^\/(es|en|pt)(?=\/|$)/, `/${l}`) || `/${l}`;
 
   const navStyle: React.CSSProperties = {
     position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
@@ -143,13 +148,13 @@ export default function Nav({ lang }: { lang: Lang }) {
         <nav style={{ display: "flex", alignItems: "center", gap: "1.75rem" }}
              className="hidden-mobile">
           {navKeys.map(({ key, id }) => (
-            <a key={key} href={`#${id}`} onClick={e => go(e, id)} style={linkStyle}>
+            <Link key={key} href={`/${lang}#${id}`} onClick={e => go(e, id)} style={linkStyle}>
               {(tr as Record<string, string>)[key]}
-            </a>
+            </Link>
           ))}
           <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginLeft: "0.5rem" }}>
             {LANGS.map(l => (
-              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}
+              <Link key={l} href={langHref(l)} style={langBtnStyle(l === lang)}
                 aria-label={l === "es" ? "Español" : l === "en" ? "English" : "Português"}
                 aria-current={l === lang ? "page" : undefined}
               >{l.toUpperCase()}</Link>
@@ -163,7 +168,7 @@ export default function Nav({ lang }: { lang: Lang }) {
              className="show-mobile">
           <div style={{ display: "flex", gap: "0.5rem" }}>
             {LANGS.map(l => (
-              <Link key={l} href={`/${l}`} style={langBtnStyle(l === lang)}
+              <Link key={l} href={langHref(l)} style={langBtnStyle(l === lang)}
                 aria-label={l === "es" ? "Español" : l === "en" ? "English" : "Português"}
                 aria-current={l === lang ? "page" : undefined}
               >{l.toUpperCase()}</Link>
@@ -189,11 +194,11 @@ export default function Nav({ lang }: { lang: Lang }) {
         <div style={{ background: "var(--bg)", borderTop: "1px solid var(--border)",
                       padding: "1.25rem 1.5rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
           {navKeys.map(({ key, id }) => (
-            <a key={key} href={`#${id}`} onClick={e => go(e, id)}
+            <Link key={key} href={`/${lang}#${id}`} onClick={e => go(e, id)}
                style={{ fontSize: "0.9375rem", color: "var(--muted)", textDecoration: "none",
                         fontFamily: "var(--font-sans)" }}>
               {(tr as Record<string, string>)[key]}
-            </a>
+            </Link>
           ))}
         </div>
       )}

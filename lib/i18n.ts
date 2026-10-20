@@ -44,7 +44,7 @@ export const t = {
         desc: "Plataforma mobile para acompañar el proceso de camperización paso a paso y conectar a la comunidad para intercambiar materiales, herramientas y conocimiento.",
         year: "2025–26",
         cover: "/assets/camperoteca-cover.jpg",
-        coverAlt: "Pantalla de la app Camperoteca en un teléfono móvil",
+        coverAlt: "Tres pantallas de la app Camperoteca (Aprende, Mi Proyecto y Comunidad) sobre madera",
       },
       riptide: {
         tag: "UX/UI · IA · Sostenibilidad · Conceptual",
@@ -99,7 +99,7 @@ export const t = {
         desc: "Mobile platform to guide the van conversion process step by step and connect the community to exchange materials, tools and knowledge.",
         year: "2025–26",
         cover: "/assets/camperoteca-cover.jpg",
-        coverAlt: "Camperoteca app screen on a mobile phone",
+        coverAlt: "Three Camperoteca app screens (Learn, My Project and Community) on wood",
       },
       riptide: {
         tag: "UX/UI · AI · Sustainability · Conceptual",
@@ -154,7 +154,7 @@ export const t = {
         desc: "Plataforma mobile para acompanhar o processo de camperização passo a passo e conectar a comunidade para trocar materiais, ferramentas e conhecimento.",
         year: "2025–26",
         cover: "/assets/camperoteca-cover.jpg",
-        coverAlt: "Ecrã da app Camperoteca num telemóvel",
+        coverAlt: "Três ecrãs da app Camperoteca (Aprende, O Meu Projeto e Comunidade) sobre madeira",
       },
       riptide: {
         tag: "UX/UI · IA · Sustentabilidade · Conceptual",

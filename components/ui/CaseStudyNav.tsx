@@ -10,6 +10,7 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
   const [active, setActive] = useState<string>("");
   const [visible, setVisible] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   /* Show bar only after hero leaves viewport */
   useEffect(() => {
@@ -42,6 +43,19 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
     return () => observerRef.current?.disconnect();
   }, [sections]);
 
+  /* Keep the active item in view: scroll the bar horizontally (never the page) */
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || !active) return;
+    const btn = track.querySelector<HTMLElement>(`[data-id="${active}"]`);
+    if (!btn) return;
+    const target = btn.offsetLeft - (track.clientWidth - btn.offsetWidth) / 2;
+    const max = track.scrollWidth - track.clientWidth;
+    const left = Math.max(0, Math.min(target, max));
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    track.scrollTo({ left, behavior: reduce ? "auto" : "smooth" });
+  }, [active]);
+
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -67,7 +81,10 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
         className="cs-nav"
       >
         <div
+          ref={trackRef}
+          className="cs-nav-track"
           style={{
+            position: "relative",
             maxWidth: "860px",
             margin: "0 auto",
             padding: "0 1.5rem",
@@ -82,6 +99,8 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
           {sections.map(({ id, label }, i) => (
             <button
               key={id}
+              data-id={id}
+              aria-current={active === id ? "location" : undefined}
               onClick={() => scrollTo(id)}
               style={{
                 background: "none",
@@ -112,7 +131,7 @@ export default function CaseStudyNav({ sections }: { sections: Section[] }) {
       </nav>
 
       <style>{`
-        .cs-nav::-webkit-scrollbar { display: none; }
+        .cs-nav-track::-webkit-scrollbar { display: none; }
       `}</style>
     </>
   );

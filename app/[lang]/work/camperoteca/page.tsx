@@ -174,7 +174,7 @@ const copy = {
       "Aprende: guías técnicas, legales y casos reales organizados por etapa del proyecto.",
       "Encuentra: directorio de materiales y herramientas disponibles entre usuarios — versión inicial del eje de intercambio P2P.",
       "Comunidad: espacio de conexión entre personas en proceso de camperización para compartir experiencias y conocimiento.",
-      "Onboarding y registro: flujo de incorporación personalizado que recoge el tipo de furgoneta, fase del proyecto y objetivos del usuario.",
+      "Onboarding y registro: presenta cómo funciona la plataforma por etapas y da acceso mediante registro o inicio de sesión.",
     ],
     mvp_inc_label: "Incluido en MVP",
 
@@ -240,7 +240,7 @@ const copy = {
       "Evaluar la comprensión del flujo principal con usuarios reales mediante pruebas de usabilidad.",
       "Diseñar y validar la sección de perfil de usuario como base del sistema de confianza para las operaciones de intercambio, donación y venta entre privados.",
       "Desarrollar el marketplace completo con sistema de valoraciones y reputación entre usuarios.",
-      "Explorar personalización del proyecto: recomendaciones adaptadas al tipo de furgoneta, presupuesto y fase de construcción del usuario.",
+      "Personalizar el proyecto desde el registro: recoger tipo de furgoneta, fase, presupuesto y objetivos para adaptar Mi Proyecto y sus recomendaciones.",
     ],
     research_methods: [
       { num: "34", label: "encuestas realizadas" },
@@ -388,7 +388,7 @@ const copy = {
       "Learn: technical guides, legal guides and real cases organised by project stage.",
       "Find: directory of materials and tools available between users — initial version of the P2P exchange axis.",
       "Community: connection space for people going through the van conversion process to share experiences and knowledge.",
-      "Onboarding and registration: personalised onboarding flow that captures the van type, project phase and user goals.",
+      "Onboarding and registration: introduces how the platform works by stages and provides access through sign-up or log-in.",
     ],
     mvp_inc_label: "Included in MVP",
 
@@ -450,7 +450,7 @@ const copy = {
       "Evaluate understanding of the main flow with real users through usability testing.",
       "Design and validate the user profile section as the foundation of the trust system for exchange, donation and sale operations between private users.",
       "Develop the full marketplace with a ratings and reputation system between users.",
-      "Explore project personalisation: recommendations tailored to the user's van type, budget and construction phase.",
+      "Personalise the project from sign-up: capture van type, phase, budget and goals to tailor My Project and its recommendations.",
     ],
     research_methods: [
       { num: "34", label: "surveys completed" },
@@ -598,7 +598,7 @@ const copy = {
       "Aprende: guias técnicos, legais e casos reais organizados por etapa do projeto.",
       "Encontra: diretório de materiais e ferramentas disponíveis entre utilizadores — versão inicial do eixo de troca P2P.",
       "Comunidade: espaço de ligação entre pessoas em processo de camperização para partilhar experiências e conhecimento.",
-      "Onboarding e registo: fluxo de incorporação personalizado que recolhe o tipo de furgoneta, fase do projeto e objetivos do utilizador.",
+      "Onboarding e registo: apresenta como a plataforma funciona por etapas e dá acesso através de registo ou início de sessão.",
     ],
     mvp_inc_label: "Incluído no MVP",
 
@@ -660,7 +660,7 @@ const copy = {
       "Avaliar a compreensão do fluxo principal com utilizadores reais através de testes de usabilidade.",
       "Desenhar e validar a secção de perfil de utilizador como base do sistema de confiança para as operações de troca, doação e venda entre privados.",
       "Desenvolver o marketplace completo com sistema de avaliações e reputação entre utilizadores.",
-      "Explorar personalização do projeto: recomendações adaptadas ao tipo de furgoneta, orçamento e fase de construção do utilizador.",
+      "Personalizar o projeto desde o registo: recolher tipo de furgoneta, fase, orçamento e objetivos para adaptar O Meu Projeto e as suas recomendações.",
     ],
     research_methods: [
       { num: "34", label: "inquéritos realizados" },

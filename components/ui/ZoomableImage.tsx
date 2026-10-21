@@ -8,6 +8,8 @@ type Props = ImageProps & {
   hint?: string;
   /** Etiqueta accesible del botón de cierre (por idioma) */
   closeLabel?: string;
+  /** Ajuste puntual de la posición de la pista (p. ej. bajarla al margen del contenedor) */
+  hintStyle?: React.CSSProperties;
 };
 
 /**
@@ -20,6 +22,7 @@ type Props = ImageProps & {
 export default function ZoomableImage({
   hint = "Toca para ampliar",
   closeLabel = "Cerrar",
+  hintStyle,
   alt,
   style,
   ...imgProps
@@ -52,7 +55,7 @@ export default function ZoomableImage({
         aria-haspopup="dialog"
       >
         <Image alt={alt} style={style} {...imgProps} />
-        <span className="zi-hint" aria-hidden="true">⤢ {hint}</span>
+        <span className="zi-hint" aria-hidden="true" style={hintStyle}>⤢ {hint}</span>
       </button>
 
       <dialog

@@ -1148,7 +1148,7 @@ export default async function CamperotecaPage({ params }: Props) {
           <div style={{ borderRadius: "12px", overflow: "hidden", marginBottom: "3rem", background: "#F7F7F4" }}>
             <ZoomableImage
               src="/assets/camperoteca/happy-path.png"
-              alt="Happy path, del primer contacto al uso diario: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"
+              alt="Secuencia de navegación: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"
               width={1672}
               height={941}
               style={{ width: "100%", height: "auto", display: "block" }}

@@ -1221,7 +1221,7 @@ export default async function CamperotecaPage({ params }: Props) {
           </p>
         </Reveal>
         <Reveal delay={0.1}>
-          <div style={{ borderRadius: "12px", overflow: "hidden", background: "#F7F7F4", padding: "1.5rem" }}>
+          <div style={{ borderRadius: "12px", overflow: "hidden", background: "#F7F7F4", padding: "1.5rem 1.5rem 2.75rem" }}>
             <ZoomableImage
               src="/assets/camperoteca/wireframes-hero.png"
               alt="Evolución de wireframes: baja, media y alta fidelidad de las pantallas de Camperoteca"
@@ -1229,6 +1229,7 @@ export default async function CamperotecaPage({ params }: Props) {
               height={941}
               style={{ width: "100%", height: "auto", display: "block", borderRadius: "8px" }}
               hint={C.zoom_hint}
+              hintStyle={{ bottom: "-2.25rem" }}
               closeLabel={C.zoom_close}
             />
           </div>

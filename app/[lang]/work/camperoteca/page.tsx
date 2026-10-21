@@ -1152,10 +1152,10 @@ export default async function CamperotecaPage({ params }: Props) {
             transform: "translateX(-50%)",
           }}>
             <ZoomableImage
-              src="/assets/camperoteca/happy-path.jpg"
+              src="/assets/camperoteca/happy-path.png"
               alt="Secuencia de navegación: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"
-              width={2000}
-              height={606}
+              width={1400}
+              height={400}
               style={{ width: "100%", height: "auto", display: "block" }}
               hint={C.zoom_hint}
               closeLabel={C.zoom_close}

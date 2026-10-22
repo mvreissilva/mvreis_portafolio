@@ -72,6 +72,7 @@ const copy = {
       ["72,2 %", "quiere una presencia visible pero no intrusiva"],
     ],
     chart_title: "La culpa y las interrupciones son los dos motivos de rechazo principales",
+    chart_note: "En color, los dos motivos que guiaron las decisiones de diseño.",
     chart_q: "¿Qué te generaría más rechazo en una herramienta así? · % de 55 personas · respuesta múltiple",
     chart_rows: [
       ["Mensajes culpabilizadores", 52.7, "52,7 %"],
@@ -197,6 +198,7 @@ const copy = {
       ["72.2%", "want a presence that is visible but not intrusive"],
     ],
     chart_title: "Guilt and interruptions are the top two reasons for rejection",
+    chart_note: "Highlighted: the two reasons that guided the design decisions.",
     chart_q: "What would put you off most in a tool like this? · % of 55 people · multiple answers",
     chart_rows: [
       ["Guilt-inducing messages", 52.7, "52.7%"],
@@ -322,6 +324,7 @@ const copy = {
       ["72,2%", "quer uma presença visível, mas não intrusiva"],
     ],
     chart_title: "A culpa e as interrupções são os dois principais motivos de rejeição",
+    chart_note: "Em destaque, os dois motivos que guiaram as decisões de design.",
     chart_q: "O que mais faria você rejeitar uma ferramenta assim? · % de 55 pessoas · múltipla escolha",
     chart_rows: [
       ["Mensagens que geram culpa", 52.7, "52,7%"],
@@ -573,6 +576,10 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
                 </li>
               ))}
             </ul>
+            <p style={{ fontSize: "0.75rem", lineHeight: 1.5, color: "var(--muted)", marginTop: "1.25rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <span aria-hidden="true" style={{ display: "inline-block", width: "0.75rem", height: "0.75rem", borderRadius: "999px", background: "var(--accent)", flexShrink: 0 }} />
+              {C.chart_note}
+            </p>
           </figure>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "640px" }}>
             <p style={body}>{C.res_after}</p>

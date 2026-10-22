@@ -117,7 +117,7 @@ export const t = {
     hero: {
       available: "Disponível · Sevilha",
       title1: "Sou Marcus Reis.",
-      title2: "Entendo o problema. Projeto a experiência.",
+      title2: "Entendo o problema. Desenho a experiência.",
       body: "UX/UI Designer com experiência em ambientes corporativos e foco em pesquisa e arquitetura da informação. Transformo problemas complexos em experiências digitais claras, úteis e centradas nas pessoas.",
       cta: "Ver projetos",
       cv: "Baixar CV",

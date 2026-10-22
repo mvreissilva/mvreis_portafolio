@@ -56,7 +56,7 @@ const copy = {
     prob_title: "El impacto existe. Pero es invisible.",
     prob_p: [
       "Cada búsqueda, cada vídeo y cada consulta a una IA consume agua en los centros de datos que los refrigeran. Tres de cada cuatro personas encuestadas lo sabían, pero un tercio nunca se había parado a pensarlo. Lo saben en abstracto; no lo perciben mientras navegan, porque nada conecta un clic con su coste físico.",
-      "Las extensiones que ya existen miden sobre todo carbono o energía, muestran el agua como un dato secundario y presentan la información en paneles técnicos. Dos de las tres analizadas solo cubren el uso de IA. Ninguna pone el agua en el centro de toda la navegación.",
+      "Las extensiones que ya existen miden sobre todo carbono o energía. De las tres analizadas, dos calculan solo emisiones de CO₂ y la tercera se limita al uso de IA. Ninguna pone el agua en el centro de toda la navegación.",
     ],
     prob_quote: "«Sé que hay servidores y todo eso, pero lo tengo en una categoría mental de \"cosas técnicas que no veo\". No lo conecto con algo como el agua.»",
     prob_quote_by: "Participante en las entrevistas",
@@ -93,7 +93,7 @@ const copy = {
     rows: [
       ["El 52,7 % rechaza los mensajes culpabilizadores", "Informar sin juzgar", "Tono descriptivo y neutro: cifras y equivalencias, nunca reproches"],
       ["El 47,3 % rechaza las interrupciones; el 72,2 % quiere algo visible pero no intrusivo", "La utilidad tiene que superar a la molestia", "Sin pop-ups: un resumen diario a la hora que elige cada persona, con las alertas en tiempo real desactivadas por defecto"],
-      ["El 81,8 % prefiere indicadores visuales simples; 8 de 9 entrevistados eligieron una gota o algo que se llena", "Un número abstracto no se siente", "En el panel web, un vaso que se llena según el objetivo semanal"],
+      ["El 81,8 % prefiere indicadores visuales simples; 7 de 9 entrevistados eligieron una gota o algo que se llena", "Un número abstracto no se siente", "En el panel web, un vaso que se llena según el objetivo semanal"],
       ["8 de 9 entrevistados dijeron que una equivalencia física les impacta más que los litros; 6 eligieron el grifo abierto", "Falta un puente entre el clic y el agua física", "Cada cifra va con su equivalencia («42 litros = 1 ducha de 5 minutos») y la persona elige la unidad: litros, tazas o piscinas olímpicas"],
       ["6 de 9 entrevistados quieren poder silenciarla", "El control es de la persona usuaria", "Onboarding con tres ajustes (qué se mide, cada cuánto se avisa, en qué unidad se muestra) y notificaciones que se pueden desactivar"],
       ["El 40 % rechaza la sensación de vigilancia", "La confianza se gana explicando", "Pantalla de privacidad en el onboarding, procesamiento local de los datos y opciones para exportarlos o borrarlos"],
@@ -102,32 +102,23 @@ const copy = {
     sol_label: "Solución",
     sol_title: "No interrumpe, no juzga, no controla.",
     sol_value: "Riptide convierte la actividad digital en señales visuales simples, integradas de forma discreta en el navegador. No se trata de optimizar tu comportamiento: se trata de hacerlo visible.",
-    sol_strategy: "Modelo freemium, con licencias para centros educativos y empresas con programas de sostenibilidad. Lo definí en el Value Proposition Canvas y el Business Model Canvas.",
+    sol_strategy: "Modelo freemium, con licencias para centros educativos y empresas con programas de sostenibilidad. Lo trabajamos en el Value Proposition Canvas y el Business Model Canvas.",
     hp_label: "Happy path",
     hp_cta: "CTA",
     hp_steps: [
-      { t: "Descubrimiento", d: "El usuario ve la extensión a través de:", b: ["Recomendación", "Presentación del proyecto", "Web, redes o boca a boca"], cta: "Añadir extensión" },
-      { t: "Instalación", d: "Instala la extensión en el navegador. Al abrirla por primera vez aparece un modal de bienvenida y personalización inicial.", b: [], cta: "Personalizar" },
-      { t: "Onboarding", d: "Tres pantallas explican de forma visual cómo se usa la extensión y cómo se puede personalizar.", b: [], cta: "Personalizar" },
-      { t: "Personalización 1", d: "El usuario elige qué quiere que analice la extensión:", b: ["Búsquedas", "Tiempo de navegación", "Compras online", "Vídeos y streaming"], cta: "Siguiente" },
-      { t: "Personalización 2", d: "El usuario decide cada cuánto tiempo quiere recibir avisos sobre su uso hídrico invisible.", b: [], cta: "Siguiente" },
-      { t: "Personalización 3", d: "El usuario decide cómo quiere ver su gasto de agua:", b: ["Litros de agua", "Equivalencias visuales (duchas, botellas, etc.)", "Indicadores simples"], cta: "Siguiente" },
-      { t: "Resumen", d: "Se muestra un primer resumen con:", b: ["Consumo acumulado estimado", "Actividad principal detectada", "Mensaje de concienciación"], cta: "Ver detalles" },
-      { t: "Landing page", d: "El usuario accede a su panel principal, donde puede ver:", b: ["Consumo total y por actividad", "Evolución en el tiempo", "Comparativas simples", "Sugerencias de mejora", "Microacciones para reducir su impacto"], cta: "" },
+      { t: "Descubrimiento", d: "El usuario llega a la landing a través de:", b: ["Recomendación", "Presentación del proyecto", "Web, redes o boca a boca"], cta: "Añadir a Chrome" },
+      { t: "Instalación", d: "Instala la extensión. Al abrirla por primera vez aparece un modal de bienvenida que invita a personalizar la experiencia.", b: [], cta: "Siguiente" },
+      { t: "Onboarding", d: "Tres pantallas presentan las claves de la extensión:", b: ["Tu huella hídrica", "Consejos diarios", "Privacidad total"], cta: "Siguiente" },
+      { t: "Personalización 1", d: "El usuario elige qué quiere ver:", b: ["Webs que más le gastan", "Consejos de ahorro", "Gráfico semanal"], cta: "Siguiente" },
+      { t: "Personalización 2", d: "El usuario decide cada cuánto quiere recibir avisos:", b: ["Desactivado", "Diario", "Cada 3 días", "Semanal"], cta: "Siguiente" },
+      { t: "Personalización 3", d: "El usuario elige en qué medida quiere ver su gasto de agua:", b: ["Litros", "Piscinas olímpicas", "Tazas", "Almacenadores"], cta: "Empezar" },
+      { t: "Resumen", d: "El popup muestra el consumo del día:", b: ["Litros gastados y su equivalencia", "Desglose por streaming, búsquedas y navegación", "Día de la semana con menos consumo"], cta: "Ver detalles" },
+      { t: "Panel web", d: "El usuario accede a su panel, donde puede ver:", b: ["Resumen semanal, mensual o anual", "Objetivo semanal", "Actividades principales", "Equivalencias cotidianas", "Sugerencias para reducir consumo"], cta: "" },
     ],
-    img_happy_alt: "Happy path de Riptide: descubrimiento, instalación, onboarding, tres pasos de personalización, resumen y landing",
+    img_happy_alt: "Happy path de Riptide: descubrimiento, instalación, onboarding, tres pasos de personalización, resumen y panel web",
     img_happy_cap: "Del descubrimiento al panel: instalación, onboarding, tres ajustes de personalización y primer resumen.",
     img_evo_alt: "La pantalla de bienvenida de Riptide en tres fases: boceto a mano, wireframe de baja fidelidad y diseño final",
     img_evo_cap: "Del boceto en papel al wireframe y a la alta fidelidad.",
-    sol_what: "Qué hace",
-    sol_features: [
-      "Un icono discreto en la barra del navegador; el detalle se abre solo cuando la persona lo pide",
-      "Un resumen diario a la hora elegida; las alertas en tiempo real son opcionales",
-      "La cifra del día con su equivalencia y el desglose por streaming, búsquedas y navegación",
-      "Un onboarding que personaliza qué medir, cada cuánto avisar y en qué unidad mostrarlo",
-      "Un panel web con la evolución semanal, un objetivo y sugerencias",
-      "Privacidad visible: datos procesados en local, con opción de exportarlos o borrarlos",
-    ],
     img_ctx_alt: "Navegador con Google abierto y el popup de Riptide desplegado bajo el icono de la gota: hoy 42 litros, equivalentes a una ducha de 5 minutos, con desglose por streaming, búsquedas y navegación",
     img_ctx_cap: "La extensión vive en la barra del navegador y solo se abre cuando la persona la consulta.",
     img_onb_alt: "Seis pantallas del popup de Riptide: bienvenida, privacidad, qué quieres ver, cada cuánto avisar, unidad de medida y configuración",
@@ -141,11 +132,11 @@ const copy = {
     learns: [
       ["Awareness sí, culpa no", "La culpa fue el primer motivo de rechazo (52,7 %). El tono no es un detalle de copy: decide si la herramienta sigue instalada."],
       ["El control es innegociable", "Casi la mitad rechaza las interrupciones y casi nadie dejaría de usar la IA por un aviso. Una herramienta de awareness no puede imponer: el resumen diario y las alertas opcionales dejan la decisión en manos de cada persona."],
-      ["Los datos se leen dos veces", "Al revisar las respuestas originales para este case study encontré cifras cruzadas en la síntesis. Corregirlas cambió la historia: el problema no era la ignorancia, sino la invisibilidad. Y un empate 4 a 4 en las entrevistas no es una preferencia: es una razón para hacer algo configurable."],
+      ["Los datos se leen dos veces", "Al revisar las respuestas originales para este case study encontré cifras cruzadas en la síntesis. Corregirlas cambió la historia: el problema no era la ignorancia, sino la invisibilidad. Y un empate en las entrevistas no es una preferencia: es una pregunta abierta que hay que testear."],
     ],
     next_label: "Próximos pasos",
     next: [
-      "Testear un indicador que se llene en la barra del navegador: fue la preferencia más clara de las entrevistas (8 de 9) y quedó fuera del diseño final",
+      "Testear un indicador que se llene en la barra del navegador: fue la preferencia más clara de las entrevistas (7 de 9) y quedó fuera del diseño final",
       "Pasar de preferencias declaradas a comportamiento real con un test de prototipo: ¿la gente mantiene la extensión instalada?",
       "Validar la metodología de cálculo con fuentes científicas antes de mostrar cifras como «0,26 ml por búsqueda»",
     ],
@@ -182,7 +173,7 @@ const copy = {
     prob_title: "The impact exists. But it's invisible.",
     prob_p: [
       "Every search, every video and every AI prompt uses water in the data centres that keep them cool. Three in four people we surveyed knew this, yet a third had never stopped to think about it. They know it in the abstract; they don't feel it while browsing, because nothing links a click to its physical cost.",
-      "Existing extensions mostly measure carbon or energy, treat water as a secondary figure and present data in technical dashboards. Two of the three we analysed only cover AI use. None puts water at the centre of all browsing.",
+      "Existing extensions mostly measure carbon or energy. Of the three we analysed, two only calculate CO₂ emissions and the third is limited to AI use. None puts water at the centre of all browsing.",
     ],
     prob_quote: "“I know there are servers and all that, but I file it under ‘technical things I don't see’. I don't connect it with something like water.”",
     prob_quote_by: "Interview participant",
@@ -219,7 +210,7 @@ const copy = {
     rows: [
       ["52.7% reject guilt-inducing messages", "Inform without judging", "A neutral, descriptive tone: figures and equivalents, never reproach"],
       ["47.3% reject interruptions; 72.2% want something visible but not intrusive", "Usefulness has to outweigh annoyance", "No pop-ups: a daily summary at the time each person chooses, with real-time alerts off by default"],
-      ["81.8% prefer simple visual indicators; 8 of 9 interviewees chose a drop or something that fills up", "An abstract number isn't felt", "In the web dashboard, a glass that fills up towards the weekly goal"],
+      ["81.8% prefer simple visual indicators; 7 of 9 interviewees chose a drop or something that fills up", "An abstract number isn't felt", "In the web dashboard, a glass that fills up towards the weekly goal"],
       ["8 of 9 interviewees said a physical equivalent hits harder than litres; 6 chose a running tap", "A bridge is missing between the click and physical water", "Every figure comes with an equivalent (“42 litres = one 5-minute shower”) and people choose the unit: litres, cups or Olympic pools"],
       ["6 of 9 interviewees want to be able to mute it", "Control belongs to the user", "Onboarding with three settings (what is measured, how often you're notified, which unit is shown) and notifications that can be switched off"],
       ["40% reject feeling watched", "Trust is earned by explaining", "A privacy screen in the onboarding, local data processing and options to export or delete data"],
@@ -228,32 +219,23 @@ const copy = {
     sol_label: "Solution",
     sol_title: "It doesn't interrupt, judge or control.",
     sol_value: "Riptide turns digital activity into simple visual signals, built discreetly into the browser. It's not about optimising your behaviour: it's about making it visible.",
-    sol_strategy: "Freemium model, with licences for schools and companies running sustainability programmes. I defined it in the Value Proposition Canvas and the Business Model Canvas.",
+    sol_strategy: "Freemium model, with licences for schools and companies running sustainability programmes. We worked it out in the Value Proposition Canvas and the Business Model Canvas.",
     hp_label: "Happy path",
     hp_cta: "CTA",
     hp_steps: [
-      { t: "Discovery", d: "The user finds the extension through:", b: ["A recommendation", "The project presentation", "The website, social media or word of mouth"], cta: "Add extension" },
-      { t: "Installation", d: "They install the extension in the browser. On first opening, a welcome and initial setup modal appears.", b: [], cta: "Personalise" },
-      { t: "Onboarding", d: "Three screens visually explain how the extension works and how it can be personalised.", b: [], cta: "Personalise" },
-      { t: "Personalisation 1", d: "The user chooses what the extension should analyse:", b: ["Searches", "Browsing time", "Online shopping", "Video and streaming"], cta: "Next" },
-      { t: "Personalisation 2", d: "The user decides how often they want to be notified about their invisible water use.", b: [], cta: "Next" },
-      { t: "Personalisation 3", d: "The user decides how they want to see their water use:", b: ["Litres of water", "Visual equivalents (showers, bottles, etc.)", "Simple indicators"], cta: "Next" },
-      { t: "Summary", d: "A first summary is shown with:", b: ["Estimated cumulative use", "Main activity detected", "An awareness message"], cta: "View details" },
-      { t: "Landing page", d: "The user reaches their main dashboard, where they can see:", b: ["Total use and use by activity", "Change over time", "Simple comparisons", "Suggestions for improvement", "Micro-actions to reduce their impact"], cta: "" },
+      { t: "Discovery", d: "The user reaches the landing page through:", b: ["A recommendation", "The project presentation", "The website, social media or word of mouth"], cta: "Add to Chrome" },
+      { t: "Installation", d: "They install the extension. On first opening, a welcome modal invites them to personalise the experience.", b: [], cta: "Next" },
+      { t: "Onboarding", d: "Three screens introduce the key ideas of the extension:", b: ["Your water footprint", "Daily tips", "Full privacy"], cta: "Next" },
+      { t: "Personalisation 1", d: "The user chooses what they want to see:", b: ["Websites that use the most water", "Saving tips", "Weekly chart"], cta: "Next" },
+      { t: "Personalisation 2", d: "The user decides how often they want to be notified:", b: ["Off", "Daily", "Every 3 days", "Weekly"], cta: "Next" },
+      { t: "Personalisation 3", d: "The user chooses which unit to see their water use in:", b: ["Litres", "Olympic pools", "Cups", "Storage tanks"], cta: "Start" },
+      { t: "Summary", d: "The popup shows today's use:", b: ["Litres used and their equivalent", "Breakdown by streaming, searches and browsing", "The day of the week with the lowest use"], cta: "View details" },
+      { t: "Web dashboard", d: "The user opens their dashboard, where they can see:", b: ["Weekly, monthly or yearly summary", "Weekly goal", "Main activities", "Everyday equivalents", "Suggestions to reduce use"], cta: "" },
     ],
-    img_happy_alt: "Riptide happy path: discovery, installation, onboarding, three personalisation steps, summary and landing page",
+    img_happy_alt: "Riptide happy path: discovery, installation, onboarding, three personalisation steps, summary and web dashboard",
     img_happy_cap: "From discovery to dashboard: installation, onboarding, three personalisation settings and a first summary.",
     img_evo_alt: "The Riptide welcome screen in three stages: hand sketch, low-fidelity wireframe and final design",
     img_evo_cap: "From paper sketch to wireframe to high fidelity.",
-    sol_what: "What it does",
-    sol_features: [
-      "A discreet icon in the browser bar; details only open when the person asks",
-      "A daily summary at a chosen time; real-time alerts are optional",
-      "Today's figure with its equivalent and a breakdown by streaming, searches and browsing",
-      "An onboarding that sets what to measure, how often to notify and which unit to show",
-      "A web dashboard with weekly trends, a goal and suggestions",
-      "Visible privacy: data processed locally, with options to export or delete it",
-    ],
     img_ctx_alt: "Browser with Google open and the Riptide popup expanded under the drop icon: 42 litres today, equivalent to a 5-minute shower, broken down by streaming, searches and browsing",
     img_ctx_cap: "The extension lives in the browser bar and only opens when the person checks it.",
     img_onb_alt: "Six Riptide popup screens: welcome, privacy, what to see, how often to notify, unit of measure and settings",
@@ -267,11 +249,11 @@ const copy = {
     learns: [
       ["Awareness yes, guilt no", "Guilt was the top reason for rejection (52.7%). Tone isn't a copy detail: it decides whether the tool stays installed."],
       ["Control is non-negotiable", "Almost half reject interruptions, and almost no one would stop using AI because of a warning. An awareness tool can't impose: the daily summary and optional alerts leave the decision to each person."],
-      ["Read the data twice", "Revisiting the raw responses for this case study, I found mislabelled figures in the synthesis. Correcting them changed the story: the problem wasn't ignorance, it was invisibility. And a 4–4 tie in the interviews isn't a preference: it's a reason to make something configurable."],
+      ["Read the data twice", "Revisiting the raw responses for this case study, I found mislabelled figures in the synthesis. Correcting them changed the story: the problem wasn't ignorance, it was invisibility. And a tie in the interviews isn't a preference: it's an open question to test."],
     ],
     next_label: "Next steps",
     next: [
-      "Test an indicator that fills up in the browser bar: the clearest preference in the interviews (8 of 9), left out of the final design",
+      "Test an indicator that fills up in the browser bar: the clearest preference in the interviews (7 of 9), left out of the final design",
       "Move from stated preferences to real behaviour with a prototype test: do people keep the extension installed?",
       "Validate the calculation method with scientific sources before showing figures such as “0.26 ml per search”",
     ],
@@ -308,7 +290,7 @@ const copy = {
     prob_title: "O impacto existe. Mas é invisível.",
     prob_p: [
       "Cada busca, cada vídeo e cada consulta a uma IA consome água nos data centers que os resfriam. Três em cada quatro pessoas que responderam ao questionário sabiam disso, mas um terço nunca tinha parado para pensar no assunto. Elas sabem na teoria; não percebem enquanto navegam, porque nada liga um clique ao seu custo físico.",
-      "As extensões que já existem medem principalmente carbono ou energia, mostram a água como um dado secundário e apresentam as informações em painéis técnicos. Duas das três analisadas só cobrem o uso de IA. Nenhuma coloca a água no centro de toda a navegação.",
+      "As extensões que já existem medem principalmente carbono ou energia. Das três analisadas, duas calculam apenas emissões de CO₂ e a terceira se limita ao uso de IA. Nenhuma coloca a água no centro de toda a navegação.",
     ],
     prob_quote: "“Sei que existem servidores e tudo mais, mas guardo isso numa categoria mental de ‘coisas técnicas que não vejo’. Não associo isso a algo como a água.”",
     prob_quote_by: "Participante das entrevistas",
@@ -345,7 +327,7 @@ const copy = {
     rows: [
       ["52,7% rejeitam mensagens que geram culpa", "Informar sem julgar", "Tom descritivo e neutro: números e equivalências, nunca críticas"],
       ["47,3% rejeitam interrupções; 72,2% querem algo visível, mas não intrusivo", "A utilidade precisa superar o incômodo", "Sem pop-ups: um resumo diário no horário que cada pessoa escolhe, com os alertas em tempo real desativados por padrão"],
-      ["81,8% preferem indicadores visuais simples; 8 de 9 entrevistados escolheram uma gota ou algo que se enche", "Um número abstrato não é sentido", "No painel web, um copo que se enche conforme a meta semanal"],
+      ["81,8% preferem indicadores visuais simples; 7 de 9 entrevistados escolheram uma gota ou algo que se enche", "Um número abstrato não é sentido", "No painel web, um copo que se enche conforme a meta semanal"],
       ["8 de 9 entrevistados disseram que uma equivalência física impacta mais do que os litros; 6 escolheram a torneira aberta", "Falta uma ponte entre o clique e a água física", "Cada número vem com sua equivalência (“42 litros = 1 banho de 5 minutos”) e a pessoa escolhe a unidade: litros, xícaras ou piscinas olímpicas"],
       ["6 de 9 entrevistados querem poder silenciá-la", "O controle é de quem usa", "Onboarding com três ajustes (o que é medido, com que frequência avisar, em que unidade mostrar) e notificações que podem ser desativadas"],
       ["40% rejeitam a sensação de estar sendo vigiados", "A confiança se conquista explicando", "Tela de privacidade no onboarding, processamento local dos dados e opções para exportá-los ou apagá-los"],
@@ -354,32 +336,23 @@ const copy = {
     sol_label: "Solução",
     sol_title: "Não interrompe, não julga, não controla.",
     sol_value: "O Riptide transforma a atividade digital em sinais visuais simples, integrados de forma discreta ao navegador. Não se trata de otimizar o seu comportamento: se trata de torná-lo visível.",
-    sol_strategy: "Modelo freemium, com licenças para escolas e empresas com programas de sustentabilidade. Eu o defini no Value Proposition Canvas e no Business Model Canvas.",
+    sol_strategy: "Modelo freemium, com licenças para escolas e empresas com programas de sustentabilidade. Nós o trabalhamos no Value Proposition Canvas e no Business Model Canvas.",
     hp_label: "Happy path",
     hp_cta: "CTA",
     hp_steps: [
-      { t: "Descoberta", d: "O usuário conhece a extensão por meio de:", b: ["Recomendação", "Apresentação do projeto", "Site, redes sociais ou boca a boca"], cta: "Adicionar extensão" },
-      { t: "Instalação", d: "Instala a extensão no navegador. Ao abri-la pela primeira vez, aparece um modal de boas-vindas e personalização inicial.", b: [], cta: "Personalizar" },
-      { t: "Onboarding", d: "Três telas explicam de forma visual como a extensão funciona e como pode ser personalizada.", b: [], cta: "Personalizar" },
-      { t: "Personalização 1", d: "O usuário escolhe o que quer que a extensão analise:", b: ["Buscas", "Tempo de navegação", "Compras online", "Vídeos e streaming"], cta: "Avançar" },
-      { t: "Personalização 2", d: "O usuário decide com que frequência quer ser avisado sobre seu uso hídrico invisível.", b: [], cta: "Avançar" },
-      { t: "Personalização 3", d: "O usuário decide como quer ver seu gasto de água:", b: ["Litros de água", "Equivalências visuais (banhos, garrafas etc.)", "Indicadores simples"], cta: "Avançar" },
-      { t: "Resumo", d: "É exibido um primeiro resumo com:", b: ["Consumo acumulado estimado", "Atividade principal identificada", "Mensagem de conscientização"], cta: "Ver detalhes" },
-      { t: "Landing page", d: "O usuário acessa seu painel principal, onde pode ver:", b: ["Consumo total e por atividade", "Evolução ao longo do tempo", "Comparações simples", "Sugestões de melhoria", "Microações para reduzir seu impacto"], cta: "" },
+      { t: "Descoberta", d: "O usuário chega à landing page por meio de:", b: ["Recomendação", "Apresentação do projeto", "Site, redes sociais ou boca a boca"], cta: "Adicionar ao Chrome" },
+      { t: "Instalação", d: "Instala a extensão. Ao abri-la pela primeira vez, aparece um modal de boas-vindas que convida a personalizar a experiência.", b: [], cta: "Avançar" },
+      { t: "Onboarding", d: "Três telas apresentam os pontos principais da extensão:", b: ["Sua pegada hídrica", "Dicas diárias", "Privacidade total"], cta: "Avançar" },
+      { t: "Personalização 1", d: "O usuário escolhe o que quer ver:", b: ["Sites que mais gastam água", "Dicas de economia", "Gráfico semanal"], cta: "Avançar" },
+      { t: "Personalização 2", d: "O usuário decide com que frequência quer receber avisos:", b: ["Desativado", "Diário", "A cada 3 dias", "Semanal"], cta: "Avançar" },
+      { t: "Personalização 3", d: "O usuário escolhe em que unidade quer ver seu gasto de água:", b: ["Litros", "Piscinas olímpicas", "Xícaras", "Reservatórios"], cta: "Começar" },
+      { t: "Resumo", d: "O pop-up mostra o consumo do dia:", b: ["Litros gastos e sua equivalência", "Divisão por streaming, buscas e navegação", "Dia da semana com menor consumo"], cta: "Ver detalhes" },
+      { t: "Painel web", d: "O usuário acessa seu painel, onde pode ver:", b: ["Resumo semanal, mensal ou anual", "Meta semanal", "Atividades principais", "Equivalências do dia a dia", "Sugestões para reduzir o consumo"], cta: "" },
     ],
-    img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três etapas de personalização, resumo e landing page",
+    img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três etapas de personalização, resumo e painel web",
     img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e o primeiro resumo.",
     img_evo_alt: "A tela de boas-vindas do Riptide em três fases: esboço à mão, wireframe de baixa fidelidade e design final",
     img_evo_cap: "Do esboço no papel ao wireframe e à alta fidelidade.",
-    sol_what: "O que faz",
-    sol_features: [
-      "Um ícone discreto na barra do navegador; os detalhes só abrem quando a pessoa pede",
-      "Um resumo diário no horário escolhido; os alertas em tempo real são opcionais",
-      "O número do dia com sua equivalência e a divisão por streaming, buscas e navegação",
-      "Um onboarding que personaliza o que medir, com que frequência avisar e em que unidade mostrar",
-      "Um painel web com a evolução semanal, uma meta e sugestões",
-      "Privacidade visível: dados processados localmente, com opção de exportá-los ou apagá-los",
-    ],
     img_ctx_alt: "Navegador com o Google aberto e o pop-up do Riptide aberto abaixo do ícone da gota: hoje 42 litros, equivalentes a um banho de 5 minutos, com divisão por streaming, buscas e navegação",
     img_ctx_cap: "A extensão fica na barra do navegador e só abre quando a pessoa a consulta.",
     img_onb_alt: "Seis telas do pop-up do Riptide: boas-vindas, privacidade, o que você quer ver, com que frequência avisar, unidade de medida e configurações",
@@ -393,11 +366,11 @@ const copy = {
     learns: [
       ["Consciência sim, culpa não", "A culpa foi o principal motivo de rejeição (52,7%). O tom não é um detalhe de copy: ele decide se a ferramenta continua instalada."],
       ["O controle é inegociável", "Quase metade rejeita interrupções e quase ninguém deixaria de usar a IA por causa de um aviso. Uma ferramenta de conscientização não pode impor: o resumo diário e os alertas opcionais deixam a decisão nas mãos de cada pessoa."],
-      ["Os dados se leem duas vezes", "Ao revisar as respostas originais para este case study, encontrei números trocados na síntese. Corrigi-los mudou a história: o problema não era a falta de conhecimento, e sim a invisibilidade. E um empate de 4 a 4 nas entrevistas não é uma preferência: é um motivo para tornar algo configurável."],
+      ["Os dados se leem duas vezes", "Ao revisar as respostas originais para este case study, encontrei números trocados na síntese. Corrigi-los mudou a história: o problema não era a falta de conhecimento, e sim a invisibilidade. E um empate nas entrevistas não é uma preferência: é uma pergunta em aberto que precisa ser testada."],
     ],
     next_label: "Próximos passos",
     next: [
-      "Testar um indicador que se enche na barra do navegador: foi a preferência mais clara nas entrevistas (8 de 9) e ficou fora do design final",
+      "Testar um indicador que se enche na barra do navegador: foi a preferência mais clara nas entrevistas (7 de 9) e ficou fora do design final",
       "Passar de preferências declaradas para comportamento real com um teste de protótipo: as pessoas mantêm a extensão instalada?",
       "Validar a metodologia de cálculo com fontes científicas antes de mostrar números como “0,26 ml por busca”",
     ],
@@ -637,16 +610,6 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           <Figure img={IMG.evolution} alt={C.img_evo_alt} caption={C.img_evo_cap} C={C} />
         </Reveal>
         <Reveal delay={0.1}>
-          <p style={{ ...smallCaps, color: "var(--accent)", marginBottom: "1rem" }}>{C.sol_what}</p>
-          <ul className="rt-features" style={{ listStyle: "none", padding: 0, margin: "0 0 2.5rem", display: "grid", gridTemplateColumns: "1fr", gap: "0.625rem" }}>
-            {C.sol_features.map((f) => (
-              <li key={f} style={{ ...card, borderRadius: "8px", display: "flex", gap: "0.5rem", padding: "0.75rem", fontSize: "0.875rem", lineHeight: 1.55, color: "var(--muted)" }}>
-                <span aria-hidden="true" style={{ color: "var(--accent)", flexShrink: 0 }}>✓</span>{f}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
-        <Reveal delay={0.1}>
           <Figure img={IMG.landing} alt={C.img_land_alt} caption={C.img_land_cap} C={C} />
           <Figure img={IMG.context} alt={C.img_ctx_alt} caption={C.img_ctx_cap} C={C} />
           <Figure img={IMG.onboarding} alt={C.img_onb_alt} caption={C.img_onb_cap} C={C} />
@@ -708,7 +671,6 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           .rt-meta { grid-template-columns: repeat(3, 1fr) !important; }
           .rt-meta-wide { grid-column: span 3; }
           .rt-stats { grid-template-columns: repeat(2, 1fr) !important; }
-          .rt-features { grid-template-columns: repeat(2, 1fr) !important; }
           .rt-hp { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; grid-template-columns: repeat(2, 1fr) !important; padding-bottom: 0 !important; }
           .hmw-row { grid-template-columns: 1fr 1fr 1fr !important; }
           .rt-bar { grid-template-columns: 15rem 1fr; align-items: center; gap: 1rem; }

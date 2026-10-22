@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LANGS, type Lang } from "@/lib/i18n";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
+import ZoomableImage from "@/components/ui/ZoomableImage";
+import { Reveal } from "@/components/ui/Reveal";
 import { pageMetadata } from "@/lib/site";
 
 export function generateStaticParams() { return LANGS.map(lang => ({ lang })); }
@@ -17,184 +19,601 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return pageMetadata({ lang, path: "/work/riptide", title, description: desc });
 }
 
-const DATA = {
-  research: [
-    ["94.3%","es","Mostraron interés en conocer el impacto hídrico de su actividad digital"],
-    ["88.7%","es","Indicaron que esta información podría afectar su comportamiento digital"],
-    ["73.1%","es","Prefieren una experiencia visible pero no intrusiva"],
-    ["54.7%","es","Rechazaban experiencias que interrumpen su flujo de trabajo"],
-    ["47.2%","es","Expresaron preocupación por experiencias de vigilancia"],
-    ["39.6%","es","Asociaban el concepto con culpa"],
-  ],
-  researchEn: ["Showed interest in knowing the water footprint of their digital activity","Indicated this information could affect their digital behaviour","Prefer a visible but non-intrusive experience","Rejected experiences that interrupt their workflow","Expressed concern about surveillance-like experiences","Associated the concept with guilt"],
-  researchPt: ["Mostraram interesse em conhecer o impacto hídrico da sua atividade digital","Indicaram que esta informação poderia afetar o seu comportamento digital","Preferem uma experiência visível mas não intrusiva","Rejeitaram experiências que interrompem o seu fluxo de trabalho","Expressaram preocupação com experiências de vigilância","Associaram o conceito com culpa"],
+/* ─── imágenes ──────────────────────────────────────────────────── */
+const IMG = {
+  happy:      { src: "/assets/riptide/happy-path.webp",            w: 3200, h: 1035 },
+  evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 862 },
+  context:    { src: "/assets/riptide/extension-en-contexto.webp", w: 2400, h: 1671 },
+  onboarding: { src: "/assets/riptide/onboarding-y-ajustes.webp",  w: 2400, h: 846 },
+  landing:    { src: "/assets/riptide/landing.webp",               w: 2400, h: 1589 },
 };
 
-const LEARNS = {
-  es: [["Awareness sí, culpa no","El diseño debe informar sin juzgar. El tono de los mensajes es crítico para no convertir la herramienta en una fuente de ansiedad."],["El control es innegociable","En herramientas de monitoreo, la percepción de vigilancia es el mayor riesgo de abandono."],["La transparencia reduce la fricción","El 47% dudaba del cálculo. Explicar el método no es un detalle técnico — es una decisión de confianza."]],
-  en: [["Awareness yes, guilt no","Design must inform without judging. The tone of messages is critical to avoid turning the tool into a source of anxiety."],["Control is non-negotiable","In monitoring tools, the perception of surveillance is the biggest abandonment risk."],["Transparency reduces friction","47% doubted the calculation method. Explaining it isn't a technical detail — it's a trust decision."]],
-  pt: [["Consciência sim, culpa não","O design deve informar sem julgar. O tom das mensagens é crítico para não transformar a ferramenta numa fonte de ansiedade."],["O controlo é inegociável","Em ferramentas de monitorização, a perceção de vigilância é o maior risco de abandono."],["A transparência reduz o atrito","47% duvidavam do cálculo. Explicar o método não é um detalhe técnico — é uma decisão de confiança."]],
+/* ─── textos ────────────────────────────────────────────────────── */
+const copy = {
+  es: {
+    back: "← Volver",
+    contact: "Contactar →",
+    zoom_hint: "Toca para ampliar",
+    zoom_close: "Cerrar",
+    nav: [
+      { id: "rt-problem",   label: "Problema" },
+      { id: "rt-research",  label: "Investigación" },
+      { id: "rt-insights",  label: "Insights" },
+      { id: "rt-solution",  label: "Solución" },
+      { id: "rt-learnings", label: "Aprendizajes" },
+    ],
+    tags: "UX/UI · IA · Sostenibilidad · Proyecto conceptual",
+    desc: "Extensión de navegador que hace visible el impacto hídrico de la actividad digital cotidiana. Awareness sin culpa, presencia sin intrusión.",
+    meta: [
+      ["Tipo", "Proyecto conceptual · Equipo de 7"],
+      ["Mi rol", "UX/UI Designer · Research"],
+      ["Plataforma", "Extensión de navegador"],
+      ["Herramientas", "Figma · FigJam"],
+      ["Filosofía", "Awareness sin culpa"],
+    ],
+    focusLabel: "Mi foco",
+    focus: "Encuestas, entrevistas, síntesis de insights y HMW · Value Proposition Canvas, propuesta de valor y Business Model Canvas · Wireflow y wireframes",
+
+    prob_label: "El problema",
+    prob_title: "El impacto existe. Pero es invisible.",
+    prob_p: [
+      "Cada búsqueda, cada vídeo y cada consulta a una IA consume agua en los centros de datos que los refrigeran. Tres de cada cuatro personas encuestadas lo sabían, pero un tercio nunca se había parado a pensarlo. Lo saben en abstracto; no lo perciben mientras navegan, porque nada conecta un clic con su coste físico.",
+      "Las extensiones que ya existen miden sobre todo carbono o energía, muestran el agua como un dato secundario y presentan la información en paneles técnicos. Dos de las tres analizadas solo cubren el uso de IA. Ninguna pone el agua en el centro de toda la navegación.",
+    ],
+    prob_quote: "«Sé que hay servidores y todo eso, pero lo tengo en una categoría mental de \"cosas técnicas que no veo\". No lo conecto con algo como el agua.»",
+    prob_quote_by: "Participante en las entrevistas",
+
+    res_label: "Investigación",
+    res_title: "Lo que la gente aceptaría, y lo que no",
+    res_intro: "Combinamos métodos cuantitativos y cualitativos para entender qué sabe la gente del consumo hídrico digital y, sobre todo, qué toleraría de una herramienta que se lo mostrara.",
+    res_methods: ["55 encuestas", "9 entrevistas", "3 extensiones analizadas", "DAFO", "Desk research"],
+    res_stats: [
+      ["92,7 %", "ve interesante una extensión que muestre su impacto hídrico"],
+      ["87,3 %", "cree que esa información cambiaría su forma de usar Internet"],
+      ["81,8 %", "prefiere indicadores visuales simples (colores o estados)"],
+      ["72,2 %", "quiere una presencia visible pero no intrusiva"],
+    ],
+    chart_title: "La culpa y las interrupciones son los dos motivos de rechazo principales",
+    chart_q: "¿Qué te generaría más rechazo en una herramienta así? · % de 55 personas · respuesta múltiple",
+    chart_rows: [
+      ["Mensajes culpabilizadores", 52.7, "52,7 %"],
+      ["Interrupciones frecuentes", 47.3, "47,3 %"],
+      ["Sensación de vigilancia", 40.0, "40,0 %"],
+      ["Falta de claridad sobre el cálculo", 23.6, "23,6 %"],
+    ],
+    res_after: "El interés estaba validado; el riesgo estaba en el rechazo. Los dos motivos principales para abandonar una herramienta así, sentirse culpable y sentirse interrumpido, marcaron los dos límites del producto.",
+    res_interviews: "Las entrevistas se centraron en el uso de IA, una de las actividades digitales de mayor consumo. Confirmaron el patrón: 6 de 9 personas describieron la extensión ideal como «un asistente discreto», y 7 de 9 seguirían usando la IA aunque la extensión les avisara de un consumo alto.",
+    res_note: "Encuesta online, febrero de 2026: 55 respuestas (54 en la pregunta sobre nivel de presencia). El 78 % tiene más de 30 años y el 62 % usa el navegador más de 4 horas al día. Algunas preguntas admitían respuesta múltiple.",
+
+    ins_label: "Insights",
+    ins_title: "Del dato a la decisión",
+    persona_name: "Ana, 32 años · Especialista en marketing digital",
+    persona_text: "Pasa gran parte del día frente al ordenador y usa extensiones a diario, pero abandona las herramientas demasiado técnicas o invasivas. Le preocupa el medioambiente y quiere que sus valores se reflejen también en su vida digital, sin sentirse juzgada.",
+    ins_central: "Casi nadie dejaría de usar la IA por un aviso. Riptide no podía prometer un cambio de conducta: tenía que hacer visible el impacto y dejar la decisión en manos de cada persona.",
+    cols: ["Dato", "Insight", "Decisión de diseño"],
+    rows: [
+      ["El 52,7 % rechaza los mensajes culpabilizadores", "Informar sin juzgar", "Tono descriptivo y neutro: cifras y equivalencias, nunca reproches"],
+      ["El 47,3 % rechaza las interrupciones; el 72,2 % quiere algo visible pero no intrusivo", "La utilidad tiene que superar a la molestia", "Sin pop-ups: un resumen diario a la hora que elige cada persona, con las alertas en tiempo real desactivadas por defecto"],
+      ["El 81,8 % prefiere indicadores visuales simples; 8 de 9 entrevistados eligieron una gota o algo que se llena", "Un número abstracto no se siente", "En el panel web, un vaso que se llena según el objetivo semanal"],
+      ["8 de 9 entrevistados dijeron que una equivalencia física les impacta más que los litros; 6 eligieron el grifo abierto", "Falta un puente entre el clic y el agua física", "Cada cifra va con su equivalencia («42 litros = 1 ducha de 5 minutos») y la persona elige la unidad: litros, tazas o piscinas olímpicas"],
+      ["6 de 9 entrevistados quieren poder silenciarla", "El control es de la persona usuaria", "Onboarding con tres ajustes (qué se mide, cada cuánto se avisa, en qué unidad se muestra) y notificaciones que se pueden desactivar"],
+      ["El 40 % rechaza la sensación de vigilancia", "La confianza se gana explicando", "Pantalla de privacidad en el onboarding, procesamiento local de los datos y opciones para exportarlos o borrarlos"],
+    ],
+
+    sol_label: "Solución",
+    sol_title: "No interrumpe, no juzga, no controla.",
+    sol_value: "Riptide convierte la actividad digital en señales visuales simples, integradas de forma discreta en el navegador. No se trata de optimizar tu comportamiento: se trata de hacerlo visible.",
+    sol_strategy: "Modelo freemium, con licencias para centros educativos y empresas con programas de sostenibilidad. Lo definí en el Value Proposition Canvas y el Business Model Canvas.",
+    img_happy_alt: "Happy path de Riptide: descubrimiento, instalación, onboarding, tres pasos de personalización, resumen y landing",
+    img_happy_cap: "Del descubrimiento al panel: instalación, onboarding, tres ajustes de personalización y primer resumen.",
+    img_evo_alt: "Tres versiones del popup de Riptide: boceto a mano, wireframe en blanco y negro y diseño final en azul",
+    img_evo_cap: "Del boceto en papel al wireframe y a la alta fidelidad.",
+    sol_what: "Qué hace",
+    sol_features: [
+      "Un icono discreto en la barra del navegador; el detalle se abre solo cuando la persona lo pide",
+      "Un resumen diario a la hora elegida; las alertas en tiempo real son opcionales",
+      "La cifra del día con su equivalencia y el desglose por streaming, búsquedas y navegación",
+      "Un onboarding que personaliza qué medir, cada cuánto avisar y en qué unidad mostrarlo",
+      "Un panel web con la evolución semanal, un objetivo y sugerencias",
+      "Privacidad visible: datos procesados en local, con opción de exportarlos o borrarlos",
+    ],
+    img_ctx_alt: "Navegador con Google abierto y el popup de Riptide desplegado bajo el icono de la gota: hoy 42 litros, equivalentes a una ducha de 5 minutos, con desglose por streaming, búsquedas y navegación",
+    img_ctx_cap: "La extensión vive en la barra del navegador y solo se abre cuando la persona la consulta.",
+    img_onb_alt: "Seis pantallas del popup de Riptide: bienvenida, privacidad, qué quieres ver, cada cuánto avisar, unidad de medida y configuración",
+    img_onb_cap: "Onboarding y ajustes: la persona decide qué se mide, cuándo se avisa y en qué unidad.",
+    img_land_alt: "Landing de Riptide con la mascota gota y el titular «Tu vida digital también consume agua. Descubre cuánta.»",
+    img_land_cap: "La landing, puerta de entrada a la extensión y al panel web.",
+    sol_team: "La alta fidelidad fue trabajo de equipo; mi parte en esta fase fueron el wireflow y los wireframes.",
+
+    learn_label: "Aprendizajes",
+    learn_title: "Qué me llevo de este proyecto",
+    learns: [
+      ["Awareness sí, culpa no", "La culpa fue el primer motivo de rechazo (52,7 %). El tono no es un detalle de copy: decide si la herramienta sigue instalada."],
+      ["El control es innegociable", "Casi la mitad rechaza las interrupciones y casi nadie dejaría de usar la IA por un aviso. Una herramienta de awareness no puede imponer: el resumen diario y las alertas opcionales dejan la decisión en manos de cada persona."],
+      ["Los datos se leen dos veces", "Al revisar las respuestas originales para este case study encontré cifras cruzadas en la síntesis. Corregirlas cambió la historia: el problema no era la ignorancia, sino la invisibilidad. Y un empate 4 a 4 en las entrevistas no es una preferencia: es una razón para hacer algo configurable."],
+    ],
+    next_label: "Próximos pasos",
+    next: [
+      "Testear un indicador que se llene en la barra del navegador: fue la preferencia más clara de las entrevistas (8 de 9) y quedó fuera del diseño final",
+      "Pasar de preferencias declaradas a comportamiento real con un test de prototipo: ¿la gente mantiene la extensión instalada?",
+      "Validar la metodología de cálculo con fuentes científicas antes de mostrar cifras como «0,26 ml por búsqueda»",
+    ],
+  },
+
+  en: {
+    back: "← Back",
+    contact: "Get in touch →",
+    zoom_hint: "Tap to enlarge",
+    zoom_close: "Close",
+    nav: [
+      { id: "rt-problem",   label: "Problem" },
+      { id: "rt-research",  label: "Research" },
+      { id: "rt-insights",  label: "Insights" },
+      { id: "rt-solution",  label: "Solution" },
+      { id: "rt-learnings", label: "Learnings" },
+    ],
+    tags: "UX/UI · AI · Sustainability · Conceptual project",
+    desc: "A browser extension that makes the hidden water footprint of everyday digital activity visible. Awareness without guilt, presence without intrusion.",
+    meta: [
+      ["Type", "Conceptual project · Team of 7"],
+      ["My role", "UX/UI Designer · Research"],
+      ["Platform", "Browser extension"],
+      ["Tools", "Figma · FigJam"],
+      ["Philosophy", "Awareness without guilt"],
+    ],
+    focusLabel: "My focus",
+    focus: "Surveys, interviews, insight synthesis and HMW · Value Proposition Canvas, value proposition and Business Model Canvas · Wireflow and wireframes",
+
+    prob_label: "The problem",
+    prob_title: "The impact exists. But it's invisible.",
+    prob_p: [
+      "Every search, every video and every AI prompt uses water in the data centres that keep them cool. Three in four people we surveyed knew this, yet a third had never stopped to think about it. They know it in the abstract; they don't feel it while browsing, because nothing links a click to its physical cost.",
+      "Existing extensions mostly measure carbon or energy, treat water as a secondary figure and present data in technical dashboards. Two of the three we analysed only cover AI use. None puts water at the centre of all browsing.",
+    ],
+    prob_quote: "“I know there are servers and all that, but I file it under ‘technical things I don't see’. I don't connect it with something like water.”",
+    prob_quote_by: "Interview participant",
+
+    res_label: "Research",
+    res_title: "What people would accept, and what they wouldn't",
+    res_intro: "We combined quantitative and qualitative methods to understand what people know about digital water use and, above all, what they would tolerate from a tool that showed it to them.",
+    res_methods: ["55 surveys", "9 interviews", "3 extensions analysed", "SWOT", "Desk research"],
+    res_stats: [
+      ["92.7%", "find an extension that shows their water footprint interesting"],
+      ["87.3%", "believe this information would change how they use the internet"],
+      ["81.8%", "prefer simple visual indicators (colours or states)"],
+      ["72.2%", "want a presence that is visible but not intrusive"],
+    ],
+    chart_title: "Guilt and interruptions are the top two reasons for rejection",
+    chart_q: "What would put you off most in a tool like this? · % of 55 people · multiple answers",
+    chart_rows: [
+      ["Guilt-inducing messages", 52.7, "52.7%"],
+      ["Frequent interruptions", 47.3, "47.3%"],
+      ["Feeling watched", 40.0, "40.0%"],
+      ["Unclear calculation method", 23.6, "23.6%"],
+    ],
+    res_after: "Interest was validated; the risk lay in rejection. The two main reasons to drop a tool like this, feeling guilty and feeling interrupted, set the two limits of the product.",
+    res_interviews: "The interviews focused on AI use, one of the most water-intensive digital activities. They confirmed the pattern: 6 in 9 people described the ideal extension as “a discreet assistant”, and 7 in 9 would keep using AI even if the extension flagged high consumption.",
+    res_note: "Online survey, February 2026: 55 responses (54 on the presence question). 78% are over 30 and 62% use their browser more than 4 hours a day. Some questions allowed multiple answers.",
+
+    ins_label: "Insights",
+    ins_title: "From data to decision",
+    persona_name: "Ana, 32 · Digital marketing specialist",
+    persona_text: "She spends most of the day at her computer and uses extensions daily, but drops tools that are too technical or invasive. She cares about the environment and wants her values reflected in her digital life too, without feeling judged.",
+    ins_central: "Almost no one would stop using AI because of a warning. Riptide couldn't promise behaviour change: it had to make the impact visible and leave the decision to each person.",
+    cols: ["Data", "Insight", "Design decision"],
+    rows: [
+      ["52.7% reject guilt-inducing messages", "Inform without judging", "A neutral, descriptive tone: figures and equivalents, never reproach"],
+      ["47.3% reject interruptions; 72.2% want something visible but not intrusive", "Usefulness has to outweigh annoyance", "No pop-ups: a daily summary at the time each person chooses, with real-time alerts off by default"],
+      ["81.8% prefer simple visual indicators; 8 of 9 interviewees chose a drop or something that fills up", "An abstract number isn't felt", "In the web dashboard, a glass that fills up towards the weekly goal"],
+      ["8 of 9 interviewees said a physical equivalent hits harder than litres; 6 chose a running tap", "A bridge is missing between the click and physical water", "Every figure comes with an equivalent (“42 litres = one 5-minute shower”) and people choose the unit: litres, cups or Olympic pools"],
+      ["6 of 9 interviewees want to be able to mute it", "Control belongs to the user", "Onboarding with three settings (what is measured, how often you're notified, which unit is shown) and notifications that can be switched off"],
+      ["40% reject feeling watched", "Trust is earned by explaining", "A privacy screen in the onboarding, local data processing and options to export or delete data"],
+    ],
+
+    sol_label: "Solution",
+    sol_title: "It doesn't interrupt, judge or control.",
+    sol_value: "Riptide turns digital activity into simple visual signals, built discreetly into the browser. It's not about optimising your behaviour: it's about making it visible.",
+    sol_strategy: "Freemium model, with licences for schools and companies running sustainability programmes. I defined it in the Value Proposition Canvas and the Business Model Canvas.",
+    img_happy_alt: "Riptide happy path: discovery, installation, onboarding, three personalisation steps, summary and landing page",
+    img_happy_cap: "From discovery to dashboard: installation, onboarding, three personalisation settings and a first summary.",
+    img_evo_alt: "Three versions of the Riptide popup: hand sketch, black-and-white wireframe and final blue design",
+    img_evo_cap: "From paper sketch to wireframe to high fidelity.",
+    sol_what: "What it does",
+    sol_features: [
+      "A discreet icon in the browser bar; details only open when the person asks",
+      "A daily summary at a chosen time; real-time alerts are optional",
+      "Today's figure with its equivalent and a breakdown by streaming, searches and browsing",
+      "An onboarding that sets what to measure, how often to notify and which unit to show",
+      "A web dashboard with weekly trends, a goal and suggestions",
+      "Visible privacy: data processed locally, with options to export or delete it",
+    ],
+    img_ctx_alt: "Browser with Google open and the Riptide popup expanded under the drop icon: 42 litres today, equivalent to a 5-minute shower, broken down by streaming, searches and browsing",
+    img_ctx_cap: "The extension lives in the browser bar and only opens when the person checks it.",
+    img_onb_alt: "Six Riptide popup screens: welcome, privacy, what to see, how often to notify, unit of measure and settings",
+    img_onb_cap: "Onboarding and settings: people decide what is measured, when they're notified and in which unit.",
+    img_land_alt: "Riptide landing page with the water-drop mascot and the headline “Your digital life also uses water. Find out how much.” (Spanish interface)",
+    img_land_cap: "The landing page, the entry point to the extension and the web dashboard.",
+    sol_team: "High fidelity was a team effort; my part in this phase was the wireflow and the wireframes.",
+
+    learn_label: "Learnings",
+    learn_title: "What I take from this project",
+    learns: [
+      ["Awareness yes, guilt no", "Guilt was the top reason for rejection (52.7%). Tone isn't a copy detail: it decides whether the tool stays installed."],
+      ["Control is non-negotiable", "Almost half reject interruptions, and almost no one would stop using AI because of a warning. An awareness tool can't impose: the daily summary and optional alerts leave the decision to each person."],
+      ["Read the data twice", "Revisiting the raw responses for this case study, I found mislabelled figures in the synthesis. Correcting them changed the story: the problem wasn't ignorance, it was invisibility. And a 4–4 tie in the interviews isn't a preference: it's a reason to make something configurable."],
+    ],
+    next_label: "Next steps",
+    next: [
+      "Test an indicator that fills up in the browser bar: the clearest preference in the interviews (8 of 9), left out of the final design",
+      "Move from stated preferences to real behaviour with a prototype test: do people keep the extension installed?",
+      "Validate the calculation method with scientific sources before showing figures such as “0.26 ml per search”",
+    ],
+  },
+
+  pt: {
+    back: "← Voltar",
+    contact: "Entrar em contacto →",
+    zoom_hint: "Toque para ampliar",
+    zoom_close: "Fechar",
+    nav: [
+      { id: "rt-problem",   label: "Problema" },
+      { id: "rt-research",  label: "Investigação" },
+      { id: "rt-insights",  label: "Insights" },
+      { id: "rt-solution",  label: "Solução" },
+      { id: "rt-learnings", label: "Aprendizagens" },
+    ],
+    tags: "UX/UI · IA · Sustentabilidade · Projeto conceptual",
+    desc: "Uma extensão de browser que torna visível o impacto hídrico da atividade digital quotidiana. Consciência sem culpa, presença sem intrusão.",
+    meta: [
+      ["Tipo", "Projeto conceptual · Equipa de 7"],
+      ["A minha função", "UX/UI Designer · Research"],
+      ["Plataforma", "Extensão de browser"],
+      ["Ferramentas", "Figma · FigJam"],
+      ["Filosofia", "Consciência sem culpa"],
+    ],
+    focusLabel: "O meu foco",
+    focus: "Inquéritos, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes",
+
+    prob_label: "O problema",
+    prob_title: "O impacto existe. Mas é invisível.",
+    prob_p: [
+      "Cada pesquisa, cada vídeo e cada consulta a uma IA consome água nos centros de dados que os arrefecem. Três em cada quatro pessoas inquiridas sabiam-no, mas um terço nunca tinha parado para pensar nisso. Sabem-no em abstrato; não o sentem enquanto navegam, porque nada liga um clique ao seu custo físico.",
+      "As extensões que já existem medem sobretudo carbono ou energia, mostram a água como um dado secundário e apresentam a informação em painéis técnicos. Duas das três analisadas só cobrem o uso de IA. Nenhuma põe a água no centro de toda a navegação.",
+    ],
+    prob_quote: "«Sei que há servidores e tudo isso, mas tenho-o numa categoria mental de \"coisas técnicas que não vejo\". Não o ligo a algo como a água.»",
+    prob_quote_by: "Participante nas entrevistas",
+
+    res_label: "Investigação",
+    res_title: "O que as pessoas aceitariam, e o que não",
+    res_intro: "Combinámos métodos quantitativos e qualitativos para perceber o que as pessoas sabem sobre o consumo hídrico digital e, sobretudo, o que tolerariam de uma ferramenta que lho mostrasse.",
+    res_methods: ["55 inquéritos", "9 entrevistas", "3 extensões analisadas", "SWOT", "Desk research"],
+    res_stats: [
+      ["92,7%", "acha interessante uma extensão que mostre o seu impacto hídrico"],
+      ["87,3%", "acredita que essa informação mudaria a forma como usa a internet"],
+      ["81,8%", "prefere indicadores visuais simples (cores ou estados)"],
+      ["72,2%", "quer uma presença visível mas não intrusiva"],
+    ],
+    chart_title: "A culpa e as interrupções são os dois principais motivos de rejeição",
+    chart_q: "O que te causaria mais rejeição numa ferramenta assim? · % de 55 pessoas · resposta múltipla",
+    chart_rows: [
+      ["Mensagens culpabilizadoras", 52.7, "52,7%"],
+      ["Interrupções frequentes", 47.3, "47,3%"],
+      ["Sensação de vigilância", 40.0, "40,0%"],
+      ["Falta de clareza no cálculo", 23.6, "23,6%"],
+    ],
+    res_after: "O interesse estava validado; o risco estava na rejeição. Os dois principais motivos para abandonar uma ferramenta assim, sentir culpa e sentir-se interrompido, marcaram os dois limites do produto.",
+    res_interviews: "As entrevistas centraram-se no uso de IA, uma das atividades digitais de maior consumo. Confirmaram o padrão: 6 em 9 pessoas descreveram a extensão ideal como «um assistente discreto», e 7 em 9 continuariam a usar a IA mesmo que a extensão as avisasse de um consumo elevado.",
+    res_note: "Inquérito online, fevereiro de 2026: 55 respostas (54 na pergunta sobre o nível de presença). 78% têm mais de 30 anos e 62% usam o browser mais de 4 horas por dia. Algumas perguntas admitiam resposta múltipla.",
+
+    ins_label: "Insights",
+    ins_title: "Do dado à decisão",
+    persona_name: "Ana, 32 anos · Especialista em marketing digital",
+    persona_text: "Passa grande parte do dia em frente ao computador e usa extensões diariamente, mas abandona as ferramentas demasiado técnicas ou invasivas. Preocupa-se com o ambiente e quer que os seus valores se reflitam também na sua vida digital, sem se sentir julgada.",
+    ins_central: "Quase ninguém deixaria de usar a IA por causa de um aviso. O Riptide não podia prometer uma mudança de comportamento: tinha de tornar o impacto visível e deixar a decisão nas mãos de cada pessoa.",
+    cols: ["Dado", "Insight", "Decisão de design"],
+    rows: [
+      ["52,7% rejeitam as mensagens culpabilizadoras", "Informar sem julgar", "Tom descritivo e neutro: números e equivalências, nunca recriminações"],
+      ["47,3% rejeitam as interrupções; 72,2% querem algo visível mas não intrusivo", "A utilidade tem de superar o incómodo", "Sem pop-ups: um resumo diário à hora que cada pessoa escolhe, com os alertas em tempo real desativados por defeito"],
+      ["81,8% preferem indicadores visuais simples; 8 em 9 entrevistados escolheram uma gota ou algo que se enche", "Um número abstrato não se sente", "No painel web, um copo que se enche conforme o objetivo semanal"],
+      ["8 em 9 entrevistados disseram que uma equivalência física os impacta mais do que os litros; 6 escolheram a torneira aberta", "Falta uma ponte entre o clique e a água física", "Cada número vem com a sua equivalência («42 litros = 1 duche de 5 minutos») e a pessoa escolhe a unidade: litros, chávenas ou piscinas olímpicas"],
+      ["6 em 9 entrevistados querem poder silenciá-la", "O controlo é de quem a usa", "Onboarding com três ajustes (o que se mede, com que frequência se avisa, em que unidade se mostra) e notificações que se podem desativar"],
+      ["40% rejeitam a sensação de vigilância", "A confiança ganha-se explicando", "Ecrã de privacidade no onboarding, processamento local dos dados e opções para os exportar ou apagar"],
+    ],
+
+    sol_label: "Solução",
+    sol_title: "Não interrompe, não julga, não controla.",
+    sol_value: "O Riptide transforma a atividade digital em sinais visuais simples, integrados de forma discreta no browser. Não se trata de otimizar o teu comportamento: trata-se de o tornar visível.",
+    sol_strategy: "Modelo freemium, com licenças para escolas e empresas com programas de sustentabilidade. Defini-o no Value Proposition Canvas e no Business Model Canvas.",
+    img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três passos de personalização, resumo e landing page",
+    img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e primeiro resumo.",
+    img_evo_alt: "Três versões do popup do Riptide: esboço à mão, wireframe a preto e branco e design final em azul",
+    img_evo_cap: "Do esboço em papel ao wireframe e à alta fidelidade.",
+    sol_what: "O que faz",
+    sol_features: [
+      "Um ícone discreto na barra do browser; o detalhe só abre quando a pessoa o pede",
+      "Um resumo diário à hora escolhida; os alertas em tempo real são opcionais",
+      "O número do dia com a sua equivalência e a divisão por streaming, pesquisas e navegação",
+      "Um onboarding que personaliza o que medir, com que frequência avisar e em que unidade mostrar",
+      "Um painel web com a evolução semanal, um objetivo e sugestões",
+      "Privacidade visível: dados processados localmente, com opção de os exportar ou apagar",
+    ],
+    img_ctx_alt: "Browser com o Google aberto e o popup do Riptide aberto sob o ícone da gota: hoje 42 litros, equivalentes a um duche de 5 minutos, com divisão por streaming, pesquisas e navegação",
+    img_ctx_cap: "A extensão vive na barra do browser e só abre quando a pessoa a consulta.",
+    img_onb_alt: "Seis ecrãs do popup do Riptide: boas-vindas, privacidade, o que queres ver, com que frequência avisar, unidade de medida e configuração",
+    img_onb_cap: "Onboarding e ajustes: a pessoa decide o que se mede, quando é avisada e em que unidade.",
+    img_land_alt: "Landing page do Riptide com a mascote gota e o título «A tua vida digital também consome água. Descobre quanta.» (interface em espanhol)",
+    img_land_cap: "A landing page, porta de entrada para a extensão e para o painel web.",
+    sol_team: "A alta fidelidade foi trabalho de equipa; a minha parte nesta fase foram o wireflow e os wireframes.",
+
+    learn_label: "Aprendizagens",
+    learn_title: "O que levo deste projeto",
+    learns: [
+      ["Consciência sim, culpa não", "A culpa foi o principal motivo de rejeição (52,7%). O tom não é um detalhe de copy: decide se a ferramenta continua instalada."],
+      ["O controlo é inegociável", "Quase metade rejeita as interrupções e quase ninguém deixaria de usar a IA por causa de um aviso. Uma ferramenta de consciencialização não pode impor: o resumo diário e os alertas opcionais deixam a decisão nas mãos de cada pessoa."],
+      ["Os dados leem-se duas vezes", "Ao rever as respostas originais para este case study, encontrei números trocados na síntese. Corrigi-los mudou a história: o problema não era a ignorância, mas a invisibilidade. E um empate de 4 a 4 nas entrevistas não é uma preferência: é uma razão para tornar algo configurável."],
+    ],
+    next_label: "Próximos passos",
+    next: [
+      "Testar um indicador que se enche na barra do browser: foi a preferência mais clara nas entrevistas (8 em 9) e ficou de fora do design final",
+      "Passar de preferências declaradas a comportamento real com um teste de protótipo: as pessoas mantêm a extensão instalada?",
+      "Validar a metodologia de cálculo com fontes científicas antes de mostrar números como «0,26 ml por pesquisa»",
+    ],
+  },
 };
 
-const S = {
-  page:  { maxWidth:"680px", margin:"0 auto", padding:"0 1.5rem", paddingTop:"6.5rem", paddingBottom:"6rem" } as React.CSSProperties,
-  label: { fontSize:"0.6875rem", fontWeight:600, letterSpacing:"0.12em", textTransform:"uppercase" as const, color:"var(--muted)", marginBottom:"2rem", display:"block" },
-  h1:    { fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"clamp(2rem,5vw,2.75rem)", lineHeight:1.1, letterSpacing:"-0.02em", color:"var(--ink)", marginBottom:"1.125rem" } as React.CSSProperties,
-  body:  { fontSize:"0.9375rem", color:"var(--muted)", lineHeight:1.78 } as React.CSSProperties,
-  sec:   { marginTop:"4rem" } as React.CSSProperties,
-  div:   { border:"none", borderTop:"1px solid var(--border)", margin:"0 0 2.5rem" } as React.CSSProperties,
-};
+type Copy = typeof copy.es;
+const getCopy = (lang: string): Copy => (copy as Record<string, Copy>)[lang] ?? copy.es;
 
+/* ─── helpers ───────────────────────────────────────────────────── */
+const serif = "'DM Serif Display', Georgia, serif";
+const body: React.CSSProperties = { fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)" };
+const smallCaps: React.CSSProperties = { fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)" };
+const card: React.CSSProperties = { background: "var(--surface)", border: "1px solid var(--border)", borderRadius: "10px" };
+
+function SectionHeading({ label, title }: { label: string; title: string }) {
+  return (
+    <div style={{ marginBottom: "2rem" }}>
+      <span style={{ fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--accent)" }}>{label}</span>
+      <h2 style={{ fontFamily: serif, fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 400, lineHeight: 1.2, marginTop: "0.4rem", color: "var(--ink)" }}>
+        {title}
+      </h2>
+    </div>
+  );
+}
+
+function Figure({ img, alt, caption, C }: { img: { src: string; w: number; h: number }; alt: string; caption: string; C: Copy }) {
+  return (
+    <figure style={{ margin: "0 0 2.5rem" }}>
+      <div style={{ borderRadius: "12px", overflow: "hidden", background: "#EAF1F7", padding: "0 0 2.75rem" }}>
+        <ZoomableImage
+          src={img.src}
+          alt={alt}
+          width={img.w}
+          height={img.h}
+          style={{ width: "100%", height: "auto", display: "block" }}
+          hint={C.zoom_hint}
+          hintStyle={{ bottom: "-2.25rem" }}
+          closeLabel={C.zoom_close}
+        />
+      </div>
+      <figcaption style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", marginTop: "0.75rem" }}>{caption}</figcaption>
+    </figure>
+  );
+}
+
+/* ─── page ──────────────────────────────────────────────────────── */
 export default async function RiptidePage({ params }: { params: Promise<{ lang: string }> }) {
-  const { lang: _lang } = await params;
-  const lang = _lang as Lang;
-  const back = lang==="en"?"← Back":lang==="pt"?"← Voltar":"← Volver";
-  const learns = LEARNS[lang];
-  const resLabels = lang==="en"? DATA.researchEn : lang==="pt"? DATA.researchPt : DATA.research.map(r=>r[2]);
+  const { lang } = await params;
+  const C = getCopy(lang);
 
-  const navSections = lang === "en"
-    ? [
-        { id: "rt-problem",   label: "Problem"   },
-        { id: "rt-research",  label: "Research"  },
-        { id: "rt-persona",   label: "Persona"   },
-        { id: "rt-solution",  label: "Solution"  },
-        { id: "rt-learnings", label: "Learnings" },
-      ]
-    : lang === "pt"
-    ? [
-        { id: "rt-problem",   label: "Problema"      },
-        { id: "rt-research",  label: "Investigação"   },
-        { id: "rt-persona",   label: "Persona"        },
-        { id: "rt-solution",  label: "Solução"        },
-        { id: "rt-learnings", label: "Aprendizagens"  },
-      ]
-    : [
-        { id: "rt-problem",   label: "Problema"     },
-        { id: "rt-research",  label: "Investigación" },
-        { id: "rt-persona",   label: "Persona"       },
-        { id: "rt-solution",  label: "Solución"      },
-        { id: "rt-learnings", label: "Aprendizajes"  },
-      ];
+  const maxW = "860px";
+  const section: React.CSSProperties = { maxWidth: maxW, margin: "0 auto", padding: "5rem 1.5rem", borderBottom: "1px solid var(--border)" };
+  const sectionLast: React.CSSProperties = { ...section, borderBottom: "none" };
+  const chartMax = 60;
 
   return (
     <div style={{ background: "var(--bg)", color: "var(--ink)" }}>
-      <CaseStudyNav sections={navSections} />
-      <div style={S.page}>
-      <section id="rt-hero">
-      <Link href={`/${lang}`} style={{ fontSize:"0.875rem", color:"var(--muted)", textDecoration:"none", display:"inline-block", marginBottom:"3rem", transition:"color 0.2s" }}>
-        {back}
-      </Link>
+      <CaseStudyNav sections={C.nav} />
 
-      <p style={{ fontSize:"0.6875rem", letterSpacing:"0.1em", textTransform:"uppercase", color:"var(--muted)", marginBottom:"0.75rem" }}>
-        {lang==="en"?"UX/UI · AI · Sustainability · Conceptual Project":lang==="pt"?"UX/UI · IA · Sustentabilidade · Projeto Conceptual":"UX/UI · IA · Sostenibilidad · Proyecto conceptual"}
-      </p>
-      <h1 style={S.h1}>Riptide</h1>
-      <p style={{ ...S.body, maxWidth:"520px", marginBottom:"3rem" }}>
-        {lang==="en"?"A browser extension that makes the hidden water footprint of digital activity visible. Awareness without guilt, presence without intrusion.":lang==="pt"?"Uma extensão de browser que torna visível o impacto hídrico oculto da atividade digital. Consciência sem culpa, presença sem intrusão.":"Extensión de navegador que hace visible el impacto hídrico de la actividad digital cotidiana. Awareness sin culpa, presencia sin intrusión."}
-      </p>
-
-      {/* Meta */}
-      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(140px,1fr))", gap:"0", border:"1px solid var(--border)", borderRadius:"0.5rem", overflow:"hidden", marginBottom:"4rem" }}>
-        {([[lang==="en"?"Type":lang==="pt"?"Tipo":"Tipo", lang==="en"?"Conceptual Project":lang==="pt"?"Projeto Conceptual":"Proyecto conceptual"],
-           [lang==="en"?"Role":lang==="pt"?"Função":"Rol","UX/UI Designer · End to End"],
-           [lang==="en"?"Platform":lang==="pt"?"Plataforma":"Plataforma","Browser Extension"],
-           [lang==="en"?"Focus":lang==="pt"?"Foco":"Foco",lang==="en"?"AI · Sustainability · UX Research":lang==="pt"?"IA · Sustentabilidade · UX Research":"IA · Sostenibilidad · UX Research"],
-           [lang==="en"?"Tools":lang==="pt"?"Ferramentas":"Herramientas","Figma · FigJam · Miro"],
-           [lang==="en"?"Philosophy":lang==="pt"?"Filosofia":"Filosofía",lang==="en"?"Awareness without guilt":lang==="pt"?"Consciência sem culpa":"Awareness sin culpa"],
-        ] as [string,string][]).map(([l,v],i)=>(
-          <div key={i} style={{ padding:"1rem 1.125rem", background:i%2===0?"var(--surface)":"var(--bg)", borderRight:"1px solid var(--border)", borderBottom:"1px solid var(--border)" }}>
-            <p style={{ fontSize:"0.6875rem", textTransform:"uppercase", letterSpacing:"0.08em", color:"var(--muted)", marginBottom:"0.25rem" }}>{l}</p>
-            <p style={{ fontSize:"0.8125rem", color:"var(--ink)" }}>{v}</p>
-          </div>
-        ))}
+      {/* ── BACK ── */}
+      <div style={{ maxWidth: maxW, margin: "0 auto", padding: "6.5rem 1.5rem 0" }}>
+        <Link href={`/${lang}`} style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none" }}>{C.back}</Link>
       </div>
 
-      </section>{/* end hero */}
+      {/* ── 01 HERO ── */}
+      <section id="rt-hero" style={section}>
+        <Reveal>
+          <p style={{ fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>{C.tags}</p>
+          <h1 style={{ fontFamily: serif, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "0.5rem", color: "var(--ink)" }}>Riptide</h1>
+          <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "var(--muted)", maxWidth: "580px", marginBottom: "3rem" }}>{C.desc}</p>
 
-      {/* Problem */}
-      <section id="rt-problem" style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{lang==="en"?"The problem":lang==="pt"?"O problema":"El problema"}</span>
-        <h2 style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"clamp(1.375rem,3vw,1.625rem)", lineHeight:1.2, letterSpacing:"-0.015em", color:"var(--ink)", marginBottom:"0.875rem" }}>
-          {lang==="en"?"The impact exists. But it's invisible.":lang==="pt"?"O impacto existe. Mas é invisível.":"El impacto existe. Pero es invisible."}
-        </h2>
-        <div style={{ ...S.body, display:"flex", flexDirection:"column", gap:"0.875rem", maxWidth:"540px" }}>
-          <p>{lang==="en"?"Every digital action — a search, a stream, an email — has a real water cost in data centres. This impact is invisible to users.":lang==="pt"?"Cada ação digital — uma pesquisa, um stream, um e-mail — tem um custo hídrico real nos centros de dados. Este impacto é invisível para os utilizadores.":"Cada acción digital — una búsqueda, un stream, un email — tiene un coste hídrico real en los centros de datos. Este impacto es invisible para el usuario."}</p>
-          <p>{lang==="en"?"Existing solutions are either too technical, generate guilt, or require installing an app that nobody will voluntarily use.":lang==="pt"?"As soluções existentes são demasiado técnicas, geram culpa, ou requerem instalar uma app que ninguém utilizará voluntariamente.":"Las soluciones existentes son demasiado técnicas, generan culpa, o requieren instalar una app que nadie va a usar voluntariamente."}</p>
-          <blockquote style={{ borderLeft:"2px solid var(--accent)", paddingLeft:"1rem", fontStyle:"italic", color:"var(--ink)" }}>
-            {lang==="en"?'"Make the invisible water footprint of your digital life visible."':lang==="pt"?'"Torna visível o impacto hídrico invisível da tua vida digital."':'"Haz visible el impacto hídrico invisible de tu vida digital."'}
-          </blockquote>
-        </div>
-      </section>
-
-      {/* Research */}
-      <section id="rt-research" style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{lang==="en"?"Research":lang==="pt"?"Investigação":"Investigación"}</span>
-        <div style={{ display:"flex", flexDirection:"column" }}>
-          {DATA.research.map(([pct,,], i) => (
-            <div key={pct} style={{ display:"flex", alignItems:"baseline", gap:"1.5rem", padding:"1rem 0", borderBottom:"1px solid var(--border)" }}>
-              <span style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"1.625rem", color:"var(--accent)", flexShrink:0, width:"4.5rem" }}>{pct}</span>
-              <span style={{ fontSize:"0.875rem", color:"var(--muted)" }}>{resLabels[i]}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Persona */}
-      <section id="rt-persona" style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{lang==="en"?"User Persona":lang==="pt"?"User Persona":"User Persona"}</span>
-        <h2 style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"clamp(1.375rem,3vw,1.625rem)", lineHeight:1.2, letterSpacing:"-0.015em", color:"var(--ink)", marginBottom:"0.875rem" }}>
-          Ana — {lang==="en"?"The Water Guardian":lang==="pt"?"A Guardiã da Água":"La Guardiana del Agua"}
-        </h2>
-        <p style={{ ...S.body, maxWidth:"520px" }}>
-          32 {lang==="en"?"years old":"años"} · Madrid · {lang==="en"?"Digital marketing professional":lang==="pt"?"Profissional de marketing digital":"Profesional de marketing digital"}.{" "}
-          {lang==="en"?"Environmentally aware but doesn't want her digital environment to make her feel constantly guilty. Wants to make better decisions, not receive constant alerts.":lang==="pt"?"Preocupada com o ambiente mas não quer que o seu ambiente digital a faça sentir constantemente culpada. Quer tomar melhores decisões, não receber alertas constantes.":"Se preocupa por el medioambiente pero no quiere que su entorno digital la haga sentir culpable constantemente. Quiere tomar mejores decisiones, no recibir alertas constantes."}
-        </p>
-      </section>
-
-      {/* Solution */}
-      <section id="rt-solution" style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{lang==="en"?"Solution":lang==="pt"?"Solução":"Solución"}</span>
-        <h2 style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"clamp(1.375rem,3vw,1.625rem)", lineHeight:1.2, letterSpacing:"-0.015em", color:"var(--ink)", marginBottom:"0.875rem" }}>
-          {lang==="en"?"Environmental presence, not surveillance":lang==="pt"?"Presença ambiental, não vigilância":"Presencia ambiental, no vigilancia"}
-        </h2>
-        <p style={{ ...S.body, maxWidth:"520px", marginBottom:"1.5rem" }}>
-          {lang==="en"?"Not another environmental tracking app. An ambient presence — something that's there when it matters, without interrupting.":lang==="pt"?"Não mais uma app de monitorização ambiental. Uma presença ambiental — algo que está lá quando importa, sem interromper.":"No otra app de seguimiento medioambiental. Una presencia ambiental — algo que esté ahí cuando importa, sin interrumpir."}
-        </p>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(220px,1fr))", gap:"0.625rem" }}>
-          {(lang==="en"?["Subtle visual indicator in the browser bar","Traffic light colour code","Progressive level during the session","Warning before high-consumption actions","No pop-ups — closeable and silenceable","Configurable: timing, style, visibility"]:lang==="pt"?["Indicador visual subtil na barra do browser","Código de cores tipo semáforo","Nível progressivo durante a sessão","Aviso antes de ações de alto consumo","Sem pop-ups — fechável e silenciável","Configurável: timing, estilo, visibilidade"]:["Indicador visual sutil en la barra del navegador","Código de color tipo traffic light","Nivel progresivo durante la sesión","Warning antes de acciones de alto consumo","Sin pop-ups — cerrable y silenciable","Configurable: timing, estilo, visibilidad"]).map(f=>(
-            <div key={f} style={{ display:"flex", gap:"0.5rem", fontSize:"0.875rem", color:"var(--muted)", padding:"0.625rem", borderRadius:"0.375rem", background:"var(--surface)", border:"1px solid var(--border)" }}>
-              <span style={{ color:"var(--accent)", flexShrink:0 }}>·</span>{f}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Learnings */}
-      <section id="rt-learnings" style={S.sec}>
-        <hr style={S.div} /><span style={S.label}>{lang==="en"?"Learnings":lang==="pt"?"Aprendizagens":"Aprendizajes"}</span>
-        <div style={{ display:"flex", flexDirection:"column" }}>
-          {learns.map(([title, body], i) => (
-            <div key={i} style={{ display:"flex", gap:"1.25rem", padding:"1.25rem 0", borderBottom:"1px solid var(--border)" }}>
-              <span style={{ fontFamily:"var(--font-serif,Georgia,serif)", fontSize:"1.5rem", color:"var(--accent)", flexShrink:0, lineHeight:1 }}>{i+1}</span>
-              <div>
-                <p style={{ fontSize:"0.9375rem", fontWeight:500, color:"var(--ink)", marginBottom:"0.375rem" }}>{title}</p>
-                <p style={{ fontSize:"0.875rem", color:"var(--muted)", lineHeight:1.75 }}>{body}</p>
+          <div className="rt-meta" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem" }}>
+            {C.meta.map(([label, value]) => (
+              <div key={label} style={{ ...card, padding: "1rem 1.1rem" }}>
+                <p style={{ ...smallCaps, color: "var(--accent)", marginBottom: "0.35rem" }}>{label}</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: "var(--ink)" }}>{value}</p>
               </div>
+            ))}
+            <div className="rt-meta-wide" style={{ ...card, padding: "1rem 1.1rem" }}>
+              <p style={{ ...smallCaps, color: "var(--accent)", marginBottom: "0.35rem" }}>{C.focusLabel}</p>
+              <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: "var(--ink)" }}>{C.focus}</p>
             </div>
-          ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 02 PROBLEMA ── */}
+      <section id="rt-problem" style={section}>
+        <Reveal>
+          <SectionHeading label={C.prob_label} title={C.prob_title} />
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "640px" }}>
+            {C.prob_p.map((p) => <p key={p} style={body}>{p}</p>)}
+          </div>
+          <blockquote style={{ margin: "2rem 0 0", borderLeft: "2px solid var(--accent)", paddingLeft: "1.25rem", maxWidth: "640px" }}>
+            <p style={{ fontFamily: serif, fontSize: "1.25rem", lineHeight: 1.5, color: "var(--ink)" }}>{C.prob_quote}</p>
+            <footer style={{ fontSize: "0.8125rem", color: "var(--muted)", marginTop: "0.5rem" }}>— {C.prob_quote_by}</footer>
+          </blockquote>
+        </Reveal>
+      </section>
+
+      {/* ── 03 RESEARCH ── */}
+      <section id="rt-research" style={section}>
+        <Reveal>
+          <SectionHeading label={C.res_label} title={C.res_title} />
+          <p style={{ ...body, maxWidth: "640px", marginBottom: "1.5rem" }}>{C.res_intro}</p>
+          <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2.5rem", display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+            {C.res_methods.map((m) => (
+              <li key={m} style={{ ...card, borderRadius: "999px", padding: "0.35rem 0.85rem", fontSize: "0.8125rem", color: "var(--ink)" }}>{m}</li>
+            ))}
+          </ul>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="rt-stats" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem", marginBottom: "3rem" }}>
+            {C.res_stats.map(([n, t]) => (
+              <div key={n} style={{ ...card, padding: "1.25rem" }}>
+                <p style={{ fontFamily: serif, fontSize: "2rem", lineHeight: 1, color: "var(--accent)", marginBottom: "0.5rem" }}>{n}</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: "var(--muted)" }}>{t}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.15}>
+          <figure style={{ ...card, padding: "1.5rem", margin: "0 0 2.5rem" }}>
+            <figcaption>
+              <p style={{ fontSize: "1rem", fontWeight: 600, lineHeight: 1.4, color: "var(--ink)", marginBottom: "0.35rem" }}>{C.chart_title}</p>
+              <p style={{ fontSize: "0.8125rem", lineHeight: 1.5, color: "var(--muted)", marginBottom: "1.5rem" }}>{C.chart_q}</p>
+            </figcaption>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "1rem" }}>
+              {C.chart_rows.map(([label, v, txt], i) => (
+                <li key={label as string} className="rt-bar">
+                  <span style={{ fontSize: "0.875rem", color: "var(--ink)" }}>{label}</span>
+                  <span style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                    <span aria-hidden="true" style={{ flex: 1, height: "0.75rem", borderRadius: "999px", background: "var(--bg)", overflow: "hidden" }}>
+                      <span style={{ display: "block", height: "100%", width: `${((v as number) / chartMax) * 100}%`, borderRadius: "999px", background: i < 2 ? "var(--accent)" : "var(--muted)", opacity: i < 2 ? 1 : 0.45 }} />
+                    </span>
+                    <span style={{ fontSize: "0.875rem", fontWeight: i < 2 ? 700 : 400, color: "var(--ink)", minWidth: "3.5rem", textAlign: "right" }}>{txt}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </figure>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "640px" }}>
+            <p style={body}>{C.res_after}</p>
+            <p style={body}>{C.res_interviews}</p>
+            <p style={{ fontSize: "0.75rem", lineHeight: 1.6, color: "var(--muted)", marginTop: "0.5rem" }}>{C.res_note}</p>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 04 INSIGHTS → DECISIONES ── */}
+      <section id="rt-insights" style={section}>
+        <Reveal>
+          <SectionHeading label={C.ins_label} title={C.ins_title} />
+          <div style={{ ...card, padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
+            <p style={{ fontSize: "0.9375rem", fontWeight: 600, color: "var(--ink)", marginBottom: "0.4rem" }}>{C.persona_name}</p>
+            <p style={{ fontSize: "0.9375rem", lineHeight: 1.7, color: "var(--muted)" }}>{C.persona_text}</p>
+          </div>
+          <blockquote style={{ margin: "0 0 2.5rem", borderLeft: "2px solid var(--accent)", paddingLeft: "1.25rem" }}>
+            <p style={{ fontFamily: serif, fontSize: "1.25rem", lineHeight: 1.5, color: "var(--ink)" }}>{C.ins_central}</p>
+          </blockquote>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            {C.rows.map((row, i) => (
+              <div key={i} className="hmw-row" style={{ ...card, display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem", padding: "1rem", fontSize: "0.875rem", lineHeight: 1.6 }}>
+                <div>
+                  <span style={{ ...smallCaps, display: "block", marginBottom: "0.25rem" }}>{C.cols[0]}</span>
+                  <span style={{ color: "var(--muted)" }}>{row[0]}</span>
+                </div>
+                <div>
+                  <span style={{ ...smallCaps, display: "block", marginBottom: "0.25rem" }}>{C.cols[1]}</span>
+                  <span style={{ color: "var(--ink)" }}>{row[1]}</span>
+                </div>
+                <div>
+                  <span style={{ ...smallCaps, display: "block", marginBottom: "0.25rem" }}>{C.cols[2]}</span>
+                  <span style={{ color: "var(--accent)", fontWeight: 600 }}>{row[2]}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── 05 SOLUCIÓN ── */}
+      <section id="rt-solution" style={section}>
+        <Reveal>
+          <SectionHeading label={C.sol_label} title={C.sol_title} />
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "640px", marginBottom: "2.5rem" }}>
+            <p style={body}>{C.sol_value}</p>
+            <p style={body}>{C.sol_strategy}</p>
+          </div>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <Figure img={IMG.happy} alt={C.img_happy_alt} caption={C.img_happy_cap} C={C} />
+          <Figure img={IMG.evolution} alt={C.img_evo_alt} caption={C.img_evo_cap} C={C} />
+        </Reveal>
+        <Reveal delay={0.1}>
+          <p style={{ ...smallCaps, color: "var(--accent)", marginBottom: "1rem" }}>{C.sol_what}</p>
+          <ul className="rt-features" style={{ listStyle: "none", padding: 0, margin: "0 0 2.5rem", display: "grid", gridTemplateColumns: "1fr", gap: "0.625rem" }}>
+            {C.sol_features.map((f) => (
+              <li key={f} style={{ ...card, borderRadius: "8px", display: "flex", gap: "0.5rem", padding: "0.75rem", fontSize: "0.875rem", lineHeight: 1.55, color: "var(--muted)" }}>
+                <span aria-hidden="true" style={{ color: "var(--accent)", flexShrink: 0 }}>✓</span>{f}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <Figure img={IMG.context} alt={C.img_ctx_alt} caption={C.img_ctx_cap} C={C} />
+          <Figure img={IMG.onboarding} alt={C.img_onb_alt} caption={C.img_onb_cap} C={C} />
+          <Figure img={IMG.landing} alt={C.img_land_alt} caption={C.img_land_cap} C={C} />
+          <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", fontStyle: "italic" }}>{C.sol_team}</p>
+        </Reveal>
+      </section>
+
+      {/* ── 06 APRENDIZAJES ── */}
+      <section id="rt-learnings" style={sectionLast}>
+        <Reveal>
+          <SectionHeading label={C.learn_label} title={C.learn_title} />
+          <ol style={{ listStyle: "none", padding: 0, margin: "0 0 3rem" }}>
+            {C.learns.map(([title, text], i) => (
+              <li key={title} style={{ display: "flex", gap: "1.25rem", padding: "1.25rem 0", borderBottom: "1px solid var(--border)" }}>
+                <span aria-hidden="true" style={{ fontFamily: serif, fontSize: "1.5rem", color: "var(--accent)", flexShrink: 0, lineHeight: 1 }}>{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <p style={{ fontSize: "0.9375rem", fontWeight: 600, color: "var(--ink)", marginBottom: "0.375rem" }}>{title}</p>
+                  <p style={{ fontSize: "0.9375rem", color: "var(--muted)", lineHeight: 1.75 }}>{text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--ink)", marginBottom: "1rem" }}>{C.next_label}</h3>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.625rem" }}>
+            {C.next.map((n) => (
+              <li key={n} style={{ display: "flex", gap: "0.5rem", fontSize: "0.9375rem", lineHeight: 1.65, color: "var(--muted)" }}>
+                <span aria-hidden="true" style={{ color: "var(--accent)", flexShrink: 0 }}>→</span>{n}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+
+        <div style={{ marginTop: "4rem", paddingTop: "2rem", borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
+          <Link href={`/${lang}`} style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none" }}>{C.back}</Link>
+          <a href="mailto:mvreissilva@gmail.com" style={{ fontSize: "0.875rem", fontWeight: 500, color: "var(--accent)", textDecoration: "none" }}>{C.contact}</a>
         </div>
       </section>
 
-      {/* Nav */}
-      <div style={{ marginTop:"4rem", paddingTop:"2rem", borderTop:"1px solid var(--border)", display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:"1rem" }}>
-        <Link href={`/${lang}`} style={{ fontSize:"0.875rem", color:"var(--muted)", textDecoration:"none" }}>
-          {back}
-        </Link>
-        <a href="mailto:mvreissilva@gmail.com" style={{ fontSize:"0.875rem", fontWeight:500, color:"var(--accent)", textDecoration:"none", transition:"opacity 0.2s" }}>
-          {lang==="en"?"Get in touch →":lang==="pt"?"Entrar em contacto →":"Contactar →"}
-        </a>
-      </div>
-      </div>{/* end S.page */}
+      <style>{`
+        .rt-bar { display: grid; grid-template-columns: 1fr; gap: 0.35rem; }
+        @media (min-width: 640px) {
+          .rt-meta { grid-template-columns: repeat(3, 1fr) !important; }
+          .rt-meta-wide { grid-column: span 3; }
+          .rt-stats { grid-template-columns: repeat(2, 1fr) !important; }
+          .rt-features { grid-template-columns: repeat(2, 1fr) !important; }
+          .hmw-row { grid-template-columns: 1fr 1fr 1fr !important; }
+          .rt-bar { grid-template-columns: 15rem 1fr; align-items: center; gap: 1rem; }
+        }
+      `}</style>
     </div>
   );
 }

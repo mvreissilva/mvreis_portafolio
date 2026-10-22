@@ -21,8 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 /* ─── imágenes ──────────────────────────────────────────────────── */
 const IMG = {
-  happy:      { src: "/assets/riptide/happy-path.webp",            w: 3200, h: 1035 },
-  evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 862 },
+  evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 669 },
   context:    { src: "/assets/riptide/extension-en-contexto.webp", w: 2400, h: 1671 },
   onboarding: { src: "/assets/riptide/onboarding-y-ajustes.webp",  w: 2400, h: 846 },
   landing:    { src: "/assets/riptide/landing.webp",               w: 2400, h: 1589 },
@@ -51,7 +50,7 @@ const copy = {
       ["Filosofía", "Awareness sin culpa"],
     ],
     focusLabel: "Mi foco",
-    focus: "Encuestas, entrevistas, síntesis de insights y HMW · Value Proposition Canvas, propuesta de valor y Business Model Canvas · Wireflow y wireframes",
+    focus: "Encuestas, entrevistas, síntesis de insights y HMW · Value Proposition Canvas, propuesta de valor y Business Model Canvas · Wireflow y wireframes de baja fidelidad",
 
     prob_label: "El problema",
     prob_title: "El impacto existe. Pero es invisible.",
@@ -73,6 +72,7 @@ const copy = {
       ["72,2 %", "quiere una presencia visible pero no intrusiva"],
     ],
     chart_title: "La culpa y las interrupciones son los dos motivos de rechazo principales",
+    chart_note: "En color, los dos motivos que guiaron las decisiones de diseño.",
     chart_q: "¿Qué te generaría más rechazo en una herramienta así? · % de 55 personas · respuesta múltiple",
     chart_rows: [
       ["Mensajes culpabilizadores", 52.7, "52,7 %"],
@@ -103,9 +103,21 @@ const copy = {
     sol_title: "No interrumpe, no juzga, no controla.",
     sol_value: "Riptide convierte la actividad digital en señales visuales simples, integradas de forma discreta en el navegador. No se trata de optimizar tu comportamiento: se trata de hacerlo visible.",
     sol_strategy: "Modelo freemium, con licencias para centros educativos y empresas con programas de sostenibilidad. Lo definí en el Value Proposition Canvas y el Business Model Canvas.",
+    hp_label: "Happy path",
+    hp_cta: "CTA",
+    hp_steps: [
+      { t: "Descubrimiento", d: "El usuario ve la extensión a través de:", b: ["Recomendación", "Presentación del proyecto", "Web, redes o boca a boca"], cta: "Añadir extensión" },
+      { t: "Instalación", d: "Instala la extensión en el navegador. Al abrirla por primera vez aparece un modal de bienvenida y personalización inicial.", b: [], cta: "Personalizar" },
+      { t: "Onboarding", d: "Tres pantallas explican de forma visual cómo se usa la extensión y cómo se puede personalizar.", b: [], cta: "Personalizar" },
+      { t: "Personalización 1", d: "El usuario elige qué quiere que analice la extensión:", b: ["Búsquedas", "Tiempo de navegación", "Compras online", "Vídeos y streaming"], cta: "Siguiente" },
+      { t: "Personalización 2", d: "El usuario decide cada cuánto tiempo quiere recibir avisos sobre su uso hídrico invisible.", b: [], cta: "Siguiente" },
+      { t: "Personalización 3", d: "El usuario decide cómo quiere ver su gasto de agua:", b: ["Litros de agua", "Equivalencias visuales (duchas, botellas, etc.)", "Indicadores simples"], cta: "Siguiente" },
+      { t: "Resumen", d: "Se muestra un primer resumen con:", b: ["Consumo acumulado estimado", "Actividad principal detectada", "Mensaje de concienciación"], cta: "Ver detalles" },
+      { t: "Landing page", d: "El usuario accede a su panel principal, donde puede ver:", b: ["Consumo total y por actividad", "Evolución en el tiempo", "Comparativas simples", "Sugerencias de mejora", "Microacciones para reducir su impacto"], cta: "" },
+    ],
     img_happy_alt: "Happy path de Riptide: descubrimiento, instalación, onboarding, tres pasos de personalización, resumen y landing",
     img_happy_cap: "Del descubrimiento al panel: instalación, onboarding, tres ajustes de personalización y primer resumen.",
-    img_evo_alt: "Tres versiones del popup de Riptide: boceto a mano, wireframe en blanco y negro y diseño final en azul",
+    img_evo_alt: "La pantalla de bienvenida de Riptide en tres fases: boceto a mano, wireframe de baja fidelidad y diseño final",
     img_evo_cap: "Del boceto en papel al wireframe y a la alta fidelidad.",
     sol_what: "Qué hace",
     sol_features: [
@@ -122,7 +134,7 @@ const copy = {
     img_onb_cap: "Onboarding y ajustes: la persona decide qué se mide, cuándo se avisa y en qué unidad.",
     img_land_alt: "Landing de Riptide con la mascota gota y el titular «Tu vida digital también consume agua. Descubre cuánta.»",
     img_land_cap: "La landing, puerta de entrada a la extensión y al panel web.",
-    sol_team: "La alta fidelidad fue trabajo de equipo; mi parte en esta fase fueron el wireflow y los wireframes.",
+    sol_team: "La alta fidelidad fue trabajo de equipo; mi parte en esta fase fueron el wireflow y los wireframes de baja fidelidad.",
 
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
@@ -164,7 +176,7 @@ const copy = {
       ["Philosophy", "Awareness without guilt"],
     ],
     focusLabel: "My focus",
-    focus: "Surveys, interviews, insight synthesis and HMW · Value Proposition Canvas, value proposition and Business Model Canvas · Wireflow and wireframes",
+    focus: "Surveys, interviews, insight synthesis and HMW · Value Proposition Canvas, value proposition and Business Model Canvas · Wireflow and low-fidelity wireframes",
 
     prob_label: "The problem",
     prob_title: "The impact exists. But it's invisible.",
@@ -186,6 +198,7 @@ const copy = {
       ["72.2%", "want a presence that is visible but not intrusive"],
     ],
     chart_title: "Guilt and interruptions are the top two reasons for rejection",
+    chart_note: "Highlighted: the two reasons that guided the design decisions.",
     chart_q: "What would put you off most in a tool like this? · % of 55 people · multiple answers",
     chart_rows: [
       ["Guilt-inducing messages", 52.7, "52.7%"],
@@ -216,9 +229,21 @@ const copy = {
     sol_title: "It doesn't interrupt, judge or control.",
     sol_value: "Riptide turns digital activity into simple visual signals, built discreetly into the browser. It's not about optimising your behaviour: it's about making it visible.",
     sol_strategy: "Freemium model, with licences for schools and companies running sustainability programmes. I defined it in the Value Proposition Canvas and the Business Model Canvas.",
+    hp_label: "Happy path",
+    hp_cta: "CTA",
+    hp_steps: [
+      { t: "Discovery", d: "The user finds the extension through:", b: ["A recommendation", "The project presentation", "The website, social media or word of mouth"], cta: "Add extension" },
+      { t: "Installation", d: "They install the extension in the browser. On first opening, a welcome and initial setup modal appears.", b: [], cta: "Personalise" },
+      { t: "Onboarding", d: "Three screens visually explain how the extension works and how it can be personalised.", b: [], cta: "Personalise" },
+      { t: "Personalisation 1", d: "The user chooses what the extension should analyse:", b: ["Searches", "Browsing time", "Online shopping", "Video and streaming"], cta: "Next" },
+      { t: "Personalisation 2", d: "The user decides how often they want to be notified about their invisible water use.", b: [], cta: "Next" },
+      { t: "Personalisation 3", d: "The user decides how they want to see their water use:", b: ["Litres of water", "Visual equivalents (showers, bottles, etc.)", "Simple indicators"], cta: "Next" },
+      { t: "Summary", d: "A first summary is shown with:", b: ["Estimated cumulative use", "Main activity detected", "An awareness message"], cta: "View details" },
+      { t: "Landing page", d: "The user reaches their main dashboard, where they can see:", b: ["Total use and use by activity", "Change over time", "Simple comparisons", "Suggestions for improvement", "Micro-actions to reduce their impact"], cta: "" },
+    ],
     img_happy_alt: "Riptide happy path: discovery, installation, onboarding, three personalisation steps, summary and landing page",
     img_happy_cap: "From discovery to dashboard: installation, onboarding, three personalisation settings and a first summary.",
-    img_evo_alt: "Three versions of the Riptide popup: hand sketch, black-and-white wireframe and final blue design",
+    img_evo_alt: "The Riptide welcome screen in three stages: hand sketch, low-fidelity wireframe and final design",
     img_evo_cap: "From paper sketch to wireframe to high fidelity.",
     sol_what: "What it does",
     sol_features: [
@@ -235,7 +260,7 @@ const copy = {
     img_onb_cap: "Onboarding and settings: people decide what is measured, when they're notified and in which unit.",
     img_land_alt: "Riptide landing page with the water-drop mascot and the headline “Your digital life also uses water. Find out how much.” (Spanish interface)",
     img_land_cap: "The landing page, the entry point to the extension and the web dashboard.",
-    sol_team: "High fidelity was a team effort; my part in this phase was the wireflow and the wireframes.",
+    sol_team: "High fidelity was a team effort; my part in this phase was the wireflow and the low-fidelity wireframes.",
 
     learn_label: "Learnings",
     learn_title: "What I take from this project",
@@ -277,7 +302,7 @@ const copy = {
       ["Filosofia", "Consciência sem culpa"],
     ],
     focusLabel: "Meu foco",
-    focus: "Questionários, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes",
+    focus: "Questionários, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes de baixa fidelidade",
 
     prob_label: "O problema",
     prob_title: "O impacto existe. Mas é invisível.",
@@ -299,6 +324,7 @@ const copy = {
       ["72,2%", "quer uma presença visível, mas não intrusiva"],
     ],
     chart_title: "A culpa e as interrupções são os dois principais motivos de rejeição",
+    chart_note: "Em destaque, os dois motivos que guiaram as decisões de design.",
     chart_q: "O que mais faria você rejeitar uma ferramenta assim? · % de 55 pessoas · múltipla escolha",
     chart_rows: [
       ["Mensagens que geram culpa", 52.7, "52,7%"],
@@ -329,9 +355,21 @@ const copy = {
     sol_title: "Não interrompe, não julga, não controla.",
     sol_value: "O Riptide transforma a atividade digital em sinais visuais simples, integrados de forma discreta ao navegador. Não se trata de otimizar o seu comportamento: se trata de torná-lo visível.",
     sol_strategy: "Modelo freemium, com licenças para escolas e empresas com programas de sustentabilidade. Eu o defini no Value Proposition Canvas e no Business Model Canvas.",
+    hp_label: "Happy path",
+    hp_cta: "CTA",
+    hp_steps: [
+      { t: "Descoberta", d: "O usuário conhece a extensão por meio de:", b: ["Recomendação", "Apresentação do projeto", "Site, redes sociais ou boca a boca"], cta: "Adicionar extensão" },
+      { t: "Instalação", d: "Instala a extensão no navegador. Ao abri-la pela primeira vez, aparece um modal de boas-vindas e personalização inicial.", b: [], cta: "Personalizar" },
+      { t: "Onboarding", d: "Três telas explicam de forma visual como a extensão funciona e como pode ser personalizada.", b: [], cta: "Personalizar" },
+      { t: "Personalização 1", d: "O usuário escolhe o que quer que a extensão analise:", b: ["Buscas", "Tempo de navegação", "Compras online", "Vídeos e streaming"], cta: "Avançar" },
+      { t: "Personalização 2", d: "O usuário decide com que frequência quer ser avisado sobre seu uso hídrico invisível.", b: [], cta: "Avançar" },
+      { t: "Personalização 3", d: "O usuário decide como quer ver seu gasto de água:", b: ["Litros de água", "Equivalências visuais (banhos, garrafas etc.)", "Indicadores simples"], cta: "Avançar" },
+      { t: "Resumo", d: "É exibido um primeiro resumo com:", b: ["Consumo acumulado estimado", "Atividade principal identificada", "Mensagem de conscientização"], cta: "Ver detalhes" },
+      { t: "Landing page", d: "O usuário acessa seu painel principal, onde pode ver:", b: ["Consumo total e por atividade", "Evolução ao longo do tempo", "Comparações simples", "Sugestões de melhoria", "Microações para reduzir seu impacto"], cta: "" },
+    ],
     img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três etapas de personalização, resumo e landing page",
     img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e o primeiro resumo.",
-    img_evo_alt: "Três versões do pop-up do Riptide: esboço à mão, wireframe em preto e branco e design final em azul",
+    img_evo_alt: "A tela de boas-vindas do Riptide em três fases: esboço à mão, wireframe de baixa fidelidade e design final",
     img_evo_cap: "Do esboço no papel ao wireframe e à alta fidelidade.",
     sol_what: "O que faz",
     sol_features: [
@@ -348,7 +386,7 @@ const copy = {
     img_onb_cap: "Onboarding e ajustes: a pessoa decide o que é medido, quando é avisada e em que unidade.",
     img_land_alt: "Landing page do Riptide com a mascote gota e o título “Sua vida digital também consome água. Descubra quanto.” (interface em espanhol)",
     img_land_cap: "A landing page, porta de entrada para a extensão e o painel web.",
-    sol_team: "A alta fidelidade foi um trabalho em equipe; minha parte nesta fase foram o wireflow e os wireframes.",
+    sol_team: "A alta fidelidade foi um trabalho em equipe; minha parte nesta fase foram o wireflow e os wireframes de baixa fidelidade.",
 
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
@@ -406,6 +444,37 @@ function Figure({ img, alt, caption, C }: { img: { src: string; w: number; h: nu
         />
       </div>
       <figcaption style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", marginTop: "0.75rem" }}>{caption}</figcaption>
+    </figure>
+  );
+}
+
+function HappyPath({ C }: { C: Copy }) {
+  return (
+    <figure style={{ margin: "0 0 2.5rem" }}>
+      <ol className="rt-hp" aria-label={C.img_happy_alt} tabIndex={0} style={{ listStyle: "none", padding: 0, margin: 0 }}>
+        {C.hp_steps.map((st, i) => (
+          <li key={st.t} style={{ ...card, padding: "1.1rem 1.1rem 1.2rem", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <span aria-hidden="true" style={{ fontFamily: serif, fontSize: "1.25rem", lineHeight: 1, color: "var(--accent)" }}>{String(i + 1).padStart(2, "0")}</span>
+            <p style={{ fontSize: "0.875rem", fontWeight: 600, lineHeight: 1.35, color: "var(--ink)" }}>{st.t}</p>
+            <p style={{ fontSize: "0.8125rem", lineHeight: 1.55, color: "var(--muted)" }}>{st.d}</p>
+            {st.b.length > 0 && (
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.2rem" }}>
+                {st.b.map((x) => (
+                  <li key={x} style={{ display: "flex", gap: "0.4rem", fontSize: "0.8125rem", lineHeight: 1.5, color: "var(--muted)" }}>
+                    <span aria-hidden="true" style={{ color: "var(--accent)" }}>·</span>{x}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {st.cta && (
+              <span style={{ marginTop: "auto", paddingTop: "0.5rem", fontSize: "0.75rem", color: "var(--ink)" }}>
+                <span style={{ ...smallCaps, color: "var(--accent)" }}>{C.hp_cta}</span> → {st.cta}
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+      <figcaption style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", marginTop: "0.75rem" }}>{C.img_happy_cap}</figcaption>
     </figure>
   );
 }
@@ -507,6 +576,10 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
                 </li>
               ))}
             </ul>
+            <p style={{ fontSize: "0.75rem", lineHeight: 1.5, color: "var(--muted)", marginTop: "1.25rem", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <span aria-hidden="true" style={{ display: "inline-block", width: "0.75rem", height: "0.75rem", borderRadius: "999px", background: "var(--accent)", flexShrink: 0 }} />
+              {C.chart_note}
+            </p>
           </figure>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "640px" }}>
             <p style={body}>{C.res_after}</p>
@@ -560,7 +633,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <Figure img={IMG.happy} alt={C.img_happy_alt} caption={C.img_happy_cap} C={C} />
+          <HappyPath C={C} />
           <Figure img={IMG.evolution} alt={C.img_evo_alt} caption={C.img_evo_cap} C={C} />
         </Reveal>
         <Reveal delay={0.1}>
@@ -574,9 +647,9 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           </ul>
         </Reveal>
         <Reveal delay={0.1}>
+          <Figure img={IMG.landing} alt={C.img_land_alt} caption={C.img_land_cap} C={C} />
           <Figure img={IMG.context} alt={C.img_ctx_alt} caption={C.img_ctx_cap} C={C} />
           <Figure img={IMG.onboarding} alt={C.img_onb_alt} caption={C.img_onb_cap} C={C} />
-          <Figure img={IMG.landing} alt={C.img_land_alt} caption={C.img_land_cap} C={C} />
           <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", fontStyle: "italic" }}>{C.sol_team}</p>
         </Reveal>
       </section>
@@ -629,13 +702,19 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
 
       <style>{`
         .rt-bar { display: grid; grid-template-columns: 1fr; gap: 0.35rem; }
+        .rt-hp { display: grid; gap: 0.75rem; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem !important; }
+        .rt-hp > li { scroll-snap-align: start; }
         @media (min-width: 640px) {
           .rt-meta { grid-template-columns: repeat(3, 1fr) !important; }
           .rt-meta-wide { grid-column: span 3; }
           .rt-stats { grid-template-columns: repeat(2, 1fr) !important; }
           .rt-features { grid-template-columns: repeat(2, 1fr) !important; }
+          .rt-hp { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; grid-template-columns: repeat(2, 1fr) !important; padding-bottom: 0 !important; }
           .hmw-row { grid-template-columns: 1fr 1fr 1fr !important; }
           .rt-bar { grid-template-columns: 15rem 1fr; align-items: center; gap: 1rem; }
+        }
+        @media (min-width: 900px) {
+          .rt-hp { grid-template-columns: repeat(4, 1fr) !important; }
         }
       `}</style>
     </div>

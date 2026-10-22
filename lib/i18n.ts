@@ -129,10 +129,10 @@ export const t = {
       p2: "Durante mais de dez anos trabalhei em ambientes corporativos, analisando contratos, processos e sistemas, e acompanhando pessoas na resolução de problemas reais. Essa experiência me ensinou a olhar além das tarefas: entender o contexto, identificar necessidades e buscar soluções que façam sentido para quem as utiliza.",
       p3: "Hoje aplico essa perspectiva ao design de produtos digitais. Tenho interesse em compreender o problema antes de projetar a solução, conectar as necessidades das pessoas aos objetivos do produto e transformar a complexidade em experiências claras, úteis e intuitivas.",
       faq: [
-        { q: "Que tipo de designer é o Marcus?", a: "Um designer que pesquisa antes de projetar. Meu foco é entender o problema real — não pular direto para wireframes. Combino UX Research, arquitetura de informação e design de interface no mesmo processo." },
+        { q: "Que tipo de designer é o Marcus?", a: "Um designer que pesquisa antes de projetar. Meu foco é entender o problema real — não pular direto para wireframes. Combino UX Research, arquitetura da informação e design de interface no mesmo processo." },
         { q: "O que me diferencia de outros perfis júnior?", a: "Minha trajetória em ambientes corporativos me deu experiência analisando processos complexos, compreendendo diferentes necessidades e resolvendo problemas em contextos reais. Hoje aplico essa perspectiva ao UX/UI Design para criar experiências que conectem as necessidades das pessoas a soluções claras e úteis." },
-        { q: "Que papel tem a IA no seu processo?", a: "É uma ferramenta em fases específicas — síntese de pesquisa, exploração visual, ideação. As decisões de design são sempre humanas e fundamentadas em contexto e usuários reais." },
-        { q: "Está disponível?", a: "Sim. Busco uma vaga como UX Designer, UX Researcher ou Product Designer na Espanha, na Europa ou remota. Disponibilidade imediata." },
+        { q: "Qual é o papel da IA no seu processo?", a: "É uma ferramenta em fases específicas — síntese de pesquisa, exploração visual, ideação. As decisões de design são sempre humanas e fundamentadas em contexto e usuários reais." },
+        { q: "Está disponível?", a: "Sim. Busco uma vaga como UX Designer, UX Researcher ou Product Designer na Espanha, na Europa ou em modelo remoto. Disponibilidade imediata." },
       ],
     },
     areas: {

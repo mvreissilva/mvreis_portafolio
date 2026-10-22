@@ -525,7 +525,7 @@ const copy = {
     persona_name: "Blanca Jiménez, 38 anos",
     persona_tag: "«A Exploradora»",
     persona_desc:
-      "Psicóloga em Pamplona. Interessada em sustentabilidade e economia colaborativa. Quer entrar no mundo camper de forma responsável: aprender antes de camperizar e conectar com pessoas com interesses semelhantes.",
+      "Psicóloga em Pamplona. Interessada em sustentabilidade e economia colaborativa. Quer entrar no mundo camper de forma responsável: aprender antes de camperizar e se conectar com pessoas com interesses semelhantes.",
     goals_title: "Objetivos",
     goals: [
       "Começar de forma sustentável e responsável.",
@@ -545,14 +545,14 @@ const copy = {
     persona2_desc:
       "Designer UX em Valência. Sua van já está camperizada e funciona como segunda casa. Acumula materiais e ferramentas de que não precisa mais e procura uma forma de fazê-los circular entre outros usuários.",
     persona2_goals: [
-      "Dar saída a ferramentas e materiais que já não usa.",
+      "Dar destino a ferramentas e materiais que não usa mais.",
       "Conectar-se com pessoas em fases mais iniciais do processo.",
       "Participar de uma comunidade onde o conhecimento é compartilhado.",
     ],
     persona2_frusts: [
       "Não existe um canal confiável para troca entre particulares.",
       "Os grupos do Facebook são caóticos e sem sistema de confiança.",
-      "Sente que a sua experiência poderia ajudar outros, mas não tem como.",
+      "Sente que a sua experiência poderia ajudar outras pessoas, mas não tem como.",
     ],
 
     hmw_label: "How Might We",
@@ -575,11 +575,11 @@ const copy = {
       },
       {
         prob: "Ferramentas e materiais requerem compra definitiva ou pesquisa externa",
-        opp: "Facilitar o acesso a recursos próximos através de troca, doação ou venda entre usuários",
+        opp: "Facilitar o acesso a recursos próximos por meio de troca, doação ou venda entre usuários",
         dec: "Diretório com filtros + perfis de usuário",
       },
       {
-        prob: "Comunidade valiosa mas caótica e pouco confiável",
+        prob: "Comunidade valiosa, mas caótica e pouco confiável",
         opp: "Organizar por contexto, fase e reputação",
         dec: "Fórum estruturado com validação",
       },
@@ -588,8 +588,8 @@ const copy = {
     hmw_col2: "Oportunidade",
     hmw_col3: "Decisão de design",
 
-    arch_label: "Arquitetura de informação",
-    arch_title: "Estrutura de navegação e percurso principal",
+    arch_label: "Arquitetura da informação",
+    arch_title: "Estrutura de navegação e fluxo principal",
     arch_body:
       "Meu Projeto funciona como hub central: o usuário avança por etapas e, ao identificar uma necessidade, acessa Aprende, Encontra ou Comunidade por meio de CTAs contextuais. A troca de recursos não é um fluxo paralelo — emerge do próprio processo, no momento em que faz sentido.",
     mvp_title: "Escopo do MVP",
@@ -626,7 +626,7 @@ const copy = {
     ui_label: "UI Design",
     ui_title: "A solução final",
     ui_body:
-      "A interface da Camperoteca toma como referência visual o mundo camper: cores quentes e terrosas, tipografia legível e uma linguagem visual que transmite calma e orientação. O design prioriza a clareza em detrimento da decoração.",
+      "A interface da Camperoteca toma como referência visual o mundo camper: cores quentes e terrosas, tipografia legível e uma linguagem visual que transmite calma e orientação. O design prioriza a clareza acima da decoração.",
     ui_miproyecto_title: "Meu Projeto",
     ui_miproyecto_body:
       "O hub central da plataforma mostra a etapa atual, o progresso geral e o próximo passo recomendado. Reduz a incerteza e mantém o usuário orientado o tempo todo.",
@@ -645,7 +645,7 @@ const copy = {
     ui_onboarding_title: "Onboarding",
     ui_onboarding_body:
       "O ponto de entrada no projeto. Guia o usuário desde o início com contexto claro e um primeiro passo prático — antes que a complexidade do processo o trave.",
-    ui_mockup_alt: "Vista geral da aplicação Camperoteca mostrando a tela principal Meu Projeto com o planejador por etapas",
+    ui_mockup_alt: "Visão geral do app Camperoteca mostrando a tela principal Meu Projeto com o planejador por etapas",
 
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",

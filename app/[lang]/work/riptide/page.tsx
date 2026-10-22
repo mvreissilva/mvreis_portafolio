@@ -472,7 +472,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
       </div>
 
       {/* ── 01 HERO ── */}
-      <section id="rt-hero" style={section}>
+      <section id="cs-hero" style={section}>
         <Reveal>
           <p style={{ fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>{C.tags}</p>
           <h1 style={{ fontFamily: serif, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "0.5rem", color: "var(--ink)" }}>Riptide</h1>

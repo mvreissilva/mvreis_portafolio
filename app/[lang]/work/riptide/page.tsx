@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 /* ─── imágenes ──────────────────────────────────────────────────── */
 const IMG = {
-  evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 862 },
+  evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 705 },
   context:    { src: "/assets/riptide/extension-en-contexto.webp", w: 2400, h: 1671 },
   onboarding: { src: "/assets/riptide/onboarding-y-ajustes.webp",  w: 2400, h: 846 },
   landing:    { src: "/assets/riptide/landing.webp",               w: 2400, h: 1589 },
@@ -116,7 +116,7 @@ const copy = {
     ],
     img_happy_alt: "Happy path de Riptide: descubrimiento, instalación, onboarding, tres pasos de personalización, resumen y landing",
     img_happy_cap: "Del descubrimiento al panel: instalación, onboarding, tres ajustes de personalización y primer resumen.",
-    img_evo_alt: "Tres versiones del popup de Riptide: boceto a mano, wireframe en blanco y negro y diseño final en azul",
+    img_evo_alt: "La pantalla de bienvenida de Riptide en tres fases: boceto a mano, wireframe de baja fidelidad y diseño final",
     img_evo_cap: "Del boceto en papel al wireframe y a la alta fidelidad.",
     sol_what: "Qué hace",
     sol_features: [
@@ -241,7 +241,7 @@ const copy = {
     ],
     img_happy_alt: "Riptide happy path: discovery, installation, onboarding, three personalisation steps, summary and landing page",
     img_happy_cap: "From discovery to dashboard: installation, onboarding, three personalisation settings and a first summary.",
-    img_evo_alt: "Three versions of the Riptide popup: hand sketch, black-and-white wireframe and final blue design",
+    img_evo_alt: "The Riptide welcome screen in three stages: hand sketch, low-fidelity wireframe and final design",
     img_evo_cap: "From paper sketch to wireframe to high fidelity.",
     sol_what: "What it does",
     sol_features: [
@@ -366,7 +366,7 @@ const copy = {
     ],
     img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três etapas de personalização, resumo e landing page",
     img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e o primeiro resumo.",
-    img_evo_alt: "Três versões do pop-up do Riptide: esboço à mão, wireframe em preto e branco e design final em azul",
+    img_evo_alt: "A tela de boas-vindas do Riptide em três fases: esboço à mão, wireframe de baixa fidelidade e design final",
     img_evo_cap: "Do esboço no papel ao wireframe e à alta fidelidade.",
     sol_what: "O que faz",
     sol_features: [

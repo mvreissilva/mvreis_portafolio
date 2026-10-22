@@ -133,7 +133,7 @@ const copy = {
     img_onb_cap: "Onboarding y ajustes: la persona decide qué se mide, cuándo se avisa y en qué unidad.",
     img_land_alt: "Landing de Riptide con la mascota gota y el titular «Tu vida digital también consume agua. Descubre cuánta.»",
     img_land_cap: "La landing, puerta de entrada a la extensión y al panel web.",
-    sol_team: "La alta fidelidad fue trabajo de equipo; mi parte en esta fase fueron el wireflow y los wireframes.",
+    sol_team: "La alta fidelidad fue trabajo de equipo; mi parte en esta fase fueron el wireflow y los wireframes de baja fidelidad.",
 
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
@@ -258,7 +258,7 @@ const copy = {
     img_onb_cap: "Onboarding and settings: people decide what is measured, when they're notified and in which unit.",
     img_land_alt: "Riptide landing page with the water-drop mascot and the headline “Your digital life also uses water. Find out how much.” (Spanish interface)",
     img_land_cap: "The landing page, the entry point to the extension and the web dashboard.",
-    sol_team: "High fidelity was a team effort; my part in this phase was the wireflow and the wireframes.",
+    sol_team: "High fidelity was a team effort; my part in this phase was the wireflow and the low-fidelity wireframes.",
 
     learn_label: "Learnings",
     learn_title: "What I take from this project",
@@ -383,7 +383,7 @@ const copy = {
     img_onb_cap: "Onboarding e ajustes: a pessoa decide o que é medido, quando é avisada e em que unidade.",
     img_land_alt: "Landing page do Riptide com a mascote gota e o título “Sua vida digital também consome água. Descubra quanto.” (interface em espanhol)",
     img_land_cap: "A landing page, porta de entrada para a extensão e o painel web.",
-    sol_team: "A alta fidelidade foi um trabalho em equipe; minha parte nesta fase foram o wireflow e os wireframes.",
+    sol_team: "A alta fidelidade foi um trabalho em equipe; minha parte nesta fase foram o wireflow e os wireframes de baixa fidelidade.",
 
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",

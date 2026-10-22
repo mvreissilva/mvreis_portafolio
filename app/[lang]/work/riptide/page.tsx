@@ -50,7 +50,7 @@ const copy = {
       ["Filosofía", "Awareness sin culpa"],
     ],
     focusLabel: "Mi foco",
-    focus: "Encuestas, entrevistas, síntesis de insights y HMW · Value Proposition Canvas, propuesta de valor y Business Model Canvas · Wireflow y wireframes",
+    focus: "Encuestas, entrevistas, síntesis de insights y HMW · Value Proposition Canvas, propuesta de valor y Business Model Canvas · Wireflow y wireframes de baja fidelidad",
 
     prob_label: "El problema",
     prob_title: "El impacto existe. Pero es invisible.",
@@ -105,7 +105,7 @@ const copy = {
     hp_label: "Happy path",
     hp_cta: "CTA",
     hp_steps: [
-      { t: "Descubrimiento", d: "El usuario ve la extensión a través de:", b: ["Recomendación", "Presentación del proyecto", "Web de Aquae, redes o boca a boca"], cta: "Añadir extensión" },
+      { t: "Descubrimiento", d: "El usuario ve la extensión a través de:", b: ["Recomendación", "Presentación del proyecto", "Web, redes o boca a boca"], cta: "Añadir extensión" },
       { t: "Instalación", d: "Instala la extensión en el navegador. Al abrirla por primera vez aparece un modal de bienvenida y personalización inicial.", b: [], cta: "Personalizar" },
       { t: "Onboarding", d: "Tres pantallas explican de forma visual cómo se usa la extensión y cómo se puede personalizar.", b: [], cta: "Personalizar" },
       { t: "Personalización 1", d: "El usuario elige qué quiere que analice la extensión:", b: ["Búsquedas", "Tiempo de navegación", "Compras online", "Vídeos y streaming"], cta: "Siguiente" },
@@ -175,7 +175,7 @@ const copy = {
       ["Philosophy", "Awareness without guilt"],
     ],
     focusLabel: "My focus",
-    focus: "Surveys, interviews, insight synthesis and HMW · Value Proposition Canvas, value proposition and Business Model Canvas · Wireflow and wireframes",
+    focus: "Surveys, interviews, insight synthesis and HMW · Value Proposition Canvas, value proposition and Business Model Canvas · Wireflow and low-fidelity wireframes",
 
     prob_label: "The problem",
     prob_title: "The impact exists. But it's invisible.",
@@ -230,7 +230,7 @@ const copy = {
     hp_label: "Happy path",
     hp_cta: "CTA",
     hp_steps: [
-      { t: "Discovery", d: "The user finds the extension through:", b: ["A recommendation", "The project presentation", "The Aquae website, social media or word of mouth"], cta: "Add extension" },
+      { t: "Discovery", d: "The user finds the extension through:", b: ["A recommendation", "The project presentation", "The website, social media or word of mouth"], cta: "Add extension" },
       { t: "Installation", d: "They install the extension in the browser. On first opening, a welcome and initial setup modal appears.", b: [], cta: "Personalise" },
       { t: "Onboarding", d: "Three screens visually explain how the extension works and how it can be personalised.", b: [], cta: "Personalise" },
       { t: "Personalisation 1", d: "The user chooses what the extension should analyse:", b: ["Searches", "Browsing time", "Online shopping", "Video and streaming"], cta: "Next" },
@@ -300,7 +300,7 @@ const copy = {
       ["Filosofia", "Consciência sem culpa"],
     ],
     focusLabel: "Meu foco",
-    focus: "Questionários, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes",
+    focus: "Questionários, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes de baixa fidelidade",
 
     prob_label: "O problema",
     prob_title: "O impacto existe. Mas é invisível.",
@@ -355,7 +355,7 @@ const copy = {
     hp_label: "Happy path",
     hp_cta: "CTA",
     hp_steps: [
-      { t: "Descoberta", d: "O usuário conhece a extensão por meio de:", b: ["Recomendação", "Apresentação do projeto", "Site da Aquae, redes sociais ou boca a boca"], cta: "Adicionar extensão" },
+      { t: "Descoberta", d: "O usuário conhece a extensão por meio de:", b: ["Recomendação", "Apresentação do projeto", "Site, redes sociais ou boca a boca"], cta: "Adicionar extensão" },
       { t: "Instalação", d: "Instala a extensão no navegador. Ao abri-la pela primeira vez, aparece um modal de boas-vindas e personalização inicial.", b: [], cta: "Personalizar" },
       { t: "Onboarding", d: "Três telas explicam de forma visual como a extensão funciona e como pode ser personalizada.", b: [], cta: "Personalizar" },
       { t: "Personalização 1", d: "O usuário escolhe o que quer que a extensão analise:", b: ["Buscas", "Tempo de navegação", "Compras online", "Vídeos e streaming"], cta: "Avançar" },

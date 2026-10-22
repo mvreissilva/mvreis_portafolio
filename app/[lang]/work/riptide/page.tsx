@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 /* ─── imágenes ──────────────────────────────────────────────────── */
 const IMG = {
-  evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 705 },
+  evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 669 },
   context:    { src: "/assets/riptide/extension-en-contexto.webp", w: 2400, h: 1671 },
   onboarding: { src: "/assets/riptide/onboarding-y-ajustes.webp",  w: 2400, h: 846 },
   landing:    { src: "/assets/riptide/landing.webp",               w: 2400, h: 1589 },

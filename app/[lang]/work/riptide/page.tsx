@@ -640,9 +640,9 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           </ul>
         </Reveal>
         <Reveal delay={0.1}>
+          <Figure img={IMG.landing} alt={C.img_land_alt} caption={C.img_land_cap} C={C} />
           <Figure img={IMG.context} alt={C.img_ctx_alt} caption={C.img_ctx_cap} C={C} />
           <Figure img={IMG.onboarding} alt={C.img_onb_alt} caption={C.img_onb_cap} C={C} />
-          <Figure img={IMG.landing} alt={C.img_land_alt} caption={C.img_land_cap} C={C} />
           <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", fontStyle: "italic" }}>{C.sol_team}</p>
         </Reveal>
       </section>

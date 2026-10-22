@@ -500,28 +500,28 @@ const copy = {
     meta_val_alcance: "Research · Definição · Arquitetura · UI Design · Prototipagem",
 
     cta_label: "Vamos conversar?",
-    cta_sub: "Se este projeto te interessou ou queres saber mais sobre o meu trabalho, entra em contacto.",
-    cta_email: "Enviar email",
+    cta_sub: "Se você se interessou por este projeto ou quer conhecer mais sobre o meu trabalho, me escreva.",
+    cta_email: "Enviar e-mail",
     cta_linkedin: "Ver LinkedIn",
 
     prob_label: "Problema e oportunidade",
-    prob_title: "Um processo complexo, sem orientação nem recursos partilhados",
+    prob_title: "Um processo complexo, sem orientação nem recursos compartilhados",
     prob_body:
-      "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e as decisões mal tomadas têm custo real. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que partilha recursos, mas sem um canal que a articule.",
+      "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e as decisões mal tomadas têm custo real. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que compartilha recursos, mas sem um canal que a articule.",
     prob_opp:
-      "A oportunidade: uma plataforma que orientasse o processo e ativasse a comunidade — onde materiais, ferramentas e conhecimento circulassem entre privados por doação, troca ou venda. Orientação e economia circular num mesmo lugar.",
+      "A oportunidade: uma plataforma que orientasse o processo e ativasse a comunidade — onde materiais, ferramentas e conhecimento circulassem entre particulares por doação, troca ou venda. Orientação e economia circular em um mesmo lugar.",
 
     research_label: "UX Research",
-    research_title: "Investigar antes de desenhar",
+    research_title: "Pesquisar antes de projetar",
     research_body:
-      "Antes de propor qualquer solução, realizei uma investigação mista para entender quem eram os usuarios, o que faziam e onde encontravam dificuldades.",
+      "Antes de propor qualquer solução, realizei uma pesquisa mista para entender quem eram os usuários, o que faziam e onde encontravam dificuldades.",
     research_benchmark:
-      "A análise competitiva confirmou a lacuna: nenhuma plataforma espanhola cobre os três eixos — guias, comunidade e recursos — num único lugar. Isso definiu o duplo âmbito do projeto. 71,6% dos inquiridos usaria uma app para este processo — o que validou a necessidade de orientação estruturada. 40,6% mostrou interesse ativo em partilhar recursos, o que justificou incluir o eixo de troca P2P desde o MVP. As entrevistas reforçaram ambos os dados: sem uma plataforma que organize o processo e conecte utilizadores, cada pessoa resolve sozinha e a maior custo.",
+      "A análise competitiva confirmou a lacuna: nenhuma plataforma espanhola cobre os três eixos — guias, comunidade e recursos — em um único lugar. Isso definiu o escopo duplo do projeto. 71,6% dos participantes usariam um app para este processo — o que validou a necessidade de orientação estruturada. 40,6% demonstraram interesse ativo em compartilhar recursos, o que justificou incluir o eixo de troca P2P desde o MVP. As entrevistas reforçaram ambos os dados: sem uma plataforma que organize o processo e conecte usuários, cada pessoa resolve sozinha e a maior custo.",
 
     insight_label: "Insight e Persona",
     insight_title: "O que realmente precisavam",
     insight_quote:
-      "Os utilizadores sabem o que querem: avançar passo a passo e não gastar desnecessariamente. O que lhes falta é uma plataforma que organize o processo e conecte quem já tem o que outros procuram.",
+      "Os usuários sabem o que querem: avançar passo a passo e não gastar desnecessariamente. O que lhes falta é uma plataforma que organize o processo e conecte quem já tem o que outros procuram.",
     persona_name: "Blanca Jiménez, 38 anos",
     persona_tag: "«A Exploradora»",
     persona_desc:
@@ -529,8 +529,8 @@ const copy = {
     goals_title: "Objetivos",
     goals: [
       "Começar de forma sustentável e responsável.",
-      "Aprender antes de tomar decisões económicas.",
-      "Conectar com uma comunidade que partilha os seus valores.",
+      "Aprender antes de tomar decisões econômicas.",
+      "Conectar-se com uma comunidade que compartilha os seus valores.",
     ],
     frusts_title: "Frustrações",
     frusts: [
@@ -539,18 +539,18 @@ const copy = {
       "Medo de gastar dinheiro em soluções que não funcionem.",
     ],
     persona_context:
-      "Dois perfis distintos, duas necessidades que o produto tem de resolver em simultâneo.",
+      "Dois perfis distintos, duas necessidades que o produto precisa resolver ao mesmo tempo.",
     persona2_name: "Fernando Molina, 31 anos",
-    persona2_tag: "«O Nómada»",
+    persona2_tag: "«O Nômade»",
     persona2_desc:
-      "Designer UX em Valência. A sua furgoneta já está camperizada e serve como segunda habitação. Acumula materiais e ferramentas que já não precisa e procura uma forma de os fazer circular entre outros utilizadores.",
+      "Designer UX em Valência. Sua van já está camperizada e funciona como segunda casa. Acumula materiais e ferramentas de que não precisa mais e procura uma forma de fazê-los circular entre outros usuários.",
     persona2_goals: [
       "Dar saída a ferramentas e materiais que já não usa.",
-      "Conectar com pessoas em fases mais iniciais do processo.",
-      "Participar numa comunidade onde o conhecimento se partilha.",
+      "Conectar-se com pessoas em fases mais iniciais do processo.",
+      "Participar de uma comunidade onde o conhecimento é compartilhado.",
     ],
     persona2_frusts: [
-      "Não existe um canal confiável para troca entre privados.",
+      "Não existe um canal confiável para troca entre particulares.",
       "Os grupos do Facebook são caóticos e sem sistema de confiança.",
       "Sente que a sua experiência poderia ajudar outros, mas não tem como.",
     ],
@@ -560,26 +560,26 @@ const copy = {
     hmw_rows: [
       {
         prob: "Informação fragmentada em múltiplas fontes",
-        opp: "Centralizar e estruturar num único lugar",
+        opp: "Centralizar e estruturar em um único lugar",
         dec: "Dashboard com fases ordenadas",
       },
       {
         prob: "Sem referência de progresso no projeto",
         opp: "Tornar o avanço visível passo a passo",
-        dec: "Planeador com etapas e checklist",
+        dec: "Planejador com etapas e checklist",
       },
       {
-        prob: "Guias dispersos no YouTube, fóruns e redes; o usuario não sabe por onde começar",
+        prob: "Guias dispersos no YouTube, fóruns e redes; o usuário não sabe por onde começar",
         opp: "Estruturar o conhecimento por tipo e fase do projeto",
         dec: "Guias técnicos, legais e casos reais",
       },
       {
         prob: "Ferramentas e materiais requerem compra definitiva ou pesquisa externa",
-        opp: "Facilitar o acesso a recursos próximos através de troca, doação ou venda entre utilizadores",
-        dec: "Diretório com filtros + perfis de utilizador",
+        opp: "Facilitar o acesso a recursos próximos através de troca, doação ou venda entre usuários",
+        dec: "Diretório com filtros + perfis de usuário",
       },
       {
-        prob: "Comunidade valiosa mas caótica e pouco fiável",
+        prob: "Comunidade valiosa mas caótica e pouco confiável",
         opp: "Organizar por contexto, fase e reputação",
         dec: "Fórum estruturado com validação",
       },
@@ -591,21 +591,21 @@ const copy = {
     arch_label: "Arquitetura de informação",
     arch_title: "Estrutura de navegação e percurso principal",
     arch_body:
-      "O Meu Projeto funciona como hub central: o utilizador avança por etapas e, ao detetar uma necessidade, acede a Aprende, Encontra ou Comunidade através de CTAs contextuais. A troca de recursos não é um fluxo paralelo — emerge do próprio processo, no momento em que faz sentido.",
-    mvp_title: "Âmbito do MVP",
+      "Meu Projeto funciona como hub central: o usuário avança por etapas e, ao identificar uma necessidade, acessa Aprende, Encontra ou Comunidade por meio de CTAs contextuais. A troca de recursos não é um fluxo paralelo — emerge do próprio processo, no momento em que faz sentido.",
+    mvp_title: "Escopo do MVP",
     mvp_inc: [
-      "O Meu Projeto: hub central do processo. O utilizador gere o seu avanço por etapas, visualiza o progresso e acede a recursos contextuais conforme a necessidade atual.",
+      "Meu Projeto: hub central do processo. O usuário gerencia seu avanço por etapas, visualiza o progresso e acessa recursos contextuais conforme a necessidade atual.",
       "Aprende: guias técnicos, legais e casos reais organizados por etapa do projeto.",
-      "Encontra: diretório de materiais e ferramentas disponíveis entre utilizadores — versão inicial do eixo de troca P2P.",
-      "Comunidade: espaço de ligação entre pessoas em processo de camperização para partilhar experiências e conhecimento.",
-      "Onboarding e registo: apresenta como a plataforma funciona por etapas e dá acesso através de registo ou início de sessão.",
+      "Encontra: diretório de materiais e ferramentas disponíveis entre usuários — versão inicial do eixo de troca P2P.",
+      "Comunidade: espaço de conexão entre pessoas em processo de camperização para compartilhar experiências e conhecimento.",
+      "Onboarding e cadastro: apresenta como a plataforma funciona por etapas e dá acesso por meio de cadastro ou login.",
     ],
     mvp_inc_label: "Incluído no MVP",
 
     wf_label: "Wireframes",
     wf_title: "Da estrutura ao design final",
     wf_body:
-      "O wireframing avançou em duas fases. Em baixa fidelidade o foco esteve na estrutura de navegação e no fluxo principal: como um utilizador novo passa do onboarding ao seu primeiro passo real no projeto. Em alta fidelidade, as decisões centraram-se na hierarquia visual de 'O Meu Projeto' como hub central, e em como apresentar o conteúdo de 'Aprende', 'Encontra' e 'Comunidade' sem saturar o utilizador. Cada iteração validou que a plataforma orientava sem sobrecarregar.",
+      "O wireframing avançou em duas fases. Em baixa fidelidade o foco esteve na estrutura de navegação e no fluxo principal: como um usuário novo passa do onboarding ao seu primeiro passo real no projeto. Em alta fidelidade, as decisões se concentraram na hierarquia visual de 'Meu Projeto' como hub central, e em como apresentar o conteúdo de 'Aprende', 'Encontra' e 'Comunidade' sem saturar o usuário. Cada iteração validou que a plataforma orientava sem sobrecarregar.",
 
     ds_label: "UI Design & Design System",
     ds_title: "«Cosecha Solar»",
@@ -629,41 +629,41 @@ const copy = {
       "A interface da Camperoteca toma como referência visual o mundo camper: cores quentes e terrosas, tipografia legível e uma linguagem visual que transmite calma e orientação. O design prioriza a clareza em detrimento da decoração.",
     ui_miproyecto_title: "Meu Projeto",
     ui_miproyecto_body:
-      "O hub central da plataforma mostra a etapa atual, o progresso geral e o próximo passo recomendado. Reduz a incerteza e mantém o usuario orientado a todo o momento.",
+      "O hub central da plataforma mostra a etapa atual, o progresso geral e o próximo passo recomendado. Reduz a incerteza e mantém o usuário orientado o tempo todo.",
     ui_aprende_title: "Aprende",
     ui_aprende_body:
-      "Organiza o conhecimento em três categorias: guias técnicos (sistemas elétricos, isolamento, carpintaria), guias legais (homologação, inspeção, regulamentação) e casos reais de outros usuarios.",
+      "Organiza o conhecimento em três categorias: guias técnicos (sistemas elétricos, isolamento, marcenaria), guias legais (homologação, inspeção, regulamentação) e casos reais de outros usuários.",
     ui_encuentra_title: "Encontra Recursos",
     ui_encuentra_body:
-      "Liga com utilizadores próximos que têm ferramentas ou materiais disponíveis — para trocar, doar, comprar ou vender. Também redireciona para lojas especializadas quando não há recurso disponível na comunidade.",
+      "Conecta você com usuários próximos que têm ferramentas ou materiais disponíveis — para trocar, doar, comprar ou vender. Também redireciona para lojas especializadas quando não há recurso disponível na comunidade.",
     ui_login_title: "Login",
     ui_login_body:
-      "Acesso direto e sem fricção. O usuario entra com email e palavra-passe para continuar onde ficou.",
+      "Acesso direto e sem fricção. O usuário entra com e-mail e senha para continuar de onde parou.",
     ui_comunidad_title: "Comunidade",
     ui_comunidad_body:
-      "Conecta com outros campistas. Pergunta, responde e encontra usuarios próximos com ferramentas ou conhecimento.",
+      "Conecte-se com outros campistas. Pergunte, responda e encontre usuários próximos com ferramentas ou conhecimento.",
     ui_onboarding_title: "Onboarding",
     ui_onboarding_body:
-      "O ponto de entrada no projeto. Guia o utilizador desde o início com contexto claro e um primeiro passo acionável — antes que a complexidade do processo o bloqueie.",
-    ui_mockup_alt: "Vista geral da aplicação Camperoteca mostrando o ecrã principal Meu Projeto com o planeador por etapas",
+      "O ponto de entrada no projeto. Guia o usuário desde o início com contexto claro e um primeiro passo prático — antes que a complexidade do processo o trave.",
+    ui_mockup_alt: "Vista geral da aplicação Camperoteca mostrando a tela principal Meu Projeto com o planejador por etapas",
 
-    learn_label: "Aprendizagens",
+    learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
     learns: [
-      "Ouvir os utilizadores fez-me mudar o foco: não desenhei um guia de conteúdos, desenhei um ponto de entrada. A desorientação inicial era o problema real.",
-      "A investigação revelou que a motivação caía quando o processo parecia infinito. Mostrar etapas e progresso não foi uma decisão estética — foi uma resposta direta ao que os utilizadores diziam.",
-      "Os dados da pesquisa — 68% a consultar múltiplas fontes, 72% sem ponto de partida claro — tornaram a arquitetura por etapas a única resposta coerente. Estruturar o conteúdo por fase não foi uma convenção de UX, foi uma decisão de design ancorada nesses números.",
-      "Os inquéritos revelaram uma disposição real para partilhar materiais e ferramentas. A comunidade não foi uma aposta de design — foi uma resposta ao que os próprios utilizadores pediam.",
+      "Ouvir os usuários me fez mudar o foco: não projetei um guia de conteúdos, projetei um ponto de entrada. A desorientação inicial era o problema real.",
+      "A pesquisa revelou que a motivação caía quando o processo parecia infinito. Mostrar etapas e progresso não foi uma decisão estética — foi uma resposta direta ao que os usuários diziam.",
+      "Os dados da pesquisa — 68% consultando várias fontes, 72% sem ponto de partida claro — tornaram a arquitetura por etapas a única resposta coerente. Estruturar o conteúdo por fase não foi uma convenção de UX, foi uma decisão de design ancorada nesses números.",
+      "Os questionários revelaram uma disposição real para compartilhar materiais e ferramentas. A comunidade não foi uma aposta de design — foi uma resposta ao que os próprios usuários pediam.",
     ],
     next_title: "Próximas iterações",
     nexts: [
-      "Avaliar a compreensão do fluxo principal com utilizadores reais através de testes de usabilidade.",
-      "Desenhar e validar a secção de perfil de utilizador como base do sistema de confiança para as operações de troca, doação e venda entre privados.",
-      "Desenvolver o marketplace completo com sistema de avaliações e reputação entre utilizadores.",
-      "Personalizar o projeto desde o registo: recolher tipo de furgoneta, fase, orçamento e objetivos para adaptar O Meu Projeto e as suas recomendações.",
+      "Avaliar a compreensão do fluxo principal com usuários reais por meio de testes de usabilidade.",
+      "Projetar e validar a seção de perfil de usuário como base do sistema de confiança para as operações de troca, doação e venda entre particulares.",
+      "Desenvolver o marketplace completo com sistema de avaliações e reputação entre usuários.",
+      "Personalizar o projeto desde o cadastro: coletar tipo de van, fase, orçamento e objetivos para adaptar Meu Projeto e suas recomendações.",
     ],
     research_methods: [
-      { num: "34", label: "inquéritos realizados" },
+      { num: "34", label: "questionários aplicados" },
       { num: "8", label: "entrevistas em profundidade" },
       { num: "3", label: "plataformas analisadas" },
     ],
@@ -671,8 +671,8 @@ const copy = {
     research_findings: [
       { pct: "72%", label: "não sabem por onde começar o seu projeto" },
       { pct: "68%", label: "consultam múltiplas fontes para resolver uma única dúvida" },
-      { pct: "54%", label: "cometeram ou temem erros com impacto económico real" },
-      { pct: "61%", label: "prefeririam ajuda de outros utilizadores durante o processo" },
+      { pct: "54%", label: "cometeram ou temem erros com impacto econômico real" },
+      { pct: "61%", label: "prefeririam ajuda de outros usuários durante o processo" },
     ],
     proto_cta: "Ver protótipo interativo",
     proto_hint: "Percorra o fluxo completo: onboarding, login e as quatro seções do app.",
@@ -686,7 +686,7 @@ const copy = {
       { id: "cs-wireframes",  label: "Wireframes" },
       { id: "cs-ds",          label: "Design System" },
       { id: "cs-ui",          label: "UI" },
-      { id: "cs-learn",       label: "Aprendizagens" },
+      { id: "cs-learn",       label: "Aprendizados" },
     ],
   },
 };

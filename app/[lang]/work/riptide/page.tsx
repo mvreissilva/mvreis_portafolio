@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const desc = lang === "en"
     ? "A browser extension that makes the hidden water footprint of digital activity visible. Awareness without guilt, presence without intrusion."
     : lang === "pt"
-    ? "Extensão de browser que torna visível o impacto hídrico da atividade digital. Consciência sem culpa, presença sem intrusão."
+    ? "Extensão de navegador que torna visível o impacto hídrico da atividade digital. Consciência sem culpa, presença sem intrusão."
     : "Extensión de navegador que hace visible el impacto hídrico de la actividad digital. Awareness sin culpa, presencia sin intrusión.";
   return pageMetadata({ lang, path: "/work/riptide", title, description: desc });
 }
@@ -32,7 +32,6 @@ const IMG = {
 const copy = {
   es: {
     back: "← Volver",
-    contact: "Contactar →",
     zoom_hint: "Toca para ampliar",
     zoom_close: "Cerrar",
     nav: [
@@ -138,11 +137,14 @@ const copy = {
       "Pasar de preferencias declaradas a comportamiento real con un test de prototipo: ¿la gente mantiene la extensión instalada?",
       "Validar la metodología de cálculo con fuentes científicas antes de mostrar cifras como «0,26 ml por búsqueda»",
     ],
+    cta_label: "¿Hablamos?",
+    cta_sub: "Si te interesa este proyecto o quieres conocer más sobre mi trabajo, escríbeme.",
+    cta_email: "Enviar email",
+    cta_linkedin: "Ver LinkedIn",
   },
 
   en: {
     back: "← Back",
-    contact: "Get in touch →",
     zoom_hint: "Tap to enlarge",
     zoom_close: "Close",
     nav: [
@@ -248,116 +250,123 @@ const copy = {
       "Move from stated preferences to real behaviour with a prototype test: do people keep the extension installed?",
       "Validate the calculation method with scientific sources before showing figures such as “0.26 ml per search”",
     ],
+    cta_label: "Let's talk",
+    cta_sub: "If this project caught your eye or you'd like to know more about my work, drop me a line.",
+    cta_email: "Send email",
+    cta_linkedin: "View LinkedIn",
   },
 
   pt: {
     back: "← Voltar",
-    contact: "Entrar em contacto →",
     zoom_hint: "Toque para ampliar",
     zoom_close: "Fechar",
     nav: [
       { id: "rt-problem",   label: "Problema" },
-      { id: "rt-research",  label: "Investigação" },
+      { id: "rt-research",  label: "Pesquisa" },
       { id: "rt-insights",  label: "Insights" },
       { id: "rt-solution",  label: "Solução" },
-      { id: "rt-learnings", label: "Aprendizagens" },
+      { id: "rt-learnings", label: "Aprendizados" },
     ],
-    tags: "UX/UI · IA · Sustentabilidade · Projeto conceptual",
-    desc: "Uma extensão de browser que torna visível o impacto hídrico da atividade digital quotidiana. Consciência sem culpa, presença sem intrusão.",
+    tags: "UX/UI · IA · Sustentabilidade · Projeto conceitual",
+    desc: "Extensão de navegador que torna visível o impacto hídrico da atividade digital do dia a dia. Consciência sem culpa, presença sem intrusão.",
     meta: [
-      ["Tipo", "Projeto conceptual · Equipa de 7"],
-      ["A minha função", "UX/UI Designer · Research"],
-      ["Plataforma", "Extensão de browser"],
+      ["Tipo", "Projeto conceitual · Equipe de 7"],
+      ["Minha função", "UX/UI Designer · Research"],
+      ["Plataforma", "Extensão de navegador"],
       ["Ferramentas", "Figma · FigJam"],
       ["Filosofia", "Consciência sem culpa"],
     ],
-    focusLabel: "O meu foco",
-    focus: "Inquéritos, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes",
+    focusLabel: "Meu foco",
+    focus: "Questionários, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes",
 
     prob_label: "O problema",
     prob_title: "O impacto existe. Mas é invisível.",
     prob_p: [
-      "Cada pesquisa, cada vídeo e cada consulta a uma IA consome água nos centros de dados que os arrefecem. Três em cada quatro pessoas inquiridas sabiam-no, mas um terço nunca tinha parado para pensar nisso. Sabem-no em abstrato; não o sentem enquanto navegam, porque nada liga um clique ao seu custo físico.",
-      "As extensões que já existem medem sobretudo carbono ou energia, mostram a água como um dado secundário e apresentam a informação em painéis técnicos. Duas das três analisadas só cobrem o uso de IA. Nenhuma põe a água no centro de toda a navegação.",
+      "Cada busca, cada vídeo e cada consulta a uma IA consome água nos data centers que os resfriam. Três em cada quatro pessoas que responderam ao questionário sabiam disso, mas um terço nunca tinha parado para pensar no assunto. Elas sabem na teoria; não percebem enquanto navegam, porque nada liga um clique ao seu custo físico.",
+      "As extensões que já existem medem principalmente carbono ou energia, mostram a água como um dado secundário e apresentam as informações em painéis técnicos. Duas das três analisadas só cobrem o uso de IA. Nenhuma coloca a água no centro de toda a navegação.",
     ],
-    prob_quote: "«Sei que há servidores e tudo isso, mas tenho-o numa categoria mental de \"coisas técnicas que não vejo\". Não o ligo a algo como a água.»",
-    prob_quote_by: "Participante nas entrevistas",
+    prob_quote: "“Sei que existem servidores e tudo mais, mas guardo isso numa categoria mental de ‘coisas técnicas que não vejo’. Não associo isso a algo como a água.”",
+    prob_quote_by: "Participante das entrevistas",
 
-    res_label: "Investigação",
+    res_label: "Pesquisa",
     res_title: "O que as pessoas aceitariam, e o que não",
-    res_intro: "Combinámos métodos quantitativos e qualitativos para perceber o que as pessoas sabem sobre o consumo hídrico digital e, sobretudo, o que tolerariam de uma ferramenta que lho mostrasse.",
-    res_methods: ["55 inquéritos", "9 entrevistas", "3 extensões analisadas", "SWOT", "Desk research"],
+    res_intro: "Combinamos métodos quantitativos e qualitativos para entender o que as pessoas sabem sobre o consumo hídrico digital e, principalmente, o que tolerariam de uma ferramenta que mostrasse isso a elas.",
+    res_methods: ["55 questionários", "9 entrevistas", "3 extensões analisadas", "Análise SWOT", "Desk research"],
     res_stats: [
-      ["92,7%", "acha interessante uma extensão que mostre o seu impacto hídrico"],
+      ["92,7%", "acha interessante uma extensão que mostre seu impacto hídrico"],
       ["87,3%", "acredita que essa informação mudaria a forma como usa a internet"],
       ["81,8%", "prefere indicadores visuais simples (cores ou estados)"],
-      ["72,2%", "quer uma presença visível mas não intrusiva"],
+      ["72,2%", "quer uma presença visível, mas não intrusiva"],
     ],
     chart_title: "A culpa e as interrupções são os dois principais motivos de rejeição",
-    chart_q: "O que te causaria mais rejeição numa ferramenta assim? · % de 55 pessoas · resposta múltipla",
+    chart_q: "O que mais faria você rejeitar uma ferramenta assim? · % de 55 pessoas · múltipla escolha",
     chart_rows: [
-      ["Mensagens culpabilizadoras", 52.7, "52,7%"],
+      ["Mensagens que geram culpa", 52.7, "52,7%"],
       ["Interrupções frequentes", 47.3, "47,3%"],
-      ["Sensação de vigilância", 40.0, "40,0%"],
+      ["Sensação de estar sendo vigiado", 40.0, "40,0%"],
       ["Falta de clareza no cálculo", 23.6, "23,6%"],
     ],
-    res_after: "O interesse estava validado; o risco estava na rejeição. Os dois principais motivos para abandonar uma ferramenta assim, sentir culpa e sentir-se interrompido, marcaram os dois limites do produto.",
-    res_interviews: "As entrevistas centraram-se no uso de IA, uma das atividades digitais de maior consumo. Confirmaram o padrão: 6 em 9 pessoas descreveram a extensão ideal como «um assistente discreto», e 7 em 9 continuariam a usar a IA mesmo que a extensão as avisasse de um consumo elevado.",
-    res_note: "Inquérito online, fevereiro de 2026: 55 respostas (54 na pergunta sobre o nível de presença). 78% têm mais de 30 anos e 62% usam o browser mais de 4 horas por dia. Algumas perguntas admitiam resposta múltipla.",
+    res_after: "O interesse estava validado; o risco estava na rejeição. Os dois principais motivos para abandonar uma ferramenta assim, sentir culpa e ser interrompido, definiram os dois limites do produto.",
+    res_interviews: "As entrevistas focaram no uso de IA, uma das atividades digitais que mais consomem água. Elas confirmaram o padrão: 6 de 9 pessoas descreveram a extensão ideal como “um assistente discreto”, e 7 de 9 continuariam usando a IA mesmo que a extensão avisasse sobre um consumo alto.",
+    res_note: "Questionário online, fevereiro de 2026: 55 respostas (54 na pergunta sobre nível de presença). 78% têm mais de 30 anos e 62% usam o navegador mais de 4 horas por dia. Algumas perguntas permitiam múltipla escolha.",
 
     ins_label: "Insights",
     ins_title: "Do dado à decisão",
     persona_name: "Ana, 32 anos · Especialista em marketing digital",
-    persona_text: "Passa grande parte do dia em frente ao computador e usa extensões diariamente, mas abandona as ferramentas demasiado técnicas ou invasivas. Preocupa-se com o ambiente e quer que os seus valores se reflitam também na sua vida digital, sem se sentir julgada.",
-    ins_central: "Quase ninguém deixaria de usar a IA por causa de um aviso. O Riptide não podia prometer uma mudança de comportamento: tinha de tornar o impacto visível e deixar a decisão nas mãos de cada pessoa.",
+    persona_text: "Passa grande parte do dia em frente ao computador e usa extensões todos os dias, mas abandona ferramentas técnicas ou invasivas demais. Ela se preocupa com o meio ambiente e quer que seus valores também se reflitam na sua vida digital, sem se sentir julgada.",
+    ins_central: "Quase ninguém deixaria de usar a IA por causa de um aviso. O Riptide não podia prometer uma mudança de comportamento: precisava tornar o impacto visível e deixar a decisão nas mãos de cada pessoa.",
     cols: ["Dado", "Insight", "Decisão de design"],
     rows: [
-      ["52,7% rejeitam as mensagens culpabilizadoras", "Informar sem julgar", "Tom descritivo e neutro: números e equivalências, nunca recriminações"],
-      ["47,3% rejeitam as interrupções; 72,2% querem algo visível mas não intrusivo", "A utilidade tem de superar o incómodo", "Sem pop-ups: um resumo diário à hora que cada pessoa escolhe, com os alertas em tempo real desativados por defeito"],
-      ["81,8% preferem indicadores visuais simples; 8 em 9 entrevistados escolheram uma gota ou algo que se enche", "Um número abstrato não se sente", "No painel web, um copo que se enche conforme o objetivo semanal"],
-      ["8 em 9 entrevistados disseram que uma equivalência física os impacta mais do que os litros; 6 escolheram a torneira aberta", "Falta uma ponte entre o clique e a água física", "Cada número vem com a sua equivalência («42 litros = 1 duche de 5 minutos») e a pessoa escolhe a unidade: litros, chávenas ou piscinas olímpicas"],
-      ["6 em 9 entrevistados querem poder silenciá-la", "O controlo é de quem a usa", "Onboarding com três ajustes (o que se mede, com que frequência se avisa, em que unidade se mostra) e notificações que se podem desativar"],
-      ["40% rejeitam a sensação de vigilância", "A confiança ganha-se explicando", "Ecrã de privacidade no onboarding, processamento local dos dados e opções para os exportar ou apagar"],
+      ["52,7% rejeitam mensagens que geram culpa", "Informar sem julgar", "Tom descritivo e neutro: números e equivalências, nunca críticas"],
+      ["47,3% rejeitam interrupções; 72,2% querem algo visível, mas não intrusivo", "A utilidade precisa superar o incômodo", "Sem pop-ups: um resumo diário no horário que cada pessoa escolhe, com os alertas em tempo real desativados por padrão"],
+      ["81,8% preferem indicadores visuais simples; 8 de 9 entrevistados escolheram uma gota ou algo que se enche", "Um número abstrato não é sentido", "No painel web, um copo que se enche conforme a meta semanal"],
+      ["8 de 9 entrevistados disseram que uma equivalência física impacta mais do que os litros; 6 escolheram a torneira aberta", "Falta uma ponte entre o clique e a água física", "Cada número vem com sua equivalência (“42 litros = 1 banho de 5 minutos”) e a pessoa escolhe a unidade: litros, xícaras ou piscinas olímpicas"],
+      ["6 de 9 entrevistados querem poder silenciá-la", "O controle é de quem usa", "Onboarding com três ajustes (o que é medido, com que frequência avisar, em que unidade mostrar) e notificações que podem ser desativadas"],
+      ["40% rejeitam a sensação de estar sendo vigiados", "A confiança se conquista explicando", "Tela de privacidade no onboarding, processamento local dos dados e opções para exportá-los ou apagá-los"],
     ],
 
     sol_label: "Solução",
     sol_title: "Não interrompe, não julga, não controla.",
-    sol_value: "O Riptide transforma a atividade digital em sinais visuais simples, integrados de forma discreta no browser. Não se trata de otimizar o teu comportamento: trata-se de o tornar visível.",
-    sol_strategy: "Modelo freemium, com licenças para escolas e empresas com programas de sustentabilidade. Defini-o no Value Proposition Canvas e no Business Model Canvas.",
-    img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três passos de personalização, resumo e landing page",
-    img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e primeiro resumo.",
-    img_evo_alt: "Três versões do popup do Riptide: esboço à mão, wireframe a preto e branco e design final em azul",
-    img_evo_cap: "Do esboço em papel ao wireframe e à alta fidelidade.",
+    sol_value: "O Riptide transforma a atividade digital em sinais visuais simples, integrados de forma discreta ao navegador. Não se trata de otimizar o seu comportamento: se trata de torná-lo visível.",
+    sol_strategy: "Modelo freemium, com licenças para escolas e empresas com programas de sustentabilidade. Eu o defini no Value Proposition Canvas e no Business Model Canvas.",
+    img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três etapas de personalização, resumo e landing page",
+    img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e o primeiro resumo.",
+    img_evo_alt: "Três versões do pop-up do Riptide: esboço à mão, wireframe em preto e branco e design final em azul",
+    img_evo_cap: "Do esboço no papel ao wireframe e à alta fidelidade.",
     sol_what: "O que faz",
     sol_features: [
-      "Um ícone discreto na barra do browser; o detalhe só abre quando a pessoa o pede",
-      "Um resumo diário à hora escolhida; os alertas em tempo real são opcionais",
-      "O número do dia com a sua equivalência e a divisão por streaming, pesquisas e navegação",
+      "Um ícone discreto na barra do navegador; os detalhes só abrem quando a pessoa pede",
+      "Um resumo diário no horário escolhido; os alertas em tempo real são opcionais",
+      "O número do dia com sua equivalência e a divisão por streaming, buscas e navegação",
       "Um onboarding que personaliza o que medir, com que frequência avisar e em que unidade mostrar",
-      "Um painel web com a evolução semanal, um objetivo e sugestões",
-      "Privacidade visível: dados processados localmente, com opção de os exportar ou apagar",
+      "Um painel web com a evolução semanal, uma meta e sugestões",
+      "Privacidade visível: dados processados localmente, com opção de exportá-los ou apagá-los",
     ],
-    img_ctx_alt: "Browser com o Google aberto e o popup do Riptide aberto sob o ícone da gota: hoje 42 litros, equivalentes a um duche de 5 minutos, com divisão por streaming, pesquisas e navegação",
-    img_ctx_cap: "A extensão vive na barra do browser e só abre quando a pessoa a consulta.",
-    img_onb_alt: "Seis ecrãs do popup do Riptide: boas-vindas, privacidade, o que queres ver, com que frequência avisar, unidade de medida e configuração",
-    img_onb_cap: "Onboarding e ajustes: a pessoa decide o que se mede, quando é avisada e em que unidade.",
-    img_land_alt: "Landing page do Riptide com a mascote gota e o título «A tua vida digital também consome água. Descobre quanta.» (interface em espanhol)",
-    img_land_cap: "A landing page, porta de entrada para a extensão e para o painel web.",
-    sol_team: "A alta fidelidade foi trabalho de equipa; a minha parte nesta fase foram o wireflow e os wireframes.",
+    img_ctx_alt: "Navegador com o Google aberto e o pop-up do Riptide aberto abaixo do ícone da gota: hoje 42 litros, equivalentes a um banho de 5 minutos, com divisão por streaming, buscas e navegação",
+    img_ctx_cap: "A extensão fica na barra do navegador e só abre quando a pessoa a consulta.",
+    img_onb_alt: "Seis telas do pop-up do Riptide: boas-vindas, privacidade, o que você quer ver, com que frequência avisar, unidade de medida e configurações",
+    img_onb_cap: "Onboarding e ajustes: a pessoa decide o que é medido, quando é avisada e em que unidade.",
+    img_land_alt: "Landing page do Riptide com a mascote gota e o título “Sua vida digital também consome água. Descubra quanto.” (interface em espanhol)",
+    img_land_cap: "A landing page, porta de entrada para a extensão e o painel web.",
+    sol_team: "A alta fidelidade foi um trabalho em equipe; minha parte nesta fase foram o wireflow e os wireframes.",
 
-    learn_label: "Aprendizagens",
+    learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
     learns: [
-      ["Consciência sim, culpa não", "A culpa foi o principal motivo de rejeição (52,7%). O tom não é um detalhe de copy: decide se a ferramenta continua instalada."],
-      ["O controlo é inegociável", "Quase metade rejeita as interrupções e quase ninguém deixaria de usar a IA por causa de um aviso. Uma ferramenta de consciencialização não pode impor: o resumo diário e os alertas opcionais deixam a decisão nas mãos de cada pessoa."],
-      ["Os dados leem-se duas vezes", "Ao rever as respostas originais para este case study, encontrei números trocados na síntese. Corrigi-los mudou a história: o problema não era a ignorância, mas a invisibilidade. E um empate de 4 a 4 nas entrevistas não é uma preferência: é uma razão para tornar algo configurável."],
+      ["Consciência sim, culpa não", "A culpa foi o principal motivo de rejeição (52,7%). O tom não é um detalhe de copy: ele decide se a ferramenta continua instalada."],
+      ["O controle é inegociável", "Quase metade rejeita interrupções e quase ninguém deixaria de usar a IA por causa de um aviso. Uma ferramenta de conscientização não pode impor: o resumo diário e os alertas opcionais deixam a decisão nas mãos de cada pessoa."],
+      ["Os dados se leem duas vezes", "Ao revisar as respostas originais para este case study, encontrei números trocados na síntese. Corrigi-los mudou a história: o problema não era a falta de conhecimento, e sim a invisibilidade. E um empate de 4 a 4 nas entrevistas não é uma preferência: é um motivo para tornar algo configurável."],
     ],
     next_label: "Próximos passos",
     next: [
-      "Testar um indicador que se enche na barra do browser: foi a preferência mais clara nas entrevistas (8 em 9) e ficou de fora do design final",
-      "Passar de preferências declaradas a comportamento real com um teste de protótipo: as pessoas mantêm a extensão instalada?",
-      "Validar a metodologia de cálculo com fontes científicas antes de mostrar números como «0,26 ml por pesquisa»",
+      "Testar um indicador que se enche na barra do navegador: foi a preferência mais clara nas entrevistas (8 de 9) e ficou fora do design final",
+      "Passar de preferências declaradas para comportamento real com um teste de protótipo: as pessoas mantêm a extensão instalada?",
+      "Validar a metodologia de cálculo com fontes científicas antes de mostrar números como “0,26 ml por busca”",
     ],
+    cta_label: "Vamos conversar?",
+    cta_sub: "Se você se interessou por este projeto ou quer conhecer mais sobre o meu trabalho, me escreva.",
+    cta_email: "Enviar e-mail",
+    cta_linkedin: "Ver LinkedIn",
   },
 };
 
@@ -597,9 +606,24 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           </ul>
         </Reveal>
 
-        <div style={{ marginTop: "4rem", paddingTop: "2rem", borderTop: "1px solid var(--border)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
+        <div style={{ marginTop: "3rem", padding: "2rem", borderRadius: "0.75rem", border: "1px solid var(--border)", background: "var(--surface)", textAlign: "center" }}>
+          <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", color: "var(--accent)", marginBottom: "0.75rem", letterSpacing: "-0.01em" }}>{C.cta_label}</p>
+          <p style={{ fontSize: "0.9375rem", color: "var(--muted)", marginBottom: "1.5rem", lineHeight: 1.6 }}>{C.cta_sub}</p>
+          <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="mailto:mvreissilva@gmail.com" className="btn-primary">{C.cta_email}</a>
+            <a
+              href="https://linkedin.com/in/reis-marcus"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-flex", alignItems: "center", padding: "0.625rem 1.25rem", borderRadius: "0.5rem", border: "1px solid var(--border)", background: "transparent", fontSize: "0.875rem", fontWeight: 500, color: "var(--ink)", textDecoration: "none", transition: "opacity 0.2s", fontFamily: "var(--font-sans)" }}
+            >
+              {C.cta_linkedin}
+            </a>
+          </div>
+        </div>
+
+        <div style={{ marginTop: "1.5rem" }}>
           <Link href={`/${lang}`} style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none" }}>{C.back}</Link>
-          <a href="mailto:mvreissilva@gmail.com" style={{ fontSize: "0.875rem", fontWeight: 500, color: "var(--accent)", textDecoration: "none" }}>{C.contact}</a>
         </div>
       </section>
 

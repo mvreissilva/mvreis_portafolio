@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
+import NextProject from "@/components/ui/NextProject";
 
 interface Props {
   params: Promise<{ lang: string }>;
@@ -1542,6 +1543,8 @@ export default async function CamperotecaPage({ params }: Props) {
               </a>
             </div>
           </div>
+
+          <NextProject lang={lang} current="camperoteca" />
 
           {/* Volver */}
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", marginTop: "1.5rem" }}>

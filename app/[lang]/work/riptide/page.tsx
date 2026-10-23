@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LANGS, type Lang } from "@/lib/i18n";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
+import NextProject from "@/components/ui/NextProject";
 import ZoomableImage from "@/components/ui/ZoomableImage";
 import { Reveal } from "@/components/ui/Reveal";
 import { pageMetadata } from "@/lib/site";
@@ -657,6 +658,8 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
             </a>
           </div>
         </div>
+
+        <NextProject lang={lang} current="riptide" />
 
         <div style={{ marginTop: "1.5rem" }}>
           <Link href={`/${lang}`} style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none" }}>{C.back}</Link>

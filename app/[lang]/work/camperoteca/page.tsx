@@ -77,9 +77,9 @@ const copy = {
 
     /* 02 */
     prob_label: "Problema y oportunidad",
-    prob_title: "Herramientas caras, de uso puntual y sin un lugar para compartirlas",
-    prob_body: "Muchas personas que camperizan su furgoneta por cuenta propia se encuentran con herramientas y materiales caros, difíciles de encontrar o que solo usarán una vez. Al terminar cada fase, lo que sobra se queda guardado o se pierde. Y no existe una plataforma pensada para que esta comunidad preste, intercambie o reutilice lo que ya tiene.",
-    prob_opp: "La pregunta de partida: ¿cómo facilitar que quien camperiza por su cuenta consiga lo que necesita sin comprarlo todo y aproveche lo que otros ya tienen? La investigación tenía que confirmar si ese era el problema real y descubrir si había otros.",
+    prob_title: "Un proceso complejo, sin guía ni recursos compartidos",
+    prob_body: "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, la información está dispersa y las decisiones mal tomadas tienen coste real. Al mismo tiempo, los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin un canal que la articule.",
+    prob_opp: "La oportunidad: una plataforma que ordenara el proceso y activara la comunidad, donde herramientas, materiales y conocimiento circularan entre particulares mediante préstamo o intercambio.",
     /* 03 */
     research_label: "UX Research",
     research_title: "Investigar antes de diseñar",
@@ -199,7 +199,7 @@ const copy = {
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
     learns: [
-      { title: "El research amplió el problema", body: "Empecé pensando en una plataforma para compartir herramientas. La encuesta y las entrevistas mostraron otra necesidad igual de fuerte: saber por dónde empezar. Por eso Camperoteca combina Encuentra con Mi Proyecto y Aprende." },
+      { title: "El research ordenó las prioridades", body: "Partía de dos problemas: un proceso sin orden y herramientas caras de uso puntual. La encuesta y las entrevistas confirmaron los dos y mostraron cómo resolverlos: Mi Proyecto con la etapa actual y el siguiente paso, y Encuentra para lo que solo se usa una vez." },
       { title: "La hipótesis de partida se sostuvo", body: "En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar. Eso confirmó que el intercambio debía ser un eje del MVP y no un extra." },
       { title: "Auditar mi propio trabajo también es diseño", body: "Al preparar este case study revisé la coherencia entre research, prototipo y MVP. Encontré cifras sin fuente y una necesidad sin cubrir: ofrecer un recurso propio. Corregí las cifras y diseñé ese flujo antes de publicar. Me enseñó que un caso honesto vale más que uno redondo." },
     ],
@@ -262,9 +262,9 @@ const copy = {
     cta_linkedin: "View LinkedIn",
 
     prob_label: "Problem & Opportunity",
-    prob_title: "Expensive, single-use tools and nowhere to share them",
-    prob_body: "Many people converting their own van face tools and materials that are expensive, hard to find or needed only once. When each phase ends, the leftovers sit in storage or go to waste. And there is no platform designed for this community to lend, swap or reuse what it already has.",
-    prob_opp: "The starting question: how can people converting their own van get what they need without buying everything, and make use of what others already have? The research had to confirm whether this was the real problem and uncover any others.",
+    prob_title: "A complex process, with no guidance or shared resources",
+    prob_body: "Converting a van on your own is technically complex and financially demanding. The process has no clear order, information is scattered and poorly timed decisions carry real cost. At the same time, materials and tools used briefly — at real cost — end up idle once that phase is over. A community that shares resources exists, but without a channel to bring it together.",
+    prob_opp: "The opportunity: a platform that brings order to the process and activates the community, where tools, materials and knowledge flow between individuals through lending or swapping.",
     research_label: "UX Research",
     research_title: "Research before design",
     research_body: "Before designing, I defined research questions about the product, the users and the market. To answer them I combined an online survey (32 responses, Nov–Dec 2025), 7 in-depth interviews and a benchmark of 3 platforms with a SWOT of the direct competitor. From that data I synthesised the insights and prioritised them by impact and effort to define the MVP.",
@@ -376,7 +376,7 @@ const copy = {
     learn_label: "Learnings",
     learn_title: "What I take away from this project",
     learns: [
-      { title: "The research widened the problem", body: "I started out thinking of a platform for sharing tools. The survey and interviews revealed another need just as strong: knowing where to start. That's why Camperoteca combines Find with My Project and Learn." },
+      { title: "The research set the priorities", body: "I started from two problems: a process with no order and expensive tools needed only briefly. The survey and interviews confirmed both and showed how to solve them: My Project with the current stage and the next step, and Find for what you only use once." },
       { title: "The starting hypothesis held up", body: "In the interviews, 7 out of 7 people put finding tools ahead of learning or connecting. That confirmed exchange had to be a core part of the MVP, not an extra." },
       { title: "Auditing my own work is design too", body: "While preparing this case study I checked the consistency between research, prototype and MVP. I found figures without a source and an unmet need: offering your own resource. I corrected the figures and designed that flow before publishing. It taught me that an honest case is worth more than a polished one." },
     ],
@@ -436,9 +436,9 @@ const copy = {
     cta_linkedin: "Ver LinkedIn",
 
     prob_label: "Problema e oportunidade",
-    prob_title: "Ferramentas caras, de uso pontual e sem um lugar para compartilhá-las",
-    prob_body: "Muitas pessoas que camperizam a própria van se deparam com ferramentas e materiais caros, difíceis de encontrar ou que só vão usar uma vez. Ao fim de cada etapa, o que sobra fica guardado ou se perde. E não existe uma plataforma pensada para que essa comunidade empreste, troque ou reaproveite o que já tem.",
-    prob_opp: "A pergunta de partida: como fazer com que quem camperiza por conta própria consiga o que precisa sem comprar tudo e aproveite o que outras pessoas já têm? A pesquisa precisava confirmar se esse era o problema real e descobrir se havia outros.",
+    prob_title: "Um processo complexo, sem orientação nem recursos compartilhados",
+    prob_body: "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e as decisões mal tomadas têm custo real. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que compartilha recursos, mas sem um canal que a articule.",
+    prob_opp: "A oportunidade: uma plataforma que organizasse o processo e ativasse a comunidade, onde ferramentas, materiais e conhecimento circulassem entre particulares por empréstimo ou troca.",
     research_label: "UX Research",
     research_title: "Pesquisar antes de projetar",
     research_body: "Antes de desenhar, defini perguntas de pesquisa sobre o produto, os usuários e o mercado. Para respondê-las, combinei um questionário online (32 respostas, nov.–dez. 2025), 7 entrevistas em profundidade e um benchmark de 3 plataformas com uma análise SWOT da concorrente direta. Com esses dados, sintetizei os insights e os priorizei por impacto e esforço para definir o MVP.",
@@ -549,7 +549,7 @@ const copy = {
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
     learns: [
-      { title: "A pesquisa ampliou o problema", body: "Comecei pensando em uma plataforma para compartilhar ferramentas. O questionário e as entrevistas mostraram outra necessidade tão forte quanto essa: saber por onde começar. Por isso, a Camperoteca combina Encontra com Meu Projeto e Aprende." },
+      { title: "A pesquisa definiu as prioridades", body: "Eu partia de dois problemas: um processo sem ordem e ferramentas caras de uso pontual. O questionário e as entrevistas confirmaram os dois e mostraram como resolvê-los: Meu Projeto com a etapa atual e o próximo passo, e Encontra para o que só se usa uma vez." },
       { title: "A hipótese de partida se confirmou", body: "Nas entrevistas, 7 de 7 pessoas colocaram encontrar ferramentas à frente de aprender ou se conectar. Isso confirmou que a troca precisava ser um eixo do MVP, e não um extra." },
       { title: "Auditar meu próprio trabalho também é design", body: "Ao preparar este estudo de caso, revisei a coerência entre pesquisa, protótipo e MVP. Encontrei números sem fonte e uma necessidade não atendida: oferecer um recurso próprio. Corrigi os números e desenhei esse fluxo antes de publicar. Aprendi que um caso honesto vale mais do que um caso perfeitinho." },
     ],

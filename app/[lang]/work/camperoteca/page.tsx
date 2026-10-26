@@ -77,9 +77,9 @@ const copy = {
 
     /* 02 */
     prob_label: "Problema y oportunidad",
-    prob_title: "Un proceso largo, sin punto de partida ni recursos compartidos",
-    prob_body: "Camperizar una furgoneta por cuenta propia exige decisiones técnicas, legales y económicas en un orden que nadie explica. En las entrevistas, 6 de 7 personas aprendían con YouTube y ninguna usaba una app específica. Además, muchas herramientas se compran para usarlas una o dos veces y después se quedan guardadas.",
-    prob_opp: "La oportunidad: un único lugar que ordene el proceso por etapas y conecte a quien tiene una herramienta con quien la necesita cerca.",
+    prob_title: "Herramientas caras, de uso puntual y sin un lugar para compartirlas",
+    prob_body: "Muchas personas que camperizan su furgoneta por cuenta propia se encuentran con herramientas y materiales caros, difíciles de encontrar o que solo usarán una vez. Al terminar cada fase, lo que sobra se queda guardado o se pierde. Y no existe una plataforma pensada para que esta comunidad preste, intercambie o reutilice lo que ya tiene.",
+    prob_opp: "La pregunta de partida: ¿cómo facilitar que quien camperiza por su cuenta consiga lo que necesita sin comprarlo todo y aproveche lo que otros ya tienen? La investigación tenía que confirmar si ese era el problema real y descubrir si había otros.",
     /* 03 */
     research_label: "UX Research",
     research_title: "Investigar antes de diseñar",
@@ -142,7 +142,7 @@ const copy = {
     mvp_inc: [
       "Mi Proyecto: hub central del proceso. El usuario gestiona su avance por etapas, visualiza su progreso y accede a recursos contextuales según su necesidad actual.",
       "Aprende: guías técnicas, legales y casos reales organizados por etapa del proyecto.",
-      "Encuentra: directorio de materiales y herramientas disponibles entre usuarios — versión inicial del eje de intercambio P2P.",
+      "Encuentra: herramientas y materiales que otras personas ofrecen cerca, para pedirlos prestados o intercambiarlos. Desde Encuentra o Mi cuenta cualquiera puede ofrecer los suyos.",
       "Comunidad: espacio de conexión entre personas en proceso de camperización para compartir experiencias y conocimiento.",
       "Onboarding y registro: presenta cómo funciona la plataforma por etapas y da acceso mediante registro o inicio de sesión.",
     ],
@@ -199,16 +199,15 @@ const copy = {
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
     learns: [
-      { title: "Diseñé un punto de entrada, no una biblioteca", body: "Empecé pensando en una guía de contenidos. Las entrevistas me hicieron cambiar el foco: lo difícil no era encontrar información, sino saber por dónde empezar. Por eso Mi Proyecto muestra siempre la etapa actual y el siguiente paso." },
-      { title: "Las herramientas no eran un extra", body: "En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar. Ese dato convirtió Encuentra en un eje del MVP desde el principio, al mismo nivel que Aprende." },
-      { title: "Auditar mi propio trabajo también es diseño", body: "Al preparar este case study revisé la coherencia entre research, prototipo y MVP. Encontré cifras sin fuente y una necesidad sin cubrir: ofrecer un recurso propio. Corregí las cifras antes de publicar, y dejé esa necesidad como siguiente paso. Me enseñó que un caso honesto vale más que uno redondo." },
+      { title: "El research amplió el problema", body: "Empecé pensando en una plataforma para compartir herramientas. La encuesta y las entrevistas mostraron otra necesidad igual de fuerte: saber por dónde empezar. Por eso Camperoteca combina Encuentra con Mi Proyecto y Aprende." },
+      { title: "La hipótesis de partida se sostuvo", body: "En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar. Eso confirmó que el intercambio debía ser un eje del MVP y no un extra." },
+      { title: "Auditar mi propio trabajo también es diseño", body: "Al preparar este case study revisé la coherencia entre research, prototipo y MVP. Encontré cifras sin fuente y una necesidad sin cubrir: ofrecer un recurso propio. Corregí las cifras y diseñé ese flujo antes de publicar. Me enseñó que un caso honesto vale más que uno redondo." },
     ],
     next_title: "Próximas iteraciones",
     nexts: [
       "Evaluar la comprensión del flujo principal con usuarios reales mediante pruebas de usabilidad.",
       "Perfil con valoraciones y reputación. Lo dejé fuera del MVP a propósito: la reputación se construye con intercambios reales, y en un lanzamiento sin historial las valoraciones estarían vacías y no darían confianza. Primero hay que validar que la comunidad presta y pide herramientas; con ese historial, valorar sí tendrá sentido.",
       "Personalizar el proyecto desde el registro: recoger tipo de furgoneta, fase, presupuesto y objetivos para adaptar Mi Proyecto y sus recomendaciones.",
-      "Diseñar «Ofrecer un recurso», para que cada persona pueda publicar sus propias herramientas y materiales. El MVP valida primero el lado de pedir; este paso cierra el ciclo del intercambio.",
     ],
     research_methods: [
       { num: "32", label: "respuestas a la encuesta" },

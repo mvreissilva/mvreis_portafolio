@@ -136,6 +136,19 @@ const copy = {
     /* 06 */
     arch_label: "Arquitectura de información",
     arch_title: "Estructura de navegación y recorrido principal",
+    hp_steps: [
+      { t: "Home", d: "Descubre qué es Camperoteca.", cta: "Empezar" },
+      { t: "Onboarding", d: "Entiende cómo funciona por etapas.", cta: "Empezar mi proyecto" },
+      { t: "Login o Registro", d: "Inicia sesión o crea su cuenta.", cta: "Iniciar sesión" },
+      { t: "Mi Proyecto", d: "Ve su etapa y el siguiente paso.", cta: "Buscar recurso", hub: true },
+      { t: "Encuentra", d: "Localiza una herramienta cerca y ve a qué distancia está.", cta: "Pedir préstamo" },
+      { t: "Solicitud", d: "Pide el préstamo con fechas y un mensaje.", cta: "Enviar solicitud" },
+      { t: "Solicitud enviada", d: "Recibe la confirmación y sigue con su proyecto.", cta: "" },
+    ],
+    hp_alt: "Happy path de Camperoteca: Home, Onboarding, Login o Registro y Mi Proyecto, desde donde se accede a Aprende y Comunidad. El recorrido principal sigue por Encuentra, Solicitud y Solicitud enviada.",
+    hp_hub: "Desde aquí también: Aprende · Comunidad",
+    hp_cta: "CTA",
+    hp_label: "Happy path",
     arch_body:
       "Mi Proyecto actúa como hub central: el usuario avanza por etapas y, al detectar una necesidad, accede a Aprende, Encuentra o Comunidad mediante CTAs contextuales. El intercambio de recursos no es un flujo paralelo — emerge del propio proceso, en el momento en que tiene sentido.",
     mvp_title: "Alcance del MVP",
@@ -317,6 +330,19 @@ const copy = {
     hmw_col3: "Design decision",
     arch_label: "Information Architecture",
     arch_title: "Navigation structure and main user flow",
+    hp_steps: [
+      { t: "Home", d: "Discovers what Camperoteca is.", cta: "Get started" },
+      { t: "Onboarding", d: "Understands how it works by stage.", cta: "Start my project" },
+      { t: "Log in or Sign up", d: "Logs in or creates an account.", cta: "Log in" },
+      { t: "My Project", d: "Sees their stage and the next step.", cta: "Find a resource", hub: true },
+      { t: "Find", d: "Finds a tool nearby and sees how far away it is.", cta: "Borrow" },
+      { t: "Request", d: "Asks to borrow it with dates and a message.", cta: "Send request" },
+      { t: "Request sent", d: "Gets the confirmation and carries on with the project.", cta: "" },
+    ],
+    hp_alt: "Camperoteca happy path: Home, Onboarding, Log in or Sign up and My Project, which also leads to Learn and Community. The main flow continues through Find, Request and Request sent.",
+    hp_hub: "From here too: Learn · Community",
+    hp_cta: "CTA",
+    hp_label: "Happy path",
     arch_body:
       "My Project acts as the central hub: the user progresses through stages and, when a need arises, accesses Learn, Find or Community through contextual CTAs. The exchange of resources is not a parallel flow — it emerges from the process itself, at the moment it makes sense.",
     mvp_title: "MVP Scope",
@@ -491,6 +517,19 @@ const copy = {
     hmw_col3: "Decisão de design",
     arch_label: "Arquitetura da informação",
     arch_title: "Estrutura de navegação e fluxo principal",
+    hp_steps: [
+      { t: "Home", d: "Descobre o que é a Camperoteca.", cta: "Começar" },
+      { t: "Onboarding", d: "Entende como funciona por etapas.", cta: "Começar meu projeto" },
+      { t: "Login ou Cadastro", d: "Faz login ou cria uma conta.", cta: "Entrar" },
+      { t: "Meu Projeto", d: "Vê sua etapa e o próximo passo.", cta: "Buscar recurso", hub: true },
+      { t: "Encontra", d: "Encontra uma ferramenta por perto e vê a que distância está.", cta: "Pedir emprestado" },
+      { t: "Solicitação", d: "Pede o empréstimo com datas e uma mensagem.", cta: "Enviar solicitação" },
+      { t: "Solicitação enviada", d: "Recebe a confirmação e segue com o projeto.", cta: "" },
+    ],
+    hp_alt: "Happy path da Camperoteca: Home, Onboarding, Login ou Cadastro e Meu Projeto, de onde também se acessa Aprende e Comunidade. O fluxo principal segue por Encontra, Solicitação e Solicitação enviada.",
+    hp_hub: "Daqui também: Aprende · Comunidade",
+    hp_cta: "CTA",
+    hp_label: "Happy path",
     arch_body:
       "Meu Projeto funciona como hub central: o usuário avança por etapas e, ao identificar uma necessidade, acessa Aprende, Encontra ou Comunidade por meio de CTAs contextuais. A troca de recursos não é um fluxo paralelo — emerge do próprio processo, no momento em que faz sentido.",
     mvp_title: "Escopo do MVP",
@@ -1052,18 +1091,41 @@ export default async function CamperotecaPage({ params }: Props) {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div style={{ borderRadius: "12px", overflow: "hidden", marginBottom: "3rem", background: "#F7F7F4", padding: "0 0 2.75rem" }}>
-            <ZoomableImage
-              src="/assets/camperoteca/happy-path.png"
-              alt="Happy path de Camperoteca: Home, Onboarding, Login o Registro y Mi Proyecto, desde donde se accede a Aprende y Comunidad. El recorrido principal sigue por Encuentra, Solicitud y Solicitud enviada."
-              width={1672}
-              height={941}
-              style={{ width: "100%", height: "auto", display: "block" }}
-              hint={C.zoom_hint}
-              hintStyle={{ bottom: "-2.25rem" }}
-              closeLabel={C.zoom_close}
-            />
-          </div>
+          <figure style={{ margin: "0 0 3rem" }}>
+            <p style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", marginBottom: "0.75rem" }}>{C.hp_label}</p>
+            <ol className="cp-hp" aria-label={C.hp_alt} tabIndex={0} style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              {C.hp_steps.map((st, i) => (
+                <li
+                  key={st.t}
+                  style={{
+                    background: st.hub ? "color-mix(in srgb, var(--accent) 8%, var(--surface))" : "var(--surface)",
+                    border: st.hub ? "1.5px solid var(--accent)" : "1px solid var(--border)",
+                    borderRadius: "12px",
+                    padding: "1.1rem 1.1rem 1.2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.5rem",
+                  }}
+                >
+                  <span aria-hidden="true" style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "1.25rem", lineHeight: 1, color: "var(--accent)" }}>{String(i + 1).padStart(2, "0")}</span>
+                  <p style={{ fontSize: "0.875rem", fontWeight: 600, lineHeight: 1.35, color: "var(--ink)" }}>{st.t}</p>
+                  <p style={{ fontSize: "0.8125rem", lineHeight: 1.55, color: "var(--muted)" }}>{st.d}</p>
+                  {st.hub && <p style={{ fontSize: "0.8125rem", lineHeight: 1.5, color: "var(--ink)" }}>{C.hp_hub}</p>}
+                  {st.cta && (
+                    <span style={{ marginTop: "auto", paddingTop: "0.5rem", fontSize: "0.75rem", color: "var(--ink)" }}>
+                      <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)" }}>{C.hp_cta}</span> → {st.cta}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </figure>
+          <style>{`
+            .cp-hp { display: grid; gap: 0.75rem; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem !important; }
+            .cp-hp > li { scroll-snap-align: start; }
+            @media (min-width: 640px) { .cp-hp { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; grid-template-columns: repeat(2, 1fr) !important; padding-bottom: 0 !important; } }
+            @media (min-width: 900px) { .cp-hp { grid-template-columns: repeat(4, 1fr) !important; } }
+          `}</style>
         </Reveal>
 
         {/* MVP table */}

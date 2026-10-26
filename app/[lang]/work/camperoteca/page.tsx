@@ -77,92 +77,62 @@ const copy = {
 
     /* 02 */
     prob_label: "Problema y oportunidad",
-    prob_title: "Un proceso complejo, sin guía ni recursos compartidos",
-    prob_body:
-      "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, la información está dispersa y las decisiones mal tomadas tienen coste real. Al mismo tiempo, los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin un canal que la articule.",
-    prob_opp:
-      "La oportunidad: una plataforma que guiara el proceso y activara la comunidad — donde materiales, herramientas y conocimiento circularan entre privados por donación, intercambio o venta. Orientación y economía circular en un mismo lugar.",
-
+    prob_title: "Un proceso largo, sin punto de partida ni recursos compartidos",
+    prob_body: "Camperizar una furgoneta por cuenta propia exige decisiones técnicas, legales y económicas en un orden que nadie explica. En las entrevistas, 6 de 7 personas aprendían con YouTube y ninguna usaba una app específica. Además, muchas herramientas se compran para usarlas una o dos veces y después se quedan guardadas.",
+    prob_opp: "La oportunidad: un único lugar que ordene el proceso por etapas y conecte a quien tiene una herramienta con quien la necesita cerca.",
     /* 03 */
     research_label: "UX Research",
     research_title: "Investigar antes de diseñar",
-    research_body:
-      "Antes de proponer ninguna solución, llevé a cabo una investigación mixta para entender quiénes eran los usuarios, qué hacían y dónde encontraban dificultades.",
-    research_benchmark:
-      "El análisis competitivo confirmó el hueco: ninguna plataforma española cubre los tres ejes — guías, comunidad y recursos — en un solo lugar. Eso definió el doble alcance del proyecto. El 71,6% de los encuestados usaría una app para este proceso — lo que validó la necesidad de guía estructurada. El 40,6% mostró interés activo en compartir recursos, lo que justificó incluir el eje de intercambio P2P desde el MVP. Las entrevistas reforzaron ambos hallazgos: sin una plataforma que ordene el proceso y conecte a usuarios, cada persona lo resuelve sola y a mayor coste.",
-
+    research_body: "Antes de diseñar, definí preguntas de investigación sobre el producto, los usuarios y el mercado. Para responderlas combiné una encuesta online (32 respuestas, nov.–dic. 2025), 7 entrevistas en profundidad y un benchmark de 3 plataformas con un DAFO de la competidora directa. Con esos datos sinteticé los insights y los prioricé por impacto y esfuerzo para definir el MVP.",
+    research_benchmark: "Analicé Wallapop y Milanuncios como competencia indirecta y Vibravan como competencia directa. Las dos primeras conectan a personas cercanas, pero no acompañan un proyecto ni fomentan la colaboración. Vibravan sí se centra en el mundo camper, pero acumula funciones sin jerarquía y no ofrece guías para quien empieza: es una app para cuando ya estás dentro, no para empezar. Ese hueco definió el posicionamiento. En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar. Sobre la muestra: es pequeña y no representativa. El 62,5% tenía entre 45 y 54 años y ninguna persona entrevistada había terminado su camper. Uso estas cifras para orientar el diseño, no para estimar el mercado.",
     /* 04 */
-    insight_label: "Insight y persona",
+    insight_label: "Insight y personas",
     insight_title: "Lo que realmente necesitaban",
-    insight_quote:
-      "Los usuarios saben lo que quieren: avanzar paso a paso y no gastar de más. Lo que les falta es una plataforma que ordene el proceso y conecte a quienes ya tienen lo que otros buscan.",
-    persona_name: "Blanca Jiménez, 38 años",
-    persona_tag: "«La Exploradora»",
-    persona_desc:
-      "Psicóloga en Pamplona. Le interesa la sostenibilidad y la economía colaborativa. Quiere iniciarse en el mundo camper de forma responsable: aprender antes de camperizar y conectar con personas con intereses similares.",
+    insight_quote: "«Si no sabes por dónde empezar, eso es lo primero» — Calebe, persona entrevistada.",
+    persona_name: "Óscar Navarro, 48 años",
+    persona_photo: "/assets/camperoteca/personas/oscar.webp",
+    persona_tag: "«El Práctico»",
+    persona_desc: "Vive en Sevilla y está camperizando su furgoneta para viajar en familia. Aprende con vídeos y guías paso a paso, y prefiere soluciones que otras personas ya han probado. No quiere gastar un dineral en herramientas que usará una vez.",
     goals_title: "Objetivos",
     goals: [
-      "Empezar de forma sostenible y responsable.",
-      "Aprender antes de tomar decisiones económicas.",
-      "Conectar con una comunidad que comparte sus valores.",
+      "Conseguir herramientas cerca sin comprar las de un solo uso.",
+      "Encontrar soluciones probadas en furgonetas como la suya.",
+      "Avanzar con guías claras, sin tecnicismos.",
     ],
     frusts_title: "Frustraciones",
     frusts: [
-      "No saber por dónde empezar.",
-      "Información dispersa y sin contexto.",
-      "Miedo a gastar dinero en soluciones que no funcionen.",
+      "Tutoriales poco claros o demasiado técnicos.",
+      "Herramientas caras para usarlas una sola vez.",
+      "No saber qué paso toca ahora ni qué viene después.",
     ],
-    persona_context:
-      "Dos perfiles distintos, dos necesidades que el producto debe resolver a la vez.",
-    persona2_name: "Fernando Molina, 31 años",
-    persona2_tag: "«El Nómada»",
-    persona2_desc:
-      "Diseñador UX en Valencia. Ya tiene su furgoneta camperizada y la usa como segunda vivienda. Acumula materiales sobrantes y herramientas que ya no necesita, y busca una forma de que circulen entre otros usuarios.",
+    persona_context: "Dos personas construidas con los datos de la muestra: quien empieza desde cero y quien ya tiene algo que compartir.",
+    persona2_name: "Carmen Ortega, 47 años",
+    persona2_photo: null,
+    persona2_tag: "«La Colaboradora»",
+    persona2_desc: "Vive en Sevilla y lleva unos meses camperizando su furgoneta. Ya tiene algunas herramientas y está dispuesta a prestarlas o intercambiarlas. Antes de buscar en internet, pregunta en su zona.",
     persona2_goals: [
-      "Dar salida a herramientas y materiales que ya no usa.",
-      "Conectar con personas en fases más tempranas que él.",
-      "Participar en una comunidad donde el conocimiento se comparte.",
+      "Prestar o intercambiar herramientas con gente cercana.",
+      "Saber con quién trata antes de quedar.",
+      "Resolver dudas con personas con más experiencia.",
     ],
     persona2_frusts: [
-      "No hay un canal confiable para intercambiar entre privados.",
-      "Los grupos de Facebook son caóticos y sin sistema de confianza.",
-      "Siente que su experiencia podría ayudar a otros pero no tiene cómo.",
+      "No saber quién tiene cerca lo que necesita.",
+      "Desconfiar de desconocidos sin valoraciones.",
+      "Comunidades online desordenadas donde nada se encuentra.",
     ],
-
     /* 05 */
-    hmw_label: "How Might We",
-    hmw_title: "Del problema a la oportunidad",
+    hmw_label: "Del dato a la decisión",
+    hmw_title: "Qué dijeron los datos y qué decidí",
     hmw_rows: [
-      {
-        prob: "Información fragmentada en múltiples fuentes",
-        opp: "Centralizar y estructurar en un solo lugar",
-        dec: "Dashboard con fases ordenadas",
-      },
-      {
-        prob: "Sin referencia de progreso en el proyecto",
-        opp: "Hacer visible el avance paso a paso",
-        dec: "Planificador con etapas y checklist",
-      },
-      {
-        prob: "Guías dispersas en YouTube, foros y redes; el usuario no sabe por dónde empezar",
-        opp: "Estructurar el conocimiento por tipo y fase del proyecto",
-        dec: "Guías técnicas, legales y casos reales",
-      },
-      {
-        prob: "Herramientas y materiales requieren compra definitiva o búsqueda externa",
-        opp: "Facilitar el acceso a recursos cercanos mediante intercambio, donación o venta entre usuarios",
-        dec: "Directorio con filtros + perfiles de usuario",
-      },
-      {
-        prob: "Comunidad valiosa pero caótica e infiable",
-        opp: "Organizar por contexto, fase y reputación",
-        dec: "Foro estructurado con validación",
-      },
+      { prob: "6 de 7 aprenden con YouTube; 96,9% quiere guías en la app", opp: "Aprenden fuera, sin orden", dec: "Aprende por etapas y Mi Proyecto con el siguiente paso" },
+      { prob: "7 de 7 priorizan herramientas; 65,6% usaría la app para ello", opp: "Comprar para un solo uso no compensa", dec: "Encuentra, para pedir prestado o intercambiar" },
+      { prob: "6 de 7 quieren ver qué hay cerca, en mapa y lista", opp: "La cercanía decide si compartir es viable", dec: "Mapa + lista en Encuentra" },
+      { prob: "7 de 7 piden valoraciones", opp: "Sin confianza no hay intercambio", dec: "Valoraciones en la siguiente fase, cuando haya intercambios que valorar" },
+      { prob: "81,3% espera una navegación fácil; 68,8% se uniría a una comunidad", opp: "Quieren comunidad, pero simple y ordenada", dec: "Un solo hub y Comunidad por temas" },
     ],
-    hmw_col1: "Problema",
-    hmw_col2: "Oportunidad",
+    hmw_col1: "Dato",
+    hmw_col2: "Insight",
     hmw_col3: "Decisión de diseño",
-
     /* 06 */
     arch_label: "Arquitectura de información",
     arch_title: "Estructura de navegación y recorrido principal",
@@ -213,8 +183,7 @@ const copy = {
     ui_aprende_body:
       "Organiza el conocimiento en tres categorías: guías técnicas (sistemas eléctricos, aislamiento, carpintería), guías legales (homologaciones, ITV, normativa) y casos reales de otros usuarios.",
     ui_encuentra_title: "Encuentra Recursos",
-    ui_encuentra_body:
-      "Conecta con usuarios cercanos que tienen herramientas o materiales disponibles — para intercambiar, donar, comprar o vender. También deriva a tiendas especializadas cuando no hay recurso disponible en la comunidad.",
+    ui_encuentra_body: "Reúne las herramientas y los materiales que otras personas ofrecen cerca, para pedirlos prestados o intercambiarlos. Cada tarjeta indica a qué distancia está y si está disponible.",
     ui_login_title: "Login",
     ui_login_body:
       "Acceso directo y sin fricción. El usuario entra con email y contraseña para continuar donde lo dejó.",
@@ -230,43 +199,42 @@ const copy = {
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
     learns: [
-      "Escuchar a los usuarios me hizo cambiar el foco: no diseñé una guía de contenidos, diseñé un punto de entrada. La desorientación inicial era el problema real.",
-      "El research reveló que la motivación caía cuando el proceso parecía infinito. Mostrar etapas y avance no fue una decisión estética — fue una respuesta directa a lo que decían los usuarios.",
-      "Los datos de la encuesta — el 68% consultando múltiples fuentes, el 72% sin punto de partida claro — hicieron de la arquitectura por etapas la única respuesta coherente. Estructurar el contenido por fase no fue una convención de UX, fue una decisión de diseño anclada en esos números.",
-      "Las encuestas revelaron una disposición real a compartir materiales y herramientas. La comunidad no fue una apuesta de diseño — fue una respuesta a lo que los propios usuarios pedían.",
+      { title: "Diseñé un punto de entrada, no una biblioteca", body: "Empecé pensando en una guía de contenidos. Las entrevistas me hicieron cambiar el foco: lo difícil no era encontrar información, sino saber por dónde empezar. Por eso Mi Proyecto muestra siempre la etapa actual y el siguiente paso." },
+      { title: "Las herramientas no eran un extra", body: "En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar. Ese dato convirtió Encuentra en un eje del MVP desde el principio, al mismo nivel que Aprende." },
+      { title: "Auditar mi propio trabajo también es diseño", body: "Al preparar este case study revisé la coherencia entre research, prototipo y MVP. Encontré cifras sin fuente y una necesidad sin cubrir: ofrecer un recurso propio. Corregí las cifras antes de publicar, y dejé esa necesidad como siguiente paso. Me enseñó que un caso honesto vale más que uno redondo." },
     ],
     next_title: "Próximas iteraciones",
     nexts: [
       "Evaluar la comprensión del flujo principal con usuarios reales mediante pruebas de usabilidad.",
-      "Diseñar y validar la sección de perfil de usuario como base del sistema de confianza para las operaciones de intercambio, donación y venta entre privados.",
-      "Desarrollar el marketplace completo con sistema de valoraciones y reputación entre usuarios.",
+      "Perfil con valoraciones y reputación. Lo dejé fuera del MVP a propósito: la reputación se construye con intercambios reales, y en un lanzamiento sin historial las valoraciones estarían vacías y no darían confianza. Primero hay que validar que la comunidad presta y pide herramientas; con ese historial, valorar sí tendrá sentido.",
       "Personalizar el proyecto desde el registro: recoger tipo de furgoneta, fase, presupuesto y objetivos para adaptar Mi Proyecto y sus recomendaciones.",
+      "Diseñar «Ofrecer un recurso», para que cada persona pueda publicar sus propias herramientas y materiales. El MVP valida primero el lado de pedir; este paso cierra el ciclo del intercambio.",
     ],
     research_methods: [
-      { num: "34", label: "encuestas realizadas" },
-      { num: "8", label: "entrevistas en profundidad" },
+      { num: "32", label: "respuestas a la encuesta" },
+      { num: "7", label: "entrevistas en profundidad" },
       { num: "3", label: "plataformas analizadas" },
     ],
     research_findings_label: "Hallazgos cuantitativos",
     research_findings: [
-      { pct: "72%", label: "no saben por dónde empezar su proyecto" },
-      { pct: "68%", label: "consultan múltiples fuentes para resolver una sola duda" },
-      { pct: "54%", label: "han cometido o temen errores con impacto económico real" },
-      { pct: "61%", label: "preferirían ayuda de otros usuarios durante el proceso" },
+      { pct: "96,9%", label: "querría tutoriales y guías dentro de la app" },
+      { pct: "68,8%", label: "se uniría a una comunidad de camperización" },
+      { pct: "65,6%", label: "usaría la app para encontrar, prestar o intercambiar herramientas" },
+      { pct: "46,9%", label: "hace bricolaje rara vez o nunca" },
     ],
     proto_cta: "Ver prototipo interactivo",
     proto_hint: "Recorre el flujo completo: onboarding, login y las cuatro secciones de la app.",
     back_projects: "← Volver a proyectos",
     nav_sections: [
-      { id: "cs-problema",    label: "Problema" },
-      { id: "cs-research",    label: "Research" },
-      { id: "cs-insight",     label: "Insight" },
-      { id: "cs-hmw",         label: "HMW" },
-      { id: "cs-arch",        label: "Arquitectura" },
-      { id: "cs-wireframes",  label: "Wireframes" },
-      { id: "cs-ds",          label: "Design System" },
-      { id: "cs-ui",          label: "UI" },
-      { id: "cs-learn",       label: "Aprendizajes" },
+      { id: "cs-problema", label: "Problema" },
+      { id: "cs-research", label: "Research" },
+      { id: "cs-insight", label: "Insight" },
+      { id: "cs-hmw", label: "Decisiones" },
+      { id: "cs-arch", label: "Arquitectura" },
+      { id: "cs-wireframes", label: "Wireframes" },
+      { id: "cs-ds", label: "Design System" },
+      { id: "cs-ui", label: "UI" },
+      { id: "cs-learn", label: "Aprendizajes" },
     ],
   },
 
@@ -1000,8 +968,8 @@ export default async function CamperotecaPage({ params }: Props) {
           {/* Persona cards — Blanca + Fernando */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }} className="personas-two-col">
             {[
-              { photo: "/assets/camperoteca/personas/blanca.webp", name: C.persona_name, tag: C.persona_tag, desc: C.persona_desc, goals: C.goals, frusts: C.frusts },
-              { photo: "/assets/camperoteca/personas/fernando.webp", name: C.persona2_name, tag: C.persona2_tag, desc: C.persona2_desc, goals: C.persona2_goals, frusts: C.persona2_frusts },
+              { photo: "persona_photo" in C ? (C as { persona_photo: string | null }).persona_photo : "/assets/camperoteca/personas/blanca.webp", name: C.persona_name, tag: C.persona_tag, desc: C.persona_desc, goals: C.goals, frusts: C.frusts },
+              { photo: "persona2_photo" in C ? (C as { persona2_photo: string | null }).persona2_photo : "/assets/camperoteca/personas/fernando.webp", name: C.persona2_name, tag: C.persona2_tag, desc: C.persona2_desc, goals: C.persona2_goals, frusts: C.persona2_frusts },
             ].map(({ photo, name, tag, desc, goals, frusts }) => (
               <div
                 key={name}
@@ -1030,14 +998,24 @@ export default async function CamperotecaPage({ params }: Props) {
                         boxShadow: "0 0 0 1px var(--border), 0 0 0 4px var(--surface), 0 0 0 5px color-mix(in srgb, var(--accent) 45%, transparent)",
                       }}
                     >
-                      <Image
-                        src={photo}
-                        alt={name.split(",")[0]}
-                        fill
-                        sizes="88px"
-                        quality={90}
-                        style={{ objectFit: "cover", objectPosition: "50% 20%" }}
-                      />
+                      {photo ? (
+                        <Image
+                          src={photo}
+                          alt={name.split(",")[0]}
+                          fill
+                          sizes="88px"
+                          quality={90}
+                          style={{ objectFit: "cover", objectPosition: "50% 20%" }}
+                        />
+                      ) : (
+                        <span
+                          role="img"
+                          aria-label={name.split(",")[0]}
+                          style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "2rem", color: "var(--accent)" }}
+                        >
+                          {name.charAt(0)}
+                        </span>
+                      )}
                     </div>
                     <div>
                       <p style={{ fontSize: "1.05rem", fontWeight: 600, marginBottom: "0.2rem", color: "var(--ink)" }}>
@@ -1148,7 +1126,7 @@ export default async function CamperotecaPage({ params }: Props) {
           <div style={{ borderRadius: "12px", overflow: "hidden", marginBottom: "3rem", background: "#F7F7F4", padding: "0 0 2.75rem" }}>
             <ZoomableImage
               src="/assets/camperoteca/happy-path.png"
-              alt="Secuencia de navegación: Home, Onboarding, Login o Registro, Mi Proyecto, Aprende, Encuentra, Comunidad"
+              alt="Happy path de Camperoteca: Home, Onboarding, Login o Registro y Mi Proyecto, desde donde se accede a Aprende y Comunidad. El recorrido principal sigue por Encuentra, Solicitud y Solicitud enviada."
               width={1672}
               height={941}
               style={{ width: "100%", height: "auto", display: "block" }}
@@ -1461,7 +1439,14 @@ export default async function CamperotecaPage({ params }: Props) {
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span>{l}</span>
+                {typeof l === "string" ? (
+                  <span>{l}</span>
+                ) : (
+                  <span>
+                    <strong style={{ display: "block", fontWeight: 600, marginBottom: "0.35rem" }}>{l.title}</strong>
+                    {l.body}
+                  </span>
+                )}
               </li>
             ))}
           </ul>

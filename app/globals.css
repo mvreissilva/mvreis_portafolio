@@ -144,3 +144,9 @@ details > summary::-webkit-details-marker { display: none; }
   .zi-scroll { justify-content: flex-start; }
   .zi-full { max-width: none; max-height: none; width: 1400px; }
 }
+
+.zi-hint-fine { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .zi-hint-touch { display: none; }
+  .zi-hint-fine { display: inline; }
+}

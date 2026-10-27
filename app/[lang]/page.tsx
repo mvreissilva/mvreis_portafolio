@@ -129,18 +129,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* ── ÁREAS ── */}
-      <section id="skills" style={sec}>
-        <hr style={hr} />
-        <div style={{ paddingTop: "3rem" }}>
-          <span style={lbl}>{tr.areas.label}</span>
-          <p style={{ fontSize: "0.9375rem", color: "var(--muted)", fontFamily: "var(--font-sans)",
-                      lineHeight: 1.65, letterSpacing: "0.01em" }}>
-            {tr.areas.items.join(" · ")}
-          </p>
-        </div>
-      </section>
-
       {/* ── CONTACT ── */}
       <section id="contact" style={sec}>
         <hr style={hr} />

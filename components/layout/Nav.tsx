@@ -132,7 +132,6 @@ export default function Nav({ lang }: { lang: Lang }) {
   const navKeys = [
     { key: "work",    id: "work"    },
     { key: "about",   id: "about"   },
-    { key: "skills",  id: "skills"  },
     { key: "contact", id: "contact" },
   ] as const;
 

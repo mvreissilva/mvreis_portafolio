@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from "react";
 type Props = ImageProps & {
   /** Texto de la pista sobre la imagen (por idioma) */
   hint?: string;
+  /** Texto para dispositivos con puntero (ratón): «Haz clic para ampliar». */
+  hintFine?: string;
   /** Etiqueta accesible del botón de cierre (por idioma) */
   closeLabel?: string;
   /** Ajuste puntual de la posición de la pista (p. ej. bajarla al margen del contenedor) */
@@ -21,6 +23,7 @@ type Props = ImageProps & {
  */
 export default function ZoomableImage({
   hint = "Toca para ampliar",
+  hintFine,
   closeLabel = "Cerrar",
   hintStyle,
   alt,
@@ -55,7 +58,7 @@ export default function ZoomableImage({
         aria-haspopup="dialog"
       >
         <Image alt={alt} style={style} {...imgProps} />
-        <span className="zi-hint" aria-hidden="true" style={hintStyle}>⤢ {hint}</span>
+        <span className="zi-hint" aria-hidden="true" style={hintStyle}>⤢ <span className={hintFine ? "zi-hint-touch" : undefined}>{hint}</span>{hintFine && <span className="zi-hint-fine">{hintFine}</span>}</span>
       </button>
 
       <dialog

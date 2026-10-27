@@ -3,7 +3,7 @@ export type Lang = typeof LANGS[number];
 
 export const t = {
   es: {
-    nav: { work: "Proyectos", about: "Sobre mí", skills: "Habilidades", contact: "Contacto" },
+    nav: { work: "Proyectos", about: "Sobre mí", contact: "Contacto" },
     hero: {
       available: "Disponible · Sevilla",
       title1: "Soy Marcus Reis.",
@@ -23,14 +23,6 @@ export const t = {
         { q: "Qué me diferencia de otros perfiles junior", a: "Mi trayectoria en entornos corporativos me ha dado experiencia analizando procesos complejos, comprendiendo distintas necesidades y resolviendo problemas en contextos reales. Hoy aplico esa perspectiva al UX/UI Design para diseñar experiencias que conecten las necesidades de las personas con soluciones claras y útiles." },
         { q: "Cómo uso la IA en mi proceso", a: "Es una herramienta en fases específicas — síntesis de research, exploración visual, ideación. Las decisiones de diseño son siempre humanas y fundamentadas en contexto y usuarios reales." },
         { q: "Disponibilidad", a: "Busco un rol como UX Designer, UX Researcher o Product Designer en España, Europa o en remoto. Disponibilidad inmediata." },
-      ],
-    },
-    areas: {
-      label: "Habilidades y herramientas",
-      groups: [
-        { title: "Investigación y estrategia", items: ["User Research", "Encuestas", "Entrevistas en profundidad", "Benchmark competitivo", "User personas", "Mapas de empatía", "Customer Journey Map", "Value Proposition Canvas"] },
-        { title: "Diseño de producto e interfaz", items: ["Arquitectura de información", "Flujos de usuario y wireflows", "Wireframing", "Prototipado", "Diseño de interacción", "Diseño mobile", "Design systems", "Accesibilidad", "UX writing"] },
-        { title: "Herramientas e IA", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
       ],
     },
     contact: {
@@ -62,7 +54,7 @@ export const t = {
   },
 
   en: {
-    nav: { work: "Work", about: "About", skills: "Skills", contact: "Contact" },
+    nav: { work: "Work", about: "About", contact: "Contact" },
     hero: {
       available: "Available · Seville",
       title1: "I'm Marcus Reis.",
@@ -82,14 +74,6 @@ export const t = {
         { q: "What sets me apart from other junior profiles", a: "My background in corporate environments has given me experience analysing complex processes, understanding different needs and solving problems in real contexts. Today I apply that perspective to UX/UI Design to create experiences that connect people's needs with clear and useful solutions." },
         { q: "How I use AI in my process", a: "It's a tool in specific phases — research synthesis, visual exploration, ideation. Design decisions are always human and grounded in real context and users." },
         { q: "Availability", a: "I'm looking for a role as UX Designer, UX Researcher or Product Designer in Spain, Europe or remote. Immediately available." },
-      ],
-    },
-    areas: {
-      label: "Skills & tools",
-      groups: [
-        { title: "Research & strategy", items: ["User Research", "Surveys", "In-depth interviews", "Competitive benchmark", "User personas", "Empathy maps", "Customer Journey Map", "Value Proposition Canvas"] },
-        { title: "Product & interface design", items: ["Information architecture", "User flows & wireflows", "Wireframing", "Prototyping", "Interaction design", "Mobile design", "Design systems", "Accessibility", "UX writing"] },
-        { title: "Tools & AI", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
       ],
     },
     contact: {
@@ -121,7 +105,7 @@ export const t = {
   },
 
   pt: {
-    nav: { work: "Projetos", about: "Sobre mim", skills: "Habilidades", contact: "Contato" },
+    nav: { work: "Projetos", about: "Sobre mim", contact: "Contato" },
     hero: {
       available: "Disponível · Sevilha",
       title1: "Sou Marcus Reis.",
@@ -141,14 +125,6 @@ export const t = {
         { q: "O que me diferencia de outros perfis júnior", a: "Minha trajetória em ambientes corporativos me deu experiência analisando processos complexos, compreendendo diferentes necessidades e resolvendo problemas em contextos reais. Hoje aplico essa perspectiva ao UX/UI Design para criar experiências que conectem as necessidades das pessoas a soluções claras e úteis." },
         { q: "Como uso a IA no meu processo", a: "É uma ferramenta em fases específicas — síntese de pesquisa, exploração visual, ideação. As decisões de design são sempre humanas e fundamentadas em contexto e usuários reais." },
         { q: "Disponibilidade", a: "Busco uma vaga como UX Designer, UX Researcher ou Product Designer na Espanha, na Europa ou em modelo remoto. Disponibilidade imediata." },
-      ],
-    },
-    areas: {
-      label: "Habilidades e ferramentas",
-      groups: [
-        { title: "Pesquisa e estratégia", items: ["User Research", "Questionários", "Entrevistas em profundidade", "Benchmark competitivo", "Personas", "Mapas de empatia", "Customer Journey Map", "Value Proposition Canvas"] },
-        { title: "Design de produto e interface", items: ["Arquitetura da informação", "Fluxos de usuário e wireflows", "Wireframing", "Prototipagem", "Design de interação", "Design mobile", "Design systems", "Acessibilidade", "UX writing"] },
-        { title: "Ferramentas e IA", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
       ],
     },
     contact: {

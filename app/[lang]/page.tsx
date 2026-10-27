@@ -129,32 +129,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* ── ÁREAS ── */}
-      <section id="skills" style={sec}>
-        <hr style={hr} />
-        <div style={{ paddingTop: "3rem" }}>
-          <span style={lbl}>{tr.areas.label}</span>
-          <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-            {tr.areas.groups.map(({ title, items }) => (
-              <div key={title}>
-                <h3 style={{ fontSize: "0.9375rem", fontWeight: 500, color: "var(--ink)",
-                             fontFamily: "var(--font-sans)", marginBottom: "0.875rem" }}>{title}</h3>
-                <ul style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", listStyle: "none",
-                             padding: 0, margin: 0 }}>
-                  {items.map((it) => (
-                    <li key={it} style={{ fontSize: "0.8125rem", lineHeight: 1.4, color: "var(--ink)",
-                                          fontFamily: "var(--font-sans)", padding: "0.375rem 0.75rem",
-                                          border: "1px solid var(--border)", borderRadius: "999px" }}>
-                      {it}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── CONTACT ── */}
       <section id="contact" style={sec}>
         <hr style={hr} />

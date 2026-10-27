@@ -179,7 +179,6 @@ const copy = {
       "El nombre sale del universo camper: naturaleza, movimiento y luz. De ahí parte una paleta cálida y terrosa, pensada para ser reconocible sin perder legibilidad.",
     ds_colors: [
       { hex: "#E07B00", name: "Primario", role: "Energía, acción, orientación" },
-      { hex: "#A85800", name: "Primario oscuro", role: "Acción accesible: botones y textos" },
       { hex: "#6B7A1A", name: "Secundario", role: "Naturaleza, confianza" },
       { hex: "#F5E642", name: "Acento", role: "Destacados, progreso" },
       { hex: "#FDFBF5", name: "Background", role: "Calidez, legibilidad" },
@@ -377,7 +376,6 @@ const copy = {
       "The name comes from the camper world: nature, movement and light. That is where a warm, earthy palette comes from, designed to be recognisable without losing legibility.",
     ds_colors: [
       { hex: "#E07B00", name: "Primary", role: "Energy, action, orientation" },
-      { hex: "#A85800", name: "Primary dark", role: "Accessible action: buttons and text" },
       { hex: "#6B7A1A", name: "Secondary", role: "Nature, trust" },
       { hex: "#F5E642", name: "Accent", role: "Highlights, progress" },
       { hex: "#FDFBF5", name: "Background", role: "Warmth, readability" },
@@ -570,7 +568,6 @@ const copy = {
       "O nome vem do universo camper: natureza, movimento e luz. Daí nasce uma paleta quente e terrosa, pensada para ser reconhecível sem perder legibilidade.",
     ds_colors: [
       { hex: "#E07B00", name: "Primário", role: "Energia, ação, orientação" },
-      { hex: "#A85800", name: "Primário escuro", role: "Ação acessível: botões e textos" },
       { hex: "#6B7A1A", name: "Secundário", role: "Natureza, confiança" },
       { hex: "#F5E642", name: "Destaque", role: "Destaques, progresso" },
       { hex: "#FDFBF5", name: "Background", role: "Calor, legibilidade" },
@@ -1257,7 +1254,7 @@ export default async function CamperotecaPage({ params }: Props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(5, 1fr)",
+              gridTemplateColumns: "repeat(4, 1fr)",
               gap: "1rem",
               marginBottom: "1.5rem",
             }}

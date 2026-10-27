@@ -78,7 +78,7 @@ const copy = {
     /* 02 */
     prob_label: "Problema y oportunidad",
     prob_title: "Un proceso complejo, sin guía ni recursos compartidos",
-    prob_body: "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, la información está dispersa y las decisiones mal tomadas pueden tener coste real. Al mismo tiempo, los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin un canal que la articule.",
+    prob_body: "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, la información está dispersa y muchas personas empiezan sin experiencia previa en bricolaje. Al mismo tiempo, los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin un canal que la articule.",
     prob_opp: "La oportunidad: una plataforma que guiara el proceso y activara la comunidad — donde materiales, herramientas y conocimiento circularan entre privados por préstamo o intercambio. Orientación y economía circular en un mismo lugar.",
     /* 03 */
     research_label: "UX Research",
@@ -125,7 +125,7 @@ const copy = {
     hmw_title: "Qué dijeron los datos y qué decidí",
     hmw_rows: [
       { prob: "6 de 7 aprenden con YouTube; 96,9% quiere guías en la app", opp: "Aprenden fuera, sin orden", dec: "Aprende por etapas y Mi Proyecto con el siguiente paso" },
-      { prob: "7 de 7 priorizan herramientas; 65,6% usaría la app para ello", opp: "Comprar para un solo uso no compensa", dec: "Encuentra, para pedir prestado o intercambiar" },
+      { prob: "7 de 7 priorizan herramientas; 65,6% usaría la app para ello", opp: "Comprar para un solo uso no compensa", dec: "Encuentra, para pedir prestadas o intercambiar herramientas y materiales" },
       { prob: "6 de 7 quieren ver qué hay cerca, en mapa y lista", opp: "La cercanía decide si compartir es viable", dec: "Distancia en cada recurso y Personas cerca en mapa o lista" },
       { prob: "7 de 7 piden valoraciones", opp: "Sin confianza no hay intercambio", dec: "Valoraciones en la siguiente fase, cuando haya intercambios que valorar" },
       { prob: "81,3% espera una navegación fácil; 68,8% se uniría a una comunidad", opp: "Quieren comunidad, pero simple y ordenada", dec: "Un solo hub y Comunidad por temas" },
@@ -276,7 +276,7 @@ const copy = {
 
     prob_label: "Problem & Opportunity",
     prob_title: "A complex process, with no guidance or shared resources",
-    prob_body: "Converting a van on your own is technically complex and financially demanding. The process has no clear order, information is scattered and poorly timed decisions can carry real cost. At the same time, materials and tools used briefly — at real cost — end up idle once that phase is over. A community that shares resources exists, but without a channel to bring it together.",
+    prob_body: "Converting a van on your own is technically complex and financially demanding. The process has no clear order, information is scattered and many people start with no prior DIY experience. At the same time, materials and tools used briefly — at real cost — end up idle once that phase is over. A community that shares resources exists, but without a channel to bring it together.",
     prob_opp: "The opportunity: a platform that guides the process and activates the community — where materials, tools and knowledge flow between individuals through lending or exchange. Guidance and circular economy in one place.",
     research_label: "UX Research",
     research_title: "Research before design",
@@ -320,7 +320,7 @@ const copy = {
     hmw_title: "What the data said and what I decided",
     hmw_rows: [
       { prob: "6 of 7 learn on YouTube; 96.9% want guides in the app", opp: "They learn elsewhere, with no order", dec: "Learn by stage and My Project with the next step" },
-      { prob: "7 of 7 prioritise tools; 65.6% would use the app for it", opp: "Buying for a single use isn't worth it", dec: "Find, to borrow or swap" },
+      { prob: "7 of 7 prioritise tools; 65.6% would use the app for it", opp: "Buying for a single use isn't worth it", dec: "Find, to borrow or swap tools and materials" },
       { prob: "6 of 7 want to see what's nearby, on a map and in a list", opp: "Proximity decides whether sharing is viable", dec: "Distance on every resource and People nearby on a map or list" },
       { prob: "7 of 7 ask for ratings", opp: "No trust, no exchange", dec: "Ratings in the next phase, once there are exchanges to rate" },
       { prob: "81.3% expect easy navigation; 68.8% would join a community", opp: "They want community, but simple and organised", dec: "A single hub and Community by topic" },
@@ -463,7 +463,7 @@ const copy = {
 
     prob_label: "Problema e oportunidade",
     prob_title: "Um processo complexo, sem orientação nem recursos compartilhados",
-    prob_body: "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e as decisões mal tomadas podem ter custo real. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que compartilha recursos, mas sem um canal que a articule.",
+    prob_body: "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e muitas pessoas começam sem experiência prévia em trabalhos manuais. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que compartilha recursos, mas sem um canal que a articule.",
     prob_opp: "A oportunidade: uma plataforma que orientasse o processo e ativasse a comunidade — onde materiais, ferramentas e conhecimento circulassem entre particulares por empréstimo ou troca. Orientação e economia circular em um mesmo lugar.",
     research_label: "UX Research",
     research_title: "Pesquisar antes de projetar",
@@ -507,7 +507,7 @@ const copy = {
     hmw_title: "O que os dados disseram e o que decidi",
     hmw_rows: [
       { prob: "6 de 7 aprendem no YouTube; 96,9% querem guias no app", opp: "Aprendem fora, sem ordem", dec: "Aprende por etapas e Meu Projeto com o próximo passo" },
-      { prob: "7 de 7 priorizam ferramentas; 65,6% usariam o app para isso", opp: "Comprar para um único uso não compensa", dec: "Encontra, para pegar emprestado ou trocar" },
+      { prob: "7 de 7 priorizam ferramentas; 65,6% usariam o app para isso", opp: "Comprar para um único uso não compensa", dec: "Encontra, para pegar emprestado ou trocar ferramentas e materiais" },
       { prob: "6 de 7 querem ver o que há por perto, no mapa e em lista", opp: "A proximidade decide se compartilhar é viável", dec: "Distância em cada recurso e Pessoas por perto no mapa ou em lista" },
       { prob: "7 de 7 pedem avaliações", opp: "Sem confiança não há troca", dec: "Avaliações na próxima fase, quando houver trocas para avaliar" },
       { prob: "81,3% esperam uma navegação fácil; 68,8% entrariam em uma comunidade", opp: "Querem comunidade, mas simples e organizada", dec: "Um único hub e Comunidade por temas" },

@@ -167,15 +167,16 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "De la estructura al diseño final",
     wf_body:
-      "El wireframing avanzó en dos fases. En baja fidelidad el foco estuvo en la estructura de navegación y el flujo principal: cómo un usuario nuevo pasa del onboarding a su primer paso real en el proyecto. En alta fidelidad, las decisiones se centraron en la jerarquía visual de 'Mi Proyecto' como hub central, y en cómo presentar el contenido de 'Aprende', 'Encuentra' y 'Comunidad' sin saturar al usuario. Cada iteración validó que la plataforma guiara sin sobrecargar.",
+      "El wireframing avanzó en dos fases. En baja fidelidad el foco estuvo en la estructura de navegación y el flujo principal: cómo un usuario nuevo pasa del onboarding a su primer paso real en el proyecto. En alta fidelidad, las decisiones se centraron en la jerarquía visual de «Mi Proyecto» como hub central, y en cómo presentar el contenido de «Aprende», «Encuentra» y «Comunidad» sin saturar al usuario. El criterio en cada iteración fue que la plataforma guiara sin sobrecargar; comprobarlo con usuarios es el siguiente paso. Usé Figma Make para generar una primera versión del prototipo a partir de mis wireframes; después la rehice y ajusté en Figma.",
 
     /* 08 */
-    ds_label: "UI Design & Design System",
+    ds_label: "Design System",
     ds_title: "«Cosecha Solar»",
     ds_body:
-      "El nombre no es accidental. El universo camper evoca naturaleza, movimiento y luz. El sistema visual de Camperoteca parte de esa referencia para construir una identidad reconocible, cálida y funcional.",
+      "El nombre sale del universo camper: naturaleza, movimiento y luz. De ahí parte una paleta cálida y terrosa, pensada para ser reconocible sin perder legibilidad.",
     ds_colors: [
       { hex: "#E07B00", name: "Primario", role: "Energía, acción, orientación" },
+      { hex: "#A85800", name: "Primario oscuro", role: "Acción accesible: botones y textos" },
       { hex: "#6B7A1A", name: "Secundario", role: "Naturaleza, confianza" },
       { hex: "#F5E642", name: "Acento", role: "Destacados, progreso" },
       { hex: "#FDFBF5", name: "Background", role: "Calidez, legibilidad" },
@@ -197,14 +198,14 @@ const copy = {
     ui_aprende_title: "Aprende",
     ui_aprende_body:
       "Organiza el conocimiento en tres categorías: guías técnicas (sistemas eléctricos, aislamiento, carpintería), guías legales (homologaciones, ITV, normativa) y casos reales de otros usuarios.",
-    ui_encuentra_title: "Encuentra Recursos",
+    ui_encuentra_title: "Encuentra",
     ui_encuentra_body: "Reúne las herramientas y los materiales que otras personas ofrecen cerca, para pedirlos prestados o intercambiarlos. Cada tarjeta indica a qué distancia está y si está disponible.",
     ui_login_title: "Login",
     ui_login_body:
-      "Acceso directo y sin fricción. El usuario entra con email y contraseña para continuar donde lo dejó.",
+      "Email y contraseña o acceso con Google: entrar en un paso y seguir donde lo dejó.",
     ui_comunidad_title: "Comunidad",
     ui_comunidad_body:
-      "Conecta con otros camperos. Pregunta, responde y encuentra usuarios cercanos con herramientas o conocimiento.",
+      "Conecta con otras personas que están camperizando. Pregunta, responde y encuentra usuarios cercanos con herramientas o conocimiento.",
     ui_onboarding_title: "Onboarding",
     ui_onboarding_body:
       "El punto de entrada al proyecto. Guía al usuario desde cero con contexto claro y un primer paso accionable — antes de que la complejidad del proceso lo frene.",
@@ -362,14 +363,15 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "From structure to final design",
     wf_body:
-      "Wireframing progressed in two phases. In low fidelity the focus was on navigation structure and the main flow: how a new user moves from onboarding to their first real step in the project. In high fidelity, decisions centred on the visual hierarchy of 'My Project' as the central hub, and on how to present 'Learn', 'Find' and 'Community' content without overwhelming the user. Each iteration validated that the platform guided without overloading.",
+      "Wireframing progressed in two phases. In low fidelity the focus was on navigation structure and the main flow: how a new user moves from onboarding to their first real step in the project. In high fidelity, decisions centred on the visual hierarchy of «My Project» as the central hub, and on how to present «Learn», «Find» and «Community» content without overwhelming the user. The criterion in every iteration was that the platform should guide without overwhelming; testing that with users is the next step. I used Figma Make to generate a first version of the prototype from my wireframes, then rebuilt and refined it in Figma.",
 
-    ds_label: "UI Design & Design System",
+    ds_label: "Design System",
     ds_title: "«Cosecha Solar»",
     ds_body:
-      "The name is no accident. The camper universe evokes nature, movement and light. Camperoteca's visual system draws from that reference to build a recognisable, warm and functional identity.",
+      "The name comes from the camper world: nature, movement and light. That is where a warm, earthy palette comes from, designed to be recognisable without losing legibility.",
     ds_colors: [
       { hex: "#E07B00", name: "Primary", role: "Energy, action, orientation" },
+      { hex: "#A85800", name: "Primary dark", role: "Accessible action: buttons and text" },
       { hex: "#6B7A1A", name: "Secondary", role: "Nature, trust" },
       { hex: "#F5E642", name: "Accent", role: "Highlights, progress" },
       { hex: "#FDFBF5", name: "Background", role: "Warmth, readability" },
@@ -390,14 +392,14 @@ const copy = {
     ui_aprende_title: "Learn",
     ui_aprende_body:
       "Organises knowledge into three categories: technical guides (electrical systems, insulation, carpentry), legal guides (homologation, MOT, regulations) and real cases from other users.",
-    ui_encuentra_title: "Find Resources",
+    ui_encuentra_title: "Find",
     ui_encuentra_body: "Brings together the tools and materials other people offer nearby, to borrow or swap. Each card shows how far away it is and whether it's available.",
     ui_login_title: "Login",
     ui_login_body:
-      "Direct, frictionless access. The user signs in with email and password to continue where they left off.",
+      "Email and password or Google sign-in: get in in one step and pick up where you left off.",
     ui_comunidad_title: "Community",
     ui_comunidad_body:
-      "Connect with other campers. Ask, answer and find nearby users with tools or knowledge to share.",
+      "Connect with other people converting their vans. Ask, answer and find nearby users with tools or knowledge to share.",
     ui_onboarding_title: "Onboarding",
     ui_onboarding_body:
       "The entry point to the project. Guides the user from scratch with clear context and a first actionable step — before the complexity of the process holds them back.",
@@ -551,14 +553,15 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "Da estrutura ao design final",
     wf_body:
-      "O wireframing avançou em duas fases. Em baixa fidelidade o foco esteve na estrutura de navegação e no fluxo principal: como um usuário novo passa do onboarding ao seu primeiro passo real no projeto. Em alta fidelidade, as decisões se concentraram na hierarquia visual de 'Meu Projeto' como hub central, e em como apresentar o conteúdo de 'Aprende', 'Encontra' e 'Comunidade' sem saturar o usuário. Cada iteração validou que a plataforma orientava sem sobrecarregar.",
+      "O wireframing avançou em duas fases. Em baixa fidelidade o foco esteve na estrutura de navegação e no fluxo principal: como um usuário novo passa do onboarding ao seu primeiro passo real no projeto. Em alta fidelidade, as decisões se concentraram na hierarquia visual de «Meu Projeto» como hub central, e em como apresentar o conteúdo de «Aprende», «Encontra» e «Comunidade» sem saturar o usuário. O critério em cada iteração foi que a plataforma orientasse sem sobrecarregar; comprovar isso com usuários é o próximo passo. Usei o Figma Make para gerar uma primeira versão do protótipo a partir dos meus wireframes; depois, refiz e ajustei no Figma.",
 
-    ds_label: "UI Design & Design System",
+    ds_label: "Design System",
     ds_title: "«Cosecha Solar»",
     ds_body:
-      "O nome não é acidental. O universo camper evoca natureza, movimento e luz. O sistema visual da Camperoteca parte dessa referência para construir uma identidade reconhecível, calorosa e funcional.",
+      "O nome vem do universo camper: natureza, movimento e luz. Daí nasce uma paleta quente e terrosa, pensada para ser reconhecível sem perder legibilidade.",
     ds_colors: [
       { hex: "#E07B00", name: "Primário", role: "Energia, ação, orientação" },
+      { hex: "#A85800", name: "Primário escuro", role: "Ação acessível: botões e textos" },
       { hex: "#6B7A1A", name: "Secundário", role: "Natureza, confiança" },
       { hex: "#F5E642", name: "Destaque", role: "Destaques, progresso" },
       { hex: "#FDFBF5", name: "Background", role: "Calor, legibilidade" },
@@ -579,11 +582,11 @@ const copy = {
     ui_aprende_title: "Aprende",
     ui_aprende_body:
       "Organiza o conhecimento em três categorias: guias técnicos (sistemas elétricos, isolamento, marcenaria), guias legais (homologação, inspeção, regulamentação) e casos reais de outros usuários.",
-    ui_encuentra_title: "Encontra Recursos",
+    ui_encuentra_title: "Encontra",
     ui_encuentra_body: "Reúne as ferramentas e os materiais que outras pessoas oferecem por perto, para pegar emprestado ou trocar. Cada card mostra a distância e se o item está disponível.",
     ui_login_title: "Login",
     ui_login_body:
-      "Acesso direto e sem fricção. O usuário entra com e-mail e senha para continuar de onde parou.",
+      "E-mail e senha ou acesso com Google: entrar em um passo e continuar de onde parou.",
     ui_comunidad_title: "Comunidade",
     ui_comunidad_body: "Conecte-se com outras pessoas que estão camperizando. Pergunte, responda e encontre pessoas próximas com ferramentas ou conhecimento.",
     ui_onboarding_title: "Onboarding",
@@ -1237,7 +1240,7 @@ export default async function CamperotecaPage({ params }: Props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
+              gridTemplateColumns: "repeat(5, 1fr)",
               gap: "1rem",
               marginBottom: "1.5rem",
             }}

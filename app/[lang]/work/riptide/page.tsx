@@ -45,7 +45,7 @@ const copy = {
     tags: "UX/UI · IA · Sostenibilidad · Proyecto conceptual",
     desc: "Extensión de navegador que hace visible el impacto hídrico de la actividad digital cotidiana. Awareness sin culpa, presencia sin intrusión.",
     meta: [
-      ["Tipo", "Proyecto conceptual · Equipo de 7"],
+      ["Tipo", "Proyecto conceptual · Equipo de 7 personas"],
       ["Mi rol", "UX/UI Designer · Research"],
       ["Plataforma", "Extensión de navegador"],
       ["Herramientas", "Figma · FigJam"],
@@ -163,7 +163,7 @@ const copy = {
     tags: "UX/UI · AI · Sustainability · Conceptual project",
     desc: "A browser extension that makes the hidden water footprint of everyday digital activity visible. Awareness without guilt, presence without intrusion.",
     meta: [
-      ["Type", "Conceptual project · Team of 7"],
+      ["Type", "Conceptual project · Team of 7 people"],
       ["My role", "UX/UI Designer · Research"],
       ["Platform", "Browser extension"],
       ["Tools", "Figma · FigJam"],
@@ -281,7 +281,7 @@ const copy = {
     tags: "UX/UI · IA · Sustentabilidade · Projeto conceitual",
     desc: "Extensão de navegador que torna visível o impacto hídrico da atividade digital do dia a dia. Consciência sem culpa, presença sem intrusão.",
     meta: [
-      ["Tipo", "Projeto conceitual · Equipe de 7"],
+      ["Tipo", "Projeto conceitual · Equipe de 7 pessoas"],
       ["Minha função", "UX/UI Designer · Research"],
       ["Plataforma", "Extensão de navegador"],
       ["Ferramentas", "Figma · FigJam"],

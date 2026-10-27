@@ -142,13 +142,13 @@ const copy = {
       { t: "Home", d: "Descubre qué es Camperoteca.", cta: "Empezar" },
       { t: "Onboarding", d: "Entiende cómo funciona por etapas.", cta: "Empezar mi proyecto" },
       { t: "Login o Registro", d: "Inicia sesión o crea su cuenta.", cta: "Iniciar sesión" },
-      { t: "Mi Proyecto", d: "Ve su etapa y el siguiente paso.", cta: "Buscar recurso", hub: true },
-      { t: "Encuentra", d: "Localiza una herramienta o material cerca y ve a qué distancia está.", cta: "Pedir préstamo" },
+      { t: "Mi Proyecto", d: "Ve su etapa y el siguiente paso, y elige según lo que necesite.", cta: "", hub: true, branches: [{ cta: "Ver guía", to: "Aprende" }, { cta: "Buscar recurso", to: "Encuentra", main: true }, { cta: "Pedir ayuda", to: "Comunidad" }] },
+      { t: "Encuentra", d: "Si necesita una herramienta o material, lo localiza cerca y ve a qué distancia está.", cta: "Pedir préstamo" },
       { t: "Solicitud", d: "Pide el préstamo con fechas y un mensaje.", cta: "Enviar solicitud" },
       { t: "Solicitud enviada", d: "Recibe la confirmación y sigue con su proyecto.", cta: "" },
     ],
-    hp_alt: "Happy path de Camperoteca: Home, Onboarding, Login o Registro y Mi Proyecto, desde donde se accede a Aprende y Comunidad. El recorrido principal sigue por Encuentra, Solicitud y Solicitud enviada.",
-    hp_hub: "Desde aquí también: Aprende · Comunidad",
+    hp_alt: "Happy path de Camperoteca: Home, Onboarding, Login o Registro y Mi Proyecto, el hub que lleva a Aprende, Encuentra o Comunidad según la necesidad. Este recorrido sigue la rama de Encuentra: Encuentra, Solicitud y Solicitud enviada.",
+    hp_hub: "Este recorrido sigue la rama de Encuentra.",
     hp_cta: "CTA",
     hp_label: "Happy path",
     arch_body:
@@ -337,13 +337,13 @@ const copy = {
       { t: "Home", d: "Discovers what Camperoteca is.", cta: "Get started" },
       { t: "Onboarding", d: "Understands how it works by stage.", cta: "Start my project" },
       { t: "Log in or Sign up", d: "Logs in or creates an account.", cta: "Log in" },
-      { t: "My Project", d: "Sees their stage and the next step.", cta: "Find a resource", hub: true },
-      { t: "Find", d: "Finds a tool or material nearby and sees how far away it is.", cta: "Borrow" },
+      { t: "My Project", d: "Sees their stage and the next step, and chooses based on what they need.", cta: "", hub: true, branches: [{ cta: "See guide", to: "Learn" }, { cta: "Find a resource", to: "Find", main: true }, { cta: "Ask for help", to: "Community" }] },
+      { t: "Find", d: "If they need a tool or material, they find it nearby and see how far away it is.", cta: "Borrow" },
       { t: "Request", d: "Asks to borrow it with dates and a message.", cta: "Send request" },
       { t: "Request sent", d: "Gets the confirmation and carries on with the project.", cta: "" },
     ],
-    hp_alt: "Camperoteca happy path: Home, Onboarding, Log in or Sign up and My Project, which also leads to Learn and Community. The main flow continues through Find, Request and Request sent.",
-    hp_hub: "From here too: Learn · Community",
+    hp_alt: "Camperoteca happy path: Home, Onboarding, Log in or Sign up and My Project, the hub that leads to Learn, Find or Community depending on the need. This flow follows the Find branch: Find, Request and Request sent.",
+    hp_hub: "This flow follows the Find branch.",
     hp_cta: "CTA",
     hp_label: "Happy path",
     arch_body:
@@ -525,13 +525,13 @@ const copy = {
       { t: "Home", d: "Descobre o que é a Camperoteca.", cta: "Começar" },
       { t: "Onboarding", d: "Entende como funciona por etapas.", cta: "Começar meu projeto" },
       { t: "Login ou Cadastro", d: "Faz login ou cria uma conta.", cta: "Entrar" },
-      { t: "Meu Projeto", d: "Vê sua etapa e o próximo passo.", cta: "Buscar recurso", hub: true },
-      { t: "Encontra", d: "Encontra uma ferramenta ou material por perto e vê a que distância está.", cta: "Pedir emprestado" },
+      { t: "Meu Projeto", d: "Vê sua etapa e o próximo passo, e escolhe de acordo com o que precisa.", cta: "", hub: true, branches: [{ cta: "Ver guia", to: "Aprende" }, { cta: "Buscar recurso", to: "Encontra", main: true }, { cta: "Pedir ajuda", to: "Comunidade" }] },
+      { t: "Encontra", d: "Se precisa de uma ferramenta ou material, encontra por perto e vê a que distância está.", cta: "Pedir emprestado" },
       { t: "Solicitação", d: "Pede o empréstimo com datas e uma mensagem.", cta: "Enviar solicitação" },
       { t: "Solicitação enviada", d: "Recebe a confirmação e segue com o projeto.", cta: "" },
     ],
-    hp_alt: "Happy path da Camperoteca: Home, Onboarding, Login ou Cadastro e Meu Projeto, de onde também se acessa Aprende e Comunidade. O fluxo principal segue por Encontra, Solicitação e Solicitação enviada.",
-    hp_hub: "Daqui também: Aprende · Comunidade",
+    hp_alt: "Happy path da Camperoteca: Home, Onboarding, Login ou Cadastro e Meu Projeto, o hub que leva ao Aprende, ao Encontra ou à Comunidade, de acordo com a necessidade. Este fluxo segue o caminho do Encontra: Encontra, Solicitação e Solicitação enviada.",
+    hp_hub: "Este fluxo segue o caminho do Encontra.",
     hp_cta: "CTA",
     hp_label: "Happy path",
     arch_body:
@@ -1114,7 +1114,17 @@ export default async function CamperotecaPage({ params }: Props) {
                   <span aria-hidden="true" style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "1.25rem", lineHeight: 1, color: "var(--accent)" }}>{String(i + 1).padStart(2, "0")}</span>
                   <p style={{ fontSize: "0.875rem", fontWeight: 600, lineHeight: 1.35, color: "var(--ink)" }}>{st.t}</p>
                   <p style={{ fontSize: "0.8125rem", lineHeight: 1.55, color: "var(--muted)" }}>{st.d}</p>
-                  {st.hub && <p style={{ fontSize: "0.8125rem", lineHeight: 1.5, color: "var(--ink)" }}>{C.hp_hub}</p>}
+                  {st.branches && (
+                    <ul style={{ listStyle: "none", padding: 0, margin: "0.25rem 0 0", display: "flex", flexDirection: "column", gap: "0.35rem" }}>
+                      {st.branches.map((b) => (
+                        <li key={b.to} style={{ fontSize: "0.75rem", lineHeight: 1.45, color: b.main ? "var(--ink)" : "var(--muted)", fontWeight: b.main ? 600 : 400, display: "flex", gap: "0.4rem", alignItems: "baseline" }}>
+                          <span aria-hidden="true" style={{ width: "6px", height: "6px", borderRadius: "50%", flexShrink: 0, transform: "translateY(-1px)", background: b.main ? "var(--accent)" : "transparent", border: "1px solid var(--accent)" }} />
+                          <span><span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)" }}>{C.hp_cta}</span> {b.cta} → {b.to}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {st.hub && <p style={{ marginTop: "auto", paddingTop: "0.5rem", fontSize: "0.75rem", lineHeight: 1.5, color: "var(--ink)" }}>{C.hp_hub}</p>}
                   {st.cta && (
                     <span style={{ marginTop: "auto", paddingTop: "0.5rem", fontSize: "0.75rem", color: "var(--ink)" }}>
                       <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)" }}>{C.hp_cta}</span> → {st.cta}

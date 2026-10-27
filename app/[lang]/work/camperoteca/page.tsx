@@ -127,7 +127,7 @@ const copy = {
       { prob: "6 de 7 aprenden con YouTube; 96,9% quiere guías en la app", opp: "Aprenden fuera, sin orden", dec: "Aprende por etapas y Mi Proyecto con el siguiente paso" },
       { prob: "7 de 7 priorizan herramientas; 65,6% usaría la app para ello", opp: "Comprar para un solo uso no compensa", dec: "Encuentra, para pedir prestadas o intercambiar herramientas y materiales" },
       { prob: "6 de 7 quieren ver qué hay cerca, en mapa y lista", opp: "La cercanía decide si compartir es viable", dec: "Distancia en cada recurso y Personas cerca en mapa o lista" },
-      { prob: "7 de 7 piden valoraciones", opp: "Sin confianza no hay intercambio", dec: "Valoraciones en la siguiente fase, cuando haya intercambios que valorar" },
+      { prob: "7 de 7 piden valoraciones", opp: "Sin confianza no hay intercambio", dec: "Valoración tras cada préstamo y reputación visible en cada recurso" },
       { prob: "81,3% espera una navegación fácil; 68,8% se uniría a una comunidad", opp: "Quieren comunidad, pero simple y ordenada", dec: "Un solo hub y Comunidad por temas" },
     ],
     hmw_col1: "Dato",
@@ -155,7 +155,7 @@ const copy = {
     mvp_inc: [
       "Mi Proyecto: hub central del proceso. El usuario gestiona su avance por etapas, visualiza su progreso y accede a recursos contextuales según su necesidad actual.",
       "Aprende: guías técnicas, legales y casos reales organizados por etapa del proyecto.",
-      "Encuentra: herramientas y materiales que otras personas ofrecen cerca, para pedirlos prestados o intercambiarlos. Desde Encuentra o Mi cuenta cualquiera puede ofrecer los suyos.",
+      "Encuentra: herramientas y materiales que otras personas ofrecen cerca, para pedirlos prestados o intercambiarlos. Desde Encuentra o Mi cuenta cualquiera puede ofrecer los suyos, y tras cada préstamo las personas se valoran entre sí.",
       "Comunidad: espacio de conexión entre personas en proceso de camperización para compartir experiencias y conocimiento.",
       "Onboarding y registro: presenta cómo funciona la plataforma por etapas y da acceso mediante registro o inicio de sesión.",
     ],
@@ -219,7 +219,7 @@ const copy = {
     next_title: "Próximas iteraciones",
     nexts: [
       "Evaluar la comprensión del flujo principal con usuarios reales mediante pruebas de usabilidad.",
-      "Perfil con valoraciones y reputación. Lo dejé fuera del MVP a propósito: la reputación se construye con intercambios reales, y en un lanzamiento sin historial las valoraciones estarían vacías y no darían confianza. Primero hay que validar que la comunidad presta y pide herramientas; con ese historial, valorar sí tendrá sentido.",
+      "Verificación de identidad y moderación de valoraciones, cuando haya un volumen real de intercambios.",
       "Personalizar el proyecto desde el registro: recoger tipo de furgoneta, fase, presupuesto y objetivos para adaptar Mi Proyecto y sus recomendaciones.",
     ],
     research_methods: [
@@ -322,7 +322,7 @@ const copy = {
       { prob: "6 of 7 learn on YouTube; 96.9% want guides in the app", opp: "They learn elsewhere, with no order", dec: "Learn by stage and My Project with the next step" },
       { prob: "7 of 7 prioritise tools; 65.6% would use the app for it", opp: "Buying for a single use isn't worth it", dec: "Find, to borrow or swap tools and materials" },
       { prob: "6 of 7 want to see what's nearby, on a map and in a list", opp: "Proximity decides whether sharing is viable", dec: "Distance on every resource and People nearby on a map or list" },
-      { prob: "7 of 7 ask for ratings", opp: "No trust, no exchange", dec: "Ratings in the next phase, once there are exchanges to rate" },
+      { prob: "7 of 7 ask for ratings", opp: "No trust, no exchange", dec: "A rating after every loan and reputation shown on every resource" },
       { prob: "81.3% expect easy navigation; 68.8% would join a community", opp: "They want community, but simple and organised", dec: "A single hub and Community by topic" },
     ],
     hmw_col1: "Data",
@@ -349,7 +349,7 @@ const copy = {
     mvp_inc: [
       "My Project: the central hub. Users manage their progress by stage, see how far they've come and access contextual resources for their current need.",
       "Learn: technical and legal guides and real cases organised by project stage.",
-      "Find: tools and materials other people offer nearby, to borrow or swap. Anyone can offer their own from Find or My Account.",
+      "Find: tools and materials other people offer nearby, to borrow or swap. Anyone can offer their own from Find or My Account, and after each loan people rate each other.",
       "Community: a space for people converting their vans to share experiences and know-how.",
       "Onboarding and sign-up: explains how the platform works by stage and gives access via sign-up or log-in.",
     ],
@@ -409,7 +409,7 @@ const copy = {
     next_title: "Next iterations",
     nexts: [
       "Test how well people understand the main flow with real users through usability testing.",
-      "A profile with ratings and reputation. I left it out of the MVP on purpose: reputation is built through real exchanges, and at a launch with no history the ratings would be empty and wouldn't build trust. First the community has to prove it lends and requests tools; with that history, ratings will make sense.",
+      "Identity verification and review moderation, once there's a real volume of exchanges.",
       "Personalise the project from sign-up: collect van type, phase, budget and goals to tailor My Project and its recommendations.",
     ],
     research_methods: [
@@ -509,7 +509,7 @@ const copy = {
       { prob: "6 de 7 aprendem no YouTube; 96,9% querem guias no app", opp: "Aprendem fora, sem ordem", dec: "Aprende por etapas e Meu Projeto com o próximo passo" },
       { prob: "7 de 7 priorizam ferramentas; 65,6% usariam o app para isso", opp: "Comprar para um único uso não compensa", dec: "Encontra, para pegar emprestado ou trocar ferramentas e materiais" },
       { prob: "6 de 7 querem ver o que há por perto, no mapa e em lista", opp: "A proximidade decide se compartilhar é viável", dec: "Distância em cada recurso e Pessoas por perto no mapa ou em lista" },
-      { prob: "7 de 7 pedem avaliações", opp: "Sem confiança não há troca", dec: "Avaliações na próxima fase, quando houver trocas para avaliar" },
+      { prob: "7 de 7 pedem avaliações", opp: "Sem confiança não há troca", dec: "Avaliação após cada empréstimo e reputação visível em cada recurso" },
       { prob: "81,3% esperam uma navegação fácil; 68,8% entrariam em uma comunidade", opp: "Querem comunidade, mas simples e organizada", dec: "Um único hub e Comunidade por temas" },
     ],
     hmw_col1: "Dado",
@@ -536,7 +536,7 @@ const copy = {
     mvp_inc: [
       "Meu Projeto: o hub central do processo. O usuário gerencia o avanço por etapas, acompanha o progresso e acessa recursos contextuais conforme a necessidade do momento.",
       "Aprende: guias técnicos, legais e casos reais organizados por etapa do projeto.",
-      "Encontra: ferramentas e materiais que outras pessoas oferecem por perto, para pegar emprestado ou trocar. Pelo Encontra ou por Minha conta, qualquer pessoa pode oferecer os seus.",
+      "Encontra: ferramentas e materiais que outras pessoas oferecem por perto, para pegar emprestado ou trocar. Pelo Encontra ou por Minha conta, qualquer pessoa pode oferecer os seus, e após cada empréstimo as pessoas se avaliam.",
       "Comunidade: espaço de conexão entre pessoas que estão camperizando para compartilhar experiências e conhecimento.",
       "Onboarding e cadastro: apresenta como a plataforma funciona por etapas e dá acesso por cadastro ou login.",
     ],
@@ -595,7 +595,7 @@ const copy = {
     next_title: "Próximas iterações",
     nexts: [
       "Avaliar a compreensão do fluxo principal com usuários reais por meio de testes de usabilidade.",
-      "Perfil com avaliações e reputação. Deixei fora do MVP de propósito: a reputação se constrói com trocas reais, e em um lançamento sem histórico as avaliações estariam vazias e não gerariam confiança. Primeiro é preciso validar que a comunidade empresta e pede ferramentas; com esse histórico, avaliar passa a fazer sentido.",
+      "Verificação de identidade e moderação de avaliações, quando houver um volume real de trocas.",
       "Personalizar o projeto desde o cadastro: coletar tipo de van, etapa, orçamento e objetivos para adaptar Meu Projeto e suas recomendações.",
     ],
     research_methods: [

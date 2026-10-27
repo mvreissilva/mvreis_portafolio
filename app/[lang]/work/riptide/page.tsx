@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     : lang === "pt"
     ? "Extensão de navegador que torna visível o impacto hídrico da atividade digital. Consciência sem culpa, presença sem intrusão."
     : "Extensión de navegador que hace visible el impacto hídrico de la actividad digital. Awareness sin culpa, presencia sin intrusión.";
-  return pageMetadata({ lang, path: "/work/riptide", title, description: desc });
+  return pageMetadata({ lang, path: "/work/riptide", title, description: desc, ogImage: { url: "/assets/og-riptide.jpg", alt: "Pantallas de la extensión Riptide: bienvenida, ajustes y resumen del día" } });
 }
 
 /* ─── imágenes ──────────────────────────────────────────────────── */
@@ -49,7 +49,7 @@ const copy = {
       ["Tipo", "Proyecto conceptual · Equipo de 7 personas"],
       ["Mi rol", "UX/UI Designer · Research"],
       ["Plataforma", "Extensión de navegador"],
-      ["Duración", "Ene – Feb 2026"],
+      ["Duración", "Ene – Mar 2026"],
       ["Herramientas", "Figma · FigJam"],
     ],
     focusLabel: "Mi foco",
@@ -168,7 +168,7 @@ const copy = {
       ["Type", "Conceptual project · Team of 7 people"],
       ["My role", "UX/UI Designer · Research"],
       ["Platform", "Browser extension"],
-      ["Duration", "Jan – Feb 2026"],
+      ["Duration", "Jan – Mar 2026"],
       ["Tools", "Figma · FigJam"],
     ],
     focusLabel: "My focus",
@@ -287,7 +287,7 @@ const copy = {
       ["Tipo", "Projeto conceitual · Equipe de 7 pessoas"],
       ["Minha função", "UX/UI Designer · Research"],
       ["Plataforma", "Extensão de navegador"],
-      ["Duração", "Jan – Fev 2026"],
+      ["Duração", "Jan – Mar 2026"],
       ["Ferramentas", "Figma · FigJam"],
     ],
     focusLabel: "Meu foco",

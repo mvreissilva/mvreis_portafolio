@@ -1118,6 +1118,7 @@ export default async function CamperotecaPage({ params }: Props) {
               {C.hp_steps.map((st, i) => (
                 <li
                   key={st.t}
+                  className={st.hub ? "cp-hp-hub" : undefined}
                   style={{
                     background: st.hub ? "color-mix(in srgb, var(--accent) 8%, var(--surface))" : "var(--surface)",
                     border: st.hub ? "1.5px solid var(--accent)" : "1px solid var(--border)",
@@ -1152,9 +1153,10 @@ export default async function CamperotecaPage({ params }: Props) {
             </ol>
           </figure>
           <style>{`
-            .cp-hp { display: grid; align-items: start; gap: 0.75rem; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem !important; }
+            .cp-hp { display: grid; gap: 0.75rem; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem !important; }
             .cp-hp > li { scroll-snap-align: start; }
-            @media (min-width: 640px) { .cp-hp { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; grid-template-columns: repeat(2, 1fr) !important; padding-bottom: 0 !important; } }
+            @media (max-width: 639px) { .cp-hp { align-items: start; } .cp-hp > li:not(.cp-hp-hub) { min-height: 12.5rem; } }
+            @media (min-width: 640px) { .cp-hp-hub { grid-row: span 2; } .cp-hp { grid-auto-flow: row dense; grid-auto-columns: auto; overflow: visible; grid-template-columns: repeat(2, 1fr) !important; padding-bottom: 0 !important; } }
             @media (min-width: 900px) { .cp-hp { grid-template-columns: repeat(4, 1fr) !important; } }
           `}</style>
         </Reveal>

@@ -31,6 +31,7 @@ export function pageMetadata({
   title,
   description,
   ogTitle,
+  ogImage,
 }: {
   lang: Lang;
   /** Ruta sin idioma, p. ej. "" para la home o "/work/camperoteca" */
@@ -39,7 +40,10 @@ export function pageMetadata({
   description: string;
   /** Título para redes; por defecto `${title} · Marcus Reis` */
   ogTitle?: string;
+  /** Imagen para redes (1200×630); por defecto la general del portafolio */
+  ogImage?: { url: string; alt: string };
 }): Metadata {
+  const image = ogImage ? { ...OG_IMAGE, ...ogImage } : OG_IMAGE;
   const url = (l: string) => `${SITE_URL}/${l}${path}`;
   const shareTitle =
     ogTitle ?? (typeof title === "string" ? `${title} · ${SITE_NAME}` : `${SITE_NAME} — UX/UI Designer`);
@@ -58,13 +62,13 @@ export function pageMetadata({
       siteName: SITE_NAME,
       locale: OG_LOCALE[lang],
       type: path ? "article" : "website",
-      images: [OG_IMAGE],
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title: shareTitle,
       description,
-      images: [OG_IMAGE.url],
+      images: [image.url],
     },
   };
 }

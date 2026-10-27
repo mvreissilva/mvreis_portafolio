@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     en: "End-to-end design of an app that guides DIY camper van builders step by step and connects them to share tools, materials and know-how.",
     pt: "Design end-to-end de um app que guia quem camperiza sua van passo a passo e conecta pessoas para compartilhar ferramentas, materiais e conhecimento.",
   };
-  return pageMetadata({ lang, path: "/work/camperoteca", title: titles[lang], description: descs[lang] });
+  return pageMetadata({ lang, path: "/work/camperoteca", title: titles[lang], description: descs[lang], ogImage: { url: "/assets/og-camperoteca.jpg", alt: "Pantallas de la app Camperoteca: Aprende, Mi Proyecto y Comunidad" } });
 }
 
 /* ─── pantallas UI ────────────────────────────────────────────────

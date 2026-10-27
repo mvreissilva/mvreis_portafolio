@@ -38,7 +38,7 @@ const copy = {
     zoom_close: "Cerrar",
     nav: [
       { id: "rt-problem",   label: "Problema" },
-      { id: "rt-research",  label: "Investigación" },
+      { id: "rt-research",  label: "Research" },
       { id: "rt-insights",  label: "Insights" },
       { id: "rt-solution",  label: "Solución" },
       { id: "rt-learnings", label: "Aprendizajes" },
@@ -49,8 +49,8 @@ const copy = {
       ["Tipo", "Proyecto conceptual · Equipo de 7 personas"],
       ["Mi rol", "UX/UI Designer · Research"],
       ["Plataforma", "Extensión de navegador"],
-      ["Herramientas", "Figma · FigJam"],
       ["Duración", "Ene – Feb 2026"],
+      ["Herramientas", "Figma · FigJam"],
     ],
     focusLabel: "Mi foco",
     focus: "Encuestas, entrevistas, síntesis de insights y HMW · Value Proposition Canvas, propuesta de valor y Business Model Canvas · Wireflow y wireframes de baja fidelidad",
@@ -64,7 +64,7 @@ const copy = {
     prob_quote: "«Sé que hay servidores y todo eso, pero lo tengo en una categoría mental de \"cosas técnicas que no veo\". No lo conecto con algo como el agua.»",
     prob_quote_by: "Participante en las entrevistas",
 
-    res_label: "Investigación",
+    res_label: "UX Research",
     res_title: "Lo que la gente aceptaría, y lo que no",
     res_intro: "Combinamos métodos cuantitativos y cualitativos para entender qué sabe la gente del consumo hídrico digital y, sobre todo, qué toleraría de una herramienta que se lo mostrara.",
     res_methods: ["55 encuestas", "9 entrevistas", "3 extensiones analizadas", "DAFO", "Desk research"],
@@ -137,7 +137,7 @@ const copy = {
       ["El control es innegociable", "Casi la mitad rechaza las interrupciones y casi nadie dejaría de usar la IA por un aviso. Una herramienta de awareness no puede imponer: el resumen diario y las alertas opcionales dejan la decisión en manos de cada persona."],
       ["Los datos se leen dos veces", "Al revisar las respuestas originales para este case study encontré cifras cruzadas en la síntesis. Corregirlas cambió la historia: el problema no era la ignorancia, sino la invisibilidad. Y un empate en las entrevistas no es una preferencia: es una pregunta abierta que hay que testear."],
     ],
-    next_label: "Próximos pasos",
+    next_label: "Próximas iteraciones",
     next: [
       "Testear un indicador que se llene en la barra del navegador: fue la preferencia más clara de las entrevistas (7 de 9) y quedó fuera del diseño final",
       "Pasar de preferencias declaradas a comportamiento real con un test de prototipo: ¿la gente mantiene la extensión instalada?",
@@ -168,8 +168,8 @@ const copy = {
       ["Type", "Conceptual project · Team of 7 people"],
       ["My role", "UX/UI Designer · Research"],
       ["Platform", "Browser extension"],
-      ["Tools", "Figma · FigJam"],
       ["Duration", "Jan – Feb 2026"],
+      ["Tools", "Figma · FigJam"],
     ],
     focusLabel: "My focus",
     focus: "Surveys, interviews, insight synthesis and HMW · Value Proposition Canvas, value proposition and Business Model Canvas · Wireflow and low-fidelity wireframes",
@@ -183,7 +183,7 @@ const copy = {
     prob_quote: "“I know there are servers and all that, but I file it under ‘technical things I don't see’. I don't connect it with something like water.”",
     prob_quote_by: "Interview participant",
 
-    res_label: "Research",
+    res_label: "UX Research",
     res_title: "What people would accept, and what they wouldn't",
     res_intro: "We combined quantitative and qualitative methods to understand what people know about digital water use and, above all, what they would tolerate from a tool that showed it to them.",
     res_methods: ["55 surveys", "9 interviews", "3 extensions analysed", "SWOT", "Desk research"],
@@ -256,7 +256,7 @@ const copy = {
       ["Control is non-negotiable", "Almost half reject interruptions, and almost no one would stop using AI because of a warning. An awareness tool can't impose: the daily summary and optional alerts leave the decision to each person."],
       ["Read the data twice", "Revisiting the raw responses for this case study, I found mislabelled figures in the synthesis. Correcting them changed the story: the problem wasn't ignorance, it was invisibility. And a tie in the interviews isn't a preference: it's an open question to test."],
     ],
-    next_label: "Next steps",
+    next_label: "Next iterations",
     next: [
       "Test an indicator that fills up in the browser bar: the clearest preference in the interviews (7 of 9), left out of the final design",
       "Move from stated preferences to real behaviour with a prototype test: do people keep the extension installed?",
@@ -276,7 +276,7 @@ const copy = {
     zoom_close: "Fechar",
     nav: [
       { id: "rt-problem",   label: "Problema" },
-      { id: "rt-research",  label: "Pesquisa" },
+      { id: "rt-research",  label: "Research" },
       { id: "rt-insights",  label: "Insights" },
       { id: "rt-solution",  label: "Solução" },
       { id: "rt-learnings", label: "Aprendizados" },
@@ -287,8 +287,8 @@ const copy = {
       ["Tipo", "Projeto conceitual · Equipe de 7 pessoas"],
       ["Minha função", "UX/UI Designer · Research"],
       ["Plataforma", "Extensão de navegador"],
-      ["Ferramentas", "Figma · FigJam"],
       ["Duração", "Jan – Fev 2026"],
+      ["Ferramentas", "Figma · FigJam"],
     ],
     focusLabel: "Meu foco",
     focus: "Questionários, entrevistas, síntese de insights e HMW · Value Proposition Canvas, proposta de valor e Business Model Canvas · Wireflow e wireframes de baixa fidelidade",
@@ -302,7 +302,7 @@ const copy = {
     prob_quote: "“Sei que existem servidores e tudo mais, mas guardo isso numa categoria mental de ‘coisas técnicas que não vejo’. Não associo isso a algo como a água.”",
     prob_quote_by: "Participante das entrevistas",
 
-    res_label: "Pesquisa",
+    res_label: "UX Research",
     res_title: "O que as pessoas aceitariam, e o que não",
     res_intro: "Combinamos métodos quantitativos e qualitativos para entender o que as pessoas sabem sobre o consumo hídrico digital e, principalmente, o que tolerariam de uma ferramenta que mostrasse isso a elas.",
     res_methods: ["55 questionários", "9 entrevistas", "3 extensões analisadas", "Análise SWOT", "Desk research"],
@@ -375,7 +375,7 @@ const copy = {
       ["O controle é inegociável", "Quase metade rejeita interrupções e quase ninguém deixaria de usar a IA por causa de um aviso. Uma ferramenta de conscientização não pode impor: o resumo diário e os alertas opcionais deixam a decisão nas mãos de cada pessoa."],
       ["Os dados se leem duas vezes", "Ao revisar as respostas originais para este case study, encontrei números trocados na síntese. Corrigi-los mudou a história: o problema não era a falta de conhecimento, e sim a invisibilidade. E um empate nas entrevistas não é uma preferência: é uma pergunta em aberto que precisa ser testada."],
     ],
-    next_label: "Próximos passos",
+    next_label: "Próximas iterações",
     next: [
       "Testar um indicador que se enche na barra do navegador: foi a preferência mais clara nas entrevistas (7 de 9) e ficou fora do design final",
       "Passar de preferências declaradas para comportamento real com um teste de protótipo: as pessoas mantêm a extensão instalada?",
@@ -639,7 +639,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
               </li>
             ))}
           </ol>
-          <h3 style={{ fontSize: "1rem", fontWeight: 600, color: "var(--ink)", marginBottom: "1rem" }}>{C.next_label}</h3>
+          <h3 style={{ fontFamily: serif, fontSize: "1.3rem", fontWeight: 400, marginBottom: "1rem", color: "var(--ink)" }}>{C.next_label}</h3>
           <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.625rem" }}>
             {C.next.map((n) => (
               <li key={n} style={{ display: "flex", gap: "0.5rem", fontSize: "0.9375rem", lineHeight: 1.65, color: "var(--muted)" }}>
@@ -676,14 +676,16 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
         .rt-hp { display: grid; gap: 0.75rem; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem !important; }
         .rt-hp > li { scroll-snap-align: start; }
         @media (min-width: 640px) {
-          .rt-meta { grid-template-columns: repeat(3, 1fr) !important; }
-          .rt-meta-wide { grid-column: span 3; }
+          .rt-meta { grid-template-columns: repeat(2, 1fr) !important; }
+          .rt-meta-wide { grid-column: span 1; }
           .rt-stats { grid-template-columns: repeat(2, 1fr) !important; }
           .rt-hp { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; grid-template-columns: repeat(2, 1fr) !important; padding-bottom: 0 !important; }
           .hmw-row { grid-template-columns: 1fr 1fr 1fr !important; }
           .rt-bar { grid-template-columns: 15rem 1fr; align-items: center; gap: 1rem; }
         }
         @media (min-width: 900px) {
+          .rt-meta { grid-template-columns: repeat(4, 1fr) !important; }
+          .rt-meta-wide { grid-column: span 3; }
           .rt-hp { grid-template-columns: repeat(4, 1fr) !important; }
         }
       `}</style>

@@ -78,7 +78,7 @@ const copy = {
     /* 02 */
     prob_label: "Problema y oportunidad",
     prob_title: "Un proceso complejo, sin guía ni recursos compartidos",
-    prob_body: "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, la información está dispersa y las decisiones mal tomadas tienen coste real. Al mismo tiempo, los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin un canal que la articule.",
+    prob_body: "Camperizar una furgoneta por cuenta propia es técnicamente complejo y económicamente exigente. El proceso carece de un orden claro, la información está dispersa y las decisiones mal tomadas pueden tener coste real. Al mismo tiempo, los materiales y herramientas que se usan puntualmente — y cuestan — terminan sin uso una vez acabada esa fase. Una comunidad que comparte recursos existe, pero sin un canal que la articule.",
     prob_opp: "La oportunidad: una plataforma que guiara el proceso y activara la comunidad — donde materiales, herramientas y conocimiento circularan entre privados por préstamo o intercambio. Orientación y economía circular en un mismo lugar.",
     /* 03 */
     research_label: "UX Research",
@@ -141,7 +141,7 @@ const copy = {
       { t: "Onboarding", d: "Entiende cómo funciona por etapas.", cta: "Empezar mi proyecto" },
       { t: "Login o Registro", d: "Inicia sesión o crea su cuenta.", cta: "Iniciar sesión" },
       { t: "Mi Proyecto", d: "Ve su etapa y el siguiente paso.", cta: "Buscar recurso", hub: true },
-      { t: "Encuentra", d: "Localiza una herramienta cerca y ve a qué distancia está.", cta: "Pedir préstamo" },
+      { t: "Encuentra", d: "Localiza una herramienta o material cerca y ve a qué distancia está.", cta: "Pedir préstamo" },
       { t: "Solicitud", d: "Pide el préstamo con fechas y un mensaje.", cta: "Enviar solicitud" },
       { t: "Solicitud enviada", d: "Recibe la confirmación y sigue con su proyecto.", cta: "" },
     ],
@@ -276,7 +276,7 @@ const copy = {
 
     prob_label: "Problem & Opportunity",
     prob_title: "A complex process, with no guidance or shared resources",
-    prob_body: "Converting a van on your own is technically complex and financially demanding. The process has no clear order, information is scattered and poorly timed decisions carry real cost. At the same time, materials and tools used briefly — at real cost — end up idle once that phase is over. A community that shares resources exists, but without a channel to bring it together.",
+    prob_body: "Converting a van on your own is technically complex and financially demanding. The process has no clear order, information is scattered and poorly timed decisions can carry real cost. At the same time, materials and tools used briefly — at real cost — end up idle once that phase is over. A community that shares resources exists, but without a channel to bring it together.",
     prob_opp: "The opportunity: a platform that guides the process and activates the community — where materials, tools and knowledge flow between individuals through lending or exchange. Guidance and circular economy in one place.",
     research_label: "UX Research",
     research_title: "Research before design",
@@ -335,7 +335,7 @@ const copy = {
       { t: "Onboarding", d: "Understands how it works by stage.", cta: "Start my project" },
       { t: "Log in or Sign up", d: "Logs in or creates an account.", cta: "Log in" },
       { t: "My Project", d: "Sees their stage and the next step.", cta: "Find a resource", hub: true },
-      { t: "Find", d: "Finds a tool nearby and sees how far away it is.", cta: "Borrow" },
+      { t: "Find", d: "Finds a tool or material nearby and sees how far away it is.", cta: "Borrow" },
       { t: "Request", d: "Asks to borrow it with dates and a message.", cta: "Send request" },
       { t: "Request sent", d: "Gets the confirmation and carries on with the project.", cta: "" },
     ],
@@ -463,7 +463,7 @@ const copy = {
 
     prob_label: "Problema e oportunidade",
     prob_title: "Um processo complexo, sem orientação nem recursos compartilhados",
-    prob_body: "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e as decisões mal tomadas têm custo real. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que compartilha recursos, mas sem um canal que a articule.",
+    prob_body: "Camperizar uma van por conta própria é tecnicamente complexo e economicamente exigente. O processo não tem uma ordem clara, a informação está dispersa e as decisões mal tomadas podem ter custo real. Ao mesmo tempo, os materiais e ferramentas usados pontualmente — e que custam — ficam sem uso assim que essa fase termina. Existe uma comunidade que compartilha recursos, mas sem um canal que a articule.",
     prob_opp: "A oportunidade: uma plataforma que orientasse o processo e ativasse a comunidade — onde materiais, ferramentas e conhecimento circulassem entre particulares por empréstimo ou troca. Orientação e economia circular em um mesmo lugar.",
     research_label: "UX Research",
     research_title: "Pesquisar antes de projetar",
@@ -522,7 +522,7 @@ const copy = {
       { t: "Onboarding", d: "Entende como funciona por etapas.", cta: "Começar meu projeto" },
       { t: "Login ou Cadastro", d: "Faz login ou cria uma conta.", cta: "Entrar" },
       { t: "Meu Projeto", d: "Vê sua etapa e o próximo passo.", cta: "Buscar recurso", hub: true },
-      { t: "Encontra", d: "Encontra uma ferramenta por perto e vê a que distância está.", cta: "Pedir emprestado" },
+      { t: "Encontra", d: "Encontra uma ferramenta ou material por perto e vê a que distância está.", cta: "Pedir emprestado" },
       { t: "Solicitação", d: "Pede o empréstimo com datas e uma mensagem.", cta: "Enviar solicitação" },
       { t: "Solicitação enviada", d: "Recebe a confirmação e segue com o projeto.", cta: "" },
     ],

@@ -92,7 +92,7 @@ const copy = {
     persona_name: "Óscar Navarro, 48 años",
     persona_photo: "/assets/camperoteca/personas/oscar.webp",
     persona_tag: "«El Práctico»",
-    persona_desc: "Vive en Sevilla y está camperizando su furgoneta para viajar en familia. Aprende con vídeos y guías paso a paso, y prefiere soluciones que otras personas ya han probado. No quiere gastar un dineral en herramientas que usará una vez.",
+    persona_desc: "Está camperizando su furgoneta para viajar en familia. Aprende con vídeos y guías paso a paso, y prefiere soluciones que otras personas ya han probado. No quiere gastar un dineral en herramientas que usará una vez.",
     goals_title: "Objetivos",
     goals: [
       "Conseguir herramientas cerca sin comprar las de un solo uso.",
@@ -105,11 +105,11 @@ const copy = {
       "Herramientas caras para usarlas una sola vez.",
       "No saber qué paso toca ahora ni qué viene después.",
     ],
-    persona_context: "Dos personas construidas con los datos de la muestra: quien empieza desde cero y quien ya tiene algo que compartir.",
+    persona_context: "Dos personas construidas con los datos de la muestra: quien empieza desde cero y quien ya tiene algo que compartir (el 87,5% colabora siempre o según el proyecto).",
     persona2_name: "Carmen Ortega, 47 años",
     persona2_photo: "/assets/camperoteca/personas/carmen.webp",
     persona2_tag: "«La Colaboradora»",
-    persona2_desc: "Vive en Sevilla y lleva unos meses camperizando su furgoneta. Ya tiene algunas herramientas y está dispuesta a prestarlas o intercambiarlas. Antes de buscar en internet, pregunta en su zona.",
+    persona2_desc: "Lleva unos meses camperizando su furgoneta. Ya tiene algunas herramientas y está dispuesta a prestarlas o intercambiarlas. Antes de buscar en internet, pregunta en su zona.",
     persona2_goals: [
       "Prestar o intercambiar herramientas con gente cercana.",
       "Saber con quién trata antes de quedar.",
@@ -124,7 +124,7 @@ const copy = {
     hmw_label: "Del dato a la decisión",
     hmw_title: "Qué dijeron los datos y qué decidí",
     hmw_rows: [
-      { prob: "6 de 7 aprenden con YouTube; 96,9% quiere guías en la app", opp: "Aprenden fuera, sin orden", dec: "Aprende por etapas y Mi Proyecto con el siguiente paso" },
+      { prob: "6 de 7 aprenden con YouTube; 96,9% quiere guías en la app", opp: "Aprenden fuera, sin orden", dec: "Guías por tema en Aprende, enlazadas desde la etapa de Mi Proyecto" },
       { prob: "7 de 7 priorizan herramientas; 65,6% usaría la app para ello", opp: "Comprar para un solo uso no compensa", dec: "Encuentra, para pedir prestadas o intercambiar herramientas y materiales" },
       { prob: "6 de 7 quieren ver qué hay cerca, en mapa y lista", opp: "La cercanía decide si compartir es viable", dec: "Distancia en cada recurso y Personas cerca en mapa o lista" },
       { prob: "7 de 7 piden valoraciones", opp: "Sin confianza no hay intercambio", dec: "Valoración tras cada préstamo y reputación visible en cada recurso" },
@@ -154,7 +154,7 @@ const copy = {
     mvp_title: "Alcance del MVP",
     mvp_inc: [
       "Mi Proyecto: hub central del proceso. El usuario gestiona su avance por etapas, visualiza su progreso y accede a recursos contextuales según su necesidad actual.",
-      "Aprende: guías técnicas, legales y casos reales organizados por etapa del proyecto.",
+      "Aprende: guías técnicas, legales y casos reales, enlazados desde la etapa en curso de Mi Proyecto.",
       "Encuentra: herramientas y materiales que otras personas ofrecen cerca, para pedirlos prestados o intercambiarlos. Desde Encuentra o Mi cuenta cualquiera puede ofrecer los suyos, y tras cada préstamo las personas se valoran entre sí.",
       "Comunidad: espacio de conexión entre personas en proceso de camperización para compartir experiencias y conocimiento.",
       "Onboarding y registro: presenta cómo funciona la plataforma por etapas y da acceso mediante registro o inicio de sesión.",
@@ -288,7 +288,7 @@ const copy = {
     persona_name: "Óscar Navarro, 48",
     persona_photo: "/assets/camperoteca/personas/oscar.webp",
     persona_tag: "“The Hands-on One”",
-    persona_desc: "Lives in Seville and is converting his van to travel with his family. He learns from videos and step-by-step guides, and prefers solutions others have already tested. He doesn't want to spend a fortune on tools he'll use once.",
+    persona_desc: "Is converting his van to travel with his family. He learns from videos and step-by-step guides, and prefers solutions others have already tested. He doesn't want to spend a fortune on tools he'll use once.",
     goals_title: "Goals",
     goals: [
       "Get tools nearby without buying single-use ones.",
@@ -301,11 +301,11 @@ const copy = {
       "Expensive tools used only once.",
       "Not knowing which step comes now or what comes next.",
     ],
-    persona_context: "Two personas built from the sample data: someone starting from scratch and someone who already has something to share.",
+    persona_context: "Two personas built from the sample data: someone starting from scratch and someone who already has something to share (87.5% collaborate always or depending on the project).",
     persona2_name: "Carmen Ortega, 47",
     persona2_photo: "/assets/camperoteca/personas/carmen.webp",
     persona2_tag: "“The Collaborator”",
-    persona2_desc: "Lives in Seville and has been converting her van for a few months. She already owns some tools and is happy to lend or swap them. Before searching online, she asks around her area.",
+    persona2_desc: "Has been converting her van for a few months. She already owns some tools and is happy to lend or swap them. Before searching online, she asks around her area.",
     persona2_goals: [
       "Lend or swap tools with people nearby.",
       "Know who she's dealing with before meeting.",
@@ -319,7 +319,7 @@ const copy = {
     hmw_label: "From data to decision",
     hmw_title: "What the data said and what I decided",
     hmw_rows: [
-      { prob: "6 of 7 learn on YouTube; 96.9% want guides in the app", opp: "They learn elsewhere, with no order", dec: "Learn by stage and My Project with the next step" },
+      { prob: "6 of 7 learn on YouTube; 96.9% want guides in the app", opp: "They learn elsewhere, with no order", dec: "Topic guides in Learn, linked from the current stage in My Project" },
       { prob: "7 of 7 prioritise tools; 65.6% would use the app for it", opp: "Buying for a single use isn't worth it", dec: "Find, to borrow or swap tools and materials" },
       { prob: "6 of 7 want to see what's nearby, on a map and in a list", opp: "Proximity decides whether sharing is viable", dec: "Distance on every resource and People nearby on a map or list" },
       { prob: "7 of 7 ask for ratings", opp: "No trust, no exchange", dec: "A rating after every loan and reputation shown on every resource" },
@@ -348,7 +348,7 @@ const copy = {
     mvp_title: "MVP Scope",
     mvp_inc: [
       "My Project: the central hub. Users manage their progress by stage, see how far they've come and access contextual resources for their current need.",
-      "Learn: technical and legal guides and real cases organised by project stage.",
+      "Learn: technical and legal guides and real cases, linked from the current stage in My Project.",
       "Find: tools and materials other people offer nearby, to borrow or swap. Anyone can offer their own from Find or My Account, and after each loan people rate each other.",
       "Community: a space for people converting their vans to share experiences and know-how.",
       "Onboarding and sign-up: explains how the platform works by stage and gives access via sign-up or log-in.",
@@ -475,7 +475,7 @@ const copy = {
     persona_name: "Óscar Navarro, 48 anos",
     persona_photo: "/assets/camperoteca/personas/oscar.webp",
     persona_tag: "“O Prático”",
-    persona_desc: "Mora em Sevilha e está camperizando a van para viajar com a família. Aprende com vídeos e guias passo a passo e prefere soluções que outras pessoas já testaram. Não quer gastar uma fortuna com ferramentas que vai usar uma vez só.",
+    persona_desc: "Está camperizando a van para viajar com a família. Aprende com vídeos e guias passo a passo e prefere soluções que outras pessoas já testaram. Não quer gastar uma fortuna com ferramentas que vai usar uma vez só.",
     goals_title: "Objetivos",
     goals: [
       "Conseguir ferramentas por perto sem comprar as de uso único.",
@@ -488,11 +488,11 @@ const copy = {
       "Ferramentas caras para usar uma vez só.",
       "Não saber qual etapa vem agora nem o que vem depois.",
     ],
-    persona_context: "Duas personas construídas com os dados da amostra: quem começa do zero e quem já tem algo para compartilhar.",
+    persona_context: "Duas personas construídas com os dados da amostra: quem começa do zero e quem já tem algo para compartilhar (87,5% colaboram sempre ou dependendo do projeto).",
     persona2_name: "Carmen Ortega, 47 anos",
     persona2_photo: "/assets/camperoteca/personas/carmen.webp",
     persona2_tag: "“A Colaboradora”",
-    persona2_desc: "Mora em Sevilha e está camperizando a van há alguns meses. Já tem algumas ferramentas e topa emprestá-las ou trocá-las. Antes de pesquisar na internet, pergunta para quem mora perto.",
+    persona2_desc: "Está camperizando a van há alguns meses. Já tem algumas ferramentas e topa emprestá-las ou trocá-las. Antes de pesquisar na internet, pergunta para quem mora perto.",
     persona2_goals: [
       "Emprestar ou trocar ferramentas com gente da região.",
       "Saber com quem está lidando antes de marcar um encontro.",
@@ -506,7 +506,7 @@ const copy = {
     hmw_label: "Do dado à decisão",
     hmw_title: "O que os dados disseram e o que decidi",
     hmw_rows: [
-      { prob: "6 de 7 aprendem no YouTube; 96,9% querem guias no app", opp: "Aprendem fora, sem ordem", dec: "Aprende por etapas e Meu Projeto com o próximo passo" },
+      { prob: "6 de 7 aprendem no YouTube; 96,9% querem guias no app", opp: "Aprendem fora, sem ordem", dec: "Guias por tema no Aprende, ligados à etapa atual do Meu Projeto" },
       { prob: "7 de 7 priorizam ferramentas; 65,6% usariam o app para isso", opp: "Comprar para um único uso não compensa", dec: "Encontra, para pegar emprestado ou trocar ferramentas e materiais" },
       { prob: "6 de 7 querem ver o que há por perto, no mapa e em lista", opp: "A proximidade decide se compartilhar é viável", dec: "Distância em cada recurso e Pessoas por perto no mapa ou em lista" },
       { prob: "7 de 7 pedem avaliações", opp: "Sem confiança não há troca", dec: "Avaliação após cada empréstimo e reputação visível em cada recurso" },
@@ -535,7 +535,7 @@ const copy = {
     mvp_title: "Escopo do MVP",
     mvp_inc: [
       "Meu Projeto: o hub central do processo. O usuário gerencia o avanço por etapas, acompanha o progresso e acessa recursos contextuais conforme a necessidade do momento.",
-      "Aprende: guias técnicos, legais e casos reais organizados por etapa do projeto.",
+      "Aprende: guias técnicos, legais e casos reais, ligados à etapa atual do Meu Projeto.",
       "Encontra: ferramentas e materiais que outras pessoas oferecem por perto, para pegar emprestado ou trocar. Pelo Encontra ou por Minha conta, qualquer pessoa pode oferecer os seus, e após cada empréstimo as pessoas se avaliam.",
       "Comunidade: espaço de conexão entre pessoas que estão camperizando para compartilhar experiências e conhecimento.",
       "Onboarding e cadastro: apresenta como a plataforma funciona por etapas e dá acesso por cadastro ou login.",

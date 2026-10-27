@@ -3,7 +3,7 @@ export type Lang = typeof LANGS[number];
 
 export const t = {
   es: {
-    nav: { work: "Proyectos", about: "Sobre mí", skills: "Áreas", contact: "Contacto" },
+    nav: { work: "Proyectos", about: "Sobre mí", skills: "Habilidades", contact: "Contacto" },
     hero: {
       available: "Disponible · Sevilla",
       title1: "Soy Marcus Reis.",
@@ -26,8 +26,12 @@ export const t = {
       ],
     },
     areas: {
-      label: "Áreas de trabajo",
-      items: ["Research", "Information Architecture", "Interaction Design", "UI Design", "Prototyping", "AI-assisted Design"],
+      label: "Habilidades y herramientas",
+      groups: [
+        { title: "Investigación y estrategia", items: ["User Research", "Encuestas", "Entrevistas en profundidad", "Benchmark competitivo", "DAFO", "User personas", "Mapas de empatía", "Customer Journey Map", "Value Proposition Canvas", "Business Model Canvas"] },
+        { title: "Diseño de producto e interfaz", items: ["Arquitectura de información", "Flujos de usuario y wireflows", "Wireframing", "Prototipado", "Diseño de interacción", "Diseño mobile", "Design systems", "Accesibilidad", "UX writing"] },
+        { title: "Herramientas e IA", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
+      ],
     },
     contact: {
       label: "Contacto",
@@ -58,7 +62,7 @@ export const t = {
   },
 
   en: {
-    nav: { work: "Work", about: "About", skills: "Areas", contact: "Contact" },
+    nav: { work: "Work", about: "About", skills: "Skills", contact: "Contact" },
     hero: {
       available: "Available · Seville",
       title1: "I'm Marcus Reis.",
@@ -81,8 +85,12 @@ export const t = {
       ],
     },
     areas: {
-      label: "Work areas",
-      items: ["Research", "Information Architecture", "Interaction Design", "UI Design", "Prototyping", "AI-assisted Design"],
+      label: "Skills & tools",
+      groups: [
+        { title: "Research & strategy", items: ["User Research", "Surveys", "In-depth interviews", "Competitive benchmark", "SWOT analysis", "User personas", "Empathy maps", "Customer Journey Map", "Value Proposition Canvas", "Business Model Canvas"] },
+        { title: "Product & interface design", items: ["Information architecture", "User flows & wireflows", "Wireframing", "Prototyping", "Interaction design", "Mobile design", "Design systems", "Accessibility", "UX writing"] },
+        { title: "Tools & AI", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
+      ],
     },
     contact: {
       label: "Contact",
@@ -113,7 +121,7 @@ export const t = {
   },
 
   pt: {
-    nav: { work: "Projetos", about: "Sobre mim", skills: "Áreas", contact: "Contato" },
+    nav: { work: "Projetos", about: "Sobre mim", skills: "Habilidades", contact: "Contato" },
     hero: {
       available: "Disponível · Sevilha",
       title1: "Sou Marcus Reis.",
@@ -136,8 +144,12 @@ export const t = {
       ],
     },
     areas: {
-      label: "Áreas de trabalho",
-      items: ["Research", "Information Architecture", "Interaction Design", "UI Design", "Prototyping", "AI-assisted Design"],
+      label: "Habilidades e ferramentas",
+      groups: [
+        { title: "Pesquisa e estratégia", items: ["User Research", "Questionários", "Entrevistas em profundidade", "Benchmark competitivo", "Análise SWOT", "Personas", "Mapas de empatia", "Customer Journey Map", "Value Proposition Canvas", "Business Model Canvas"] },
+        { title: "Design de produto e interface", items: ["Arquitetura da informação", "Fluxos de usuário e wireflows", "Wireframing", "Prototipagem", "Design de interação", "Design mobile", "Design systems", "Acessibilidade", "UX writing"] },
+        { title: "Ferramentas e IA", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
+      ],
     },
     contact: {
       label: "Contato",

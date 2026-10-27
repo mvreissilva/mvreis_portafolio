@@ -56,6 +56,7 @@ const copy = {
     back: "Volver",
     to_top: "Volver arriba",
     zoom_hint: "Toca para ampliar",
+    zoom_hint_fine: "Haz clic para ampliar",
     zoom_close: "Cerrar",
     ui_screen_alt: "Pantalla de Camperoteca",
     heroTitle: "Camperoteca",
@@ -86,7 +87,8 @@ const copy = {
     research_label: "UX Research",
     research_title: "Investigar antes de diseñar",
     research_body: "Antes de diseñar, definí preguntas de investigación sobre el producto, los usuarios y el mercado. Para responderlas combiné una encuesta online (32 respuestas, nov.–dic. 2025), 7 entrevistas en profundidad y un benchmark de 3 plataformas con un DAFO de la competidora directa. Con esos datos sinteticé los insights y los prioricé por impacto y esfuerzo para definir el MVP.",
-    research_benchmark: "Analicé Wallapop y Milanuncios como competencia indirecta y Vibravan como competencia directa. Las dos primeras conectan a personas cercanas, pero no acompañan un proyecto ni fomentan la colaboración. Vibravan sí se centra en el mundo camper, pero acumula funciones sin jerarquía y no ofrece guías para quien empieza: es una app para cuando ya estás dentro, no para empezar. Ese hueco definió el posicionamiento. En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar. Sobre la muestra: es pequeña y no representativa. El 62,5% tenía entre 45 y 54 años y ninguna persona entrevistada había terminado su camper. Uso estas cifras para orientar el diseño, no para estimar el mercado.",
+    research_benchmark: "Analicé Wallapop y Milanuncios como competencia indirecta y Vibravan como competencia directa. Las dos primeras conectan a personas cercanas, pero no acompañan un proyecto ni fomentan la colaboración. Vibravan sí se centra en el mundo camper, pero acumula funciones sin jerarquía y no ofrece guías para quien empieza: es una app para cuando ya estás dentro, no para empezar. Ese hueco definió el posicionamiento. En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar.",
+    research_sample: "Sobre la muestra: es pequeña y no representativa. El 62,5% tenía entre 45 y 54 años y ninguna persona entrevistada había terminado su camper. Uso estas cifras para orientar el diseño, no para estimar el mercado.",
     /* 04 */
     insight_label: "Insight y personas",
     insight_title: "Lo que realmente necesitaban",
@@ -167,7 +169,8 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "De la estructura al diseño final",
     wf_body:
-      "El wireframing avanzó en dos fases. En baja fidelidad el foco estuvo en la estructura de navegación y el flujo principal: cómo un usuario nuevo pasa del onboarding a su primer paso real en el proyecto. En alta fidelidad, las decisiones se centraron en la jerarquía visual de «Mi Proyecto» como hub central, y en cómo presentar el contenido de «Aprende», «Encuentra» y «Comunidad» sin saturar al usuario. El criterio en cada iteración fue que la plataforma guiara sin sobrecargar; comprobarlo con usuarios es el siguiente paso. Usé Figma Make para generar una primera versión del prototipo a partir de mis wireframes; después la rehice y ajusté en Figma.",
+      "El wireframing avanzó en dos fases. En baja fidelidad el foco estuvo en la estructura de navegación y el flujo principal: cómo un usuario nuevo pasa del onboarding a su primer paso real en el proyecto. En alta fidelidad, las decisiones se centraron en la jerarquía visual de «Mi Proyecto» como hub central, y en cómo presentar el contenido de «Aprende», «Encuentra» y «Comunidad» sin saturar al usuario.",
+    wf_body2: "El criterio en cada iteración fue que la plataforma guiara sin sobrecargar; comprobarlo con usuarios es el siguiente paso.",
 
     /* 08 */
     ds_label: "Design System",
@@ -215,13 +218,13 @@ const copy = {
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
     learns: [
-      { title: "El research ordenó las prioridades", body: "Partía de dos problemas: un proceso sin orden y herramientas caras de uso puntual. La encuesta y las entrevistas confirmaron los dos y mostraron cómo resolverlos: Mi Proyecto con la etapa actual y el siguiente paso, y Encuentra para lo que solo se usa una vez." },
+      { title: "El research cambió el papel de Aprende", body: "En las entrevistas, 6 de 7 personas aprendían con YouTube: contenido había de sobra, pero nadie les decía qué tocaba en cada momento. Por eso Aprende no es una biblioteca suelta: sus guías se enlazan desde la etapa en curso de Mi Proyecto, para llegar a la información justo cuando hace falta. Aprendí que el valor no estaba en tener más contenido, sino en ordenarlo." },
       { title: "Decir que no también es diseñar", body: "Servicios profesionales tenía sentido por partida doble: ayudaba a las personas en las fases que piden un profesional y abría una vía para monetizar la plataforma. Pero en la matriz de impacto y esfuerzo quedaba por detrás de lo que necesitaban primero: saber por dónde empezar y conseguir herramientas cerca. La dejé para una fase posterior. Aprendí que un MVP se define tanto por lo que incluye como por lo que deja para después." },
       { title: "Contar el proyecto también es revisarlo", body: "Al preparar este case study contrasté cada pantalla del prototipo con el research y el alcance del MVP. Esa revisión destapó una necesidad sin cubrir: sin una forma de ofrecer herramientas, no había nada que pedir. Diseñé ese flujo antes de publicar. Me enseñó que el case study también es una herramienta de diseño, no solo de presentación." },
     ],
     next_title: "Próximas iteraciones",
     nexts: [
-      "Evaluar la comprensión del flujo principal con usuarios reales mediante pruebas de usabilidad.",
+      "Evaluar el flujo principal con pruebas de usabilidad, midiendo si las personas encuentran su siguiente paso y completan una solicitud de préstamo sin ayuda.",
       "Verificación de identidad y moderación de valoraciones, cuando haya un volumen real de intercambios.",
       "Personalizar el proyecto desde el registro: recoger tipo de furgoneta, fase, presupuesto y objetivos para adaptar Mi Proyecto y sus recomendaciones.",
       "Servicios profesionales: conectar con profesionales para las fases que no se pueden resolver por cuenta propia, como vía de apoyo para las personas usuarias y de ingresos para la plataforma.",
@@ -258,6 +261,7 @@ const copy = {
     back: "Back",
     to_top: "Back to top",
     zoom_hint: "Tap to enlarge",
+    zoom_hint_fine: "Click to enlarge",
     zoom_close: "Close",
     ui_screen_alt: "Camperoteca screen",
     heroTitle: "Camperoteca",
@@ -286,7 +290,8 @@ const copy = {
     research_label: "UX Research",
     research_title: "Research before design",
     research_body: "Before designing, I defined research questions about the product, the users and the market. To answer them I combined an online survey (32 responses, Nov–Dec 2025), 7 in-depth interviews and a benchmark of 3 platforms with a SWOT of the direct competitor. From that data I synthesised the insights and prioritised them by impact and effort to define the MVP.",
-    research_benchmark: "I analysed Wallapop and Milanuncios as indirect competitors and Vibravan as the direct one. The first two connect people nearby, but they don't support a project or encourage collaboration. Vibravan does focus on the camper world, but it piles up features without hierarchy and offers no guidance for beginners: it's an app for when you're already in, not for getting started. That gap defined the positioning. In the interviews, 7 out of 7 people put finding tools ahead of learning or connecting. About the sample: it is small and not representative. 62.5% were aged 45 to 54, and none of the interviewees had finished their van. I use these figures to guide design, not to size the market.",
+    research_benchmark: "I analysed Wallapop and Milanuncios as indirect competitors and Vibravan as the direct one. The first two connect people nearby, but they don't support a project or encourage collaboration. Vibravan does focus on the camper world, but it piles up features without hierarchy and offers no guidance for beginners: it's an app for when you're already in, not for getting started. That gap defined the positioning. In the interviews, 7 out of 7 people put finding tools ahead of learning or connecting.",
+    research_sample: "About the sample: it is small and not representative. 62.5% were aged 45 to 54, and none of the interviewees had finished their van. I use these figures to guide design, not to size the market.",
     insight_label: "Insight & Personas",
     insight_title: "What they really needed",
     insight_quote: "“If you don't know where to start, that's the first thing” — Calebe, interviewee.",
@@ -363,7 +368,8 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "From structure to final design",
     wf_body:
-      "Wireframing progressed in two phases. In low fidelity the focus was on navigation structure and the main flow: how a new user moves from onboarding to their first real step in the project. In high fidelity, decisions centred on the visual hierarchy of «My Project» as the central hub, and on how to present «Learn», «Find» and «Community» content without overwhelming the user. The criterion in every iteration was that the platform should guide without overwhelming; testing that with users is the next step. I used Figma Make to generate a first version of the prototype from my wireframes, then rebuilt and refined it in Figma.",
+      "Wireframing progressed in two phases. In low fidelity the focus was on navigation structure and the main flow: how a new user moves from onboarding to their first real step in the project. In high fidelity, decisions centred on the visual hierarchy of «My Project» as the central hub, and on how to present «Learn», «Find» and «Community» content without overwhelming the user.",
+    wf_body2: "The criterion in every iteration was that the platform should guide without overwhelming; testing that with users is the next step.",
 
     ds_label: "Design System",
     ds_title: "«Cosecha Solar»",
@@ -408,13 +414,13 @@ const copy = {
     learn_label: "Learnings",
     learn_title: "What I take away from this project",
     learns: [
-      { title: "The research set the priorities", body: "I started from two problems: a process with no order and expensive tools needed only briefly. The survey and interviews confirmed both and showed how to solve them: My Project with the current stage and the next step, and Find for what you only use once." },
+      { title: "Research changed the role of Learn", body: "In the interviews, 6 out of 7 people learned from YouTube: there was plenty of content, but nobody told them what came next. That is why Learn is not a standalone library: its guides are linked from the current stage in My Project, so people reach the information right when they need it. I learned that the value was not in having more content, but in putting it in order." },
       { title: "Saying no is design too", body: "Professional services made sense on two counts: it helped people through the stages that need a professional, and it opened a way to monetise the platform. But in the impact and effort matrix it ranked behind what people needed first: knowing where to start and getting tools nearby. I left it for a later phase. I learned that an MVP is defined as much by what it leaves for later as by what it includes." },
       { title: "Telling the project is also reviewing it", body: "While preparing this case study I checked every prototype screen against the research and the MVP scope. That review uncovered an unmet need: without a way to offer tools, there was nothing to request. I designed that flow before publishing. It taught me that a case study is a design tool too, not just a presentation." },
     ],
     next_title: "Next iterations",
     nexts: [
-      "Test how well people understand the main flow with real users through usability testing.",
+      "Evaluate the main flow with usability testing, measuring whether people find their next step and complete a loan request without help.",
       "Identity verification and review moderation, once there's a real volume of exchanges.",
       "Personalise the project from sign-up: collect van type, phase, budget and goals to tailor My Project and its recommendations.",
       "Professional services: connecting people with professionals for the stages they can't handle on their own, as support for users and a source of revenue for the platform.",
@@ -451,6 +457,7 @@ const copy = {
     back: "Voltar",
     to_top: "Voltar ao topo",
     zoom_hint: "Toque para ampliar",
+    zoom_hint_fine: "Clique para ampliar",
     zoom_close: "Fechar",
     ui_screen_alt: "Tela da Camperoteca",
     meta_rol: "Função",
@@ -476,7 +483,8 @@ const copy = {
     research_label: "UX Research",
     research_title: "Pesquisar antes de projetar",
     research_body: "Antes de desenhar, defini perguntas de pesquisa sobre o produto, os usuários e o mercado. Para respondê-las, combinei um questionário online (32 respostas, nov.–dez. 2025), 7 entrevistas em profundidade e um benchmark de 3 plataformas com uma análise SWOT da concorrente direta. Com esses dados, sintetizei os insights e os priorizei por impacto e esforço para definir o MVP.",
-    research_benchmark: "Analisei o Wallapop e o Milanuncios como concorrência indireta e o Vibravan como concorrência direta. Os dois primeiros conectam pessoas próximas, mas não acompanham um projeto nem incentivam a colaboração. O Vibravan é focado no mundo camper, mas acumula funções sem hierarquia e não oferece guias para quem está começando: é um app para quando você já está dentro, não para começar. Essa lacuna definiu o posicionamento. Nas entrevistas, 7 de 7 pessoas colocaram encontrar ferramentas à frente de aprender ou se conectar. Sobre a amostra: é pequena e não representativa. 62,5% tinham entre 45 e 54 anos, e nenhuma pessoa entrevistada tinha terminado a sua camper. Uso esses números para orientar o design, não para estimar o mercado.",
+    research_benchmark: "Analisei o Wallapop e o Milanuncios como concorrência indireta e o Vibravan como concorrência direta. Os dois primeiros conectam pessoas próximas, mas não acompanham um projeto nem incentivam a colaboração. O Vibravan é focado no mundo camper, mas acumula funções sem hierarquia e não oferece guias para quem está começando: é um app para quando você já está dentro, não para começar. Essa lacuna definiu o posicionamento. Nas entrevistas, 7 de 7 pessoas colocaram encontrar ferramentas à frente de aprender ou se conectar.",
+    research_sample: "Sobre a amostra: é pequena e não representativa. 62,5% tinham entre 45 e 54 anos, e nenhuma pessoa entrevistada tinha terminado a sua camper. Uso esses números para orientar o design, não para estimar o mercado.",
     insight_label: "Insight e personas",
     insight_title: "O que realmente precisavam",
     insight_quote: "“Se você não sabe por onde começar, isso é o primeiro” — Calebe, pessoa entrevistada.",
@@ -553,7 +561,8 @@ const copy = {
     wf_label: "Wireframes",
     wf_title: "Da estrutura ao design final",
     wf_body:
-      "O wireframing avançou em duas fases. Em baixa fidelidade o foco esteve na estrutura de navegação e no fluxo principal: como um usuário novo passa do onboarding ao seu primeiro passo real no projeto. Em alta fidelidade, as decisões se concentraram na hierarquia visual de «Meu Projeto» como hub central, e em como apresentar o conteúdo de «Aprende», «Encontra» e «Comunidade» sem saturar o usuário. O critério em cada iteração foi que a plataforma orientasse sem sobrecarregar; comprovar isso com usuários é o próximo passo. Usei o Figma Make para gerar uma primeira versão do protótipo a partir dos meus wireframes; depois, refiz e ajustei no Figma.",
+      "O wireframing avançou em duas fases. Em baixa fidelidade o foco esteve na estrutura de navegação e no fluxo principal: como um usuário novo passa do onboarding ao seu primeiro passo real no projeto. Em alta fidelidade, as decisões se concentraram na hierarquia visual de «Meu Projeto» como hub central, e em como apresentar o conteúdo de «Aprende», «Encontra» e «Comunidade» sem saturar o usuário.",
+    wf_body2: "O critério em cada iteração foi que a plataforma orientasse sem sobrecarregar; comprovar isso com usuários é o próximo passo.",
 
     ds_label: "Design System",
     ds_title: "«Cosecha Solar»",
@@ -597,13 +606,13 @@ const copy = {
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
     learns: [
-      { title: "A pesquisa definiu as prioridades", body: "Eu partia de dois problemas: um processo sem ordem e ferramentas caras de uso pontual. O questionário e as entrevistas confirmaram os dois e mostraram como resolvê-los: Meu Projeto com a etapa atual e o próximo passo, e Encontra para o que só se usa uma vez." },
+      { title: "A pesquisa mudou o papel do Aprende", body: "Nas entrevistas, 6 de 7 pessoas aprendiam com o YouTube: conteúdo não faltava, mas ninguém dizia o que fazer em cada momento. Por isso o Aprende não é uma biblioteca solta: seus guias são acessados a partir da etapa atual do Meu Projeto, para chegar à informação na hora certa. Aprendi que o valor não estava em ter mais conteúdo, mas em organizá-lo." },
       { title: "Dizer não também é design", body: "Serviços profissionais fazia sentido por dois motivos: ajudava as pessoas nas etapas que exigem um profissional e abria um caminho para monetizar a plataforma. Mas, na matriz de impacto e esforço, ficava atrás do que elas precisavam primeiro: saber por onde começar e conseguir ferramentas por perto. Deixei para uma fase posterior. Aprendi que um MVP se define tanto pelo que inclui quanto pelo que deixa para depois." },
       { title: "Contar o projeto também é revisá-lo", body: "Ao preparar este estudo de caso, comparei cada tela do protótipo com a pesquisa e o escopo do MVP. Essa revisão revelou uma necessidade não atendida: sem uma forma de oferecer ferramentas, não havia nada para pedir. Desenhei esse fluxo antes de publicar. Aprendi que o estudo de caso também é uma ferramenta de design, não só de apresentação." },
     ],
     next_title: "Próximas iterações",
     nexts: [
-      "Avaliar a compreensão do fluxo principal com usuários reais por meio de testes de usabilidade.",
+      "Avaliar o fluxo principal com testes de usabilidade, medindo se as pessoas encontram o próximo passo e concluem uma solicitação de empréstimo sem ajuda.",
       "Verificação de identidade e moderação de avaliações, quando houver um volume real de trocas.",
       "Personalizar o projeto desde o cadastro: coletar tipo de van, etapa, orçamento e objetivos para adaptar Meu Projeto e suas recomendações.",
       "Serviços profissionais: conectar as pessoas a profissionais nas etapas que não dá para resolver por conta própria, como apoio para quem usa a plataforma e fonte de receita para ela.",
@@ -745,7 +754,7 @@ export default async function CamperotecaPage({ params }: Props) {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
+              gridTemplateColumns: "repeat(5, 1fr)",
               gap: "1rem",
               marginBottom: "0",
             }}
@@ -905,13 +914,15 @@ export default async function CamperotecaPage({ params }: Props) {
             style={{
               marginTop: "1.5rem",
               padding: "1.25rem 1.5rem",
-              borderLeft: "3px solid var(--accent)",
               background: "var(--surface)",
-              borderRadius: "0 10px 10px 0",
+              borderRadius: "10px",
             }}
           >
-            <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "var(--muted)", fontStyle: "italic" }}>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.75, color: "var(--muted)" }}>
               {C.research_benchmark}
+            </p>
+            <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", marginTop: "0.75rem" }}>
+              {C.research_sample}
             </p>
           </div>
         </Reveal>
@@ -1141,7 +1152,7 @@ export default async function CamperotecaPage({ params }: Props) {
             </ol>
           </figure>
           <style>{`
-            .cp-hp { display: grid; gap: 0.75rem; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem !important; }
+            .cp-hp { display: grid; align-items: start; gap: 0.75rem; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem !important; }
             .cp-hp > li { scroll-snap-align: start; }
             @media (min-width: 640px) { .cp-hp { grid-auto-flow: row; grid-auto-columns: auto; overflow: visible; grid-template-columns: repeat(2, 1fr) !important; padding-bottom: 0 !important; } }
             @media (min-width: 900px) { .cp-hp { grid-template-columns: repeat(4, 1fr) !important; } }
@@ -1209,6 +1220,9 @@ export default async function CamperotecaPage({ params }: Props) {
           <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "2.5rem" }}>
             {C.wf_body}
           </p>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginTop: "-1.25rem", marginBottom: "2.5rem" }}>
+            {C.wf_body2}
+          </p>
         </Reveal>
         <Reveal delay={0.1}>
           <div style={{ borderRadius: "12px", overflow: "hidden", background: "#F7F7F4", padding: "1.5rem 1.5rem 2.75rem" }}>
@@ -1219,6 +1233,7 @@ export default async function CamperotecaPage({ params }: Props) {
               height={941}
               style={{ width: "100%", height: "auto", display: "block", borderRadius: "8px" }}
               hint={C.zoom_hint}
+              hintFine={C.zoom_hint_fine}
               hintStyle={{ bottom: "-2.25rem" }}
               closeLabel={C.zoom_close}
             />

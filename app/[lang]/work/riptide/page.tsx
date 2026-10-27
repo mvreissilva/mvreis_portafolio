@@ -34,6 +34,7 @@ const copy = {
     back: "← Volver",
     to_top: "Volver arriba",
     zoom_hint: "Toca para ampliar",
+    zoom_hint_fine: "Haz clic para ampliar",
     zoom_close: "Cerrar",
     nav: [
       { id: "rt-problem",   label: "Problema" },
@@ -152,6 +153,7 @@ const copy = {
     back: "← Back",
     to_top: "Back to top",
     zoom_hint: "Tap to enlarge",
+    zoom_hint_fine: "Click to enlarge",
     zoom_close: "Close",
     nav: [
       { id: "rt-problem",   label: "Problem" },
@@ -270,6 +272,7 @@ const copy = {
     back: "← Voltar",
     to_top: "Voltar ao topo",
     zoom_hint: "Toque para ampliar",
+    zoom_hint_fine: "Clique para ampliar",
     zoom_close: "Fechar",
     nav: [
       { id: "rt-problem",   label: "Problema" },
@@ -415,7 +418,7 @@ function Figure({ img, alt, caption, C }: { img: { src: string; w: number; h: nu
           width={img.w}
           height={img.h}
           style={{ width: "100%", height: "auto", display: "block" }}
-          hint={C.zoom_hint}
+          hint={C.zoom_hint} hintFine={C.zoom_hint_fine}
           hintStyle={{ bottom: "-2.25rem" }}
           closeLabel={C.zoom_close}
         />

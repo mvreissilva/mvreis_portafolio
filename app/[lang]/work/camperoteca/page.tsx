@@ -1350,9 +1350,6 @@ export default async function CamperotecaPage({ params }: Props) {
       <section id="cs-ui" style={section}>
         <Reveal>
           <SectionHeading label={C.ui_label} title={C.ui_title} />
-          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--muted)", marginBottom: "3rem" }}>
-            {C.ui_body}
-          </p>
         </Reveal>
 
         {/* Screens grid — 3 pantallas clave */}
@@ -1362,7 +1359,7 @@ export default async function CamperotecaPage({ params }: Props) {
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
               gap: "1.5rem",
-              marginTop: "3rem",
+              marginTop: "1.5rem",
             }}
             className="screens-grid"
           >
@@ -1592,7 +1589,8 @@ export default async function CamperotecaPage({ params }: Props) {
             grid-template-columns: 1fr !important;
           }
           .screens-grid {
-            grid-template-columns: 1fr !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 1.75rem 1rem !important;
           }
           .ds-color-grid {
             grid-template-columns: 1fr 1fr !important;

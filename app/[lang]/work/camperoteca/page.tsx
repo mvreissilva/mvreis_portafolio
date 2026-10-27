@@ -213,8 +213,8 @@ const copy = {
     learn_title: "Qué me llevo de este proyecto",
     learns: [
       { title: "El research ordenó las prioridades", body: "Partía de dos problemas: un proceso sin orden y herramientas caras de uso puntual. La encuesta y las entrevistas confirmaron los dos y mostraron cómo resolverlos: Mi Proyecto con la etapa actual y el siguiente paso, y Encuentra para lo que solo se usa una vez." },
-      { title: "La hipótesis de partida se sostuvo", body: "En las entrevistas, 7 de 7 personas pusieron encontrar herramientas por delante de aprender o conectar. Eso confirmó que el intercambio debía ser un eje del MVP y no un extra." },
-      { title: "Auditar mi propio trabajo también es diseño", body: "Al preparar este case study revisé la coherencia entre research, prototipo y MVP. Encontré cifras sin fuente y una necesidad sin cubrir: ofrecer un recurso propio. Corregí las cifras y diseñé ese flujo antes de publicar. Me enseñó que un caso honesto vale más que uno redondo." },
+      { title: "La confianza no podía esperar a la siguiente fase", body: "Al principio dejé las valoraciones para después: sin intercambios, no habría nada que valorar. Pero 7 de 7 personas entrevistadas las pedían, y nadie presta una herramienta a un desconocido. Las incluí en el MVP, vinculadas a cada préstamo. Aprendí a distinguir lo que un producto necesita para crecer de lo que necesita para arrancar." },
+      { title: "Contar el proyecto también es revisarlo", body: "Al preparar este case study contrasté cada pantalla del prototipo con el research y el alcance del MVP. Esa revisión destapó una necesidad sin cubrir: sin una forma de ofrecer herramientas, no había nada que pedir. Diseñé ese flujo antes de publicar. Me enseñó que el case study también es una herramienta de diseño, no solo de presentación." },
     ],
     next_title: "Próximas iteraciones",
     nexts: [
@@ -403,8 +403,8 @@ const copy = {
     learn_title: "What I take away from this project",
     learns: [
       { title: "The research set the priorities", body: "I started from two problems: a process with no order and expensive tools needed only briefly. The survey and interviews confirmed both and showed how to solve them: My Project with the current stage and the next step, and Find for what you only use once." },
-      { title: "The starting hypothesis held up", body: "In the interviews, 7 out of 7 people put finding tools ahead of learning or connecting. That confirmed exchange had to be a core part of the MVP, not an extra." },
-      { title: "Auditing my own work is design too", body: "While preparing this case study I checked the consistency between research, prototype and MVP. I found figures without a source and an unmet need: offering your own resource. I corrected the figures and designed that flow before publishing. It taught me that an honest case is worth more than a polished one." },
+      { title: "Trust couldn't wait for the next phase", body: "At first I left ratings for later: with no exchanges yet, there would be nothing to rate. But 7 out of 7 interviewees asked for them, and nobody lends a tool to a stranger. I added them to the MVP, tied to each loan. I learned to tell apart what a product needs to grow from what it needs to get started." },
+      { title: "Telling the project is also reviewing it", body: "While preparing this case study I checked every prototype screen against the research and the MVP scope. That review uncovered an unmet need: without a way to offer tools, there was nothing to request. I designed that flow before publishing. It taught me that a case study is a design tool too, not just a presentation." },
     ],
     next_title: "Next iterations",
     nexts: [
@@ -589,8 +589,8 @@ const copy = {
     learn_title: "O que levo deste projeto",
     learns: [
       { title: "A pesquisa definiu as prioridades", body: "Eu partia de dois problemas: um processo sem ordem e ferramentas caras de uso pontual. O questionário e as entrevistas confirmaram os dois e mostraram como resolvê-los: Meu Projeto com a etapa atual e o próximo passo, e Encontra para o que só se usa uma vez." },
-      { title: "A hipótese de partida se confirmou", body: "Nas entrevistas, 7 de 7 pessoas colocaram encontrar ferramentas à frente de aprender ou se conectar. Isso confirmou que a troca precisava ser um eixo do MVP, e não um extra." },
-      { title: "Auditar meu próprio trabalho também é design", body: "Ao preparar este estudo de caso, revisei a coerência entre pesquisa, protótipo e MVP. Encontrei números sem fonte e uma necessidade não atendida: oferecer um recurso próprio. Corrigi os números e desenhei esse fluxo antes de publicar. Aprendi que um caso honesto vale mais do que um caso perfeitinho." },
+      { title: "A confiança não podia esperar a próxima fase", body: "No início, deixei as avaliações para depois: sem trocas, não haveria nada para avaliar. Mas 7 de 7 pessoas entrevistadas pediam avaliações, e ninguém empresta uma ferramenta para um desconhecido. Incluí as avaliações no MVP, vinculadas a cada empréstimo. Aprendi a distinguir o que um produto precisa para crescer do que ele precisa para começar." },
+      { title: "Contar o projeto também é revisá-lo", body: "Ao preparar este estudo de caso, comparei cada tela do protótipo com a pesquisa e o escopo do MVP. Essa revisão revelou uma necessidade não atendida: sem uma forma de oferecer ferramentas, não havia nada para pedir. Desenhei esse fluxo antes de publicar. Aprendi que o estudo de caso também é uma ferramenta de design, não só de apresentação." },
     ],
     next_title: "Próximas iterações",
     nexts: [

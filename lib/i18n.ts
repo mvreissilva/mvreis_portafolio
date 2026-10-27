@@ -28,7 +28,7 @@ export const t = {
     areas: {
       label: "Habilidades y herramientas",
       groups: [
-        { title: "Investigación y estrategia", items: ["User Research", "Encuestas", "Entrevistas en profundidad", "Benchmark competitivo", "DAFO", "User personas", "Mapas de empatía", "Customer Journey Map", "Value Proposition Canvas", "Business Model Canvas"] },
+        { title: "Investigación y estrategia", items: ["User Research", "Encuestas", "Entrevistas en profundidad", "Benchmark competitivo", "User personas", "Mapas de empatía", "Customer Journey Map", "Value Proposition Canvas"] },
         { title: "Diseño de producto e interfaz", items: ["Arquitectura de información", "Flujos de usuario y wireflows", "Wireframing", "Prototipado", "Diseño de interacción", "Diseño mobile", "Design systems", "Accesibilidad", "UX writing"] },
         { title: "Herramientas e IA", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
       ],
@@ -87,7 +87,7 @@ export const t = {
     areas: {
       label: "Skills & tools",
       groups: [
-        { title: "Research & strategy", items: ["User Research", "Surveys", "In-depth interviews", "Competitive benchmark", "SWOT analysis", "User personas", "Empathy maps", "Customer Journey Map", "Value Proposition Canvas", "Business Model Canvas"] },
+        { title: "Research & strategy", items: ["User Research", "Surveys", "In-depth interviews", "Competitive benchmark", "User personas", "Empathy maps", "Customer Journey Map", "Value Proposition Canvas"] },
         { title: "Product & interface design", items: ["Information architecture", "User flows & wireflows", "Wireframing", "Prototyping", "Interaction design", "Mobile design", "Design systems", "Accessibility", "UX writing"] },
         { title: "Tools & AI", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
       ],
@@ -146,7 +146,7 @@ export const t = {
     areas: {
       label: "Habilidades e ferramentas",
       groups: [
-        { title: "Pesquisa e estratégia", items: ["User Research", "Questionários", "Entrevistas em profundidade", "Benchmark competitivo", "Análise SWOT", "Personas", "Mapas de empatia", "Customer Journey Map", "Value Proposition Canvas", "Business Model Canvas"] },
+        { title: "Pesquisa e estratégia", items: ["User Research", "Questionários", "Entrevistas em profundidade", "Benchmark competitivo", "Personas", "Mapas de empatia", "Customer Journey Map", "Value Proposition Canvas"] },
         { title: "Design de produto e interface", items: ["Arquitetura da informação", "Fluxos de usuário e wireflows", "Wireframing", "Prototipagem", "Design de interação", "Design mobile", "Design systems", "Acessibilidade", "UX writing"] },
         { title: "Ferramentas e IA", items: ["Figma", "FigJam", "Figma Make", "Framer", "Miro", "Notion", "Claude", "ChatGPT", "Emergent"] },
       ],

@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
+import BackToTop from "@/components/ui/BackToTop";
 
 interface Props {
   params: Promise<{ lang: string }>;
@@ -53,6 +54,7 @@ const PROTOTYPE_URL =
 const copy = {
   es: {
     back: "Volver",
+    to_top: "Volver arriba",
     zoom_hint: "Toca para ampliar",
     zoom_close: "Cerrar",
     ui_screen_alt: "Pantalla de Camperoteca",
@@ -252,6 +254,7 @@ const copy = {
 
   en: {
     back: "Back",
+    to_top: "Back to top",
     zoom_hint: "Tap to enlarge",
     zoom_close: "Close",
     ui_screen_alt: "Camperoteca screen",
@@ -442,6 +445,7 @@ const copy = {
 
   pt: {
     back: "Voltar",
+    to_top: "Voltar ao topo",
     zoom_hint: "Toque para ampliar",
     zoom_close: "Fechar",
     ui_screen_alt: "Tela da Camperoteca",
@@ -1520,13 +1524,14 @@ export default async function CamperotecaPage({ params }: Props) {
           </div>
 
           {/* Volver */}
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", marginTop: "1.5rem" }}>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", marginTop: "1.5rem" }}>
             <Link
               href={`/${lang}`}
               style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none", display: "inline-block", transition: "color 0.2s" }}
             >
               ← {C.back}
             </Link>
+            <BackToTop label={C.to_top} />
           </div>
         </Reveal>
       </section>

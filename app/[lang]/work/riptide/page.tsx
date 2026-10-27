@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LANGS, type Lang } from "@/lib/i18n";
 import CaseStudyNav from "@/components/ui/CaseStudyNav";
+import BackToTop from "@/components/ui/BackToTop";
 import ZoomableImage from "@/components/ui/ZoomableImage";
 import { Reveal } from "@/components/ui/Reveal";
 import { pageMetadata } from "@/lib/site";
@@ -31,6 +32,7 @@ const IMG = {
 const copy = {
   es: {
     back: "← Volver",
+    to_top: "Volver arriba",
     zoom_hint: "Toca para ampliar",
     zoom_close: "Cerrar",
     nav: [
@@ -148,6 +150,7 @@ const copy = {
 
   en: {
     back: "← Back",
+    to_top: "Back to top",
     zoom_hint: "Tap to enlarge",
     zoom_close: "Close",
     nav: [
@@ -265,6 +268,7 @@ const copy = {
 
   pt: {
     back: "← Voltar",
+    to_top: "Voltar ao topo",
     zoom_hint: "Toque para ampliar",
     zoom_close: "Fechar",
     nav: [
@@ -658,8 +662,9 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
           </div>
         </div>
 
-        <div style={{ marginTop: "1.5rem" }}>
+        <div style={{ marginTop: "1.5rem", display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between" }}>
           <Link href={`/${lang}`} style={{ fontSize: "0.875rem", color: "var(--muted)", textDecoration: "none" }}>{C.back}</Link>
+          <BackToTop label={C.to_top} />
         </div>
       </section>
 

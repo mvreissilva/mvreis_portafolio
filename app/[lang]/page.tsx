@@ -51,7 +51,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           <span style={{ color: "var(--border)" }}>·</span>
           <a href="https://linkedin.com/in/reis-marcus" target="_blank" rel="noopener noreferrer"
              className="link-muted"
-             aria-label="Marcus Reis on LinkedIn (opens in new tab)"
+             aria-label={tr.contact.linkedinAria}
              style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
             {tr.contact.linkedin} ↗
           </a>
@@ -144,14 +144,14 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           <p style={{ ...body, maxWidth: "480px", marginBottom: "2rem" }}>{tr.contact.body}</p>
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1.25rem" }}>
             <a href="mailto:mvreissilva@gmail.com" className="link-accent"
-               aria-label="Send email to Marcus Reis"
+               aria-label={tr.contact.emailAria}
                style={{ fontSize: "0.9375rem", fontWeight: 500, fontFamily: "var(--font-sans)" }}>
               mvreissilva@gmail.com
             </a>
             <span style={{ color: "var(--border)" }}>·</span>
             <a href="https://linkedin.com/in/reis-marcus" target="_blank" rel="noopener noreferrer"
                className="link-muted"
-               aria-label="Marcus Reis on LinkedIn (opens in new tab)"
+               aria-label={tr.contact.linkedinAria}
                style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
               {tr.contact.linkedin} ↗
             </a>

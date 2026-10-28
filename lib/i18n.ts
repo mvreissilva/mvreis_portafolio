@@ -32,6 +32,8 @@ export const t = {
       linkedin: "LinkedIn",
       cv: "Descargar CV",
       cvAria: "Descargar el CV de Marcus Reis (PDF)",
+      linkedinAria: "Marcus Reis en LinkedIn (se abre en una pestaña nueva)",
+      emailAria: "Enviar un correo electrónico a Marcus Reis",
     },
     footer: "Sevilla, España · 2026",
     projects: {
@@ -84,6 +86,8 @@ export const t = {
       linkedin: "LinkedIn",
       cv: "Download CV",
       cvAria: "Download Marcus Reis CV (PDF)",
+      linkedinAria: "Marcus Reis on LinkedIn (opens in new tab)",
+      emailAria: "Send email to Marcus Reis",
     },
     footer: "Seville, Spain · 2026",
     projects: {
@@ -136,6 +140,8 @@ export const t = {
       linkedin: "LinkedIn",
       cv: "Baixar CV",
       cvAria: "Baixar o CV de Marcus Reis (PDF)",
+      linkedinAria: "Marcus Reis no LinkedIn (abre em uma nova aba)",
+      emailAria: "Enviar um e-mail para Marcus Reis",
     },
     footer: "Sevilha, Espanha · 2026",
     projects: {

@@ -79,6 +79,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                     alt={p.coverAlt}
                     fill
                     sizes="(max-width: 680px) 100vw, 680px"
+                    // La primera portada es el LCP en escritorio: sin carga diferida (sin preload, para no competir con la fuente en móvil)
+                    loading={slug === "camperoteca" ? "eager" : "lazy"}
                     style={{ objectFit: "cover", objectPosition: "center" }}
                   />
                 </div>

@@ -17,3 +17,5 @@
 
 - [English version](https://mvreisuxportafolio.vercel.app/en)
 - [Versão em português](https://mvreisuxportafolio.vercel.app/pt)
+- [CV in English (PDF)](https://mvreisuxportafolio.vercel.app/assets/marcus-reis-cv-en.pdf)
+- [CV em português (PDF)](https://mvreisuxportafolio.vercel.app/assets/marcus-reis-cv-pt.pdf)

@@ -10,6 +10,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
   const { lang: _lang } = await params;
   const lang = (LANGS.includes(_lang as Lang) ? _lang : "es") as Lang;
   const tr = t[lang];
+  const cvHref = lang === "es" ? "/assets/marcus-reis-cv.pdf" : `/assets/marcus-reis-cv-${lang}.pdf`;
+  const cvFile = `Marcus-Reis-CV-${lang.toUpperCase()}.pdf`;
 
   const sec: React.CSSProperties  = { paddingTop: "4.5rem" };
   const lbl: React.CSSProperties  = { fontSize: "0.6875rem", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "2.5rem", display: "block", fontFamily: "var(--font-sans)" };
@@ -41,7 +43,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
           <Link href={`#work`} className="btn-primary">{tr.hero.cta} ↓</Link>
           <span style={{ display: "inline-flex", gap: "1rem", alignItems: "center", whiteSpace: "nowrap" }}>
-          <a href="/assets/marcus-reis-cv.pdf" download
+          <a href={cvHref} download={cvFile}
              className="link-muted"
              style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
             {tr.hero.cv} ↓
@@ -154,7 +156,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               {tr.contact.linkedin} ↗
             </a>
             <span style={{ color: "var(--border)" }}>·</span>
-            <a href="/assets/marcus-reis-cv.pdf" download className="link-muted"
+            <a href={cvHref} download={cvFile} className="link-muted"
                aria-label="Download Marcus Reis CV (PDF)"
                style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
               {tr.contact.cv} ↓

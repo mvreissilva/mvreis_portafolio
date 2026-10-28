@@ -26,9 +26,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     pt: "Camperoteca — Estudo de caso UX/UI",
   };
   const descs: Record<Lang, string> = {
-    es: "Diseño end-to-end de una app que guía a quienes camperizan su furgoneta paso a paso y les conecta para compartir herramientas, materiales y conocimiento.",
-    en: "End-to-end design of an app that guides DIY camper van builders step by step and connects them to share tools, materials and know-how.",
-    pt: "Design end-to-end de um app que guia quem camperiza sua van passo a passo e conecta pessoas para compartilhar ferramentas, materiais e conhecimento.",
+    es: "Diseño end-to-end de una app que guía paso a paso a quienes camperizan su furgoneta y les conecta para prestar o intercambiar herramientas y materiales, y compartir conocimiento.",
+    en: "End-to-end design of an app that guides DIY camper van builders step by step and connects them to lend or swap tools and materials, and share knowledge.",
+    pt: "Design end-to-end de um app que guia passo a passo quem camperiza sua van e conecta as pessoas para emprestar ou trocar ferramentas e materiais, e compartilhar conhecimento.",
   };
   return pageMetadata({ lang, path: "/work/camperoteca", title: titles[lang], description: descs[lang], ogImage: { url: "/assets/og-camperoteca.jpg", alt: "Pantallas de la app Camperoteca: Aprende, Mi Proyecto y Comunidad" } });
 }
@@ -61,7 +61,7 @@ const copy = {
     ui_screen_alt: "Pantalla de Camperoteca",
     heroTitle: "Camperoteca",
     heroDesc:
-      "Diseño de una plataforma digital para acompañar a las personas durante su proyecto de camperización y facilitar el intercambio de recursos y conocimiento dentro de la comunidad.",
+      "Diseño de una plataforma digital que acompaña a las personas en su proyecto de camperización y las conecta para prestar o intercambiar herramientas y materiales, y compartir conocimiento.",
     meta_rol: "Rol",
     meta_tipo: "Tipo de proyecto",
     meta_tools: "Herramientas",
@@ -265,7 +265,7 @@ const copy = {
     ui_screen_alt: "Camperoteca screen",
     heroTitle: "Camperoteca",
     heroDesc:
-      "Design of a digital platform to guide people through their camper van conversion project and facilitate the exchange of resources and knowledge within the community.",
+      "Design of a digital platform that guides people through their camper van conversion project and connects them to lend or swap tools and materials, and share knowledge.",
     meta_rol: "Role",
     meta_tipo: "Project type",
     meta_tools: "Tools",
@@ -453,6 +453,9 @@ const copy = {
 
   pt: {
     back: "Voltar",
+    heroTitle: "Camperoteca",
+    heroDesc:
+      "Design de uma plataforma digital que acompanha as pessoas no seu projeto de camperização e as conecta para emprestar ou trocar ferramentas e materiais, e compartilhar conhecimento.",
     to_top: "Voltar ao topo",
     zoom_hint: "Toque para ampliar",
     zoom_hint_fine: "Clique para ampliar",

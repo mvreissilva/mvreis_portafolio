@@ -31,6 +31,7 @@ export const t = {
       body: "Busco oportunidades como UX/UI Designer, UX Researcher o Product Designer. Híbrido o remoto en Sevilla; remoto en el resto de España.",
       linkedin: "LinkedIn",
       cv: "Descargar CV",
+      cvAria: "Descargar el CV de Marcus Reis (PDF)",
     },
     footer: "Sevilla, España · 2026",
     projects: {
@@ -82,6 +83,7 @@ export const t = {
       body: "Looking for opportunities as a UX/UI Designer, UX Researcher or Product Designer. Hybrid or remote in Seville; remote anywhere else in Spain.",
       linkedin: "LinkedIn",
       cv: "Download CV",
+      cvAria: "Download Marcus Reis CV (PDF)",
     },
     footer: "Seville, Spain · 2026",
     projects: {
@@ -133,6 +135,7 @@ export const t = {
       body: "Busco oportunidades como UX/UI Designer, UX Researcher ou Product Designer. Híbrido ou remoto em Sevilha; remoto no resto da Espanha.",
       linkedin: "LinkedIn",
       cv: "Baixar CV",
+      cvAria: "Baixar o CV de Marcus Reis (PDF)",
     },
     footer: "Sevilha, Espanha · 2026",
     projects: {

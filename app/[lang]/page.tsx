@@ -157,7 +157,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             </a>
             <span style={{ color: "var(--border)" }}>·</span>
             <a href={cvHref} download={cvFile} className="link-muted"
-               aria-label="Download Marcus Reis CV (PDF)"
+               aria-label={tr.contact.cvAria}
                style={{ fontSize: "0.875rem", fontFamily: "var(--font-sans)" }}>
               {tr.contact.cv} ↓
             </a>

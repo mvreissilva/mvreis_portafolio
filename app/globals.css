@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  --font-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  /* next/font define --font-inter y --font-dm-serif con su fallback de métricas ajustadas
+     ("Inter Fallback", "DM Serif Display Fallback"): así el cambio de fuente no mueve el diseño (CLS). */
+  --font-sans:  var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-serif: var(--font-dm-serif), Georgia, 'Times New Roman', serif;
   --bg:      #F7F7F4;
   --surface: #EEEEEB;
   --border:  #DEDEDB;

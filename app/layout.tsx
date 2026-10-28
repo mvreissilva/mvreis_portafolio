@@ -6,7 +6,7 @@ import { SITE_URL } from "@/lib/site";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -14,7 +14,7 @@ const dmSerifDisplay = DM_Serif_Display({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--font-dm-serif",
   display: "swap",
   // Sin precarga: solo la usan títulos y citas; así no compite en móvil con Inter,
   // que es la fuente del texto principal (LCP). Se pinta con el fallback ajustado y cambia sin saltos.

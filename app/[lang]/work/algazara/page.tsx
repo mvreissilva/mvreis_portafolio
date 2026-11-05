@@ -22,7 +22,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 /* ─── imágenes ──────────────────────────────────────────────────── */
 const IMG = {
-  cover:  { src: "/assets/algazara-cover.jpg",          w: 2000, h: 1125 },
   before: { src: "/assets/algazara/hero-antes.webp",    w: 1600, h: 750 },
   after:  { src: "/assets/algazara/hero-despues.webp",  w: 1600, h: 750 },
 };
@@ -61,7 +60,6 @@ const copy = {
     ],
     focusLabel: "Mi foco",
     focus: "Evaluación heurística y de accesibilidad · Priorización con la clienta · Rediseño con su marca · UX writing · Implementación y verificación de cada cambio",
-    img_cover_alt: "La web de Proyecto Algazara en un portátil y un móvil: hero crema con el monograma naranja de dos comillas que se sonríen",
 
     prob_label: "El problema",
     prob_title: "Tres dudas sin resolver",
@@ -162,7 +160,6 @@ const copy = {
     ],
     focusLabel: "My focus",
     focus: "Heuristic and accessibility evaluation · Prioritising with the client · Redesign with her brand · UX writing · Implementing and checking every change",
-    img_cover_alt: "The Proyecto Algazara website on a laptop and a phone: cream hero with the orange monogram of two smiling quotation marks",
 
     prob_label: "The problem",
     prob_title: "Three unanswered questions",
@@ -263,7 +260,6 @@ const copy = {
     ],
     focusLabel: "Meu foco",
     focus: "Avaliação heurística e de acessibilidade · Priorização com a cliente · Redesign com a marca dela · UX writing · Implementação e verificação de cada mudança",
-    img_cover_alt: "O site do Proyecto Algazara em um notebook e um celular: hero creme com o monograma laranja de duas aspas que sorriem",
 
     prob_label: "O problema",
     prob_title: "Três dúvidas sem resposta",
@@ -407,7 +403,7 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
           <h1 style={{ fontFamily: serif, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "0.5rem", color: "var(--ink)" }}>Proyecto Algazara</h1>
           <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "var(--muted)", maxWidth: "580px", marginBottom: "3rem" }}>{C.desc}</p>
 
-          <div className="al-meta" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem", marginBottom: "2.5rem" }}>
+          <div className="al-meta" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem" }}>
             {C.meta.map(([label, value]) => (
               <div key={label} style={{ ...card, padding: "1rem 1.1rem" }}>
                 <p style={{ ...smallCaps, color: "var(--accent)", marginBottom: "0.35rem" }}>{label}</p>
@@ -420,14 +416,6 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
             </div>
           </div>
 
-          <div style={{ borderRadius: "12px", overflow: "hidden" }}>
-            <ZoomableImage
-              src={IMG.cover.src} alt={C.img_cover_alt} width={IMG.cover.w} height={IMG.cover.h}
-              priority sizes="(max-width: 860px) 100vw, 812px"
-              style={{ width: "100%", height: "auto", display: "block" }}
-              hint={C.zoom_hint} hintFine={C.zoom_hint_fine} closeLabel={C.zoom_close}
-            />
-          </div>
         </Reveal>
       </section>
 

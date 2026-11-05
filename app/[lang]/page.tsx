@@ -65,7 +65,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <div style={{ paddingTop: "3rem" }}>
           <span style={lbl}>{tr.work.label}</span>
 
-          {(["camperoteca", "riptide"] as const).map((slug) => {
+          {(["camperoteca", "riptide", "algazara"] as const).map((slug) => {
             const p = tr.projects[slug];
             return (
               <Link key={slug} href={`/${lang}/work/${slug}`}

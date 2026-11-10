@@ -48,6 +48,7 @@ const copy = {
       { id: "al-process",  label: "Proceso" },
       { id: "al-solution", label: "Solución" },
       { id: "al-results",  label: "Resultados" },
+      { id: "al-after",   label: "Iteración" },
     ],
     tags: "UX/UI · Auditoría · Accesibilidad · Cliente real",
     desc: "Auditoría heurística y rediseño de la web de una psicóloga y sexóloga, para que quien busca ayuda entienda, confíe y se atreva a escribir.",
@@ -118,6 +119,21 @@ const copy = {
     resu_note: "Los 3 problemas abiertos quedan así por decisión de la clienta.",
     resu_p: "Revisé cada cambio de la IA antes de publicar y detecté cuatro regresiones. La auditoría final encontró además un botón invisible que PageSpeed no detectaba.",
 
+    post_label: "Después del lanzamiento",
+    post_title: "Una segunda auditoría, con la web ya publicada",
+    post_intro: "Con la web en producción, Pilar recibió una auditoría externa que le daba un 6,6 sobre 10. La revisé punto por punto: separé los fallos reales de los falsos positivos de su herramienta, que no lee webs cargadas con JavaScript, y corregí los reales.",
+    post_stats: [
+      ["6,6 → 9,4", "sobre 10, con la misma escala de la auditoría (93 de 99 puntos)"],
+      ["45 de 63", "impresiones en Google iban a URLs antiguas que daban error. Recuperé los 3 artículos en sus mismas direcciones"],
+      ["10 → 15", "páginas en el sitemap, con 2 páginas de servicio nuevas"],
+      ["0", "fallos de contraste, texto alternativo o tamaño táctil en 7 páginas"],
+    ],
+    post_p: [
+      "La foto de Pilar en la portada bajó el rendimiento móvil de 99 a 96. La mantuve: la falta de una cara era uno de los puntos de la auditoría, y en un servicio de terapia la confianza pesa más que tres puntos. El resto del tiempo de carga depende del constructor web, no del contenido.",
+      "Instalé analítica sin cookies (Umami) con un evento en cada botón de contacto. Search Console queda como punto de partida: 6 clics y 58 impresiones en 28 días.",
+    ],
+    post_note: "Puntuación calculada por mí con la escala del informe. Los 6 puntos restantes dependen de decisiones de la clienta, como publicar un teléfono, no de errores.",
+
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
     learns: [
@@ -148,6 +164,7 @@ const copy = {
       { id: "al-process",  label: "Process" },
       { id: "al-solution", label: "Solution" },
       { id: "al-results",  label: "Results" },
+      { id: "al-after",   label: "Iteration" },
     ],
     tags: "UX/UI · Audit · Accessibility · Real client",
     desc: "Heuristic audit and redesign of a psychologist and sexologist's website, so people looking for help understand, trust and dare to get in touch.",
@@ -218,6 +235,21 @@ const copy = {
     resu_note: "The 3 open issues stay as they are at the client's request.",
     resu_p: "I reviewed every AI change before publishing and caught four regressions. The final audit also found an invisible button that PageSpeed didn't flag.",
 
+    post_label: "After launch",
+    post_title: "A second audit, with the site already live",
+    post_intro: "With the site in production, Pilar received an external audit that scored it 6.6 out of 10. I went through it point by point: I separated real issues from the false positives of its tool, which can't read JavaScript-rendered sites, and fixed the real ones.",
+    post_stats: [
+      ["6.6 → 9.4", "out of 10, on the audit's own scale (93 of 99 points)"],
+      ["45 of 63", "Google impressions went to old URLs that returned errors. I restored the 3 articles at their original addresses"],
+      ["10 → 15", "pages in the sitemap, including 2 new service pages"],
+      ["0", "contrast, alt text or touch target failures across 7 pages"],
+    ],
+    post_p: [
+      "Pilar's photo on the home page lowered mobile performance from 99 to 96. I kept it: the lack of a face was one of the audit's points, and in a therapy service trust matters more than three points. The remaining load time depends on the site builder, not the content.",
+      "I set up cookieless analytics (Umami) with an event on every contact button. Search Console serves as the baseline: 6 clicks and 58 impressions in 28 days.",
+    ],
+    post_note: "Score calculated by me using the report's scale. The remaining 6 points depend on the client's decisions, such as publishing a phone number, not on errors.",
+
     learn_label: "Learnings",
     learn_title: "What I take from this project",
     learns: [
@@ -248,6 +280,7 @@ const copy = {
       { id: "al-process",  label: "Processo" },
       { id: "al-solution", label: "Solução" },
       { id: "al-results",  label: "Resultados" },
+      { id: "al-after",   label: "Iteração" },
     ],
     tags: "UX/UI · Auditoria · Acessibilidade · Cliente real",
     desc: "Auditoria heurística e redesign do site de uma psicóloga e sexóloga, para que quem procura ajuda entenda, confie e tenha coragem de escrever.",
@@ -317,6 +350,21 @@ const copy = {
     ],
     resu_note: "Os 3 problemas em aberto ficam assim por decisão da cliente.",
     resu_p: "Revisei cada mudança da IA antes de publicar e detectei quatro regressões. A auditoria final ainda encontrou um botão invisível que o PageSpeed não detectava.",
+
+    post_label: "Depois do lançamento",
+    post_title: "Uma segunda auditoria, com o site já no ar",
+    post_intro: "Com o site em produção, Pilar recebeu uma auditoria externa que dava nota 6,6 de 10. Revisei ponto por ponto: separei os problemas reais dos falsos positivos da ferramenta, que não lê sites carregados com JavaScript, e corrigi os reais.",
+    post_stats: [
+      ["6,6 → 9,4", "de 10, com a mesma escala da auditoria (93 de 99 pontos)"],
+      ["45 de 63", "impressões no Google iam para URLs antigas que davam erro. Recuperei os 3 artigos nos mesmos endereços"],
+      ["10 → 15", "páginas no sitemap, com 2 novas páginas de serviço"],
+      ["0", "falhas de contraste, texto alternativo ou tamanho de toque em 7 páginas"],
+    ],
+    post_p: [
+      "A foto da Pilar na página inicial baixou o desempenho mobile de 99 para 96. Mantive: a falta de um rosto era um dos pontos da auditoria, e num serviço de terapia a confiança pesa mais que três pontos. O restante do tempo de carregamento depende do construtor do site, não do conteúdo.",
+      "Instalei analytics sem cookies (Umami) com um evento em cada botão de contato. O Search Console fica como ponto de partida: 6 cliques e 58 impressões em 28 dias.",
+    ],
+    post_note: "Nota calculada por mim com a escala do relatório. Os 6 pontos restantes dependem de decisões da cliente, como publicar um telefone, não de erros.",
 
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
@@ -546,7 +594,29 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
         </Reveal>
       </section>
 
-      {/* ── 07 APRENDIZAJES ── */}
+      {/* ── 07 DESPUÉS DEL LANZAMIENTO ── */}
+      <section id="al-after" style={section}>
+        <Reveal>
+          <SectionHeading label={C.post_label} title={C.post_title} />
+          <p style={{ ...body, maxWidth: "640px", marginBottom: "2rem" }}>{C.post_intro}</p>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <div className="al-stats" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem", marginBottom: "2rem" }}>
+            {C.post_stats.map(([n, t]) => (
+              <div key={t} style={{ ...card, padding: "1.25rem" }}>
+                <p style={{ fontFamily: serif, fontSize: "2rem", lineHeight: 1, color: "var(--accent)", marginBottom: "0.5rem", whiteSpace: "nowrap" }}>{n}</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.5, color: "var(--muted)" }}>{t}</p>
+              </div>
+            ))}
+          </div>
+          {C.post_p.map((t) => (
+            <p key={t} style={{ ...body, maxWidth: "640px", marginBottom: "1rem" }}>{t}</p>
+          ))}
+          <p style={{ fontSize: "0.75rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: "640px" }}>{C.post_note}</p>
+        </Reveal>
+      </section>
+
+      {/* ── 08 APRENDIZAJES ── */}
       <section id="al-learnings" style={sectionLast}>
         <Reveal>
           <SectionHeading label={C.learn_label} title={C.learn_title} />

@@ -11,13 +11,13 @@ export function generateStaticParams() { return LANGS.map(lang => ({ lang })); }
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang: _lang } = await params;
   const lang = _lang as Lang;
-  const title = lang === "pt" ? "Riptide — Case Study UX/UI" : "Riptide — UX/UI Case Study";
+  const title = lang === "pt" ? "RipTide — Case Study UX/UI" : "RipTide — UX/UI Case Study";
   const desc = lang === "en"
     ? "A browser extension that makes the hidden water footprint of digital activity visible. Awareness without guilt, presence without intrusion."
     : lang === "pt"
     ? "Extensão de navegador que torna visível o impacto hídrico da atividade digital. Consciência sem culpa, presença sem intrusão."
     : "Extensión de navegador que hace visible el impacto hídrico de la actividad digital. Awareness sin culpa, presencia sin intrusión.";
-  return pageMetadata({ lang, path: "/work/riptide", title, description: desc, ogImage: { url: "/assets/og-riptide.jpg", alt: "Pantallas de la extensión Riptide: bienvenida, ajustes y resumen del día" } });
+  return pageMetadata({ lang, path: "/work/riptide", title, description: desc, ogImage: { url: "/assets/og-riptide.jpg", alt: "Pantallas de la extensión RipTide: bienvenida, ajustes y resumen del día" } });
 }
 
 /* ─── imágenes ──────────────────────────────────────────────────── */
@@ -95,7 +95,7 @@ const copy = {
     ins_title: "Del dato a la decisión",
     persona_name: "Ana, 32 años · Especialista en marketing digital",
     persona_text: "Pasa gran parte del día frente al ordenador y usa extensiones a diario, pero abandona las herramientas demasiado técnicas o invasivas. Le preocupa el medioambiente y quiere que sus valores se reflejen también en su vida digital, sin sentirse juzgada.",
-    ins_central: "Casi nadie dejaría de usar la IA por un aviso. Riptide no podía prometer un cambio de conducta: tenía que hacer visible el impacto y dejar la decisión en manos de cada persona.",
+    ins_central: "Casi nadie dejaría de usar la IA por un aviso. RipTide no podía prometer un cambio de conducta: tenía que hacer visible el impacto y dejar la decisión en manos de cada persona.",
     cols: ["Dato", "Insight", "Decisión de diseño"],
     rows: [
       ["El 52,7 % rechaza los mensajes culpabilizadores", "Informar sin juzgar", "Tono descriptivo y neutro: cifras y equivalencias, nunca reproches"],
@@ -108,7 +108,7 @@ const copy = {
 
     sol_label: "Solución",
     sol_title: "No interrumpe, no juzga, no controla.",
-    sol_value: "Riptide convierte la actividad digital en señales visuales simples, integradas de forma discreta en el navegador. No se trata de optimizar tu comportamiento: se trata de hacerlo visible.",
+    sol_value: "RipTide convierte la actividad digital en señales visuales simples, integradas de forma discreta en el navegador. No se trata de optimizar tu comportamiento: se trata de hacerlo visible.",
     sol_strategy: "Modelo freemium, con licencias para centros educativos y empresas con programas de sostenibilidad. Lo trabajamos en el Value Proposition Canvas y el Business Model Canvas.",
     hp_label: "Happy path",
     hp_cta: "CTA",
@@ -122,15 +122,15 @@ const copy = {
       { t: "Resumen", d: "El popup muestra el consumo del día:", b: ["Litros gastados y su equivalencia", "Desglose por streaming, búsquedas y navegación", "Día de la semana con menos consumo"], cta: "Ver detalles" },
       { t: "Panel web", d: "El usuario accede a su panel, donde puede ver:", b: ["Resumen semanal, mensual o anual", "Objetivo semanal", "Actividades principales", "Equivalencias cotidianas", "Sugerencias para reducir consumo"], cta: "" },
     ],
-    img_happy_alt: "Happy path de Riptide: descubrimiento, instalación, onboarding, tres pasos de personalización, resumen y panel web",
+    img_happy_alt: "Happy path de RipTide: descubrimiento, instalación, onboarding, tres pasos de personalización, resumen y panel web",
     img_happy_cap: "Del descubrimiento al panel: instalación, onboarding, tres ajustes de personalización y primer resumen.",
-    img_evo_alt: "La pantalla de bienvenida de Riptide en tres fases: boceto a mano, wireframe de baja fidelidad y diseño final",
+    img_evo_alt: "La pantalla de bienvenida de RipTide en tres fases: boceto a mano, wireframe de baja fidelidad y diseño final",
     img_evo_cap: "Del boceto en papel al wireframe y a la alta fidelidad.",
-    img_ctx_alt: "Navegador con Google abierto y el popup de Riptide desplegado bajo el icono de la gota: hoy 42 litros, equivalentes a una ducha de 5 minutos, con desglose por streaming, búsquedas y navegación",
+    img_ctx_alt: "Navegador con Google abierto y el popup de RipTide desplegado bajo el icono de la gota: hoy 42 litros, equivalentes a una ducha de 5 minutos, con desglose por streaming, búsquedas y navegación",
     img_ctx_cap: "La extensión vive en la barra del navegador y solo se abre cuando la persona la consulta.",
-    img_onb_alt: "Seis pantallas del popup de Riptide: bienvenida, privacidad, qué quieres ver, cada cuánto avisar, unidad de medida y configuración",
+    img_onb_alt: "Seis pantallas del popup de RipTide: bienvenida, privacidad, qué quieres ver, cada cuánto avisar, unidad de medida y configuración",
     img_onb_cap: "Onboarding y ajustes: la persona decide qué se mide, cuándo se avisa y en qué unidad.",
-    img_land_alt: "Landing de Riptide con la mascota gota y el titular «Tu vida digital también consume agua. Descubre cuánta.»",
+    img_land_alt: "Landing de RipTide con la mascota gota y el titular «Tu vida digital también consume agua. Descubre cuánta.»",
     img_land_cap: "La landing, puerta de entrada a la extensión y al panel web.",
     sol_team: "La alta fidelidad fue trabajo de equipo; mi parte en esta fase fueron el wireflow y los wireframes de baja fidelidad.",
     proto_cta: "Ver prototipo interactivo",
@@ -216,7 +216,7 @@ const copy = {
     ins_title: "From data to decision",
     persona_name: "Ana, 32 · Digital marketing specialist",
     persona_text: "She spends most of the day at her computer and uses extensions daily, but drops tools that are too technical or invasive. She cares about the environment and wants her values reflected in her digital life too, without feeling judged.",
-    ins_central: "Almost no one would stop using AI because of a warning. Riptide couldn't promise behaviour change: it had to make the impact visible and leave the decision to each person.",
+    ins_central: "Almost no one would stop using AI because of a warning. RipTide couldn't promise behaviour change: it had to make the impact visible and leave the decision to each person.",
     cols: ["Data", "Insight", "Design decision"],
     rows: [
       ["52.7% reject guilt-inducing messages", "Inform without judging", "A neutral, descriptive tone: figures and equivalents, never reproach"],
@@ -229,7 +229,7 @@ const copy = {
 
     sol_label: "Solution",
     sol_title: "It doesn't interrupt, judge or control.",
-    sol_value: "Riptide turns digital activity into simple visual signals, built discreetly into the browser. It's not about optimising your behaviour: it's about making it visible.",
+    sol_value: "RipTide turns digital activity into simple visual signals, built discreetly into the browser. It's not about optimising your behaviour: it's about making it visible.",
     sol_strategy: "Freemium model, with licences for schools and companies running sustainability programmes. We worked it out in the Value Proposition Canvas and the Business Model Canvas.",
     hp_label: "Happy path",
     hp_cta: "CTA",
@@ -243,15 +243,15 @@ const copy = {
       { t: "Summary", d: "The popup shows today's use:", b: ["Litres used and their equivalent", "Breakdown by streaming, searches and browsing", "The day of the week with the lowest use"], cta: "View details" },
       { t: "Web dashboard", d: "The user opens their dashboard, where they can see:", b: ["Weekly, monthly or yearly summary", "Weekly goal", "Main activities", "Everyday equivalents", "Suggestions to reduce use"], cta: "" },
     ],
-    img_happy_alt: "Riptide happy path: discovery, installation, onboarding, three personalisation steps, summary and web dashboard",
+    img_happy_alt: "RipTide happy path: discovery, installation, onboarding, three personalisation steps, summary and web dashboard",
     img_happy_cap: "From discovery to dashboard: installation, onboarding, three personalisation settings and a first summary.",
-    img_evo_alt: "The Riptide welcome screen in three stages: hand sketch, low-fidelity wireframe and final design",
+    img_evo_alt: "The RipTide welcome screen in three stages: hand sketch, low-fidelity wireframe and final design",
     img_evo_cap: "From paper sketch to wireframe to high fidelity.",
-    img_ctx_alt: "Browser with Google open and the Riptide popup expanded under the drop icon: 42 litres today, equivalent to a 5-minute shower, broken down by streaming, searches and browsing",
+    img_ctx_alt: "Browser with Google open and the RipTide popup expanded under the drop icon: 42 litres today, equivalent to a 5-minute shower, broken down by streaming, searches and browsing",
     img_ctx_cap: "The extension lives in the browser bar and only opens when the person checks it.",
-    img_onb_alt: "Six Riptide popup screens: welcome, privacy, what to see, how often to notify, unit of measure and settings",
+    img_onb_alt: "Six RipTide popup screens: welcome, privacy, what to see, how often to notify, unit of measure and settings",
     img_onb_cap: "Onboarding and settings: people decide what is measured, when they're notified and in which unit.",
-    img_land_alt: "Riptide landing page with the water-drop mascot and the headline “Your digital life also uses water. Find out how much.” (Spanish interface)",
+    img_land_alt: "RipTide landing page with the water-drop mascot and the headline “Your digital life also uses water. Find out how much.” (Spanish interface)",
     img_land_cap: "The landing page, the entry point to the extension and the web dashboard.",
     sol_team: "High fidelity was a team effort; my part in this phase was the wireflow and the low-fidelity wireframes.",
     proto_cta: "View interactive prototype",
@@ -337,7 +337,7 @@ const copy = {
     ins_title: "Do dado à decisão",
     persona_name: "Ana, 32 anos · Especialista em marketing digital",
     persona_text: "Passa grande parte do dia em frente ao computador e usa extensões todos os dias, mas abandona ferramentas técnicas ou invasivas demais. Ela se preocupa com o meio ambiente e quer que seus valores também se reflitam na sua vida digital, sem se sentir julgada.",
-    ins_central: "Quase ninguém deixaria de usar a IA por causa de um aviso. O Riptide não podia prometer uma mudança de comportamento: precisava tornar o impacto visível e deixar a decisão nas mãos de cada pessoa.",
+    ins_central: "Quase ninguém deixaria de usar a IA por causa de um aviso. O RipTide não podia prometer uma mudança de comportamento: precisava tornar o impacto visível e deixar a decisão nas mãos de cada pessoa.",
     cols: ["Dado", "Insight", "Decisão de design"],
     rows: [
       ["52,7% rejeitam mensagens que geram culpa", "Informar sem julgar", "Tom descritivo e neutro: números e equivalências, nunca críticas"],
@@ -350,7 +350,7 @@ const copy = {
 
     sol_label: "Solução",
     sol_title: "Não interrompe, não julga, não controla.",
-    sol_value: "O Riptide transforma a atividade digital em sinais visuais simples, integrados de forma discreta ao navegador. Não se trata de otimizar o seu comportamento: se trata de torná-lo visível.",
+    sol_value: "O RipTide transforma a atividade digital em sinais visuais simples, integrados de forma discreta ao navegador. Não se trata de otimizar o seu comportamento: se trata de torná-lo visível.",
     sol_strategy: "Modelo freemium, com licenças para escolas e empresas com programas de sustentabilidade. Nós o trabalhamos no Value Proposition Canvas e no Business Model Canvas.",
     hp_label: "Happy path",
     hp_cta: "CTA",
@@ -364,15 +364,15 @@ const copy = {
       { t: "Resumo", d: "O pop-up mostra o consumo do dia:", b: ["Litros gastos e sua equivalência", "Divisão por streaming, buscas e navegação", "Dia da semana com menor consumo"], cta: "Ver detalhes" },
       { t: "Painel web", d: "O usuário acessa seu painel, onde pode ver:", b: ["Resumo semanal, mensal ou anual", "Meta semanal", "Atividades principais", "Equivalências do dia a dia", "Sugestões para reduzir o consumo"], cta: "" },
     ],
-    img_happy_alt: "Happy path do Riptide: descoberta, instalação, onboarding, três etapas de personalização, resumo e painel web",
+    img_happy_alt: "Happy path do RipTide: descoberta, instalação, onboarding, três etapas de personalização, resumo e painel web",
     img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e o primeiro resumo.",
-    img_evo_alt: "A tela de boas-vindas do Riptide em três fases: esboço à mão, wireframe de baixa fidelidade e design final",
+    img_evo_alt: "A tela de boas-vindas do RipTide em três fases: esboço à mão, wireframe de baixa fidelidade e design final",
     img_evo_cap: "Do esboço no papel ao wireframe e à alta fidelidade.",
-    img_ctx_alt: "Navegador com o Google aberto e o pop-up do Riptide aberto abaixo do ícone da gota: hoje 42 litros, equivalentes a um banho de 5 minutos, com divisão por streaming, buscas e navegação",
+    img_ctx_alt: "Navegador com o Google aberto e o pop-up do RipTide aberto abaixo do ícone da gota: hoje 42 litros, equivalentes a um banho de 5 minutos, com divisão por streaming, buscas e navegação",
     img_ctx_cap: "A extensão fica na barra do navegador e só abre quando a pessoa a consulta.",
-    img_onb_alt: "Seis telas do pop-up do Riptide: boas-vindas, privacidade, o que você quer ver, com que frequência avisar, unidade de medida e configurações",
+    img_onb_alt: "Seis telas do pop-up do RipTide: boas-vindas, privacidade, o que você quer ver, com que frequência avisar, unidade de medida e configurações",
     img_onb_cap: "Onboarding e ajustes: a pessoa decide o que é medido, quando é avisada e em que unidade.",
-    img_land_alt: "Landing page do Riptide com a mascote gota e o título “Sua vida digital também consome água. Descubra quanto.” (interface em espanhol)",
+    img_land_alt: "Landing page do RipTide com a mascote gota e o título “Sua vida digital também consome água. Descubra quanto.” (interface em espanhol)",
     img_land_cap: "A landing page, porta de entrada para a extensão e o painel web.",
     sol_team: "A alta fidelidade foi um trabalho em equipe; minha parte nesta fase foram o wireflow e os wireframes de baixa fidelidade.",
     proto_cta: "Ver protótipo interativo",
@@ -492,7 +492,7 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
       <section id="cs-hero" style={section}>
         <Reveal>
           <p style={{ fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>{C.tags}</p>
-          <h1 style={{ fontFamily: serif, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "0.5rem", color: "var(--ink)" }}>Riptide</h1>
+          <h1 style={{ fontFamily: serif, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "0.5rem", color: "var(--ink)" }}>RipTide</h1>
           <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "var(--muted)", maxWidth: "580px", marginBottom: "1.5rem" }}>{C.desc}</p>
 
           <a href={PROTOTYPE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ marginBottom: "3rem", textDecoration: "none" }}>

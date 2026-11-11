@@ -5,6 +5,7 @@ import CaseStudyNav from "@/components/ui/CaseStudyNav";
 import BackToTop from "@/components/ui/BackToTop";
 import ZoomableImage from "@/components/ui/ZoomableImage";
 import { Reveal } from "@/components/ui/Reveal";
+import PrototypeEmbed from "@/components/ui/PrototypeEmbed";
 import { pageMetadata } from "@/lib/site";
 
 export function generateStaticParams() { return LANGS.map(lang => ({ lang })); }
@@ -26,6 +27,12 @@ const IMG = {
   context:    { src: "/assets/riptide/extension-en-contexto.webp", w: 2400, h: 1671 },
   onboarding: { src: "/assets/riptide/onboarding-y-ajustes.webp",  w: 2400, h: 846 },
   landing:    { src: "/assets/riptide/landing.webp",               w: 2400, h: 1589 },
+};
+
+/* ─── prototipo de Figma (página «Prototipo navegable», flujo desde la landing) ── */
+const PROTO = {
+  embed: "https://embed.figma.com/proto/0QROMtypXvPdeOKehysVkn/Riptide?node-id=5057-2836&page-id=5052%3A993&starting-point-node-id=5057%3A2836&scaling=scale-down-width&content-scaling=fixed&hide-ui=1&embed-host=mvreis-portafolio",
+  open: "https://www.figma.com/proto/0QROMtypXvPdeOKehysVkn/Riptide?node-id=5057-2836&page-id=5052%3A993&starting-point-node-id=5057%3A2836&scaling=scale-down-width&content-scaling=fixed",
 };
 
 /* ─── textos ────────────────────────────────────────────────────── */
@@ -129,6 +136,13 @@ const copy = {
     img_land_alt: "Landing de Riptide con la mascota gota y el titular «Tu vida digital también consume agua. Descubre cuánta.»",
     img_land_cap: "La landing, puerta de entrada a la extensión y al panel web.",
     sol_team: "La alta fidelidad fue trabajo de equipo; mi parte en esta fase fueron el wireflow y los wireframes de baja fidelidad.",
+    proto_title: "Prueba el prototipo",
+    proto_text: "Recorre el happy path completo: de la landing al onboarding, el resumen del día y el panel web. Pulsa los botones como lo haría una persona usuaria.",
+    proto_load: "Cargar prototipo interactivo",
+    proto_open: "Abrir en Figma",
+    proto_new_tab: "(se abre en una pestaña nueva)",
+    proto_iframe: "Prototipo interactivo de Riptide en Figma",
+    proto_note: "Prototipo de Figma pensado para escritorio. En el móvil se ve mejor abierto en Figma.",
 
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
@@ -248,6 +262,13 @@ const copy = {
     img_land_alt: "Riptide landing page with the water-drop mascot and the headline “Your digital life also uses water. Find out how much.” (Spanish interface)",
     img_land_cap: "The landing page, the entry point to the extension and the web dashboard.",
     sol_team: "High fidelity was a team effort; my part in this phase was the wireflow and the low-fidelity wireframes.",
+    proto_title: "Try the prototype",
+    proto_text: "Walk through the full happy path: from the landing page to onboarding, the daily summary and the web dashboard. Click the buttons as a user would.",
+    proto_load: "Load interactive prototype",
+    proto_open: "Open in Figma",
+    proto_new_tab: "(opens in a new tab)",
+    proto_iframe: "Riptide interactive prototype in Figma",
+    proto_note: "Figma prototype designed for desktop. On mobile, it works best opened in Figma.",
 
     learn_label: "Learnings",
     learn_title: "What I take from this project",
@@ -367,6 +388,13 @@ const copy = {
     img_land_alt: "Landing page do Riptide com a mascote gota e o título “Sua vida digital também consome água. Descubra quanto.” (interface em espanhol)",
     img_land_cap: "A landing page, porta de entrada para a extensão e o painel web.",
     sol_team: "A alta fidelidade foi um trabalho em equipe; minha parte nesta fase foram o wireflow e os wireframes de baixa fidelidade.",
+    proto_title: "Teste o protótipo",
+    proto_text: "Percorra o happy path completo: da landing page ao onboarding, ao resumo do dia e ao painel web. Clique nos botões como faria uma pessoa usuária.",
+    proto_load: "Carregar protótipo interativo",
+    proto_open: "Abrir no Figma",
+    proto_new_tab: "(abre em uma nova aba)",
+    proto_iframe: "Protótipo interativo do Riptide no Figma",
+    proto_note: "Protótipo do Figma pensado para desktop. No celular, funciona melhor aberto no Figma.",
 
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
@@ -614,6 +642,21 @@ export default async function RiptidePage({ params }: { params: Promise<{ lang: 
         </Reveal>
         <Reveal delay={0.1}>
           <HappyPath C={C} />
+          <div style={{ margin: "0 0 2.5rem" }}>
+            <h3 style={{ fontFamily: serif, fontSize: "1.3rem", fontWeight: 400, marginBottom: "0.5rem", color: "var(--ink)" }}>{C.proto_title}</h3>
+            <p style={{ ...body, maxWidth: "640px", marginBottom: "1.25rem" }}>{C.proto_text}</p>
+            <PrototypeEmbed
+              embedSrc={PROTO.embed}
+              openHref={PROTO.open}
+              poster={IMG.context}
+              posterAlt={C.img_ctx_alt}
+              title={C.proto_iframe}
+              loadLabel={C.proto_load}
+              openLabel={C.proto_open}
+              newTabLabel={C.proto_new_tab}
+            />
+            <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", marginTop: "0.25rem" }}>{C.proto_note}</p>
+          </div>
           <Figure img={IMG.evolution} alt={C.img_evo_alt} caption={C.img_evo_cap} C={C} />
         </Reveal>
         <Reveal delay={0.1}>

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 /* ─── imágenes ──────────────────────────────────────────────────── */
 const IMG = {
   evolution:  { src: "/assets/riptide/evolucion-diseno.webp",      w: 2400, h: 669 },
-  context:    { src: "/assets/riptide/extension-en-contexto.webp", w: 2400, h: 1671 },
+  context:    { src: "/assets/riptide/extension-en-contexto.webp", w: 2400, h: 1552 },
   onboarding: { src: "/assets/riptide/onboarding-y-ajustes.webp",  w: 2400, h: 846 },
   landing:    { src: "/assets/riptide/landing.webp",               w: 2400, h: 1589 },
 };
@@ -126,7 +126,7 @@ const copy = {
     img_happy_cap: "Del descubrimiento al panel: instalación, onboarding, tres ajustes de personalización y primer resumen.",
     img_evo_alt: "La pantalla de bienvenida de RipTide en tres fases: boceto a mano, wireframe de baja fidelidad y diseño final",
     img_evo_cap: "Del boceto en papel al wireframe y a la alta fidelidad.",
-    img_ctx_alt: "Navegador con Google abierto y el popup de RipTide desplegado bajo el icono de la gota: hoy 42 litros, equivalentes a una ducha de 5 minutos, con desglose por streaming, búsquedas y navegación",
+    img_ctx_alt: "Navegador con una web de ejemplo y el popup de RipTide desplegado bajo el icono de la gota: hoy 42 litros, equivalentes a una ducha de 5 minutos, con desglose por streaming, búsquedas y navegación",
     img_ctx_cap: "La extensión vive en la barra del navegador y solo se abre cuando la persona la consulta.",
     img_onb_alt: "Seis pantallas del popup de RipTide: bienvenida, privacidad, qué quieres ver, cada cuánto avisar, unidad de medida y configuración",
     img_onb_cap: "Onboarding y ajustes: la persona decide qué se mide, cuándo se avisa y en qué unidad.",
@@ -247,7 +247,7 @@ const copy = {
     img_happy_cap: "From discovery to dashboard: installation, onboarding, three personalisation settings and a first summary.",
     img_evo_alt: "The RipTide welcome screen in three stages: hand sketch, low-fidelity wireframe and final design",
     img_evo_cap: "From paper sketch to wireframe to high fidelity.",
-    img_ctx_alt: "Browser with Google open and the RipTide popup expanded under the drop icon: 42 litres today, equivalent to a 5-minute shower, broken down by streaming, searches and browsing",
+    img_ctx_alt: "Browser with a sample website and the RipTide popup expanded under the drop icon: 42 litres today, equivalent to a 5-minute shower, broken down by streaming, searches and browsing",
     img_ctx_cap: "The extension lives in the browser bar and only opens when the person checks it.",
     img_onb_alt: "Six RipTide popup screens: welcome, privacy, what to see, how often to notify, unit of measure and settings",
     img_onb_cap: "Onboarding and settings: people decide what is measured, when they're notified and in which unit.",
@@ -368,7 +368,7 @@ const copy = {
     img_happy_cap: "Da descoberta ao painel: instalação, onboarding, três ajustes de personalização e o primeiro resumo.",
     img_evo_alt: "A tela de boas-vindas do RipTide em três fases: esboço à mão, wireframe de baixa fidelidade e design final",
     img_evo_cap: "Do esboço no papel ao wireframe e à alta fidelidade.",
-    img_ctx_alt: "Navegador com o Google aberto e o pop-up do RipTide aberto abaixo do ícone da gota: hoje 42 litros, equivalentes a um banho de 5 minutos, com divisão por streaming, buscas e navegação",
+    img_ctx_alt: "Navegador com um site de exemplo e o pop-up do RipTide aberto abaixo do ícone da gota: hoje 42 litros, equivalentes a um banho de 5 minutos, com divisão por streaming, buscas e navegação",
     img_ctx_cap: "A extensão fica na barra do navegador e só abre quando a pessoa a consulta.",
     img_onb_alt: "Seis telas do pop-up do RipTide: boas-vindas, privacidade, o que você quer ver, com que frequência avisar, unidade de medida e configurações",
     img_onb_cap: "Onboarding e ajustes: a pessoa decide o que é medido, quando é avisada e em que unidade.",

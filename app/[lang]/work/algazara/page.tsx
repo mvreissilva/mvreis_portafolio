@@ -88,9 +88,9 @@ const copy = {
     head_before: "Sea cual sea tu dificultad, te acompaño",
     head_after: "Terapia sexual y de pareja online, sin juicios ni prejuicios",
     strat_points: [
-      ["Posicionamiento", "Servicio y modalidad en el titular, en el título para buscadores y en el pie. Una página propia para cada búsqueda: terapia sexual online y terapia de pareja online."],
-      ["Atención", "Las tarjetas hablan del problema, no del servicio: «¿Te pasa algo de esto?», con motivos de consulta concretos, y «Para ti» o «Para vuestra relación» para que cada persona se reconozca."],
-      ["Contenido", "Recuperé tres artículos antiguos que seguían recibiendo visitas desde Google y enlacé cada uno con su página de servicio."],
+      ["Posicionamiento", "Servicio y modalidad en el titular, en el título para buscadores y en el pie. Una página propia para cada búsqueda: terapia sexual online y terapia de pareja online.", "Rastro de información (Pirolli y Card): cada búsqueda debe llevar a una página que confirme que está en el sitio correcto."],
+      ["Atención", "Las tarjetas hablan del problema, no del servicio: «¿Te pasa algo de esto?», con motivos de consulta concretos, y «Para ti» o «Para vuestra relación» para que cada persona se reconozca.", "Heurística n.º 2 de Nielsen: hablar el lenguaje del usuario, no el de la profesión."],
+      ["Contenido", "Recuperé tres artículos antiguos que seguían recibiendo visitas desde Google y enlacé cada uno con su página de servicio.", "Rastro de información: el contenido que ya atrae visitas debe conducir al servicio."],
     ],
     cta_title: "Una sola acción principal",
     cta_levels: [
@@ -99,17 +99,19 @@ const copy = {
       ["Enlace de texto", "Pedir la primera entrevista →", "Salidas discretas al final de una sección, que no compiten con la principal."],
     ],
     cta_note: "Cada botón de contacto lleva un evento de analítica con la sección de origen, para saber qué llamada funciona.",
+    cta_principle: "Principios: ley de Hick (menos opciones, decisión más rápida), efecto Von Restorff (lo que destaca se recuerda) y heurística n.º 4 de Nielsen (consistencia y estándares).",
 
     dec_label: "Decisiones",
     dec_title: "Lo delicado de una web de terapia",
     dec_cols: ["Situación", "Decisión", "Por qué"],
+    principle_label: "Principio",
     decisions: [
-      ["Testimonios con nombre y foto de pacientes", "Sección «Por qué confiar en mí», con colegiación, registro sanitario y experiencia", "En terapia sexual la privacidad es parte del servicio. Exponer a pacientes resta confianza."],
-      ["Sin precio", "Duración, modalidad y precio en cada tarjeta: «60 min · online · 60 €»", "Quita la pregunta más incómoda antes de escribir. Pilar decidió publicarlo en la etapa 3."],
-      ["Primer contacto con compromiso", "Entrevista gratuita de 30 minutos, explicada en tres pasos en «Cómo trabajamos»", "Se pide una conversación, no una terapia."],
-      ["Formulario que se enviaba vacío", "Errores en tono cercano: «Escribe aunque sea una línea para saber cómo ayudarte.»", "En este contexto, un error frío suena a reproche."],
-      ["Cursos pedía un email con un asunto concreto", "Botón a un formulario con el mensaje ya escrito para la lista de espera", "Menos pasos y ninguna regla que recordar."],
-      ["Quien consultaba por otro motivo no tenía salida", "Bloque final con un enlace de texto a la entrevista", "No compite con la llamada principal, pero no deja fuera a nadie."],
+      ["Testimonios con nombre y foto de pacientes", "Sección «Por qué confiar en mí», con colegiación, registro sanitario y experiencia", "En terapia sexual la privacidad es parte del servicio. Exponer a pacientes resta confianza.", "Credibilidad web (B. J. Fogg, Stanford): mostrar a la persona real y sus credenciales."],
+      ["Sin precio", "Duración, modalidad y precio en cada tarjeta: «60 min · online · 60 €»", "Quita la pregunta más incómoda antes de escribir. Pilar decidió publicarlo en la etapa 3.", "NN/g sobre precios: ocultarlos genera desconfianza y abandono."],
+      ["Primer contacto con compromiso", "Entrevista gratuita de 30 minutos, explicada en tres pasos en «Cómo trabajamos»", "Se pide una conversación, no una terapia.", "Modelo de conducta de Fogg (B = MAP): bajar la dificultad del primer paso."],
+      ["Formulario que se enviaba vacío", "Errores en tono cercano: «Escribe aunque sea una línea para saber cómo ayudarte.»", "En este contexto, un error frío suena a reproche.", "Heurística n.º 9 de Nielsen: ayudar a reconocer y corregir errores, en un tono adecuado al contexto."],
+      ["Cursos pedía un email con un asunto concreto", "Botón a un formulario con el mensaje ya escrito para la lista de espera", "Menos pasos y ninguna regla que recordar.", "Heurística n.º 6 de Nielsen: reconocer antes que recordar."],
+      ["Quien consultaba por otro motivo no tenía salida", "Bloque final con un enlace de texto a la entrevista", "No compite con la llamada principal, pero no deja fuera a nadie.", "Heurística n.º 3 de Nielsen: control y libertad, una salida para quien no encaja."],
     ],
 
     sys_label: "Identidad y sistema",
@@ -121,11 +123,13 @@ const copy = {
       ["Maqueta", "Portada en escritorio y móvil, frente a una página con la web de antes"],
       ["Web publicada", "Cada pieza llevada al editor de IONOS con un prompt"],
     ],
+    flow_principle: "Método: Atomic Design (Brad Frost), de las piezas pequeñas a las plantillas y de ahí a las páginas.",
     palette_title: "Un naranja para decorar, otro para actuar",
     palette_names: ["Naranja de marca · decorativo", "Naranja de acción · botones y texto", "Crema · fondo", "Marrón · texto"],
     palette_notes: ["Formas, arco y comillas", "Botones y enlaces", "Base de la página", "Texto principal"],
     btn_title: "Botones: de tres estilos a un sistema",
     btn_p: "Convivían naranja relleno, contorno y negro o blanco para acciones del mismo nivel. Los reduje a un principal, un secundario y una variante para fondo oscuro, con el mismo radio y relleno.",
+    btn_principle: "Principios: heurística n.º 4 de Nielsen (consistencia y estándares) y ley de semejanza de la Gestalt (lo que se parece se percibe como de la misma función).",
     specimen: {
       primary: "Pide tu entrevista gratuita",
       secondary: "Conoce a Pilar",
@@ -228,9 +232,9 @@ const copy = {
     head_before: "Whatever your difficulty, I'm with you",
     head_after: "Online sex and couples therapy, without judgement or prejudice",
     strat_points: [
-      ["Positioning", "Service and format in the headline, the search title and the footer. One page for each search: online sex therapy and online couples therapy."],
-      ["Attention", "The cards talk about the problem, not the service: “Does any of this sound familiar?”, with specific reasons for seeking help, and “For you” or “For your relationship” so each person recognises themselves."],
-      ["Content", "I restored three old articles that were still getting visits from Google and linked each one to its service page."],
+      ["Positioning", "Service and format in the headline, the search title and the footer. One page for each search: online sex therapy and online couples therapy.", "Information scent (Pirolli and Card): each search should land on a page that confirms it's the right place."],
+      ["Attention", "The cards talk about the problem, not the service: “Does any of this sound familiar?”, with specific reasons for seeking help, and “For you” or “For your relationship” so each person recognises themselves.", "Nielsen's heuristic #2: speak the user's language, not the profession's."],
+      ["Content", "I restored three old articles that were still getting visits from Google and linked each one to its service page.", "Information scent: content that already draws visits should lead to the service."],
     ],
     cta_title: "One main action",
     cta_levels: [
@@ -239,17 +243,19 @@ const copy = {
       ["Text link", "Book the first interview →", "Discreet exits at the end of a section that don't compete with the primary action."],
     ],
     cta_note: "Every contact button carries an analytics event with its source section, to learn which call to action works.",
+    cta_principle: "Principles: Hick's law (fewer choices, faster decisions), the Von Restorff effect (what stands out is remembered) and Nielsen's heuristic #4 (consistency and standards).",
 
     dec_label: "Decisions",
     dec_title: "The sensitive side of a therapy website",
     dec_cols: ["Situation", "Decision", "Why"],
+    principle_label: "Principle",
     decisions: [
-      ["Testimonials with patients' names and photos", "A “Why trust me” section, with licence number, health registration and experience", "In sex therapy, privacy is part of the service. Exposing patients erodes trust."],
-      ["No price", "Duration, format and price on each card: “60 min · online · €60”", "It removes the most awkward question before writing. Pilar chose to publish it in stage 3."],
-      ["A first contact that felt like a commitment", "A free 30-minute interview, explained in three steps in “How we work”", "It asks for a conversation, not for therapy."],
-      ["A form that could be sent empty", "Errors in a warm tone: “Write even just one line so I know how to help you.”", "In this context, a cold error message sounds like a reproach."],
-      ["Courses asked for an email with a specific subject", "A button to a form with the waiting-list message already written", "Fewer steps and no rule to remember."],
-      ["People with other concerns had no way forward", "A closing block with a text link to the interview", "It doesn't compete with the primary action, but leaves no one out."],
+      ["Testimonials with patients' names and photos", "A “Why trust me” section, with licence number, health registration and experience", "In sex therapy, privacy is part of the service. Exposing patients erodes trust.", "Web credibility (B. J. Fogg, Stanford): show the real person and their credentials."],
+      ["No price", "Duration, format and price on each card: “60 min · online · €60”", "It removes the most awkward question before writing. Pilar chose to publish it in stage 3.", "NN/g on pricing: hiding prices breeds distrust and drop-off."],
+      ["A first contact that felt like a commitment", "A free 30-minute interview, explained in three steps in “How we work”", "It asks for a conversation, not for therapy.", "Fogg Behavior Model (B = MAP): lower the difficulty of the first step."],
+      ["A form that could be sent empty", "Errors in a warm tone: “Write even just one line so I know how to help you.”", "In this context, a cold error message sounds like a reproach.", "Nielsen's heuristic #9: help users recognise and recover from errors, in a tone suited to the context."],
+      ["Courses asked for an email with a specific subject", "A button to a form with the waiting-list message already written", "Fewer steps and no rule to remember.", "Nielsen's heuristic #6: recognition rather than recall."],
+      ["People with other concerns had no way forward", "A closing block with a text link to the interview", "It doesn't compete with the primary action, but leaves no one out.", "Nielsen's heuristic #3: user control and freedom, a way out for those who don't fit."],
     ],
 
     sys_label: "Identity and system",
@@ -261,11 +267,13 @@ const copy = {
       ["Layout", "Home page on desktop and mobile, next to a page with the old site"],
       ["Live site", "Each piece brought to the IONOS editor with a prompt"],
     ],
+    flow_principle: "Method: Atomic Design (Brad Frost), from small pieces to templates and then to pages.",
     palette_title: "One orange to decorate, another to act",
     palette_names: ["Brand orange · decorative", "Action orange · buttons and text", "Cream · background", "Brown · text"],
     palette_notes: ["Shapes, arch and quotation marks", "Buttons and links", "Page base", "Body text"],
     btn_title: "Buttons: from three styles to a system",
     btn_p: "Filled orange, outline and black or white coexisted for actions of the same level. I reduced them to a primary, a secondary and a dark-background variant, with the same radius and padding.",
+    btn_principle: "Principles: Nielsen's heuristic #4 (consistency and standards) and the Gestalt law of similarity (things that look alike are read as having the same function).",
     specimen: {
       primary: "Book your free interview",
       secondary: "Meet Pilar",
@@ -368,9 +376,9 @@ const copy = {
     head_before: "Seja qual for a sua dificuldade, eu te acompanho",
     head_after: "Terapia sexual e de casal online, sem julgamentos nem preconceitos",
     strat_points: [
-      ["Posicionamento", "Serviço e modalidade no título, no título para buscadores e no rodapé. Uma página própria para cada busca: terapia sexual online e terapia de casal online."],
-      ["Atenção", "Os cards falam do problema, não do serviço: “Algo disso acontece com você?”, com motivos de consulta concretos, e “Para você” ou “Para a relação de vocês” para que cada pessoa se reconheça."],
-      ["Conteúdo", "Recuperei três artigos antigos que ainda recebiam visitas do Google e liguei cada um à sua página de serviço."],
+      ["Posicionamento", "Serviço e modalidade no título, no título para buscadores e no rodapé. Uma página própria para cada busca: terapia sexual online e terapia de casal online.", "Rastro de informação (Pirolli e Card): cada busca deve levar a uma página que confirme que a pessoa está no lugar certo."],
+      ["Atenção", "Os cards falam do problema, não do serviço: “Algo disso acontece com você?”, com motivos de consulta concretos, e “Para você” ou “Para a relação de vocês” para que cada pessoa se reconheça.", "Heurística nº 2 de Nielsen: falar a língua do usuário, não a da profissão."],
+      ["Conteúdo", "Recuperei três artigos antigos que ainda recebiam visitas do Google e liguei cada um à sua página de serviço.", "Rastro de informação: o conteúdo que já atrai visitas deve levar ao serviço."],
     ],
     cta_title: "Uma única ação principal",
     cta_levels: [
@@ -379,17 +387,19 @@ const copy = {
       ["Link de texto", "Agendar a primeira entrevista →", "Saídas discretas no fim de uma seção, que não competem com a principal."],
     ],
     cta_note: "Cada botão de contato tem um evento de analytics com a seção de origem, para saber qual chamada funciona.",
+    cta_principle: "Princípios: lei de Hick (menos opções, decisão mais rápida), efeito Von Restorff (o que se destaca é lembrado) e heurística nº 4 de Nielsen (consistência e padrões).",
 
     dec_label: "Decisões",
     dec_title: "O lado delicado de um site de terapia",
     dec_cols: ["Situação", "Decisão", "Por quê"],
+    principle_label: "Princípio",
     decisions: [
-      ["Depoimentos com nome e foto de pacientes", "Seção “Por que confiar em mim”, com registro profissional, registro sanitário e experiência", "Na terapia sexual, a privacidade faz parte do serviço. Expor pacientes tira confiança."],
-      ["Sem preço", "Duração, modalidade e preço em cada card: “60 min · online · 60 €”", "Tira a pergunta mais constrangedora antes de escrever. Pilar decidiu publicar na etapa 3."],
-      ["Primeiro contato com cara de compromisso", "Entrevista gratuita de 30 minutos, explicada em três passos em “Como trabalhamos”", "Pede-se uma conversa, não uma terapia."],
-      ["Formulário que podia ser enviado vazio", "Erros em tom acolhedor: “Escreva pelo menos uma linha para eu saber como te ajudar.”", "Nesse contexto, um erro frio soa como bronca."],
-      ["Cursos pedia um e-mail com um assunto específico", "Botão para um formulário com a mensagem da lista de espera já escrita", "Menos passos e nenhuma regra para lembrar."],
-      ["Quem buscava ajuda por outro motivo não tinha saída", "Bloco final com um link de texto para a entrevista", "Não compete com a chamada principal, mas não deixa ninguém de fora."],
+      ["Depoimentos com nome e foto de pacientes", "Seção “Por que confiar em mim”, com registro profissional, registro sanitário e experiência", "Na terapia sexual, a privacidade faz parte do serviço. Expor pacientes tira confiança.", "Credibilidade web (B. J. Fogg, Stanford): mostrar a pessoa real e as credenciais dela."],
+      ["Sem preço", "Duração, modalidade e preço em cada card: “60 min · online · 60 €”", "Tira a pergunta mais constrangedora antes de escrever. Pilar decidiu publicar na etapa 3.", "NN/g sobre preços: escondê-los gera desconfiança e abandono."],
+      ["Primeiro contato com cara de compromisso", "Entrevista gratuita de 30 minutos, explicada em três passos em “Como trabalhamos”", "Pede-se uma conversa, não uma terapia.", "Modelo de comportamento de Fogg (B = MAP): diminuir a dificuldade do primeiro passo."],
+      ["Formulário que podia ser enviado vazio", "Erros em tom acolhedor: “Escreva pelo menos uma linha para eu saber como te ajudar.”", "Nesse contexto, um erro frio soa como bronca.", "Heurística nº 9 de Nielsen: ajudar a reconhecer e corrigir erros, num tom adequado ao contexto."],
+      ["Cursos pedia um e-mail com um assunto específico", "Botão para um formulário com a mensagem da lista de espera já escrita", "Menos passos e nenhuma regra para lembrar.", "Heurística nº 6 de Nielsen: reconhecer em vez de lembrar."],
+      ["Quem buscava ajuda por outro motivo não tinha saída", "Bloco final com um link de texto para a entrevista", "Não compete com a chamada principal, mas não deixa ninguém de fora.", "Heurística nº 3 de Nielsen: controle e liberdade, uma saída para quem não se encaixa."],
     ],
 
     sys_label: "Identidade e sistema",
@@ -401,11 +411,13 @@ const copy = {
       ["Diagramação", "Página inicial no desktop e no celular, ao lado de uma página com o site antigo"],
       ["Site publicado", "Cada peça levada ao editor da IONOS com um prompt"],
     ],
+    flow_principle: "Método: Atomic Design (Brad Frost), das peças pequenas aos templates e daí às páginas.",
     palette_title: "Um laranja para decorar, outro para agir",
     palette_names: ["Laranja da marca · decorativo", "Laranja de ação · botões e texto", "Creme · fundo", "Marrom · texto"],
     palette_notes: ["Formas, arco e aspas", "Botões e links", "Base da página", "Texto principal"],
     btn_title: "Botões: de três estilos a um sistema",
     btn_p: "Conviviam laranja preenchido, contorno e preto ou branco para ações do mesmo nível. Reduzi a um principal, um secundário e uma variante para fundo escuro, com o mesmo raio e o mesmo espaçamento interno.",
+    btn_principle: "Princípios: heurística nº 4 de Nielsen (consistência e padrões) e lei da semelhança da Gestalt (o que se parece é percebido como tendo a mesma função).",
     specimen: {
       primary: "Agende sua entrevista gratuita",
       secondary: "Conheça a Pilar",
@@ -494,6 +506,15 @@ function Shot({ img, alt, C, label }: { img: { src: string; w: number; h: number
         closeLabel={C.zoom_close}
       />
     </div>
+  );
+}
+
+function Principle({ label, text }: { label: string; text: string }) {
+  return (
+    <p style={{ fontSize: "0.8125rem", lineHeight: 1.55, color: "var(--ink)", borderLeft: "2px solid var(--accent)", paddingLeft: "0.75rem", maxWidth: "640px" }}>
+      <span style={{ ...smallCaps, color: "var(--accent)", display: "block", marginBottom: "0.2rem" }}>{label}</span>
+      {text}
+    </p>
   );
 }
 
@@ -599,10 +620,11 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
         </Reveal>
         <Reveal delay={0.1}>
           <div className="al-three" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem", marginBottom: "3rem" }}>
-            {C.strat_points.map(([title, text]) => (
+            {C.strat_points.map(([title, text, why]) => (
               <div key={title} style={{ ...card, padding: "1.25rem" }}>
                 <p style={{ ...smallCaps, color: "var(--accent)", marginBottom: "0.5rem" }}>{title}</p>
-                <p style={{ fontSize: "0.875rem", lineHeight: 1.6, color: "var(--muted)" }}>{text}</p>
+                <p style={{ fontSize: "0.875rem", lineHeight: 1.6, color: "var(--muted)", marginBottom: "0.75rem" }}>{text}</p>
+                <Principle label={C.principle_label} text={why} />
               </div>
             ))}
           </div>
@@ -618,7 +640,8 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
               </li>
             ))}
           </ol>
-          <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: "640px" }}>{C.cta_note}</p>
+          <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: "640px", marginBottom: "1rem" }}>{C.cta_note}</p>
+          <Principle label={C.principle_label} text={C.cta_principle} />
         </Reveal>
       </section>
 
@@ -629,12 +652,13 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             {C.decisions.map((row) => (
               <div key={row[0]} className="al-row" style={{ ...card, display: "grid", gridTemplateColumns: "1fr", gap: "0.5rem", padding: "1rem", fontSize: "0.875rem", lineHeight: 1.6 }}>
-                {row.map((cell, j) => (
+                {row.slice(0, 3).map((cell, j) => (
                   <div key={j}>
                     <span style={{ ...smallCaps, display: "block", marginBottom: "0.25rem" }}>{C.dec_cols[j]}</span>
                     <span style={{ color: j === 1 ? "var(--accent)" : j === 0 ? "var(--ink)" : "var(--muted)", fontWeight: j === 1 ? 600 : 400 }}>{cell}</span>
                   </div>
                 ))}
+                <div className="al-row-full"><Principle label={C.principle_label} text={row[3]} /></div>
               </div>
             ))}
           </div>
@@ -654,6 +678,7 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
               </li>
             ))}
           </ol>
+          <div style={{ margin: "-2rem 0 3rem" }}><Principle label={C.principle_label} text={C.flow_principle} /></div>
         </Reveal>
 
         <Reveal delay={0.1}>
@@ -673,7 +698,8 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
 
         <Reveal delay={0.1}>
           <h3 style={h3}>{C.btn_title}</h3>
-          <p style={{ ...body, maxWidth: "640px", marginBottom: "1.5rem" }}>{C.btn_p}</p>
+          <p style={{ ...body, maxWidth: "640px", marginBottom: "1rem" }}>{C.btn_p}</p>
+          <div style={{ marginBottom: "1.5rem" }}><Principle label={C.principle_label} text={C.btn_principle} /></div>
           <figure style={{ margin: "0 0 3rem" }}>
             <div className="al-spec" style={{ display: "grid", gridTemplateColumns: "1fr", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border)" }}>
               <div style={{ background: "#F4ECDC", padding: "1.5rem", display: "grid", gap: "1.25rem" }}>
@@ -793,6 +819,7 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
           .al-flow { grid-template-columns: repeat(2, 1fr) !important; }
           .al-spec { grid-template-columns: 1.6fr 1fr !important; }
           .al-row { grid-template-columns: 1fr 1.2fr 1.2fr !important; }
+          .al-row-full { grid-column: 1 / -1; }
           .al-cta { grid-template-columns: 8rem 1fr !important; column-gap: 1.5rem !important; }
           .al-cta > span:last-child { grid-column: 2; }
           .al-palette { grid-template-columns: repeat(4, 1fr) !important; }

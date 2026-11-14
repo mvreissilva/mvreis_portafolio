@@ -51,6 +51,12 @@ const copy = {
     ],
     tags: "UX/UI · Estrategia de contenido · Design system · Cliente real",
     desc: "Rediseño y reposicionamiento de la web de una psicóloga y sexóloga: qué se dice primero, dónde están las llamadas a la acción y un sistema visual nacido de su marca.",
+    tldr_label: "En 30 segundos",
+    tldr: [
+      ["Problema", "Una web cálida que no decía qué ofrecía, para quién ni cuánto costaba."],
+      ["Qué hice", "Auditoría, rediseño con su marca, nuevo planteamiento de la portada y un sistema de componentes en Figma."],
+      ["Resultado", "De 6,6 a 9,4 en una auditoría externa, de tres estilos de botón a dos y una página por servicio."],
+    ],
     meta: [
       ["Tipo", "Cliente real · Proyecto individual"],
       ["Mi rol", "UX/UI Designer · UX Writer"],
@@ -70,11 +76,11 @@ const copy = {
 
     evo_label: "Evolución",
     evo_title: "De la auditoría al reposicionamiento",
-    evo_intro: "El trabajo avanzó en tres etapas. Pilar edita su web con el editor con IA de IONOS, así que cada cambio tenía que poder aplicarse con un prompt. Eso pedía reglas pocas y fáciles de repetir.",
+    evo_intro: "Pilar edita su web con el editor con IA de IONOS, así que cada cambio tenía que caber en un prompt.",
     stages: [
-      ["01", "Punto de partida", "Octubre", "Auditoría heurística de 7 páginas en móvil y escritorio, contrastada con Pilar: 21 problemas. Titular genérico, siete fotos de stock en las cabeceras, tres estilos de botón, testimonios con nombre de pacientes, sin precio y con la política de privacidad rota."],
-      ["02", "Rediseño con su marca", "Octubre–noviembre", "Llevé su identidad a la web: monograma, tipografías y una paleta con dos naranjas. Textos legales, formulario con validación y 18 de los 21 problemas resueltos."],
-      ["03", "Reposicionamiento", "Noviembre", "Una auditoría externa puntuó la web con un 6,6. Separé sus falsos positivos de los fallos reales y replanteé la portada, las llamadas a la acción y el sistema de botones."],
+      ["01", "Punto de partida", "Octubre", "21 problemas en 7 páginas: titular genérico, fotos de stock, tres estilos de botón, testimonios de pacientes y sin precio."],
+      ["02", "Rediseño con su marca", "Octubre–noviembre", "Su identidad llevada a la web y 18 de los 21 problemas resueltos."],
+      ["03", "Reposicionamiento", "Noviembre", "Tras una auditoría externa (6,6), nueva portada, llamadas a la acción y sistema de botones."],
     ],
     before_label: "Antes",
     after_label: "Rediseño",
@@ -84,21 +90,20 @@ const copy = {
 
     strat_label: "Planteamiento",
     strat_title: "Qué, para quién y cómo, en cinco segundos",
-    strat_intro: "El titular de partida era cálido, pero no decía qué hacía Pilar ni que atendía online. Reordené la portada para responder a las tres dudas en el primer pantallazo.",
+    strat_intro: "El titular de partida era cálido, pero no decía qué hacía Pilar ni que atendía online.",
     head_before: "Sea cual sea tu dificultad, te acompaño",
     head_after: "Terapia sexual y de pareja online, sin juicios ni prejuicios",
     strat_points: [
-      ["Posicionamiento", "Servicio y modalidad en el titular, en el título para buscadores y en el pie. Una página propia para cada búsqueda: terapia sexual online y terapia de pareja online."],
-      ["Atención", "Las tarjetas hablan del problema, no del servicio: «¿Te pasa algo de esto?», con motivos de consulta concretos, y «Para ti» o «Para vuestra relación» para que cada persona se reconozca."],
-      ["Contenido", "Recuperé tres artículos antiguos que seguían recibiendo visitas desde Google y enlacé cada uno con su página de servicio."],
+      ["Posicionamiento", "Servicio y modalidad en el titular, y una página propia para cada búsqueda."],
+      ["Atención", "Tarjetas que hablan del problema: «¿Te pasa algo de esto?», con motivos concretos."],
+      ["Contenido", "Tres artículos antiguos con visitas recuperados y enlazados a su servicio."],
     ],
     cta_title: "Una sola acción principal",
     cta_levels: [
-      ["Principal", "Pide tu entrevista gratuita", "El mismo texto en la cabecera, la portada y las páginas de servicio, con la letra pequeña «30 minutos por videollamada, sin compromiso»."],
-      ["Secundaria", "Conoce a Pilar · Ver servicios", "Para quien todavía no está listo para escribir."],
-      ["Enlace de texto", "Pedir la primera entrevista →", "Salidas discretas al final de una sección, que no compiten con la principal."],
+      ["Principal", "Pide tu entrevista gratuita", "El mismo texto en toda la web, con «30 minutos por videollamada, sin compromiso»."],
+      ["Secundaria", "Conoce a Pilar · Ver servicios", "Para quien aún no está listo para escribir."],
+      ["Enlace de texto", "Pedir la primera entrevista →", "Salidas discretas que no compiten con la principal."],
     ],
-    cta_note: "Cada botón de contacto lleva un evento de analítica con la sección de origen, para saber qué llamada funciona.",
     cta_principle: "Ley de Hick: cuantas más opciones, más se tarda en decidir. Por eso hay una sola acción principal por pantalla.",
 
     dec_label: "Decisiones",
@@ -107,17 +112,15 @@ const copy = {
     principle_label: "Principio",
     dec_principle: "Heurísticas de Nielsen: hablar el lenguaje del usuario, reconocer antes que recordar, dejar siempre una salida y ayudar a corregir los errores.",
     decisions: [
-      ["Testimonios con nombre y foto de pacientes", "Sección «Por qué confiar en mí», con colegiación, registro sanitario y experiencia", "En terapia sexual la privacidad es parte del servicio. Exponer a pacientes resta confianza."],
-      ["Sin precio", "Duración, modalidad y precio en cada tarjeta: «60 min · online · 60 €»", "Quita la pregunta más incómoda antes de escribir. Pilar decidió publicarlo en la etapa 3."],
-      ["Primer contacto con compromiso", "Entrevista gratuita de 30 minutos, explicada en tres pasos en «Cómo trabajamos»", "Se pide una conversación, no una terapia."],
-      ["Formulario que se enviaba vacío", "Errores en tono cercano: «Escribe aunque sea una línea para saber cómo ayudarte.»", "En este contexto, un error frío suena a reproche."],
-      ["Cursos pedía un email con un asunto concreto", "Botón a un formulario con el mensaje ya escrito para la lista de espera", "Menos pasos y ninguna regla que recordar."],
-      ["Quien consultaba por otro motivo no tenía salida", "Bloque final con un enlace de texto a la entrevista", "No compite con la llamada principal, pero no deja fuera a nadie."],
+      ["Testimonios con nombre y foto de pacientes", "«Por qué confiar en mí», con colegiación y experiencia", "En terapia sexual la privacidad es parte del servicio."],
+      ["Sin precio", "«60 min · online · 60 €» en cada tarjeta", "Quita la pregunta más incómoda antes de escribir."],
+      ["Primer contacto con compromiso", "Entrevista gratuita de 30 minutos, explicada en tres pasos", "Se pide una conversación, no una terapia."],
+      ["Errores fríos en el formulario", "«Escribe aunque sea una línea para saber cómo ayudarte.»", "En este contexto, un error frío suena a reproche."],
     ],
 
     sys_label: "Identidad y sistema",
     sys_title: "De la marca a un sistema de componentes",
-    sys_p: "La clienta ya tenía logotipo, monograma y colores, pero no un sistema. Pasé esa identidad a Figma, la ordené en componentes y con ellos maqueté la portada antes de tocar la web. El monograma, dos comillas que se sonríen, cuenta la terapia como una conversación: lo convertí en el patrón que encabeza los títulos, adopté sus tipografías, Avotte y Sagata Sans, y en la portada uní marca y persona con la foto de Pilar sobre el arco naranja.",
+    sys_p: "La clienta tenía logotipo, monograma y colores, pero no un sistema. Lo pasé a Figma, lo ordené en componentes y con ellos maqueté la portada. Las comillas del monograma se convirtieron en el patrón que encabeza los títulos.",
     flow: [
       ["Identidad de partida", "Logotipo, monograma y colores, sin reglas de uso"],
       ["Componentes en Figma", "Monograma en 3 colores, logotipo, botón con 3 variantes, tarjetas, cabecera y pie"],
@@ -129,7 +132,7 @@ const copy = {
     palette_names: ["Naranja de marca · decorativo", "Naranja de acción · botones y texto", "Crema · fondo", "Marrón · texto"],
     palette_notes: ["Formas, arco y comillas", "Botones y enlaces", "Base de la página", "Texto principal"],
     btn_title: "Botones: de tres estilos a un sistema",
-    btn_p: "Convivían naranja relleno, contorno y negro o blanco para acciones del mismo nivel. Los reduje a un principal, un secundario y una variante para fondo oscuro, con el mismo radio y relleno.",
+    btn_p: "Había naranja relleno, contorno y negro o blanco para acciones del mismo nivel. Quedaron un principal, un secundario y una variante para fondo oscuro.",
     specimen: {
       primary: "Pide tu entrevista gratuita",
       secondary: "Conoce a Pilar",
@@ -138,13 +141,6 @@ const copy = {
     },
     specimen_notes: ["Principal · relleno #B83A12", "Secundario · contorno de 2 px", "Terciario · enlace de texto", "Fondo oscuro · contorno #FC4C00"],
     specimen_cap: "Esquema con los colores reales de la web.",
-    rules_title: "Reglas que se repiten en toda la web",
-    rules: [
-      "Rótulos de sección de 11 a 13 px en todas las páginas",
-      "Un solo texto para la llamada principal",
-      "Tarjetas de servicio con el mismo orden: motivos, duración, modalidad y precio",
-      "Menú de hamburguesa por debajo de 1100 px, sin cortes de texto",
-    ],
 
     resu_label: "Resultados",
     resu_title: "Medido, no estimado",
@@ -152,25 +148,22 @@ const copy = {
     resu_rows: [
       ["Nota de la auditoría externa (su escala)", "6,6", "9,4"],
       ["Problemas de mi auditoría resueltos", "0 de 21", "18 de 21"],
-      ["Estilos de botón para acciones del mismo nivel", "3", "2"],
-      ["Textos distintos para la llamada principal", "2", "1"],
+      ["Estilos de botón para el mismo nivel", "3", "2"],
       ["Páginas propias por servicio", "0", "2"],
       ["Componentes de marca en Figma", "0", "14"],
     ],
-    resu_note: "La nota externa la calculé yo con la escala del informe. Los puntos que faltan dependen de decisiones de la clienta, como publicar un teléfono.",
-    resu_p: "Revisé cada cambio de la IA antes de publicar y detecté cuatro regresiones. Con la foto de Pilar incluida, la portada mantiene 96 en rendimiento móvil en PageSpeed.",
+    resu_note: "La nota externa la calculé yo con la escala del informe.",
+    resu_p: "Revisé cada cambio de la IA antes de publicar y detecté cuatro regresiones.",
 
     learn_label: "Aprendizajes",
     learn_title: "Qué me llevo de este proyecto",
     learns: [
-      ["Una auditoría vale lo que se puede aplicar", "La herramienta y el presupuesto reales de la clienta cambiaron todas las prioridades."],
-      ["Un sistema pequeño sobrevive", "Dos botones y una regla para las comillas caben en un prompt. Un sistema grande no resistiría al editor."],
+      ["Un sistema pequeño sobrevive", "Dos botones y una regla para las comillas caben en un prompt."],
       ["Una herramienta no sustituye la revisión", "Ni la IA que aplica los cambios ni la que los puntúa lo detectan todo."],
     ],
     next_label: "Próximos pasos",
     next: [
       "Medir las solicitudes de entrevista al mes frente a la base de 8–10",
-      "Comparar Search Console a finales de noviembre con la base: 6 clics y 58 impresiones en 28 días",
       "Validar la portada con una prueba de 5 segundos",
     ],
     cta_label: "¿Hablamos?",
@@ -195,6 +188,12 @@ const copy = {
     ],
     tags: "UX/UI · Content strategy · Design system · Real client",
     desc: "Redesign and repositioning of a psychologist and sexologist's website: what is said first, where the calls to action go, and a visual system born from her brand.",
+    tldr_label: "In 30 seconds",
+    tldr: [
+      ["Problem", "A warm website that didn't say what it offered, for whom or how much it cost."],
+      ["What I did", "Audit, redesign with her brand, a new home page strategy and a component system in Figma."],
+      ["Result", "From 6.6 to 9.4 in an external audit, from three button styles to two and one page per service."],
+    ],
     meta: [
       ["Type", "Real client · Solo project"],
       ["My role", "UX/UI Designer · UX Writer"],
@@ -214,11 +213,11 @@ const copy = {
 
     evo_label: "Evolution",
     evo_title: "From audit to repositioning",
-    evo_intro: "The work moved through three stages. Pilar edits her site with the IONOS AI editor, so every change had to be applicable with a prompt. That called for few rules that are easy to repeat.",
+    evo_intro: "Pilar edits her site with the IONOS AI editor, so every change had to fit in a prompt.",
     stages: [
-      ["01", "Starting point", "October", "Heuristic audit of 7 pages on mobile and desktop, checked with Pilar: 21 issues. A generic headline, seven stock photos in the headers, three button styles, testimonials with patients' names, no price and a broken privacy policy."],
-      ["02", "Redesign with her brand", "October–November", "I brought her identity to the site: monogram, typefaces and a palette with two oranges. Legal texts, a validated form and 18 of the 21 issues fixed."],
-      ["03", "Repositioning", "November", "An external audit scored the site 6.6. I separated its false positives from the real issues and reworked the home page, the calls to action and the button system."],
+      ["01", "Starting point", "October", "21 issues across 7 pages: a generic headline, stock photos, three button styles, patient testimonials and no price."],
+      ["02", "Redesign with her brand", "October–November", "Her identity brought to the site and 18 of the 21 issues fixed."],
+      ["03", "Repositioning", "November", "After an external audit (6.6), a new home page, calls to action and button system."],
     ],
     before_label: "Before",
     after_label: "Redesign",
@@ -228,21 +227,20 @@ const copy = {
 
     strat_label: "Strategy",
     strat_title: "What, for whom and how, in five seconds",
-    strat_intro: "The original headline was warm, but it didn't say what Pilar did or that she worked online. I reordered the home page to answer the three questions above the fold.",
+    strat_intro: "The original headline was warm, but it didn't say what Pilar did or that she worked online.",
     head_before: "Whatever your difficulty, I'm with you",
     head_after: "Online sex and couples therapy, without judgement or prejudice",
     strat_points: [
-      ["Positioning", "Service and format in the headline, the search title and the footer. One page for each search: online sex therapy and online couples therapy."],
-      ["Attention", "The cards talk about the problem, not the service: “Does any of this sound familiar?”, with specific reasons for seeking help, and “For you” or “For your relationship” so each person recognises themselves."],
-      ["Content", "I restored three old articles that were still getting visits from Google and linked each one to its service page."],
+      ["Positioning", "Service and format in the headline, and one page for each search."],
+      ["Attention", "Cards that talk about the problem: “Does any of this sound familiar?”, with specific reasons."],
+      ["Content", "Three old articles that still had visits restored and linked to their service."],
     ],
     cta_title: "One main action",
     cta_levels: [
-      ["Primary", "Book your free interview", "The same label in the header, the home page and the service pages, with the small print “30 minutes by video call, no commitment”."],
+      ["Primary", "Book your free interview", "The same label across the site, with “30 minutes by video call, no commitment”."],
       ["Secondary", "Meet Pilar · See services", "For people who aren't ready to write yet."],
-      ["Text link", "Book the first interview →", "Discreet exits at the end of a section that don't compete with the primary action."],
+      ["Text link", "Book the first interview →", "Discreet exits that don't compete with the primary action."],
     ],
-    cta_note: "Every contact button carries an analytics event with its source section, to learn which call to action works.",
     cta_principle: "Hick's law: the more options, the longer it takes to decide. That's why each screen has a single main action.",
 
     dec_label: "Decisions",
@@ -251,17 +249,15 @@ const copy = {
     principle_label: "Principle",
     dec_principle: "Nielsen's heuristics: speak the user's language, recognition rather than recall, always leave a way out and help users recover from errors.",
     decisions: [
-      ["Testimonials with patients' names and photos", "A “Why trust me” section, with licence number, health registration and experience", "In sex therapy, privacy is part of the service. Exposing patients erodes trust."],
-      ["No price", "Duration, format and price on each card: “60 min · online · €60”", "It removes the most awkward question before writing. Pilar chose to publish it in stage 3."],
-      ["A first contact that felt like a commitment", "A free 30-minute interview, explained in three steps in “How we work”", "It asks for a conversation, not for therapy."],
-      ["A form that could be sent empty", "Errors in a warm tone: “Write even just one line so I know how to help you.”", "In this context, a cold error message sounds like a reproach."],
-      ["Courses asked for an email with a specific subject", "A button to a form with the waiting-list message already written", "Fewer steps and no rule to remember."],
-      ["People with other concerns had no way forward", "A closing block with a text link to the interview", "It doesn't compete with the primary action, but leaves no one out."],
+      ["Testimonials with patients' names and photos", "“Why trust me”, with licence number and experience", "In sex therapy, privacy is part of the service."],
+      ["No price", "“60 min · online · €60” on each card", "It removes the most awkward question before writing."],
+      ["A first contact that felt like a commitment", "A free 30-minute interview, explained in three steps", "It asks for a conversation, not for therapy."],
+      ["Cold form errors", "“Write even just one line so I know how to help you.”", "In this context, a cold error sounds like a reproach."],
     ],
 
     sys_label: "Identity and system",
     sys_title: "From brand to component system",
-    sys_p: "The client already had a logo, a monogram and colours, but no system. I brought that identity into Figma, organised it into components and used them to lay out the home page before touching the site. The monogram, two quotation marks smiling at each other, tells therapy as a conversation: I turned it into the pattern that heads the titles, adopted her typefaces, Avotte and Sagata Sans, and on the home page joined brand and person with Pilar's photo over the orange arch.",
+    sys_p: "The client had a logo, a monogram and colours, but no system. I brought it into Figma, organised it into components and used them to lay out the home page. The monogram's quotation marks became the pattern that heads the titles.",
     flow: [
       ["Starting identity", "Logo, monogram and colours, with no usage rules"],
       ["Components in Figma", "Monogram in 3 colours, logo, button with 3 variants, cards, header and footer"],
@@ -273,7 +269,7 @@ const copy = {
     palette_names: ["Brand orange · decorative", "Action orange · buttons and text", "Cream · background", "Brown · text"],
     palette_notes: ["Shapes, arch and quotation marks", "Buttons and links", "Page base", "Body text"],
     btn_title: "Buttons: from three styles to a system",
-    btn_p: "Filled orange, outline and black or white coexisted for actions of the same level. I reduced them to a primary, a secondary and a dark-background variant, with the same radius and padding.",
+    btn_p: "Filled orange, outline and black or white coexisted for same-level actions. What remained was a primary, a secondary and a dark-background variant.",
     specimen: {
       primary: "Book your free interview",
       secondary: "Meet Pilar",
@@ -282,13 +278,6 @@ const copy = {
     },
     specimen_notes: ["Primary · #B83A12 fill", "Secondary · 2 px outline", "Tertiary · text link", "Dark background · #FC4C00 outline"],
     specimen_cap: "Diagram using the website's real colours. Labels translated from Spanish.",
-    rules_title: "Rules repeated across the site",
-    rules: [
-      "Section labels from 11 to 13 px on every page",
-      "A single label for the primary call to action",
-      "Service cards in the same order: reasons, duration, format and price",
-      "Hamburger menu below 1100 px, with no truncated text",
-    ],
 
     resu_label: "Results",
     resu_title: "Measured, not estimated",
@@ -296,25 +285,22 @@ const copy = {
     resu_rows: [
       ["External audit score (its own scale)", "6.6", "9.4"],
       ["Issues from my audit fixed", "0 of 21", "18 of 21"],
-      ["Button styles for same-level actions", "3", "2"],
-      ["Different labels for the primary call to action", "2", "1"],
+      ["Button styles for the same level", "3", "2"],
       ["Dedicated service pages", "0", "2"],
       ["Brand components in Figma", "0", "14"],
     ],
-    resu_note: "I calculated the external score myself using the report's scale. The missing points depend on the client's decisions, such as publishing a phone number.",
-    resu_p: "I reviewed every AI change before publishing and caught four regressions. With Pilar's photo included, the home page keeps 96 for mobile performance in PageSpeed.",
+    resu_note: "I calculated the external score myself using the report's scale.",
+    resu_p: "I reviewed every AI change before publishing and caught four regressions.",
 
     learn_label: "Learnings",
     learn_title: "What I take from this project",
     learns: [
-      ["An audit is worth what can be applied", "The client's real tool and budget changed every priority."],
-      ["A small system survives", "Two buttons and one rule for the quotation marks fit in a prompt. A large system wouldn't survive the editor."],
+      ["A small system survives", "Two buttons and one rule for the quotation marks fit in a prompt."],
       ["A tool doesn't replace review", "Neither the AI that applies the changes nor the one that scores them catches everything."],
     ],
     next_label: "Next steps",
     next: [
       "Measure monthly interview requests against the 8–10 baseline",
-      "Compare Search Console at the end of November with the baseline: 6 clicks and 58 impressions in 28 days",
       "Validate the home page with a 5-second test",
     ],
     cta_label: "Let's talk?",
@@ -339,6 +325,12 @@ const copy = {
     ],
     tags: "UX/UI · Estratégia de conteúdo · Design system · Cliente real",
     desc: "Redesign e reposicionamento do site de uma psicóloga e sexóloga: o que se diz primeiro, onde ficam as chamadas para ação e um sistema visual nascido da marca dela.",
+    tldr_label: "Em 30 segundos",
+    tldr: [
+      ["Problema", "Um site acolhedor que não dizia o que oferecia, para quem nem quanto custava."],
+      ["O que fiz", "Auditoria, redesign com a marca dela, nova estratégia para a página inicial e um sistema de componentes no Figma."],
+      ["Resultado", "De 6,6 para 9,4 numa auditoria externa, de três estilos de botão para dois e uma página por serviço."],
+    ],
     meta: [
       ["Tipo", "Cliente real · Projeto individual"],
       ["Meu papel", "UX/UI Designer · UX Writer"],
@@ -358,11 +350,11 @@ const copy = {
 
     evo_label: "Evolução",
     evo_title: "Da auditoria ao reposicionamento",
-    evo_intro: "O trabalho avançou em três etapas. Pilar edita o site com o editor com IA da IONOS, então cada mudança precisava poder ser aplicada com um prompt. Isso pedia poucas regras e fáceis de repetir.",
+    evo_intro: "Pilar edita o site com o editor com IA da IONOS, então cada mudança precisava caber num prompt.",
     stages: [
-      ["01", "Ponto de partida", "Outubro", "Auditoria heurística de 7 páginas no celular e no desktop, validada com Pilar: 21 problemas. Título genérico, sete fotos de banco de imagens nos cabeçalhos, três estilos de botão, depoimentos com nome de pacientes, sem preço e com a política de privacidade quebrada."],
-      ["02", "Redesign com a marca dela", "Outubro–novembro", "Levei a identidade dela para o site: monograma, tipografias e uma paleta com dois laranjas. Textos legais, formulário com validação e 18 dos 21 problemas resolvidos."],
-      ["03", "Reposicionamento", "Novembro", "Uma auditoria externa deu nota 6,6 ao site. Separei os falsos positivos dos problemas reais e repensei a página inicial, as chamadas para ação e o sistema de botões."],
+      ["01", "Ponto de partida", "Outubro", "21 problemas em 7 páginas: título genérico, fotos de banco de imagens, três estilos de botão, depoimentos de pacientes e sem preço."],
+      ["02", "Redesign com a marca dela", "Outubro–novembro", "A identidade dela levada ao site e 18 dos 21 problemas resolvidos."],
+      ["03", "Reposicionamento", "Novembro", "Depois de uma auditoria externa (6,6), nova página inicial, chamadas para ação e sistema de botões."],
     ],
     before_label: "Antes",
     after_label: "Redesign",
@@ -372,21 +364,20 @@ const copy = {
 
     strat_label: "Estratégia",
     strat_title: "O quê, para quem e como, em cinco segundos",
-    strat_intro: "O título original era acolhedor, mas não dizia o que Pilar fazia nem que atendia online. Reorganizei a página inicial para responder às três dúvidas na primeira dobra.",
+    strat_intro: "O título original era acolhedor, mas não dizia o que Pilar fazia nem que atendia online.",
     head_before: "Seja qual for a sua dificuldade, eu te acompanho",
     head_after: "Terapia sexual e de casal online, sem julgamentos nem preconceitos",
     strat_points: [
-      ["Posicionamento", "Serviço e modalidade no título, no título para buscadores e no rodapé. Uma página própria para cada busca: terapia sexual online e terapia de casal online."],
-      ["Atenção", "Os cards falam do problema, não do serviço: “Algo disso acontece com você?”, com motivos de consulta concretos, e “Para você” ou “Para a relação de vocês” para que cada pessoa se reconheça."],
-      ["Conteúdo", "Recuperei três artigos antigos que ainda recebiam visitas do Google e liguei cada um à sua página de serviço."],
+      ["Posicionamento", "Serviço e modalidade no título, e uma página própria para cada busca."],
+      ["Atenção", "Cards que falam do problema: “Algo disso acontece com você?”, com motivos concretos."],
+      ["Conteúdo", "Três artigos antigos que ainda tinham visitas, recuperados e ligados ao seu serviço."],
     ],
     cta_title: "Uma única ação principal",
     cta_levels: [
-      ["Principal", "Agende sua entrevista gratuita", "O mesmo texto no cabeçalho, na página inicial e nas páginas de serviço, com a letra miúda “30 minutos por videochamada, sem compromisso”."],
+      ["Principal", "Agende sua entrevista gratuita", "O mesmo texto em todo o site, com “30 minutos por videochamada, sem compromisso”."],
       ["Secundária", "Conheça a Pilar · Ver serviços", "Para quem ainda não está pronto para escrever."],
-      ["Link de texto", "Agendar a primeira entrevista →", "Saídas discretas no fim de uma seção, que não competem com a principal."],
+      ["Link de texto", "Agendar a primeira entrevista →", "Saídas discretas que não competem com a principal."],
     ],
-    cta_note: "Cada botão de contato tem um evento de analytics com a seção de origem, para saber qual chamada funciona.",
     cta_principle: "Lei de Hick: quanto mais opções, mais se demora para decidir. Por isso há uma única ação principal por tela.",
 
     dec_label: "Decisões",
@@ -395,17 +386,15 @@ const copy = {
     principle_label: "Princípio",
     dec_principle: "Heurísticas de Nielsen: falar a língua do usuário, reconhecer em vez de lembrar, sempre deixar uma saída e ajudar a corrigir os erros.",
     decisions: [
-      ["Depoimentos com nome e foto de pacientes", "Seção “Por que confiar em mim”, com registro profissional, registro sanitário e experiência", "Na terapia sexual, a privacidade faz parte do serviço. Expor pacientes tira confiança."],
-      ["Sem preço", "Duração, modalidade e preço em cada card: “60 min · online · 60 €”", "Tira a pergunta mais constrangedora antes de escrever. Pilar decidiu publicar na etapa 3."],
-      ["Primeiro contato com cara de compromisso", "Entrevista gratuita de 30 minutos, explicada em três passos em “Como trabalhamos”", "Pede-se uma conversa, não uma terapia."],
-      ["Formulário que podia ser enviado vazio", "Erros em tom acolhedor: “Escreva pelo menos uma linha para eu saber como te ajudar.”", "Nesse contexto, um erro frio soa como bronca."],
-      ["Cursos pedia um e-mail com um assunto específico", "Botão para um formulário com a mensagem da lista de espera já escrita", "Menos passos e nenhuma regra para lembrar."],
-      ["Quem buscava ajuda por outro motivo não tinha saída", "Bloco final com um link de texto para a entrevista", "Não compete com a chamada principal, mas não deixa ninguém de fora."],
+      ["Depoimentos com nome e foto de pacientes", "“Por que confiar em mim”, com registro profissional e experiência", "Na terapia sexual, a privacidade faz parte do serviço."],
+      ["Sem preço", "“60 min · online · 60 €” em cada card", "Tira a pergunta mais constrangedora antes de escrever."],
+      ["Primeiro contato com cara de compromisso", "Entrevista gratuita de 30 minutos, explicada em três passos", "Pede-se uma conversa, não uma terapia."],
+      ["Erros frios no formulário", "“Escreva pelo menos uma linha para eu saber como te ajudar.”", "Nesse contexto, um erro frio soa como bronca."],
     ],
 
     sys_label: "Identidade e sistema",
     sys_title: "Da marca a um sistema de componentes",
-    sys_p: "A cliente já tinha logotipo, monograma e cores, mas não um sistema. Levei essa identidade para o Figma, organizei em componentes e com eles diagramei a página inicial antes de mexer no site. O monograma, duas aspas que sorriem uma para a outra, conta a terapia como uma conversa: transformei-o no padrão que abre os títulos, adotei as tipografias dela, Avotte e Sagata Sans, e na página inicial uni marca e pessoa com a foto de Pilar sobre o arco laranja.",
+    sys_p: "A cliente tinha logotipo, monograma e cores, mas não um sistema. Levei para o Figma, organizei em componentes e com eles diagramei a página inicial. As aspas do monograma viraram o padrão que abre os títulos.",
     flow: [
       ["Identidade de partida", "Logotipo, monograma e cores, sem regras de uso"],
       ["Componentes no Figma", "Monograma em 3 cores, logotipo, botão com 3 variantes, cards, cabeçalho e rodapé"],
@@ -417,7 +406,7 @@ const copy = {
     palette_names: ["Laranja da marca · decorativo", "Laranja de ação · botões e texto", "Creme · fundo", "Marrom · texto"],
     palette_notes: ["Formas, arco e aspas", "Botões e links", "Base da página", "Texto principal"],
     btn_title: "Botões: de três estilos a um sistema",
-    btn_p: "Conviviam laranja preenchido, contorno e preto ou branco para ações do mesmo nível. Reduzi a um principal, um secundário e uma variante para fundo escuro, com o mesmo raio e o mesmo espaçamento interno.",
+    btn_p: "Havia laranja preenchido, contorno e preto ou branco para ações do mesmo nível. Ficaram um principal, um secundário e uma variante para fundo escuro.",
     specimen: {
       primary: "Agende sua entrevista gratuita",
       secondary: "Conheça a Pilar",
@@ -426,13 +415,6 @@ const copy = {
     },
     specimen_notes: ["Principal · preenchido #B83A12", "Secundário · contorno de 2 px", "Terciário · link de texto", "Fundo escuro · contorno #FC4C00"],
     specimen_cap: "Esquema com as cores reais do site. Textos traduzidos do espanhol.",
-    rules_title: "Regras que se repetem em todo o site",
-    rules: [
-      "Rótulos de seção de 11 para 13 px em todas as páginas",
-      "Um único texto para a chamada principal",
-      "Cards de serviço na mesma ordem: motivos, duração, modalidade e preço",
-      "Menu hambúrguer abaixo de 1100 px, sem textos cortados",
-    ],
 
     resu_label: "Resultados",
     resu_title: "Medido, não estimado",
@@ -440,25 +422,22 @@ const copy = {
     resu_rows: [
       ["Nota da auditoria externa (escala dela)", "6,6", "9,4"],
       ["Problemas da minha auditoria resolvidos", "0 de 21", "18 de 21"],
-      ["Estilos de botão para ações do mesmo nível", "3", "2"],
-      ["Textos diferentes para a chamada principal", "2", "1"],
+      ["Estilos de botão para o mesmo nível", "3", "2"],
       ["Páginas próprias por serviço", "0", "2"],
       ["Componentes de marca no Figma", "0", "14"],
     ],
-    resu_note: "Calculei a nota externa eu mesmo, com a escala do relatório. Os pontos que faltam dependem de decisões da cliente, como publicar um telefone.",
-    resu_p: "Revisei cada mudança da IA antes de publicar e encontrei quatro regressões. Com a foto de Pilar incluída, a página inicial mantém 96 em desempenho mobile no PageSpeed.",
+    resu_note: "Calculei a nota externa eu mesmo, com a escala do relatório.",
+    resu_p: "Revisei cada mudança da IA antes de publicar e encontrei quatro regressões.",
 
     learn_label: "Aprendizados",
     learn_title: "O que levo deste projeto",
     learns: [
-      ["Uma auditoria vale o que dá para aplicar", "A ferramenta e o orçamento reais da cliente mudaram todas as prioridades."],
-      ["Um sistema pequeno sobrevive", "Dois botões e uma regra para as aspas cabem num prompt. Um sistema grande não resistiria ao editor."],
+      ["Um sistema pequeno sobrevive", "Dois botões e uma regra para as aspas cabem num prompt."],
       ["Uma ferramenta não substitui a revisão", "Nem a IA que aplica as mudanças nem a que dá as notas detectam tudo."],
     ],
     next_label: "Próximos passos",
     next: [
       "Medir os pedidos de entrevista por mês em relação à base de 8–10",
-      "Comparar o Search Console no fim de novembro com a base: 6 cliques e 58 impressões em 28 dias",
       "Validar a página inicial com um teste de 5 segundos",
     ],
     cta_label: "Vamos conversar?",
@@ -544,7 +523,18 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
         <Reveal>
           <p style={{ fontSize: "0.6875rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "0.75rem" }}>{C.tags}</p>
           <h1 style={{ fontFamily: serif, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "0.5rem", color: "var(--ink)" }}>Proyecto Algazara</h1>
-          <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "var(--muted)", maxWidth: "580px", marginBottom: "3rem" }}>{C.desc}</p>
+          <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "var(--muted)", maxWidth: "580px", marginBottom: "2rem" }}>{C.desc}</p>
+          <div style={{ ...card, padding: "1.25rem 1.25rem 0.5rem", marginBottom: "2rem", borderColor: "var(--accent)" }}>
+            <p style={{ ...smallCaps, color: "var(--accent)", marginBottom: "0.75rem" }}>{C.tldr_label}</p>
+            <dl style={{ margin: 0 }}>
+              {C.tldr.map(([k, v]) => (
+                <div key={k} className="al-tldr" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "0.15rem", paddingBottom: "0.75rem" }}>
+                  <dt style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--ink)" }}>{k}</dt>
+                  <dd style={{ margin: 0, fontSize: "0.875rem", lineHeight: 1.55, color: "var(--muted)" }}>{v}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
 
           <div className="al-meta" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem" }}>
             {C.meta.map(([label, value]) => (
@@ -639,7 +629,6 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
               </li>
             ))}
           </ol>
-          <p style={{ fontSize: "0.8125rem", lineHeight: 1.6, color: "var(--muted)", maxWidth: "640px", marginBottom: "1rem" }}>{C.cta_note}</p>
           <Principle label={C.principle_label} text={C.cta_principle} />
         </Reveal>
       </section>
@@ -721,16 +710,6 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
           </figure>
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <h3 style={h3}>{C.rules_title}</h3>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.625rem" }}>
-            {C.rules.map((r) => (
-              <li key={r} style={{ display: "flex", gap: "0.5rem", fontSize: "0.9375rem", lineHeight: 1.65, color: "var(--muted)" }}>
-                <span aria-hidden="true" style={{ color: "var(--accent)", flexShrink: 0 }}>→</span>{r}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
       </section>
 
       {/* ── 07 RESULTADOS ── */}
@@ -816,6 +795,7 @@ export default async function AlgazaraPage({ params }: { params: Promise<{ lang:
           .al-ba { grid-template-columns: 1fr 1fr !important; }
           .al-flow { grid-template-columns: repeat(2, 1fr) !important; }
           .al-spec { grid-template-columns: 1.6fr 1fr !important; }
+          .al-tldr { grid-template-columns: 7rem 1fr !important; column-gap: 1rem !important; }
           .al-row { grid-template-columns: 1fr 1.2fr 1.2fr !important; }
           .al-cta { grid-template-columns: 8rem 1fr !important; column-gap: 1.5rem !important; }
           .al-cta > span:last-child { grid-column: 2; }

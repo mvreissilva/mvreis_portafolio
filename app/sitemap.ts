@@ -6,6 +6,7 @@ const PAGES = [
   { path: "", priority: 1 },
   { path: "/work/camperoteca", priority: 0.8 },
   { path: "/work/riptide", priority: 0.8 },
+  { path: "/work/algazara", priority: 0.8 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
